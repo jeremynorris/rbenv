@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"pattern:EFI"4Puppet::Network::AuthStore::Declaration#pattern;FI"R;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"DThe pattern we're matching against.  Can be an IPAddr instance,;TI"@or an array of strings, resulting from reversing a hostname;TI"or domain name.;T:
+@file0FI"$lib/puppet/network/authstore.rb;T

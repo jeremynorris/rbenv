@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"status:EFI"'Puppet::Transaction::Report#status;FI"R;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"WThe status of the client run is an enumeration: 'failed', 'changed' or 'unchanged';TI"c@return [String] the status of the run - one of the values 'failed', 'changed', or 'unchanged';T:
+@file0FI"%lib/puppet/transaction/report.rb;T

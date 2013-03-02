@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"	logs:EFI"%Puppet::Transaction::Report#logs;FI"R;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"A list of log messages.;TI",@return [Array<String>] logged messages;T:
+@file0FI"%lib/puppet/transaction/report.rb;T

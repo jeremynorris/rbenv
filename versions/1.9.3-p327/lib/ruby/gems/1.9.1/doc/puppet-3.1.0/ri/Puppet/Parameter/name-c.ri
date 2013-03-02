@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"	name:EFI"Puppet::Parameter::name;FI"R;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"F@return [Symbol] The parameter name as given when it was created.;T:
+@file0TI"lib/puppet/parameter.rb;T

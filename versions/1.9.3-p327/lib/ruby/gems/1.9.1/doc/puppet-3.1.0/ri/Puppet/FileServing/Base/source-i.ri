@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"source:EFI"%Puppet::FileServing::Base#source;FI"RW;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"EThis is for external consumers to store the source that was used;TI"to retrieve the metadata.;T:
+@file0FI"$lib/puppet/file_serving/base.rb;T

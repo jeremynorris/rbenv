@@ -1,0 +1,533 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Class: RSpec::Puppet::ManifestMatchers::CreateGeneric</title>
+
+  <link rel="stylesheet" href="../../../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../../../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../../../index.html">Home</a>
+          <a href="../../../index.html#classes">Classes</a>
+          <a href="../../../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../../../lib/rspec-puppet/matchers/create_generic_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/rspec-puppet/matchers/create_generic.rb">lib/rspec-puppet/matchers/create_generic.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link"><a href="../../../Object.html">Object</a></p>
+        
+      </div>
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-new">::new</a></li>
+          
+          <li><a href="#method-i-description">#description</a></li>
+          
+          <li><a href="#method-i-failure_message_for_should">#failure_message_for_should</a></li>
+          
+          <li><a href="#method-i-failure_message_for_should_not">#failure_message_for_should_not</a></li>
+          
+          <li><a href="#method-i-matches-3F">#matches?</a></li>
+          
+          <li><a href="#method-i-method_missing">#method_missing</a></li>
+          
+          <li><a href="#method-i-with">#with</a></li>
+          
+          <li><a href="#method-i-without">#without</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../../../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../../../RSpec.html">RSpec</a></li>
+        
+          <li><a href="../../../RSpec/Puppet.html">RSpec::Puppet</a></li>
+        
+          <li><a href="../../../RSpec/Puppet/ClassExampleGroup.html">RSpec::Puppet::ClassExampleGroup</a></li>
+        
+          <li><a href="../../../RSpec/Puppet/DefineExampleGroup.html">RSpec::Puppet::DefineExampleGroup</a></li>
+        
+          <li><a href="../../../RSpec/Puppet/FunctionExampleGroup.html">RSpec::Puppet::FunctionExampleGroup</a></li>
+        
+          <li><a href="../../../RSpec/Puppet/FunctionMatchers.html">RSpec::Puppet::FunctionMatchers</a></li>
+        
+          <li><a href="../../../RSpec/Puppet/HostExampleGroup.html">RSpec::Puppet::HostExampleGroup</a></li>
+        
+          <li><a href="../../../RSpec/Puppet/ManifestMatchers.html">RSpec::Puppet::ManifestMatchers</a></li>
+        
+          <li><a href="../../../RSpec/Puppet/ManifestMatchers/CreateGeneric.html">RSpec::Puppet::ManifestMatchers::CreateGeneric</a></li>
+        
+          <li><a href="../../../RSpec/Puppet/Setup.html">RSpec::Puppet::Setup</a></li>
+        
+          <li><a href="../../../RSpec/Puppet/Support.html">RSpec::Puppet::Support</a></li>
+        
+          <li><a href="../../../Object.html">Object</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">RSpec::Puppet::ManifestMatchers::CreateGeneric</h1>
+
+    <div id="description" class="description">
+      
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="new-method" class="method-detail ">
+          <a name="method-c-new"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">new</span><span
+              class="method-args">(*args, &block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="new-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec-puppet/matchers/create_generic.rb, line 4</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(*<span class="ruby-identifier">args</span>, &amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-ivar">@exp_resource_type</span> = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">shift</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp">/^(create|contain)_/</span>, <span class="ruby-string">''</span>)
+  <span class="ruby-ivar">@args</span> = <span class="ruby-identifier">args</span>
+  <span class="ruby-ivar">@block</span> = <span class="ruby-identifier">block</span>
+  <span class="ruby-ivar">@referenced_type</span> = <span class="ruby-identifier">referenced_type</span>(<span class="ruby-ivar">@exp_resource_type</span>)
+  <span class="ruby-ivar">@title</span> = <span class="ruby-identifier">args</span>[<span class="ruby-value">0</span>]
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- new-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- new-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="description-method" class="method-detail ">
+          <a name="method-i-description"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">description</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="description-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec-puppet/matchers/create_generic.rb, line 88</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">description</span>
+  <span class="ruby-identifier">values</span> = []
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@expected_params</span>
+    <span class="ruby-ivar">@expected_params</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">name</span>, <span class="ruby-identifier">value</span><span class="ruby-operator">|</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">value</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Regexp</span>)
+        <span class="ruby-identifier">values</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;#{name.to_s} matching #{value.inspect}&quot;</span>
+      <span class="ruby-keyword">else</span>
+        <span class="ruby-identifier">values</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;#{name.to_s} =&gt; #{value.inspect}&quot;</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@expected_undef_params</span>
+    <span class="ruby-ivar">@expected_undef_params</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">name</span>, <span class="ruby-identifier">value</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">values</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;#{name.to_s} undefined&quot;</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">unless</span> <span class="ruby-identifier">values</span>.<span class="ruby-identifier">empty?</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">values</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">==</span> <span class="ruby-value">1</span>
+      <span class="ruby-identifier">value_str</span> = <span class="ruby-node">&quot; with #{values.first}&quot;</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">value_str</span> = <span class="ruby-node">&quot; with #{values[0..-2].join(&quot;, &quot;)} and #{values[-1]}&quot;</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-node">&quot;contain #{@referenced_type}[#{@title}]#{value_str}&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- description-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- description-method -->
+
+      
+        <div id="failure_message_for_should-method" class="method-detail ">
+          <a name="method-i-failure_message_for_should"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">failure_message_for_should</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="failure_message_for_should-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec-puppet/matchers/create_generic.rb, line 80</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">failure_message_for_should</span>
+  <span class="ruby-node">&quot;expected that the catalogue would contain #{@referenced_type}[#{@title}]#{errors}&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- failure_message_for_should-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- failure_message_for_should-method -->
+
+      
+        <div id="failure_message_for_should_not-method" class="method-detail ">
+          <a name="method-i-failure_message_for_should_not"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">failure_message_for_should_not</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="failure_message_for_should_not-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec-puppet/matchers/create_generic.rb, line 84</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">failure_message_for_should_not</span>
+  <span class="ruby-node">&quot;expected that the catalogue would not contain #{@referenced_type}[#{@title}]#{errors}&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- failure_message_for_should_not-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- failure_message_for_should_not-method -->
+
+      
+        <div id="matches-3F-method" class="method-detail ">
+          <a name="method-i-matches-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">matches?</span><span
+              class="method-args">(catalogue)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="matches-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec-puppet/matchers/create_generic.rb, line 38</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">matches?</span>(<span class="ruby-identifier">catalogue</span>)
+  <span class="ruby-identifier">ret</span> = <span class="ruby-keyword">true</span>
+  <span class="ruby-identifier">resource</span> = <span class="ruby-identifier">catalogue</span>.<span class="ruby-identifier">resource</span>(<span class="ruby-ivar">@referenced_type</span>, <span class="ruby-ivar">@title</span>)
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">resource</span>.<span class="ruby-identifier">nil?</span>
+    <span class="ruby-identifier">ret</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">rsrc_hsh</span> = <span class="ruby-identifier">resource</span>.<span class="ruby-identifier">to_hash</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@expected_params</span>
+      <span class="ruby-ivar">@expected_params</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">name</span>, <span class="ruby-identifier">value</span><span class="ruby-operator">|</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">value</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Regexp</span>) <span class="ruby-keyword">then</span>
+          <span class="ruby-keyword">unless</span> <span class="ruby-identifier">rsrc_hsh</span>[<span class="ruby-identifier">name</span>.<span class="ruby-identifier">to_sym</span>].<span class="ruby-identifier">to_s</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">value</span>
+            <span class="ruby-identifier">ret</span> = <span class="ruby-keyword">false</span>
+            (<span class="ruby-ivar">@errors</span> <span class="ruby-operator">||=</span> []) <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;#{name.to_s} matching `#{value.inspect}` but its value of `#{rsrc_hsh[name.to_sym].inspect}` does not&quot;</span>
+          <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">value</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Array</span>) <span class="ruby-keyword">then</span>
+          <span class="ruby-keyword">unless</span> <span class="ruby-constant">Array</span>(<span class="ruby-identifier">rsrc_hsh</span>[<span class="ruby-identifier">name</span>.<span class="ruby-identifier">to_sym</span>]).<span class="ruby-identifier">flatten</span>.<span class="ruby-identifier">join</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">value</span>.<span class="ruby-identifier">flatten</span>.<span class="ruby-identifier">join</span>
+            <span class="ruby-identifier">ret</span> = <span class="ruby-keyword">false</span>
+            (<span class="ruby-ivar">@errors</span> <span class="ruby-operator">||=</span> []) <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;#{name.to_s} set to `#{value.inspect}` but it is set to `#{rsrc_hsh[name.to_sym].inspect}` in the catalogue&quot;</span>
+          <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">else</span>
+          <span class="ruby-keyword">unless</span> <span class="ruby-identifier">rsrc_hsh</span>[<span class="ruby-identifier">name</span>.<span class="ruby-identifier">to_sym</span>].<span class="ruby-identifier">to_s</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">value</span>.<span class="ruby-identifier">to_s</span>
+            <span class="ruby-identifier">ret</span> = <span class="ruby-keyword">false</span>
+            (<span class="ruby-ivar">@errors</span> <span class="ruby-operator">||=</span> []) <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;#{name.to_s} set to `#{value.inspect}` but it is set to `#{rsrc_hsh[name.to_sym].inspect}` in the catalogue&quot;</span>
+          <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">end</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@expected_undef_params</span>
+      <span class="ruby-ivar">@expected_undef_params</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">name</span><span class="ruby-operator">|</span>
+        <span class="ruby-keyword">unless</span> <span class="ruby-identifier">resource</span>.<span class="ruby-identifier">send</span>(<span class="ruby-value">:parameters</span>)[<span class="ruby-identifier">name</span>.<span class="ruby-identifier">to_sym</span>].<span class="ruby-identifier">nil?</span>
+          <span class="ruby-identifier">ret</span> = <span class="ruby-keyword">false</span>
+          (<span class="ruby-ivar">@errors</span> <span class="ruby-operator">||=</span> []) <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;#{name.to_s} undefined&quot;</span>
+        <span class="ruby-keyword">end</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">ret</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- matches-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- matches-3F-method -->
+
+      
+        <div id="method_missing-method" class="method-detail ">
+          <a name="method-i-method_missing"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">method_missing</span><span
+              class="method-args">(method, *args, &block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="method_missing-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec-puppet/matchers/create_generic.rb, line 24</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">method_missing</span>(<span class="ruby-identifier">method</span>, *<span class="ruby-identifier">args</span>, &amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">method</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/^with_/</span>
+    <span class="ruby-identifier">param</span> = <span class="ruby-identifier">method</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp">/^with_/</span>, <span class="ruby-string">''</span>)
+    (<span class="ruby-ivar">@expected_params</span> <span class="ruby-operator">||=</span> []) <span class="ruby-operator">&lt;&lt;</span> [<span class="ruby-identifier">param</span>, <span class="ruby-identifier">args</span>[<span class="ruby-value">0</span>]]
+    <span class="ruby-keyword">self</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">method</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/^without_/</span>
+    <span class="ruby-identifier">param</span> = <span class="ruby-identifier">method</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp">/^without_/</span>, <span class="ruby-string">''</span>)
+    (<span class="ruby-ivar">@expected_undef_params</span> <span class="ruby-operator">||=</span> []) <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">param</span>
+    <span class="ruby-keyword">self</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-keyword">super</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- method_missing-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- method_missing-method -->
+
+      
+        <div id="with-method" class="method-detail ">
+          <a name="method-i-with"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">with</span><span
+              class="method-args">(*args, &block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="with-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec-puppet/matchers/create_generic.rb, line 12</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">with</span>(*<span class="ruby-identifier">args</span>, &amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">params</span> = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">shift</span>
+  <span class="ruby-ivar">@expected_params</span> = (<span class="ruby-ivar">@expected_params</span> <span class="ruby-operator">||</span> []) <span class="ruby-operator">|</span> <span class="ruby-identifier">params</span>.<span class="ruby-identifier">to_a</span>
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- with-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- with-method -->
+
+      
+        <div id="without-method" class="method-detail ">
+          <a name="method-i-without"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">without</span><span
+              class="method-args">(*args, &block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="without-source">
+<pre>
+<span class="ruby-comment"># File lib/rspec-puppet/matchers/create_generic.rb, line 18</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">without</span>(*<span class="ruby-identifier">args</span>, &amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">params</span> = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">shift</span>
+  <span class="ruby-ivar">@expected_undef_params</span> = (<span class="ruby-ivar">@expected_undef_params</span> <span class="ruby-operator">||</span> []) <span class="ruby-operator">|</span> <span class="ruby-constant">Array</span>(<span class="ruby-identifier">params</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- without-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- without-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

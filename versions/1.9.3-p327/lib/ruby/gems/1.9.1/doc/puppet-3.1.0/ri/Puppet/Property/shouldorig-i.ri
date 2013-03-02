@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"shouldorig:EFI" Puppet::Property#shouldorig;FI"R;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"VReturns the original wanted value(s) _(should)_ unprocessed by munging/unmunging.;TI"<The original values are set by {#value=} or {#should=}.;TI"@return (see #should);T:
+@file0FI"lib/puppet/property.rb;T

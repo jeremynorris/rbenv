@@ -1,0 +1,4 @@
+U:RDoc::Attr[iI"validater:EFI"!Puppet::Parameter::validater;FI"R;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"Unused?;TI"j@todo The term "validater" only appears in this location in the Puppet code base. There is `validate`;To:RDoc::Markup::Verbatim;	[I"Cwhich seems to works fine without this attribute declaration.
+;Fo;
+;	[I"@api private;T:
+@file0TI"lib/puppet/parameter.rb;T

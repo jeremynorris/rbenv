@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>facter-1.6.17 Documentation</title>
+
+  <link type="text/css" media="screen" href="rdoc.css" rel="stylesheet" />
+
+  <script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body class="indexpage">
+
+  
+  <h1>facter-1.6.17 Documentation</h1>
+
+  
+  <p>This is the API documentation for 'facter-1.6.17 Documentation'.</p>
+  
+
+  
+  
+
+  <h2 id="classes">Classes/Modules</h2>
+  <ul>
+    
+    <li class="module"><a href="Facter.html">Facter</a></li>
+    
+    <li class="module"><a href="Facter/Application.html">Facter::Application</a></li>
+    
+    <li class="module"><a href="Facter/Manufacturer.html">Facter::Manufacturer</a></li>
+    
+    <li class="module"><a href="Facter/Memory.html">Facter::Memory</a></li>
+    
+    <li class="module"><a href="Facter/NetMask.html">Facter::NetMask</a></li>
+    
+    <li class="module"><a href="Facter/Util.html">Facter::Util</a></li>
+    
+    <li class="class"><a href="Facter/Util/Collection.html">Facter::Util::Collection</a></li>
+    
+    <li class="module"><a href="Facter/Util/Config.html">Facter::Util::Config</a></li>
+    
+    <li class="class"><a href="Facter/Util/Confine.html">Facter::Util::Confine</a></li>
+    
+    <li class="module"><a href="Facter/Util/EC2.html">Facter::Util::EC2</a></li>
+    
+    <li class="class"><a href="Facter/Util/Fact.html">Facter::Util::Fact</a></li>
+    
+    <li class="module"><a href="Facter/Util/IP.html">Facter::Util::IP</a></li>
+    
+    <li class="class"><a href="Facter/Util/Loader.html">Facter::Util::Loader</a></li>
+    
+    <li class="module"><a href="Facter/Util/Macaddress.html">Facter::Util::Macaddress</a></li>
+    
+    <li class="module"><a href="Facter/Util/Macaddress/Darwin.html">Facter::Util::Macaddress::Darwin</a></li>
+    
+    <li class="module"><a href="Facter/Util/Macaddress/Windows.html">Facter::Util::Macaddress::Windows</a></li>
+    
+    <li class="module"><a href="Facter/Util/Macosx.html">Facter::Util::Macosx</a></li>
+    
+    <li class="module"><a href="Facter/Util/MonkeyPatches.html">Facter::Util::MonkeyPatches</a></li>
+    
+    <li class="module"><a href="Facter/Util/MonkeyPatches/Lines.html">Facter::Util::MonkeyPatches::Lines</a></li>
+    
+    <li class="module"><a href="Facter/Util/Processor.html">Facter::Util::Processor</a></li>
+    
+    <li class="module"><a href="Facter/Util/Registry.html">Facter::Util::Registry</a></li>
+    
+    <li class="class"><a href="Facter/Util/Resolution.html">Facter::Util::Resolution</a></li>
+    
+    <li class="module"><a href="Facter/Util/Uptime.html">Facter::Util::Uptime</a></li>
+    
+    <li class="module"><a href="Facter/Util/Values.html">Facter::Util::Values</a></li>
+    
+    <li class="module"><a href="Facter/Util/Virtual.html">Facter::Util::Virtual</a></li>
+    
+    <li class="module"><a href="Facter/Util/Vlans.html">Facter::Util::Vlans</a></li>
+    
+    <li class="module"><a href="Facter/Util/WMI.html">Facter::Util::WMI</a></li>
+    
+    <li class="module"><a href="Facter/Util/Xendomains.html">Facter::Util::Xendomains</a></li>
+    
+    <li class="module"><a href="Plist.html">Plist</a></li>
+    
+    <li class="module"><a href="Plist/Emit.html">Plist::Emit</a></li>
+    
+    <li class="class"><a href="Plist/Listener.html">Plist::Listener</a></li>
+    
+    <li class="class"><a href="Plist/PArray.html">Plist::PArray</a></li>
+    
+    <li class="class"><a href="Plist/PData.html">Plist::PData</a></li>
+    
+    <li class="class"><a href="Plist/PDate.html">Plist::PDate</a></li>
+    
+    <li class="class"><a href="Plist/PDict.html">Plist::PDict</a></li>
+    
+    <li class="class"><a href="Plist/PFalse.html">Plist::PFalse</a></li>
+    
+    <li class="class"><a href="Plist/PInteger.html">Plist::PInteger</a></li>
+    
+    <li class="class"><a href="Plist/PKey.html">Plist::PKey</a></li>
+    
+    <li class="class"><a href="Plist/PList.html">Plist::PList</a></li>
+    
+    <li class="class"><a href="Plist/PReal.html">Plist::PReal</a></li>
+    
+    <li class="class"><a href="Plist/PString.html">Plist::PString</a></li>
+    
+    <li class="class"><a href="Plist/PTag.html">Plist::PTag</a></li>
+    
+    <li class="class"><a href="Plist/PTrue.html">Plist::PTrue</a></li>
+    
+    <li class="class"><a href="Plist/StreamParser.html">Plist::StreamParser</a></li>
+    
+    <li class="class"><a href="IO.html">IO</a></li>
+    
+    <li class="class"><a href="Object.html">Object</a></li>
+    
+    <li class="class"><a href="String.html">String</a></li>
+    
+  </ul>
+
+  <h2 id="methods">Methods</h2>
+  <ul>
+    
+      <li><a href="Facter.html#method-c-5B-5D">::[] &mdash; Facter</a></li>
+    
+      <li><a href="Facter/Util/Resolution.html#method-c-absolute_path-3F">::absolute_path? &mdash; Facter::Util::Resolution</a></li>
+    
+      <li><a href="Facter.html#method-c-add">::add &mdash; Facter</a></li>
+    
+      <li><a href="Facter/Util/Processor.html#method-c-aix_processor_list">::aix_processor_list &mdash; Facter::Util::Processor</a></li>
+    
+      <li><a href="Facter/Util/IP.html#method-c-alphafy">::alphafy &mdash; Facter::Util::IP</a></li>
+    
+      <li><a href="Facter/Util/EC2.html#method-c-can_connect-3F">::can_connect? &mdash; Facter::Util::EC2</a></li>
+    
+      <li><a href="Facter.html#method-c-clear">::clear &mdash; Facter</a></li>
+    
+      <li><a href="Facter.html#method-c-clear_messages">::clear_messages &mdash; Facter</a></li>
+    
+      <li><a href="Facter.html#method-c-collection">::collection &mdash; Facter</a></li>
+    
+      <li><a href="Facter/Util/WMI.html#method-c-connect">::connect &mdash; Facter::Util::WMI</a></li>
+    
+      <li><a href="Facter/Util/IP.html#method-c-convert_from_hex-3F">::convert_from_hex? &mdash; Facter::Util::IP</a></li>
+    
+      <li><a href="Facter.html#method-c-debug">::debug &mdash; Facter</a></li>
+    
+      <li><a href="Facter.html#method-c-debugging">::debugging &mdash; Facter</a></li>
+    
+      <li><a href="Facter.html#method-c-debugging-3F">::debugging? &mdash; Facter</a></li>
+    
+      <li><a href="Facter/Util/Macaddress/Darwin.html#method-c-default_interface">::default_interface &mdash; Facter::Util::Macaddress::Darwin</a></li>
+    
+      <li><a href="Facter/Manufacturer.html#method-c-dmi_find_system_info">::dmi_find_system_info &mdash; Facter::Manufacturer</a></li>
+    
+      <li><a href="Plist/Emit.html#method-c-dump">::dump &mdash; Plist::Emit</a></li>
+    
+      <li><a href="Facter.html#method-c-each">::each &mdash; Facter</a></li>
+    
+      <li><a href="Facter/Util/Processor.html#method-c-enum_cpuinfo">::enum_cpuinfo &mdash; Facter::Util::Processor</a></li>
+    
+      <li><a href="Facter/Util/Processor.html#method-c-enum_kstat">::enum_kstat &mdash; Facter::Util::Processor</a></li>
+    
+      <li><a href="Facter/Util/Resolution.html#method-c-exec">::exec &mdash; Facter::Util::Resolution</a></li>
+    
+      <li><a href="Facter/Util/WMI.html#method-c-execquery">::execquery &mdash; Facter::Util::WMI</a></li>
+    
+      <li><a href="Facter/Util/Resolution.html#method-c-expand_command">::expand_command &mdash; Facter::Util::Resolution</a></li>
+    
+      <li><a href="Facter/Util/IP.html#method-c-get_all_interface_output">::get_all_interface_output &mdash; Facter::Util::IP</a></li>
+    
+      <li><a href="Facter/Util/IP.html#method-c-get_arp_value">::get_arp_value &mdash; Facter::Util::IP</a></li>
+    
+      <li><a href="Facter/Util/IP.html#method-c-get_bonding_master">::get_bonding_master &mdash; Facter::Util::IP</a></li>
+    
+      <li><a href="Facter/Manufacturer.html#method-c-get_dmi_table">::get_dmi_table &mdash; Facter::Manufacturer</a></li>
+    
+      <li><a href="Facter/Util/Xendomains.html#method-c-get_domains">::get_domains &mdash; Facter::Util::Xendomains</a></li>
+    
+      <li><a href="Facter/Util/IP.html#method-c-get_ifconfig">::get_ifconfig &mdash; Facter::Util::IP</a></li>
+    
+      <li><a href="Facter/Util/IP.html#method-c-get_infiniband_macaddress">::get_infiniband_macaddress &mdash; Facter::Util::IP</a></li>
+    
+      <li><a href="Facter/Util/IP.html#method-c-get_interface_value">::get_interface_value &mdash; Facter::Util::IP</a></li>
+    
+      <li><a href="Facter/Util/IP.html#method-c-get_interfaces">::get_interfaces &mdash; Facter::Util::IP</a></li>
+    
+      <li><a href="Facter/NetMask.html#method-c-get_netmask">::get_netmask &mdash; Facter::NetMask</a></li>
+    
+      <li><a href="Facter/Util/IP.html#method-c-get_network_value">::get_network_value &mdash; Facter::Util::IP</a></li>
+    
+      <li><a href="Facter/Util/IP.html#method-c-get_output_for_interface_and_label">::get_output_for_interface_and_label &mdash; Facter::Util::IP</a></li>
+    
+      <li><a href="Facter/Util/IP.html#method-c-get_single_interface_output">::get_single_interface_output &mdash; Facter::Util::IP</a></li>
+    
+      <li><a href="Facter/Util/Uptime.html#method-c-get_uptime_seconds_unix">::get_uptime_seconds_unix &mdash; Facter::Util::Uptime</a></li>
+    
+      <li><a href="Facter/Util/Uptime.html#method-c-get_uptime_seconds_win">::get_uptime_seconds_win &mdash; Facter::Util::Uptime</a></li>
+    
+      <li><a href="Facter/Util/Vlans.html#method-c-get_vlan_config">::get_vlan_config &mdash; Facter::Util::Vlans</a></li>
+    
+      <li><a href="Facter/Util/Vlans.html#method-c-get_vlans">::get_vlans &mdash; Facter::Util::Vlans</a></li>
+    
+      <li><a href="Facter/Util/Processor.html#method-c-getconf_cpu_chip_type">::getconf_cpu_chip_type &mdash; Facter::Util::Processor</a></li>
+    
+      <li><a href="Facter/Util/Processor.html#method-c-getconf_cpu_version">::getconf_cpu_version &mdash; Facter::Util::Processor</a></li>
+    
+      <li><a href="Facter/Util/Macosx.html#method-c-hardware_overview">::hardware_overview &mdash; Facter::Util::Macosx</a></li>
+    
+      <li><a href="Facter/Util/EC2.html#method-c-has_ec2_arp-3F">::has_ec2_arp? &mdash; Facter::Util::EC2</a></li>
+    
+      <li><a href="Facter/Util/EC2.html#method-c-has_euca_mac-3F">::has_euca_mac? &mdash; Facter::Util::EC2</a></li>
+    
+      <li><a href="Facter/Util/EC2.html#method-c-has_openstack_mac-3F">::has_openstack_mac? &mdash; Facter::Util::EC2</a></li>
+    
+      <li><a href="Facter/Util/Registry.html#method-c-hklm_read">::hklm_read &mdash; Facter::Util::Registry</a></li>
+    
+      <li><a href="Facter/Util/IP.html#method-c-hpux_ifconfig_interface">::hpux_ifconfig_interface &mdash; Facter::Util::IP</a></li>
+    
+      <li><a href="Facter/Util/IP.html#method-c-hpux_lanscan">::hpux_lanscan &mdash; Facter::Util::IP</a></li>
+    
+      <li><a href="Facter/Util/IP.html#method-c-hpux_netstat_in">::hpux_netstat_in &mdash; Facter::Util::IP</a></li>
+    
+      <li><a href="Facter/Util/Processor.html#method-c-hpux_processor_list">::hpux_processor_list &mdash; Facter::Util::Processor</a></li>
+    
+      <li><a href="Facter/Util/Virtual.html#method-c-hpvm-3F">::hpvm? &mdash; Facter::Util::Virtual</a></li>
+    
+      <li><a href="Facter/Util/IP.html#method-c-ifconfig_interface">::ifconfig_interface &mdash; Facter::Util::IP</a></li>
+    
+      <li><a href="Plist/PTag.html#method-c-inherited">::inherited &mdash; Plist::PTag</a></li>
+    
+      <li><a href="Facter/Util/Macosx.html#method-c-intern_xml">::intern_xml &mdash; Facter::Util::Macosx</a></li>
+    
+      <li><a href="Facter/Util/Processor.html#method-c-ioscan">::ioscan &mdash; Facter::Util::Processor</a></li>
+    
+      <li><a href="Facter/Util/Config.html#method-c-is_windows-3F">::is_windows? &mdash; Facter::Util::Config</a></li>
+    
+      <li><a href="Facter/Util/Virtual.html#method-c-jail-3F">::jail? &mdash; Facter::Util::Virtual</a></li>
+    
+      <li><a href="Facter/Util/Processor.html#method-c-kernel_fact_value">::kernel_fact_value &mdash; Facter::Util::Processor</a></li>
+    
+      <li><a href="Facter/Util/Virtual.html#method-c-kvm-3F">::kvm? &mdash; Facter::Util::Virtual</a></li>
+    
+      <li><a href="Facter/Util/Virtual.html#method-c-kvm_type">::kvm_type &mdash; Facter::Util::Virtual</a></li>
+    
+      <li><a href="Facter.html#method-c-loadfacts">::loadfacts &mdash; Facter</a></li>
+    
+      <li><a href="Facter/Util/Processor.html#method-c-lsattr">::lsattr &mdash; Facter::Util::Processor</a></li>
+    
+      <li><a href="Facter/Util/Processor.html#method-c-lsdev">::lsdev &mdash; Facter::Util::Processor</a></li>
+    
+      <li><a href="Facter/Util/Virtual.html#method-c-lspci">::lspci &mdash; Facter::Util::Virtual</a></li>
+    
+      <li><a href="Facter/Util/Macaddress/Darwin.html#method-c-macaddress">::macaddress &mdash; Facter::Util::Macaddress::Darwin</a></li>
+    
+      <li><a href="Facter/Util/Macaddress/Windows.html#method-c-macaddress">::macaddress &mdash; Facter::Util::Macaddress::Windows</a></li>
+    
+      <li><a href="Facter/Util/Processor.html#method-c-machinfo">::machinfo &mdash; Facter::Util::Processor</a></li>
+    
+      <li><a href="Plist/PTag.html#method-c-mappings">::mappings &mdash; Plist::PTag</a></li>
+    
+      <li><a href="Facter/Memory.html#method-c-meminfo_number">::meminfo_number &mdash; Facter::Memory</a></li>
+    
+      <li><a href="Facter.html#method-c-method_missing">::method_missing &mdash; Facter</a></li>
+    
+      <li><a href="Facter/Util/Processor.html#method-c-model">::model &mdash; Facter::Util::Processor</a></li>
+    
+      <li><a href="Plist/StreamParser.html#method-c-new">::new &mdash; Plist::StreamParser</a></li>
+    
+      <li><a href="Facter/Util/Fact.html#method-c-new">::new &mdash; Facter::Util::Fact</a></li>
+    
+      <li><a href="Plist/Listener.html#method-c-new">::new &mdash; Plist::Listener</a></li>
+    
+      <li><a href="Facter/Util/Resolution.html#method-c-new">::new &mdash; Facter::Util::Resolution</a></li>
+    
+      <li><a href="Plist/PTag.html#method-c-new">::new &mdash; Plist::PTag</a></li>
+    
+      <li><a href="Facter/Util/Loader.html#method-c-new">::new &mdash; Facter::Util::Loader</a></li>
+    
+      <li><a href="Facter/Util/Confine.html#method-c-new">::new &mdash; Facter::Util::Confine</a></li>
+    
+      <li><a href="Facter/Util/Collection.html#method-c-new">::new &mdash; Facter::Util::Collection</a></li>
+    
+      <li><a href="Facter/Util/Virtual.html#method-c-openvz-3F">::openvz? &mdash; Facter::Util::Virtual</a></li>
+    
+      <li><a href="Facter/Util/Virtual.html#method-c-openvz_cloudlinux-3F">::openvz_cloudlinux? &mdash; Facter::Util::Virtual</a></li>
+    
+      <li><a href="Facter/Util/Virtual.html#method-c-openvz_type">::openvz_type &mdash; Facter::Util::Virtual</a></li>
+    
+      <li><a href="Facter/Util/Macosx.html#method-c-os_overview">::os_overview &mdash; Facter::Util::Macosx</a></li>
+    
+      <li><a href="Plist.html#method-c-parse_xml">::parse_xml &mdash; Plist</a></li>
+    
+      <li><a href="Facter/Util/Macosx.html#method-c-profiler_data">::profiler_data &mdash; Facter::Util::Macosx</a></li>
+    
+      <li><a href="Facter/Util/Macosx.html#method-c-profiler_xml">::profiler_xml &mdash; Facter::Util::Macosx</a></li>
+    
+      <li><a href="Facter/Manufacturer.html#method-c-prtdiag_sparc_find_system_info">::prtdiag_sparc_find_system_info &mdash; Facter::Manufacturer</a></li>
+    
+      <li><a href="Facter.html#method-c-reset">::reset &mdash; Facter</a></li>
+    
+      <li><a href="Facter/Application.html#method-c-run">::run &mdash; Facter::Application</a></li>
+    
+      <li><a href="Plist/Emit.html#method-c-save_plist">::save_plist &mdash; Plist::Emit</a></li>
+    
+      <li><a href="Facter/Memory.html#method-c-scale_number">::scale_number &mdash; Facter::Memory</a></li>
+    
+      <li><a href="Facter.html#method-c-search">::search &mdash; Facter</a></li>
+    
+      <li><a href="Facter.html#method-c-search_path">::search_path &mdash; Facter</a></li>
+    
+      <li><a href="Facter/Util/Resolution.html#method-c-search_paths">::search_paths &mdash; Facter::Util::Resolution</a></li>
+    
+      <li><a href="Facter.html#method-c-show_time">::show_time &mdash; Facter</a></li>
+    
+      <li><a href="Facter/Util/Macaddress.html#method-c-standardize">::standardize &mdash; Facter::Util::Macaddress</a></li>
+    
+      <li><a href="Facter/Util/IP.html#method-c-supported_platforms">::supported_platforms &mdash; Facter::Util::IP</a></li>
+    
+      <li><a href="Facter/Util/Macosx.html#method-c-sw_vers">::sw_vers &mdash; Facter::Util::Macosx</a></li>
+    
+      <li><a href="Facter/Manufacturer.html#method-c-sysctl_find_system_info">::sysctl_find_system_info &mdash; Facter::Manufacturer</a></li>
+    
+      <li><a href="Facter.html#method-c-timing">::timing &mdash; Facter</a></li>
+    
+      <li><a href="Facter.html#method-c-timing-3F">::timing? &mdash; Facter</a></li>
+    
+      <li><a href="Facter/Util/EC2.html#method-c-userdata">::userdata &mdash; Facter::Util::EC2</a></li>
+    
+      <li><a href="Facter.html#method-c-version">::version &mdash; Facter</a></li>
+    
+      <li><a href="Facter.html#method-c-version-3D">::version= &mdash; Facter</a></li>
+    
+      <li><a href="Facter/Util/Virtual.html#method-c-virt_what">::virt_what &mdash; Facter::Util::Virtual</a></li>
+    
+      <li><a href="Facter/Memory.html#method-c-vmstat_darwin_find_free_memory">::vmstat_darwin_find_free_memory &mdash; Facter::Memory</a></li>
+    
+      <li><a href="Facter/Memory.html#method-c-vmstat_find_free_memory">::vmstat_find_free_memory &mdash; Facter::Memory</a></li>
+    
+      <li><a href="Facter/Util/Virtual.html#method-c-vserver-3F">::vserver? &mdash; Facter::Util::Virtual</a></li>
+    
+      <li><a href="Facter/Util/Virtual.html#method-c-vserver_type">::vserver_type &mdash; Facter::Util::Virtual</a></li>
+    
+      <li><a href="Facter.html#method-c-warn">::warn &mdash; Facter</a></li>
+    
+      <li><a href="Facter.html#method-c-warnonce">::warnonce &mdash; Facter</a></li>
+    
+      <li><a href="Facter/Util/Resolution.html#method-c-which">::which &mdash; Facter::Util::Resolution</a></li>
+    
+      <li><a href="Facter/Manufacturer.html#method-c-win32_find_system_info">::win32_find_system_info &mdash; Facter::Manufacturer</a></li>
+    
+      <li><a href="Facter/Util/WMI.html#method-c-wmi_resource_uri">::wmi_resource_uri &mdash; Facter::Util::WMI</a></li>
+    
+      <li><a href="Facter/Util/Virtual.html#method-c-xen-3F">::xen? &mdash; Facter::Util::Virtual</a></li>
+    
+      <li><a href="Facter/Util/Virtual.html#method-c-zlinux-3F">::zlinux? &mdash; Facter::Util::Virtual</a></li>
+    
+      <li><a href="Facter/Util/Virtual.html#method-c-zone-3F">::zone? &mdash; Facter::Util::Virtual</a></li>
+    
+      <li><a href="Facter/Util/Collection.html#method-i-5B-5D">#[] &mdash; Facter::Util::Collection</a></li>
+    
+      <li><a href="Facter/Util/Fact.html#method-i-add">#add &mdash; Facter::Util::Fact</a></li>
+    
+      <li><a href="Facter/Util/Collection.html#method-i-add">#add &mdash; Facter::Util::Collection</a></li>
+    
+      <li><a href="Facter/Util/Resolution.html#method-i-confine">#confine &mdash; Facter::Util::Resolution</a></li>
+    
+      <li><a href="Facter/Util/Values.html#method-i-convert">#convert &mdash; Facter::Util::Values</a></li>
+    
+      <li><a href="Facter/Util/Collection.html#method-i-each">#each &mdash; Facter::Util::Collection</a></li>
+    
+      <li><a href="Facter/Util/Collection.html#method-i-fact">#fact &mdash; Facter::Util::Collection</a></li>
+    
+      <li><a href="Facter/Util/Collection.html#method-i-flush">#flush &mdash; Facter::Util::Collection</a></li>
+    
+      <li><a href="Facter/Util/Fact.html#method-i-flush">#flush &mdash; Facter::Util::Fact</a></li>
+    
+      <li><a href="Object.html#method-i-get_address_after_token">#get_address_after_token &mdash; Object</a></li>
+    
+      <li><a href="Facter/Util/Resolution.html#method-i-has_weight">#has_weight &mdash; Facter::Util::Resolution</a></li>
+    
+      <li><a href="Facter/Util/Resolution.html#method-i-interpreter-3D">#interpreter= &mdash; Facter::Util::Resolution</a></li>
+    
+      <li><a href="Facter/Util/Resolution.html#method-i-limit">#limit &mdash; Facter::Util::Resolution</a></li>
+    
+      <li><a href="Facter/Util/MonkeyPatches/Lines.html#method-i-lines">#lines &mdash; Facter::Util::MonkeyPatches::Lines</a></li>
+    
+      <li><a href="Facter/Util/Collection.html#method-i-list">#list &mdash; Facter::Util::Collection</a></li>
+    
+      <li><a href="Facter/Util/Loader.html#method-i-load">#load &mdash; Facter::Util::Loader</a></li>
+    
+      <li><a href="Facter/Util/Loader.html#method-i-load_all">#load_all &mdash; Facter::Util::Loader</a></li>
+    
+      <li><a href="Facter/Util/Collection.html#method-i-load_all">#load_all &mdash; Facter::Util::Collection</a></li>
+    
+      <li><a href="Facter/Util/Collection.html#method-i-loader">#loader &mdash; Facter::Util::Collection</a></li>
+    
+      <li><a href="Object.html#method-i-metadata">#metadata &mdash; Object</a></li>
+    
+      <li><a href="Plist/StreamParser.html#method-i-parse">#parse &mdash; Plist::StreamParser</a></li>
+    
+      <li><a href="Plist/Emit.html#method-i-save_plist">#save_plist &mdash; Plist::Emit</a></li>
+    
+      <li><a href="Facter/Util/Loader.html#method-i-search_path">#search_path &mdash; Facter::Util::Loader</a></li>
+    
+      <li><a href="Object.html#method-i-selinux_mount_point">#selinux_mount_point &mdash; Object</a></li>
+    
+      <li><a href="Facter/Util/Resolution.html#method-i-setcode">#setcode &mdash; Facter::Util::Resolution</a></li>
+    
+      <li><a href="Facter/Util/Resolution.html#method-i-suitable-3F">#suitable? &mdash; Facter::Util::Resolution</a></li>
+    
+      <li><a href="Plist/Listener.html#method-i-tag_end">#tag_end &mdash; Plist::Listener</a></li>
+    
+      <li><a href="Plist/Listener.html#method-i-tag_start">#tag_start &mdash; Plist::Listener</a></li>
+    
+      <li><a href="Plist/Listener.html#method-i-text">#text &mdash; Plist::Listener</a></li>
+    
+      <li><a href="Facter/Util/Collection.html#method-i-to_hash">#to_hash &mdash; Facter::Util::Collection</a></li>
+    
+      <li><a href="Plist/Emit.html#method-i-to_plist">#to_plist &mdash; Plist::Emit</a></li>
+    
+      <li><a href="Plist/PDate.html#method-i-to_ruby">#to_ruby &mdash; Plist::PDate</a></li>
+    
+      <li><a href="Plist/PData.html#method-i-to_ruby">#to_ruby &mdash; Plist::PData</a></li>
+    
+      <li><a href="Plist/PReal.html#method-i-to_ruby">#to_ruby &mdash; Plist::PReal</a></li>
+    
+      <li><a href="Plist/PDict.html#method-i-to_ruby">#to_ruby &mdash; Plist::PDict</a></li>
+    
+      <li><a href="Plist/PKey.html#method-i-to_ruby">#to_ruby &mdash; Plist::PKey</a></li>
+    
+      <li><a href="Plist/PList.html#method-i-to_ruby">#to_ruby &mdash; Plist::PList</a></li>
+    
+      <li><a href="Plist/PString.html#method-i-to_ruby">#to_ruby &mdash; Plist::PString</a></li>
+    
+      <li><a href="Plist/PArray.html#method-i-to_ruby">#to_ruby &mdash; Plist::PArray</a></li>
+    
+      <li><a href="Plist/PInteger.html#method-i-to_ruby">#to_ruby &mdash; Plist::PInteger</a></li>
+    
+      <li><a href="Plist/PFalse.html#method-i-to_ruby">#to_ruby &mdash; Plist::PFalse</a></li>
+    
+      <li><a href="Plist/PTrue.html#method-i-to_ruby">#to_ruby &mdash; Plist::PTrue</a></li>
+    
+      <li><a href="Plist/PTag.html#method-i-to_ruby">#to_ruby &mdash; Plist::PTag</a></li>
+    
+      <li><a href="Facter/Util/Resolution.html#method-i-to_s">#to_s &mdash; Facter::Util::Resolution</a></li>
+    
+      <li><a href="Facter/Util/Confine.html#method-i-to_s">#to_s &mdash; Facter::Util::Confine</a></li>
+    
+      <li><a href="Facter/Util/Confine.html#method-i-true-3F">#true? &mdash; Facter::Util::Confine</a></li>
+    
+      <li><a href="Object.html#method-i-userdata">#userdata &mdash; Object</a></li>
+    
+      <li><a href="Facter/Util/Fact.html#method-i-value">#value &mdash; Facter::Util::Fact</a></li>
+    
+      <li><a href="Facter/Util/Collection.html#method-i-value">#value &mdash; Facter::Util::Collection</a></li>
+    
+      <li><a href="Facter/Util/Resolution.html#method-i-value">#value &mdash; Facter::Util::Resolution</a></li>
+    
+      <li><a href="Facter/Util/Resolution.html#method-i-weight">#weight &mdash; Facter::Util::Resolution</a></li>
+    
+  </ul>
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+</body>
+</html>

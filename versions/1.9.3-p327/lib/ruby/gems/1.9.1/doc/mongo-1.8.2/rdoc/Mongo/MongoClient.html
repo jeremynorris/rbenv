@@ -1,0 +1,2576 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Class: Mongo::MongoClient</title>
+
+  <link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../lib/mongo/mongo_client_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/mongo/mongo_client.rb">lib/mongo/mongo_client.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link">Object</p>
+        
+      </div>
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-from_uri">::from_uri</a></li>
+          
+          <li><a href="#method-c-multi">::multi</a></li>
+          
+          <li><a href="#method-c-new">::new</a></li>
+          
+          <li><a href="#method-i-5B-5D">#[]</a></li>
+          
+          <li><a href="#method-i-active-3F">#active?</a></li>
+          
+          <li><a href="#method-i-add_auth">#add_auth</a></li>
+          
+          <li><a href="#method-i-apply_saved_authentication">#apply_saved_authentication</a></li>
+          
+          <li><a href="#method-i-authenticate_pools">#authenticate_pools</a></li>
+          
+          <li><a href="#method-i-check_opts">#check_opts</a></li>
+          
+          <li><a href="#method-i-checkin">#checkin</a></li>
+          
+          <li><a href="#method-i-checkout_reader">#checkout_reader</a></li>
+          
+          <li><a href="#method-i-checkout_writer">#checkout_writer</a></li>
+          
+          <li><a href="#method-i-clear_auths">#clear_auths</a></li>
+          
+          <li><a href="#method-i-close">#close</a></li>
+          
+          <li><a href="#method-i-connect">#connect</a></li>
+          
+          <li><a href="#method-i-connected-3F">#connected?</a></li>
+          
+          <li><a href="#method-i-copy_database">#copy_database</a></li>
+          
+          <li><a href="#method-i-database_info">#database_info</a></li>
+          
+          <li><a href="#method-i-database_names">#database_names</a></li>
+          
+          <li><a href="#method-i-db">#db</a></li>
+          
+          <li><a href="#method-i-drop_database">#drop_database</a></li>
+          
+          <li><a href="#method-i-host">#host</a></li>
+          
+          <li><a href="#method-i-host_port">#host_port</a></li>
+          
+          <li><a href="#method-i-lock-21">#lock!</a></li>
+          
+          <li><a href="#method-i-locked-3F">#locked?</a></li>
+          
+          <li><a href="#method-i-logout_pools">#logout_pools</a></li>
+          
+          <li><a href="#method-i-max_bson_size">#max_bson_size</a></li>
+          
+          <li><a href="#method-i-mongos-3F">#mongos?</a></li>
+          
+          <li><a href="#method-i-parse_init">#parse_init</a></li>
+          
+          <li><a href="#method-i-pin_pool">#pin_pool</a></li>
+          
+          <li><a href="#method-i-ping">#ping</a></li>
+          
+          <li><a href="#method-i-port">#port</a></li>
+          
+          <li><a href="#method-i-primary-3F">#primary?</a></li>
+          
+          <li><a href="#method-i-read_pool">#read_pool</a></li>
+          
+          <li><a href="#method-i-read_primary-3F">#read_primary?</a></li>
+          
+          <li><a href="#method-i-reconnect">#reconnect</a></li>
+          
+          <li><a href="#method-i-refresh">#refresh</a></li>
+          
+          <li><a href="#method-i-remove_auth">#remove_auth</a></li>
+          
+          <li><a href="#method-i-server_info">#server_info</a></li>
+          
+          <li><a href="#method-i-server_version">#server_version</a></li>
+          
+          <li><a href="#method-i-setup">#setup</a></li>
+          
+          <li><a href="#method-i-slave_ok-3F">#slave_ok?</a></li>
+          
+          <li><a href="#method-i-unlock-21">#unlock!</a></li>
+          
+          <li><a href="#method-i-unpin_pool">#unpin_pool</a></li>
+          
+          <li><a href="#method-i-valid_opts">#valid_opts</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+      <!-- Included Modules -->
+      <div id="includes-section" class="section">
+        <h3 class="section-header">Included Modules</h3>
+        <ul class="link-list">
+        
+        
+          <li><a class="include" href="Logging.html">Mongo::Logging</a></li>
+        
+        
+        
+          <li><a class="include" href="Networking.html">Mongo::Networking</a></li>
+        
+        
+        
+          <li><a class="include" href="WriteConcern.html">Mongo::WriteConcern</a></li>
+        
+        
+        </ul>
+      </div>
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../Mongo.html">Mongo</a></li>
+        
+          <li><a href="../Mongo/AuthenticationError.html">Mongo::AuthenticationError</a></li>
+        
+          <li><a href="../Mongo/Collection.html">Mongo::Collection</a></li>
+        
+          <li><a href="../Mongo/Connection.html">Mongo::Connection</a></li>
+        
+          <li><a href="../Mongo/ConnectionError.html">Mongo::ConnectionError</a></li>
+        
+          <li><a href="../Mongo/ConnectionFailure.html">Mongo::ConnectionFailure</a></li>
+        
+          <li><a href="../Mongo/ConnectionTimeoutError.html">Mongo::ConnectionTimeoutError</a></li>
+        
+          <li><a href="../Mongo/Constants.html">Mongo::Constants</a></li>
+        
+          <li><a href="../Mongo/Conversions.html">Mongo::Conversions</a></li>
+        
+          <li><a href="../Mongo/Cursor.html">Mongo::Cursor</a></li>
+        
+          <li><a href="../Mongo/DB.html">Mongo::DB</a></li>
+        
+          <li><a href="../Mongo/Grid.html">Mongo::Grid</a></li>
+        
+          <li><a href="../Mongo/GridError.html">Mongo::GridError</a></li>
+        
+          <li><a href="../Mongo/GridExt.html">Mongo::GridExt</a></li>
+        
+          <li><a href="../Mongo/GridExt/InstanceMethods.html">Mongo::GridExt::InstanceMethods</a></li>
+        
+          <li><a href="../Mongo/GridFileNotFound.html">Mongo::GridFileNotFound</a></li>
+        
+          <li><a href="../Mongo/GridFileSystem.html">Mongo::GridFileSystem</a></li>
+        
+          <li><a href="../Mongo/GridIO.html">Mongo::GridIO</a></li>
+        
+          <li><a href="../Mongo/GridMD5Failure.html">Mongo::GridMD5Failure</a></li>
+        
+          <li><a href="../Mongo/InvalidNSName.html">Mongo::InvalidNSName</a></li>
+        
+          <li><a href="../Mongo/InvalidOperation.html">Mongo::InvalidOperation</a></li>
+        
+          <li><a href="../Mongo/InvalidSortValueError.html">Mongo::InvalidSortValueError</a></li>
+        
+          <li><a href="../Mongo/LegacyWriteConcern.html">Mongo::LegacyWriteConcern</a></li>
+        
+          <li><a href="../Mongo/Logging.html">Mongo::Logging</a></li>
+        
+          <li><a href="../Mongo/Logging/Instrumenter.html">Mongo::Logging::Instrumenter</a></li>
+        
+          <li><a href="../Mongo/MongoArgumentError.html">Mongo::MongoArgumentError</a></li>
+        
+          <li><a href="../Mongo/MongoClient.html">Mongo::MongoClient</a></li>
+        
+          <li><a href="../Mongo/MongoDBError.html">Mongo::MongoDBError</a></li>
+        
+          <li><a href="../Mongo/MongoReplicaSetClient.html">Mongo::MongoReplicaSetClient</a></li>
+        
+          <li><a href="../Mongo/MongoRubyError.html">Mongo::MongoRubyError</a></li>
+        
+          <li><a href="../Mongo/MongoShardedClient.html">Mongo::MongoShardedClient</a></li>
+        
+          <li><a href="../Mongo/Networking.html">Mongo::Networking</a></li>
+        
+          <li><a href="../Mongo/Node.html">Mongo::Node</a></li>
+        
+          <li><a href="../Mongo/NodeWithTagsNotFound.html">Mongo::NodeWithTagsNotFound</a></li>
+        
+          <li><a href="../Mongo/OperationFailure.html">Mongo::OperationFailure</a></li>
+        
+          <li><a href="../Mongo/OperationTimeout.html">Mongo::OperationTimeout</a></li>
+        
+          <li><a href="../Mongo/Pool.html">Mongo::Pool</a></li>
+        
+          <li><a href="../Mongo/PoolManager.html">Mongo::PoolManager</a></li>
+        
+          <li><a href="../Mongo/ReadPreference.html">Mongo::ReadPreference</a></li>
+        
+          <li><a href="../Mongo/ReplSetConnection.html">Mongo::ReplSetConnection</a></li>
+        
+          <li><a href="../Mongo/ReplicaSetConnectionError.html">Mongo::ReplicaSetConnectionError</a></li>
+        
+          <li><a href="../Mongo/SSLSocket.html">Mongo::SSLSocket</a></li>
+        
+          <li><a href="../Mongo/ServerVersion.html">Mongo::ServerVersion</a></li>
+        
+          <li><a href="../Mongo/ShardedConnection.html">Mongo::ShardedConnection</a></li>
+        
+          <li><a href="../Mongo/ShardingPoolManager.html">Mongo::ShardingPoolManager</a></li>
+        
+          <li><a href="../Mongo/Support.html">Mongo::Support</a></li>
+        
+          <li><a href="../Mongo/TCPSocket.html">Mongo::TCPSocket</a></li>
+        
+          <li><a href="../Mongo/ThreadLocalVariableManager.html">Mongo::ThreadLocalVariableManager</a></li>
+        
+          <li><a href="../Mongo/UNIXSocket.html">Mongo::UNIXSocket</a></li>
+        
+          <li><a href="../Mongo/URIParser.html">Mongo::URIParser</a></li>
+        
+          <li><a href="../Mongo/WriteConcern.html">Mongo::WriteConcern</a></li>
+        
+          <li><a href="../Class.html">Class</a></li>
+        
+          <li><a href="../Mutex.html">Mutex</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">Mongo::MongoClient</h1>
+
+    <div id="description" class="description">
+      
+<p>Instantiates and manages self.connections to MongoDB.</p>
+
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+      <!-- Constants -->
+      <div id="constants-list" class="section">
+        <h3 class="section-header">Constants</h3>
+        <dl>
+        
+          <dt><a name="CLIENT_ONLY_OPTS">CLIENT_ONLY_OPTS</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="ConditionVariable">ConditionVariable</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="DEFAULT_DB_NAME">DEFAULT_DB_NAME</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="DEFAULT_HOST">DEFAULT_HOST</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="DEFAULT_PORT">DEFAULT_PORT</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="GENERIC_OPTS">GENERIC_OPTS</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="Mutex">Mutex</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="POOL_OPTS">POOL_OPTS</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="READ_PREFERENCE_OPTS">READ_PREFERENCE_OPTS</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="TIMEOUT_OPTS">TIMEOUT_OPTS</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="WRITE_CONCERN_OPTS">WRITE_CONCERN_OPTS</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+        </dl>
+      </div>
+      
+
+      
+      <!-- Attributes -->
+      <div id="attribute-method-details" class="method-section section">
+        <h3 class="section-header">Attributes</h3>
+
+        
+        <div id="acceptable_latency-attribute-method" class="method-detail">
+          <a name="acceptable_latency"></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">acceptable_latency</span><span
+              class="attribute-access-type">[R]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+        <div id="auths-attribute-method" class="method-detail">
+          <a name="auths"></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">auths</span><span
+              class="attribute-access-type">[R]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+        <div id="connect_timeout-attribute-method" class="method-detail">
+          <a name="connect_timeout"></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">connect_timeout</span><span
+              class="attribute-access-type">[R]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+        <div id="host_to_try-attribute-method" class="method-detail">
+          <a name="host_to_try"></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">host_to_try</span><span
+              class="attribute-access-type">[R]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+        <div id="logger-attribute-method" class="method-detail">
+          <a name="logger"></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">logger</span><span
+              class="attribute-access-type">[R]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+        <div id="op_timeout-attribute-method" class="method-detail">
+          <a name="op_timeout"></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">op_timeout</span><span
+              class="attribute-access-type">[R]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+        <div id="pool_size-attribute-method" class="method-detail">
+          <a name="pool_size"></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">pool_size</span><span
+              class="attribute-access-type">[R]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+        <div id="pool_timeout-attribute-method" class="method-detail">
+          <a name="pool_timeout"></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">pool_timeout</span><span
+              class="attribute-access-type">[R]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+        <div id="primary-attribute-method" class="method-detail">
+          <a name="primary"></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">primary</span><span
+              class="attribute-access-type">[R]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+        <div id="primary_pool-attribute-method" class="method-detail">
+          <a name="primary_pool"></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">primary_pool</span><span
+              class="attribute-access-type">[R]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+        <div id="read-attribute-method" class="method-detail">
+          <a name="read"></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">read</span><span
+              class="attribute-access-type">[R]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+        <div id="size-attribute-method" class="method-detail">
+          <a name="size"></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">size</span><span
+              class="attribute-access-type">[R]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+        <div id="socket_class-attribute-method" class="method-detail">
+          <a name="socket_class"></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">socket_class</span><span
+              class="attribute-access-type">[R]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+        <div id="tag_sets-attribute-method" class="method-detail">
+          <a name="tag_sets"></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">tag_sets</span><span
+              class="attribute-access-type">[R]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+        <div id="write_concern-attribute-method" class="method-detail">
+          <a name="write_concern"></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">write_concern</span><span
+              class="attribute-access-type">[R]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+      </div><!-- attribute-method-details -->
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="from_uri-method" class="method-detail ">
+          <a name="method-c-from_uri"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">from_uri</span><span
+              class="method-args">(uri = ENV['MONGODB_URI'], extra_opts={})</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Initialize a connection to MongoDB using the MongoDB URI spec.</p>
+
+<p>Since <a href="MongoClient.html#method-c-new">MongoClient.new</a> cannot be
+used with any <tt>ENV["MONGODB_URI"]</tt> that has multiple hosts (implying
+a replicaset), you may use this when the type of your connection varies by
+environment and should be determined solely from
+<tt>ENV["MONGODB_URI"]</tt>.</p>
+
+<p>@param uri [String]</p>
+
+<pre>A string of the format mongodb://[username:password@]host1[:port1][,host2[:port2],...[,hostN[:portN]]][/database]</pre>
+
+<p>@param opts Any of the options available for <a
+href="MongoClient.html#method-c-new">MongoClient.new</a></p>
+
+<p>@return [<a href="MongoClient.html">Mongo::MongoClient</a>,
+Mongo::MongoReplicaSetClient]</p>
+            
+
+            
+            <div class="method-source-code" id="from_uri-source">
+<pre>
+<span class="ruby-comment"># File lib/mongo/mongo_client.rb, line 192</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">from_uri</span>(<span class="ruby-identifier">uri</span> = <span class="ruby-constant">ENV</span>[<span class="ruby-string">'MONGODB_URI'</span>], <span class="ruby-identifier">extra_opts</span>={})
+  <span class="ruby-identifier">parser</span> = <span class="ruby-constant">URIParser</span>.<span class="ruby-identifier">new</span> <span class="ruby-identifier">uri</span>
+  <span class="ruby-identifier">parser</span>.<span class="ruby-identifier">connection</span>(<span class="ruby-identifier">extra_opts</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- from_uri-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- from_uri-method -->
+
+      
+        <div id="multi-method" class="method-detail ">
+          <a name="method-c-multi"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">multi</span><span
+              class="method-args">(nodes, opts={})</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>DEPRECATED</p>
+
+<p>Initialize a connection to a MongoDB replica set using an array of seed
+nodes.</p>
+
+<p>The seed nodes specified will be used on the initial connection to the
+replica set, but note that this list of nodes will be replaced by the list
+of canonical nodes returned by running the is_master command on the replica
+set.</p>
+
+<p>@param nodes [Array] An array of arrays, each of which specifies a host and
+port. @param opts [Hash] Any of the available options that can be passed to
+<a href="MongoClient.html#method-c-new">MongoClient.new</a>.</p>
+
+<p>@option opts [String] :rs_name (nil) The name of the replica set to connect
+to. An exception will be</p>
+
+<pre>raised if unable to connect to a replica set with this name.</pre>
+
+<p>@option opts [Boolean] :read_secondary (false) When true, this connection
+object will pick a random slave</p>
+
+<pre>to send reads to.</pre>
+
+<p>@example</p>
+
+<pre>Mongo::MongoClient.multi([[&quot;db1.example.com&quot;, 27017], [&quot;db2.example.com&quot;, 27017]])</pre>
+
+<p>@example This connection will read from a random secondary node.</p>
+
+<pre>Mongo::MongoClient.multi([[&quot;db1.example.com&quot;, 27017], [&quot;db2.example.com&quot;, 27017], [&quot;db3.example.com&quot;, 27017]],
+                :read_secondary =&gt; true)</pre>
+
+<p>@return [Mongo::MongoClient]</p>
+
+<p>@deprecated</p>
+            
+
+            
+            <div class="method-source-code" id="multi-source">
+<pre>
+<span class="ruby-comment"># File lib/mongo/mongo_client.rb, line 175</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">multi</span>(<span class="ruby-identifier">nodes</span>, <span class="ruby-identifier">opts</span>={})
+  <span class="ruby-identifier">warn</span> <span class="ruby-string">&quot;MongoClient.multi is now deprecated and will be removed in v2.0. Please use MongoReplicaSetClient.new instead.&quot;</span>
+
+  <span class="ruby-constant">MongoReplicaSetClient</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">nodes</span>, <span class="ruby-identifier">opts</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- multi-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- multi-method -->
+
+      
+        <div id="new-method" class="method-detail ">
+          <a name="method-c-new"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">new</span><span
+              class="method-args">(*args)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Create a connection to single MongoDB instance.</p>
+
+<p>If no args are provided, it will check <tt>ENV["MONGODB_URI"]</tt>.</p>
+
+<p>You may specify whether connection to slave is permitted. In all cases, the
+default host is “localhost” and the default port is 27017.</p>
+
+<p>If you’re connecting to a replica set, you’ll need to use <a
+href="MongoReplicaSetClient.html#method-c-new">MongoReplicaSetClient.new</a>
+instead.</p>
+
+<p>Once connected to a replica set, you can find out which nodes are primary,
+secondary, and arbiters with the corresponding accessors: <a
+href="MongoClient.html#attribute-i-primary">MongoClient#primary</a>,
+MongoClient#secondaries, and MongoClient#arbiters. This is useful if your
+application needs to connect manually to nodes other than the primary.</p>
+
+<p>@param [String] host @param [Integer] port specify a port number here if
+only one host is being specified.</p>
+
+<p>@option opts [String, Integer, Symbol] :w (1) Set default number of nodes
+to which a write</p>
+
+<pre>should be acknowledged</pre>
+
+<p>@option opts [Boolean] :j (false) Set journal acknowledgement @option opts
+[Integer] :wtimeout (nil) Set replica set acknowledgement timeout @option
+opts [Boolean] :fsync (false) Set fsync acknowledgement.</p>
+
+<pre>Notes about write concern options:
+  Write concern options are propagated to objects instantiated from this MongoClient.
+  These defaults can be overridden upon instantiation of any object by explicitly setting an options hash
+  on initialization.</pre>
+
+<p>@option opts [Boolean] :slave_ok (false) Must be set to <tt>true</tt> when
+connecting</p>
+
+<pre>to a single, slave node.</pre>
+
+<p>@option opts [Logger, debug] :logger (nil) A Logger instance for debugging
+driver ops. Note that</p>
+
+<pre>logging negatively impacts performance; therefore, it should not be used for high-performance apps.</pre>
+
+<p>@option opts [Integer] :<a
+href="MongoClient.html#attribute-i-pool_size">pool_size</a> (1) The maximum
+number of socket self.connections allowed per</p>
+
+<pre>connection pool. Note: this setting is relevant only for multi-threaded applications.</pre>
+
+<p>@option opts [Float] :timeout (5.0) When all of the self.connections a pool
+are checked out,</p>
+
+<pre>this is the number of seconds to wait for a new connection to be released before throwing an exception.
+Note: this setting is relevant only for multi-threaded applications (which in Ruby are rare).</pre>
+
+<p>@option opts [Float] :<a
+href="MongoClient.html#attribute-i-op_timeout">op_timeout</a> (nil) The
+number of seconds to wait for a read operation to time out.</p>
+
+<pre>Disabled by default.</pre>
+
+<p>@option opts [Float] :<a
+href="MongoClient.html#attribute-i-connect_timeout">connect_timeout</a>
+(nil) The number of seconds to wait before timing out a</p>
+
+<pre>connection attempt.</pre>
+
+<p>@option opts [Boolean] :ssl (false) If true, create the connection to the
+server using SSL.</p>
+
+<p>@example localhost, 27017 (or <tt>ENV["MONGODB_URI"]</tt> if available)</p>
+
+<pre>MongoClient.new</pre>
+
+<p>@example localhost, 27017</p>
+
+<pre>MongoClient.new(&quot;localhost&quot;)</pre>
+
+<p>@example localhost, 3000, max 5 self.connections, with max 5 seconds of
+wait time.</p>
+
+<pre>MongoClient.new(&quot;localhost&quot;, 3000, :pool_size =&gt; 5, :timeout =&gt; 5)</pre>
+
+<p>@example localhost, 3000, where this node may be a slave</p>
+
+<pre>MongoClient.new(&quot;localhost&quot;, 3000, :slave_ok =&gt; true)</pre>
+
+<p>@example Unix Domain Socket</p>
+
+<pre>MongoClient.new(&quot;/var/run/mongodb.sock&quot;)</pre>
+
+<p>@see <a
+href="http://api.mongodb.org/ruby/current/file.REPLICA_SETS.html">api.mongodb.org/ruby/current/file.REPLICA_SETS.html</a>
+Replica sets in Ruby</p>
+
+<p>@raise [ReplicaSetConnectionError] This is raised if a replica set name is
+specified and the</p>
+
+<pre>driver fails to connect to a replica set with that name.</pre>
+
+<p>@raise [MongoArgumentError] If called with no arguments and
+<tt>ENV["MONGODB_URI"]</tt> implies a replica set.</p>
+
+<p>@core self.connections</p>
+            
+
+            
+            <div class="method-source-code" id="new-source">
+<pre>
+<span class="ruby-comment"># File lib/mongo/mongo_client.rb, line 126</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(*<span class="ruby-identifier">args</span>)
+  <span class="ruby-identifier">opts</span> = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">last</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Hash</span>) <span class="ruby-operator">?</span> <span class="ruby-identifier">args</span>.<span class="ruby-identifier">pop</span> <span class="ruby-operator">:</span> {}
+  <span class="ruby-ivar">@host</span>, <span class="ruby-ivar">@port</span> = <span class="ruby-identifier">parse_init</span>(<span class="ruby-identifier">args</span>[<span class="ruby-value">0</span>], <span class="ruby-identifier">args</span>[<span class="ruby-value">1</span>], <span class="ruby-identifier">opts</span>)
+
+  <span class="ruby-comment"># Default maximum BSON object size</span>
+  <span class="ruby-ivar">@max_bson_size</span> = <span class="ruby-constant">Mongo</span><span class="ruby-operator">::</span><span class="ruby-constant">DEFAULT_MAX_BSON_SIZE</span>
+
+  <span class="ruby-comment"># Lock for request ids.</span>
+  <span class="ruby-ivar">@id_lock</span> = <span class="ruby-constant">Mutex</span>.<span class="ruby-identifier">new</span>
+
+  <span class="ruby-comment"># Connection pool for primary node</span>
+  <span class="ruby-ivar">@primary</span>      = <span class="ruby-keyword">nil</span>
+  <span class="ruby-ivar">@primary_pool</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-ivar">@mongos</span>       = <span class="ruby-keyword">false</span>
+
+  <span class="ruby-comment"># Not set for direct connection</span>
+  <span class="ruby-ivar">@tag_sets</span> = []
+  <span class="ruby-ivar">@acceptable_latency</span> = <span class="ruby-value">15</span>
+
+  <span class="ruby-identifier">check_opts</span>(<span class="ruby-identifier">opts</span>)
+  <span class="ruby-identifier">setup</span>(<span class="ruby-identifier">opts</span>.<span class="ruby-identifier">dup</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- new-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- new-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="5B-5D-method" class="method-detail ">
+          <a name="method-i-5B-5D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">[]</span><span
+              class="method-args">(db_name)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Shortcut for returning a database. Use DB#db to accept options.</p>
+
+<p>@param [String] db_name a valid database name.</p>
+
+<p>@return [Mongo::DB]</p>
+
+<p>@core databases []-instance_method</p>
+            
+
+            
+            <div class="method-source-code" id="5B-5D-source">
+<pre>
+<span class="ruby-comment"># File lib/mongo/mongo_client.rb, line 367</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">[]</span>(<span class="ruby-identifier">db_name</span>)
+  <span class="ruby-constant">DB</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">db_name</span>, <span class="ruby-keyword">self</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- 5B-5D-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- 5B-5D-method -->
+
+      
+        <div id="active-3F-method" class="method-detail ">
+          <a name="method-i-active-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">active?</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Determine if the connection is active. In a normal case the <b><a
+href="MongoClient.html#method-i-server_info">server_info</a></b> operation
+will be performed without issues, but if the connection was dropped by the
+server or for some reason the sockets are unsynchronized, a <a
+href="ConnectionFailure.html">ConnectionFailure</a> will be raised and the
+return will be false.</p>
+
+<p>@return [Boolean]</p>
+            
+
+            
+            <div class="method-source-code" id="active-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/mongo/mongo_client.rb, line 499</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">active?</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">connected?</span>
+
+  <span class="ruby-identifier">ping</span>
+  <span class="ruby-keyword">true</span>
+
+  <span class="ruby-keyword">rescue</span> <span class="ruby-constant">ConnectionFailure</span>
+  <span class="ruby-keyword">false</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- active-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- active-3F-method -->
+
+      
+        <div id="add_auth-method" class="method-detail ">
+          <a name="method-i-add_auth"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">add_auth</span><span
+              class="method-args">(db_name, username, password)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Save an authentication to this connection. When connecting, the connection
+will attempt to re-authenticate on every db specified in the list of auths.
+This method is called automatically by <a
+href="DB.html#method-i-authenticate">DB#authenticate</a>.</p>
+
+<p>Note: this method will not actually issue an authentication command. To do
+that, either run <a
+href="MongoClient.html#method-i-apply_saved_authentication">MongoClient#apply_saved_authentication</a>
+or <a href="DB.html#method-i-authenticate">DB#authenticate</a>.</p>
+
+<p>@param [String] db_name @param [String] username @param [String] password</p>
+
+<p>@return [Hash] a hash representing the authentication just added.</p>
+            
+
+            
+            <div class="method-source-code" id="add_auth-source">
+<pre>
+<span class="ruby-comment"># File lib/mongo/mongo_client.rb, line 283</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">add_auth</span>(<span class="ruby-identifier">db_name</span>, <span class="ruby-identifier">username</span>, <span class="ruby-identifier">password</span>)
+  <span class="ruby-identifier">remove_auth</span>(<span class="ruby-identifier">db_name</span>)
+  <span class="ruby-identifier">auth</span> = {}
+  <span class="ruby-identifier">auth</span>[<span class="ruby-string">'db_name'</span>]  = <span class="ruby-identifier">db_name</span>
+  <span class="ruby-identifier">auth</span>[<span class="ruby-string">'username'</span>] = <span class="ruby-identifier">username</span>
+  <span class="ruby-identifier">auth</span>[<span class="ruby-string">'password'</span>] = <span class="ruby-identifier">password</span>
+  <span class="ruby-ivar">@auths</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">auth</span>
+  <span class="ruby-identifier">auth</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- add_auth-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- add_auth-method -->
+
+      
+        <div id="apply_saved_authentication-method" class="method-detail ">
+          <a name="method-i-apply_saved_authentication"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">apply_saved_authentication</span><span
+              class="method-args">(opts={})</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Apply each of the saved database authentications.</p>
+
+<p>@return [Boolean] returns true if authentications exist and succeeds, false</p>
+
+<pre>if none exists.</pre>
+
+<p>@raise [AuthenticationError] raises an exception if any one</p>
+
+<pre>authentication fails.</pre>
+            
+
+            
+            <div class="method-source-code" id="apply_saved_authentication-source">
+<pre>
+<span class="ruby-comment"># File lib/mongo/mongo_client.rb, line 261</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">apply_saved_authentication</span>(<span class="ruby-identifier">opts</span>={})
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@auths</span>.<span class="ruby-identifier">empty?</span>
+  <span class="ruby-ivar">@auths</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">auth</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">self</span>[<span class="ruby-identifier">auth</span>[<span class="ruby-string">'db_name'</span>]].<span class="ruby-identifier">issue_authentication</span>(<span class="ruby-identifier">auth</span>[<span class="ruby-string">'username'</span>], <span class="ruby-identifier">auth</span>[<span class="ruby-string">'password'</span>], <span class="ruby-keyword">false</span>,
+      <span class="ruby-value">:socket</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">opts</span>[<span class="ruby-value">:socket</span>])
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">true</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- apply_saved_authentication-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- apply_saved_authentication-method -->
+
+      
+        <div id="authenticate_pools-method" class="method-detail ">
+          <a name="method-i-authenticate_pools"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">authenticate_pools</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="authenticate_pools-source">
+<pre>
+<span class="ruby-comment"># File lib/mongo/mongo_client.rb, line 315</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">authenticate_pools</span>
+  <span class="ruby-ivar">@primary_pool</span>.<span class="ruby-identifier">authenticate_existing</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- authenticate_pools-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- authenticate_pools-method -->
+
+      
+        <div id="checkin-method" class="method-detail ">
+          <a name="method-i-checkin"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">checkin</span><span
+              class="method-args">(socket)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Check a socket back into its pool. Note: this is overridden in <a
+href="MongoReplicaSetClient.html">MongoReplicaSetClient</a>.</p>
+            
+
+            
+            <div class="method-source-code" id="checkin-source">
+<pre>
+<span class="ruby-comment"># File lib/mongo/mongo_client.rb, line 559</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">checkin</span>(<span class="ruby-identifier">socket</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@primary_pool</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">socket</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">socket</span>.<span class="ruby-identifier">pool</span>
+    <span class="ruby-identifier">socket</span>.<span class="ruby-identifier">pool</span>.<span class="ruby-identifier">checkin</span>(<span class="ruby-identifier">socket</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- checkin-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- checkin-method -->
+
+      
+        <div id="checkout_reader-method" class="method-detail ">
+          <a name="method-i-checkout_reader"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">checkout_reader</span><span
+              class="method-args">(mode=:primary, tag_sets={}, acceptable_latency=15)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Checkout a socket for reading (i.e., a secondary node). Note: this is
+overridden in <a
+href="MongoReplicaSetClient.html">MongoReplicaSetClient</a>.</p>
+            
+
+            
+            <div class="method-source-code" id="checkout_reader-source">
+<pre>
+<span class="ruby-comment"># File lib/mongo/mongo_client.rb, line 545</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">checkout_reader</span>(<span class="ruby-identifier">mode</span>=<span class="ruby-value">:primary</span>, <span class="ruby-identifier">tag_sets</span>={}, <span class="ruby-identifier">acceptable_latency</span>=<span class="ruby-value">15</span>)
+  <span class="ruby-identifier">connect</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">connected?</span>
+  <span class="ruby-ivar">@primary_pool</span>.<span class="ruby-identifier">checkout</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- checkout_reader-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- checkout_reader-method -->
+
+      
+        <div id="checkout_writer-method" class="method-detail ">
+          <a name="method-i-checkout_writer"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">checkout_writer</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Checkout a socket for writing (i.e., a primary node). Note: this is
+overridden in <a
+href="MongoReplicaSetClient.html">MongoReplicaSetClient</a>.</p>
+            
+
+            
+            <div class="method-source-code" id="checkout_writer-source">
+<pre>
+<span class="ruby-comment"># File lib/mongo/mongo_client.rb, line 552</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">checkout_writer</span>
+  <span class="ruby-identifier">connect</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">connected?</span>
+  <span class="ruby-ivar">@primary_pool</span>.<span class="ruby-identifier">checkout</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- checkout_writer-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- checkout_writer-method -->
+
+      
+        <div id="clear_auths-method" class="method-detail ">
+          <a name="method-i-clear_auths"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">clear_auths</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Remove all authentication information stored in this connection.</p>
+
+<p>@return [true] this operation return true because it always succeeds.</p>
+            
+
+            
+            <div class="method-source-code" id="clear_auths-source">
+<pre>
+<span class="ruby-comment"># File lib/mongo/mongo_client.rb, line 310</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">clear_auths</span>
+  <span class="ruby-ivar">@auths</span> = []
+  <span class="ruby-keyword">true</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- clear_auths-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- clear_auths-method -->
+
+      
+        <div id="close-method" class="method-detail ">
+          <a name="method-i-close"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">close</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Close the connection to the database.</p>
+            
+
+            
+            <div class="method-source-code" id="close-source">
+<pre>
+<span class="ruby-comment"># File lib/mongo/mongo_client.rb, line 529</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">close</span>
+  <span class="ruby-ivar">@primary_pool</span>.<span class="ruby-identifier">close</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@primary_pool</span>
+  <span class="ruby-ivar">@primary_pool</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-ivar">@primary</span> = <span class="ruby-keyword">nil</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- close-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- close-method -->
+
+      
+        <div id="connect-method" class="method-detail ">
+          <a name="method-i-connect"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">connect</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Create a new socket and attempt to connect to master. If successful, sets
+host and port to master and returns the socket.</p>
+
+<p>If connecting to a replica set, this method will replace the
+initially-provided seed list with any nodes known to the set.</p>
+
+<p>@raise [ConnectionFailure] if unable to connect to any host or port.</p>
+            
+
+            
+            <div class="method-source-code" id="connect-source">
+<pre>
+<span class="ruby-comment"># File lib/mongo/mongo_client.rb, line 457</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">connect</span>
+  <span class="ruby-identifier">close</span>
+
+  <span class="ruby-identifier">config</span> = <span class="ruby-identifier">check_is_master</span>(<span class="ruby-identifier">host_port</span>)
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">config</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">config</span>[<span class="ruby-string">'ismaster'</span>] <span class="ruby-operator">==</span> <span class="ruby-value">1</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">config</span>[<span class="ruby-string">'ismaster'</span>] <span class="ruby-operator">==</span> <span class="ruby-keyword">true</span>
+      <span class="ruby-ivar">@read_primary</span> = <span class="ruby-keyword">true</span>
+    <span class="ruby-keyword">elsif</span> <span class="ruby-ivar">@slave_ok</span>
+      <span class="ruby-ivar">@read_primary</span> = <span class="ruby-keyword">false</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">config</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-string">'msg'</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">config</span>[<span class="ruby-string">'msg'</span>] <span class="ruby-operator">==</span> <span class="ruby-string">'isdbgrid'</span>
+      <span class="ruby-ivar">@mongos</span> = <span class="ruby-keyword">true</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-ivar">@max_bson_size</span> = <span class="ruby-identifier">config</span>[<span class="ruby-string">'maxBsonObjectSize'</span>] <span class="ruby-operator">||</span> <span class="ruby-constant">Mongo</span><span class="ruby-operator">::</span><span class="ruby-constant">DEFAULT_MAX_BSON_SIZE</span>
+    <span class="ruby-identifier">set_primary</span>(<span class="ruby-identifier">host_port</span>)
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">connected?</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">ConnectionFailure</span>, <span class="ruby-node">&quot;Failed to connect to a master node at #{host_port.join(&quot;:&quot;)}&quot;</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- connect-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- connect-method -->
+
+      
+        <div id="connected-3F-method" class="method-detail ">
+          <a name="method-i-connected-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">connected?</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>It’s possible that we defined connected as all nodes being connected???
+NOTE: Do check if this needs to be more stringent. Probably not since if
+any node raises a connection failure, all nodes will be closed.</p>
+            
+
+            
+            <div class="method-source-code" id="connected-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/mongo/mongo_client.rb, line 489</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">connected?</span>
+  <span class="ruby-ivar">@primary_pool</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-ivar">@primary_pool</span>.<span class="ruby-identifier">closed?</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- connected-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- connected-3F-method -->
+
+      
+        <div id="copy_database-method" class="method-detail ">
+          <a name="method-i-copy_database"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">copy_database</span><span
+              class="method-args">(from, to, from_host=DEFAULT_HOST, username=nil, password=nil)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Copy the database <tt>from</tt> to <tt>to</tt> on localhost. The
+<tt>from</tt> database is assumed to be on localhost, but an alternate host
+can be specified.</p>
+
+<p>@param [String] from name of the database to copy from. @param [String] to
+name of the database to copy to. @param [String] from_host host of the
+‘from’ database. @param [String] username username for authentication
+against from_db (&gt;=1.3.x). @param [String] password password for
+authentication against from_db (&gt;=1.3.x).</p>
+            
+
+            
+            <div class="method-source-code" id="copy_database-source">
+<pre>
+<span class="ruby-comment"># File lib/mongo/mongo_client.rb, line 395</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">copy_database</span>(<span class="ruby-identifier">from</span>, <span class="ruby-identifier">to</span>, <span class="ruby-identifier">from_host</span>=<span class="ruby-constant">DEFAULT_HOST</span>, <span class="ruby-identifier">username</span>=<span class="ruby-keyword">nil</span>, <span class="ruby-identifier">password</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-identifier">oh</span> = <span class="ruby-constant">BSON</span><span class="ruby-operator">::</span><span class="ruby-constant">OrderedHash</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-identifier">oh</span>[<span class="ruby-value">:copydb</span>]   = <span class="ruby-value">1</span>
+  <span class="ruby-identifier">oh</span>[<span class="ruby-value">:fromhost</span>] = <span class="ruby-identifier">from_host</span>
+  <span class="ruby-identifier">oh</span>[<span class="ruby-value">:fromdb</span>]   = <span class="ruby-identifier">from</span>
+  <span class="ruby-identifier">oh</span>[<span class="ruby-value">:todb</span>]     = <span class="ruby-identifier">to</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">username</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">password</span>
+    <span class="ruby-keyword">unless</span> <span class="ruby-identifier">username</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">password</span>
+      <span class="ruby-identifier">raise</span> <span class="ruby-constant">MongoArgumentError</span>, <span class="ruby-string">&quot;Both username and password must be supplied for authentication.&quot;</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">nonce_cmd</span> = <span class="ruby-constant">BSON</span><span class="ruby-operator">::</span><span class="ruby-constant">OrderedHash</span>.<span class="ruby-identifier">new</span>
+    <span class="ruby-identifier">nonce_cmd</span>[<span class="ruby-value">:copydbgetnonce</span>] = <span class="ruby-value">1</span>
+    <span class="ruby-identifier">nonce_cmd</span>[<span class="ruby-value">:fromhost</span>] = <span class="ruby-identifier">from_host</span>
+    <span class="ruby-identifier">result</span> = <span class="ruby-keyword">self</span>[<span class="ruby-string">&quot;admin&quot;</span>].<span class="ruby-identifier">command</span>(<span class="ruby-identifier">nonce_cmd</span>)
+    <span class="ruby-identifier">oh</span>[<span class="ruby-value">:nonce</span>] = <span class="ruby-identifier">result</span>[<span class="ruby-string">&quot;nonce&quot;</span>]
+    <span class="ruby-identifier">oh</span>[<span class="ruby-value">:username</span>] = <span class="ruby-identifier">username</span>
+    <span class="ruby-identifier">oh</span>[<span class="ruby-value">:key</span>] = <span class="ruby-constant">Mongo</span><span class="ruby-operator">::</span><span class="ruby-constant">Support</span>.<span class="ruby-identifier">auth_key</span>(<span class="ruby-identifier">username</span>, <span class="ruby-identifier">password</span>, <span class="ruby-identifier">oh</span>[<span class="ruby-value">:nonce</span>])
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">self</span>[<span class="ruby-string">&quot;admin&quot;</span>].<span class="ruby-identifier">command</span>(<span class="ruby-identifier">oh</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- copy_database-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- copy_database-method -->
+
+      
+        <div id="database_info-method" class="method-detail ">
+          <a name="method-i-database_info"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">database_info</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Return a hash with all database names and their respective sizes on disk.</p>
+
+<p>@return [Hash]</p>
+            
+
+            
+            <div class="method-source-code" id="database_info-source">
+<pre>
+<span class="ruby-comment"># File lib/mongo/mongo_client.rb, line 327</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">database_info</span>
+  <span class="ruby-identifier">doc</span> = <span class="ruby-keyword">self</span>[<span class="ruby-string">'admin'</span>].<span class="ruby-identifier">command</span>({<span class="ruby-value">:listDatabases</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>})
+  <span class="ruby-identifier">doc</span>[<span class="ruby-string">'databases'</span>].<span class="ruby-identifier">each_with_object</span>({}) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">db</span>, <span class="ruby-identifier">info</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">info</span>[<span class="ruby-identifier">db</span>[<span class="ruby-string">'name'</span>]] = <span class="ruby-identifier">db</span>[<span class="ruby-string">'sizeOnDisk'</span>].<span class="ruby-identifier">to_i</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- database_info-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- database_info-method -->
+
+      
+        <div id="database_names-method" class="method-detail ">
+          <a name="method-i-database_names"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">database_names</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Return an array of database names.</p>
+
+<p>@return [Array]</p>
+            
+
+            
+            <div class="method-source-code" id="database_names-source">
+<pre>
+<span class="ruby-comment"># File lib/mongo/mongo_client.rb, line 337</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">database_names</span>
+  <span class="ruby-identifier">database_info</span>.<span class="ruby-identifier">keys</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- database_names-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- database_names-method -->
+
+      
+        <div id="db-method" class="method-detail ">
+          <a name="method-i-db"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">db</span><span
+              class="method-args">(db_name=nil, opts={})</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Return a database with the given name. See DB#new for valid options hash
+parameters.</p>
+
+<p>@param [String] db_name a valid database name. @param [Hash] opts options
+to be passed to the <a href="DB.html">DB</a> constructor.</p>
+
+<p>@return [Mongo::DB]</p>
+
+<p>@core databases db-instance_method</p>
+            
+
+            
+            <div class="method-source-code" id="db-source">
+<pre>
+<span class="ruby-comment"># File lib/mongo/mongo_client.rb, line 350</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">db</span>(<span class="ruby-identifier">db_name</span>=<span class="ruby-keyword">nil</span>, <span class="ruby-identifier">opts</span>={})
+  <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">db_name</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">uri</span> = <span class="ruby-constant">ENV</span>[<span class="ruby-string">'MONGODB_URI'</span>]
+    <span class="ruby-identifier">db_name</span> = <span class="ruby-identifier">uri</span>[<span class="ruby-regexp">%{/([^/\?]+)(\?|$)}</span>, <span class="ruby-value">1</span>]
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">db_name</span> <span class="ruby-operator">||=</span> <span class="ruby-constant">DEFAULT_DB_NAME</span>
+
+  <span class="ruby-constant">DB</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">db_name</span>, <span class="ruby-keyword">self</span>, <span class="ruby-identifier">opts</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- db-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- db-method -->
+
+      
+        <div id="drop_database-method" class="method-detail ">
+          <a name="method-i-drop_database"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">drop_database</span><span
+              class="method-args">(name)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Drop a database.</p>
+
+<p>@param [String] name name of an existing database.</p>
+            
+
+            
+            <div class="method-source-code" id="drop_database-source">
+<pre>
+<span class="ruby-comment"># File lib/mongo/mongo_client.rb, line 383</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">drop_database</span>(<span class="ruby-identifier">name</span>)
+  <span class="ruby-keyword">self</span>[<span class="ruby-identifier">name</span>].<span class="ruby-identifier">command</span>(<span class="ruby-value">:dropDatabase</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- drop_database-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- drop_database-method -->
+
+      
+        <div id="host-method" class="method-detail ">
+          <a name="method-i-host"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">host</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>The host name used for this connection.</p>
+
+<p>@return [String]</p>
+            
+
+            
+            <div class="method-source-code" id="host-source">
+<pre>
+<span class="ruby-comment"># File lib/mongo/mongo_client.rb, line 214</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">host</span>
+  <span class="ruby-ivar">@primary_pool</span>.<span class="ruby-identifier">host</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- host-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- host-method -->
+
+      
+        <div id="host_port-method" class="method-detail ">
+          <a name="method-i-host_port"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">host_port</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="host_port-source">
+<pre>
+<span class="ruby-comment"># File lib/mongo/mongo_client.rb, line 225</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">host_port</span>
+  [<span class="ruby-ivar">@host</span>, <span class="ruby-ivar">@port</span>]
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- host_port-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- host_port-method -->
+
+      
+        <div id="lock-21-method" class="method-detail ">
+          <a name="method-i-lock-21"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">lock!</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Fsync, then lock the mongod process against writes. Use this to get the
+datafiles in a state safe for snapshotting, backing up, etc.</p>
+
+<p>@return [BSON::OrderedHash] the command response</p>
+            
+
+            
+            <div class="method-source-code" id="lock-21-source">
+<pre>
+<span class="ruby-comment"># File lib/mongo/mongo_client.rb, line 233</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">lock!</span>
+  <span class="ruby-identifier">cmd</span> = <span class="ruby-constant">BSON</span><span class="ruby-operator">::</span><span class="ruby-constant">OrderedHash</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-identifier">cmd</span>[<span class="ruby-value">:fsync</span>] = <span class="ruby-value">1</span>
+  <span class="ruby-identifier">cmd</span>[<span class="ruby-value">:lock</span>]  = <span class="ruby-keyword">true</span>
+  <span class="ruby-keyword">self</span>[<span class="ruby-string">'admin'</span>].<span class="ruby-identifier">command</span>(<span class="ruby-identifier">cmd</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- lock-21-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- lock-21-method -->
+
+      
+        <div id="locked-3F-method" class="method-detail ">
+          <a name="method-i-locked-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">locked?</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Is this database locked against writes?</p>
+
+<p>@return [Boolean]</p>
+            
+
+            
+            <div class="method-source-code" id="locked-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/mongo/mongo_client.rb, line 243</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">locked?</span>
+  [<span class="ruby-value">1</span>, <span class="ruby-keyword">true</span>].<span class="ruby-identifier">include?</span> <span class="ruby-keyword">self</span>[<span class="ruby-string">'admin'</span>][<span class="ruby-string">'$cmd.sys.inprog'</span>].<span class="ruby-identifier">find_one</span>[<span class="ruby-string">'fsyncLock'</span>]
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- locked-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- locked-3F-method -->
+
+      
+        <div id="logout_pools-method" class="method-detail ">
+          <a name="method-i-logout_pools"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">logout_pools</span><span
+              class="method-args">(db)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="logout_pools-source">
+<pre>
+<span class="ruby-comment"># File lib/mongo/mongo_client.rb, line 319</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">logout_pools</span>(<span class="ruby-identifier">db</span>)
+  <span class="ruby-ivar">@primary_pool</span>.<span class="ruby-identifier">logout_existing</span>(<span class="ruby-identifier">db</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- logout_pools-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- logout_pools-method -->
+
+      
+        <div id="max_bson_size-method" class="method-detail ">
+          <a name="method-i-max_bson_size"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">max_bson_size</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Returns the maximum BSON object size as returned by the core server. Use
+the 4MB default when the server doesn’t report this.</p>
+
+<p>@return [Integer]</p>
+            
+
+            
+            <div class="method-source-code" id="max_bson_size-source">
+<pre>
+<span class="ruby-comment"># File lib/mongo/mongo_client.rb, line 539</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">max_bson_size</span>
+  <span class="ruby-ivar">@max_bson_size</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- max_bson_size-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- max_bson_size-method -->
+
+      
+        <div id="mongos-3F-method" class="method-detail ">
+          <a name="method-i-mongos-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">mongos?</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="mongos-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/mongo/mongo_client.rb, line 446</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">mongos?</span>
+  <span class="ruby-ivar">@mongos</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- mongos-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- mongos-3F-method -->
+
+      
+        <div id="parse_init-method" class="method-detail ">
+          <a name="method-i-parse_init"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">parse_init</span><span
+              class="method-args">(host, port, opts)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="parse_init-source">
+<pre>
+<span class="ruby-comment"># File lib/mongo/mongo_client.rb, line 197</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">parse_init</span>(<span class="ruby-identifier">host</span>, <span class="ruby-identifier">port</span>, <span class="ruby-identifier">opts</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">host</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">port</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-constant">ENV</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-string">'MONGODB_URI'</span>)
+    <span class="ruby-identifier">parser</span> = <span class="ruby-constant">URIParser</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">ENV</span>[<span class="ruby-string">'MONGODB_URI'</span>])
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">parser</span>.<span class="ruby-identifier">replicaset?</span>
+      <span class="ruby-identifier">raise</span> <span class="ruby-constant">MongoArgumentError</span>,
+        <span class="ruby-string">&quot;ENV['MONGODB_URI'] implies a replica set.&quot;</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">merge!</span> <span class="ruby-identifier">parser</span>.<span class="ruby-identifier">connection_options</span>
+    [<span class="ruby-identifier">parser</span>.<span class="ruby-identifier">host</span>, <span class="ruby-identifier">parser</span>.<span class="ruby-identifier">port</span>]
+  <span class="ruby-keyword">else</span>
+    [<span class="ruby-identifier">host</span> <span class="ruby-operator">||</span> <span class="ruby-constant">DEFAULT_HOST</span>, <span class="ruby-identifier">port</span> <span class="ruby-operator">||</span> <span class="ruby-constant">DEFAULT_PORT</span>]
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- parse_init-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- parse_init-method -->
+
+      
+        <div id="pin_pool-method" class="method-detail ">
+          <a name="method-i-pin_pool"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">pin_pool</span><span
+              class="method-args">(pool)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="pin_pool-source">
+<pre>
+<span class="ruby-comment"># File lib/mongo/mongo_client.rb, line 374</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">pin_pool</span>(<span class="ruby-identifier">pool</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- pin_pool-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- pin_pool-method -->
+
+      
+        <div id="ping-method" class="method-detail ">
+          <a name="method-i-ping"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">ping</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Checks if a server is alive. This command will return immediately even if
+the server is in a lock.</p>
+
+<p>@return [Hash]</p>
+            
+
+            
+            <div class="method-source-code" id="ping-source">
+<pre>
+<span class="ruby-comment"># File lib/mongo/mongo_client.rb, line 420</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">ping</span>
+  <span class="ruby-keyword">self</span>[<span class="ruby-string">&quot;admin&quot;</span>].<span class="ruby-identifier">command</span>({<span class="ruby-value">:ping</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>})
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- ping-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- ping-method -->
+
+      
+        <div id="port-method" class="method-detail ">
+          <a name="method-i-port"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">port</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>The port used for this connection.</p>
+
+<p>@return [Integer]</p>
+            
+
+            
+            <div class="method-source-code" id="port-source">
+<pre>
+<span class="ruby-comment"># File lib/mongo/mongo_client.rb, line 221</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">port</span>
+  <span class="ruby-ivar">@primary_pool</span>.<span class="ruby-identifier">port</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- port-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- port-method -->
+
+      
+        <div id="primary-3F-method" class="method-detail ">
+          <a name="method-i-primary-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">primary?</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Ensures that the alias carries over to the overridden connect method when
+using the replica set or sharded clients.</p>
+            
+
+            
+            <div class="method-source-code" id="primary-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/mongo/mongo_client.rb, line 519</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">primary?</span>; <span class="ruby-identifier">read_primary?</span> <span class="ruby-keyword">end</span></pre>
+            </div><!-- primary-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- primary-3F-method -->
+
+      
+        <div id="read_pool-method" class="method-detail ">
+          <a name="method-i-read_pool"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">read_pool</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>The socket pool that this connection reads from.</p>
+
+<p>@return [Mongo::Pool]</p>
+            
+
+            
+            <div class="method-source-code" id="read_pool-source">
+<pre>
+<span class="ruby-comment"># File lib/mongo/mongo_client.rb, line 524</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">read_pool</span>
+  <span class="ruby-ivar">@primary_pool</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- read_pool-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- read_pool-method -->
+
+      
+        <div id="read_primary-3F-method" class="method-detail ">
+          <a name="method-i-read_primary-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">read_primary?</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Determine whether we’re reading from a primary node. If false, this
+connection connects to a secondary node and @slave_ok is true.</p>
+
+<p>@return [Boolean]</p>
+            
+
+            
+            <div class="method-source-code" id="read_primary-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/mongo/mongo_client.rb, line 513</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">read_primary?</span>
+  <span class="ruby-ivar">@read_primary</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- read_primary-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- read_primary-3F-method -->
+
+      
+        <div id="reconnect-method" class="method-detail ">
+          <a name="method-i-reconnect"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">reconnect</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Ensures that the alias carries over to the overridden connect method when
+using the replica set or sharded clients.</p>
+            
+
+            
+            <div class="method-source-code" id="reconnect-source">
+<pre>
+<span class="ruby-comment"># File lib/mongo/mongo_client.rb, line 484</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">reconnect</span>; <span class="ruby-identifier">connect</span> <span class="ruby-keyword">end</span></pre>
+            </div><!-- reconnect-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- reconnect-method -->
+
+      
+        <div id="refresh-method" class="method-detail ">
+          <a name="method-i-refresh"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">refresh</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="refresh-source">
+<pre>
+<span class="ruby-comment"># File lib/mongo/mongo_client.rb, line 371</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">refresh</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- refresh-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- refresh-method -->
+
+      
+        <div id="remove_auth-method" class="method-detail ">
+          <a name="method-i-remove_auth"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">remove_auth</span><span
+              class="method-args">(db_name)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Remove a saved authentication for this connection.</p>
+
+<p>@param [String] db_name</p>
+
+<p>@return [Boolean]</p>
+            
+
+            
+            <div class="method-source-code" id="remove_auth-source">
+<pre>
+<span class="ruby-comment"># File lib/mongo/mongo_client.rb, line 298</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">remove_auth</span>(<span class="ruby-identifier">db_name</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@auths</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@auths</span>.<span class="ruby-identifier">reject!</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">a</span><span class="ruby-operator">|</span> <span class="ruby-identifier">a</span>[<span class="ruby-string">'db_name'</span>] <span class="ruby-operator">==</span> <span class="ruby-identifier">db_name</span> }
+    <span class="ruby-keyword">true</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-keyword">false</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- remove_auth-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- remove_auth-method -->
+
+      
+        <div id="server_info-method" class="method-detail ">
+          <a name="method-i-server_info"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">server_info</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Get the build information for the current connection.</p>
+
+<p>@return [Hash]</p>
+            
+
+            
+            <div class="method-source-code" id="server_info-source">
+<pre>
+<span class="ruby-comment"># File lib/mongo/mongo_client.rb, line 427</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">server_info</span>
+  <span class="ruby-keyword">self</span>[<span class="ruby-string">&quot;admin&quot;</span>].<span class="ruby-identifier">command</span>({<span class="ruby-value">:buildinfo</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>})
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- server_info-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- server_info-method -->
+
+      
+        <div id="server_version-method" class="method-detail ">
+          <a name="method-i-server_version"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">server_version</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Get the build version of the current server.</p>
+
+<p>@return [Mongo::ServerVersion]</p>
+
+<pre>object allowing easy comparability of version.</pre>
+            
+
+            
+            <div class="method-source-code" id="server_version-source">
+<pre>
+<span class="ruby-comment"># File lib/mongo/mongo_client.rb, line 435</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">server_version</span>
+  <span class="ruby-constant">ServerVersion</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">server_info</span>[<span class="ruby-string">&quot;version&quot;</span>])
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- server_version-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- server_version-method -->
+
+      
+        <div id="slave_ok-3F-method" class="method-detail ">
+          <a name="method-i-slave_ok-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">slave_ok?</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Is it okay to connect to a slave?</p>
+
+<p>@return [Boolean]</p>
+            
+
+            
+            <div class="method-source-code" id="slave_ok-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/mongo/mongo_client.rb, line 442</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">slave_ok?</span>
+  <span class="ruby-ivar">@slave_ok</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- slave_ok-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- slave_ok-3F-method -->
+
+      
+        <div id="unlock-21-method" class="method-detail ">
+          <a name="method-i-unlock-21"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">unlock!</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Unlock a previously fsync-locked mongod process.</p>
+
+<p>@return [BSON::OrderedHash] command response</p>
+            
+
+            
+            <div class="method-source-code" id="unlock-21-source">
+<pre>
+<span class="ruby-comment"># File lib/mongo/mongo_client.rb, line 250</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">unlock!</span>
+  <span class="ruby-keyword">self</span>[<span class="ruby-string">'admin'</span>][<span class="ruby-string">'$cmd.sys.unlock'</span>].<span class="ruby-identifier">find_one</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- unlock-21-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- unlock-21-method -->
+
+      
+        <div id="unpin_pool-method" class="method-detail ">
+          <a name="method-i-unpin_pool"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">unpin_pool</span><span
+              class="method-args">(pool)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="unpin_pool-source">
+<pre>
+<span class="ruby-comment"># File lib/mongo/mongo_client.rb, line 377</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">unpin_pool</span>(<span class="ruby-identifier">pool</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- unpin_pool-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- unpin_pool-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+      <div id="protected-instance-method-details" class="method-section section">
+        <h3 class="section-header">Protected Instance Methods</h3>
+
+      
+        <div id="check_opts-method" class="method-detail ">
+          <a name="method-i-check_opts"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">check_opts</span><span
+              class="method-args">(opts)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="check_opts-source">
+<pre>
+<span class="ruby-comment"># File lib/mongo/mongo_client.rb, line 576</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">check_opts</span>(<span class="ruby-identifier">opts</span>)
+  <span class="ruby-identifier">bad_opts</span> = <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">keys</span>.<span class="ruby-identifier">reject</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">opt</span><span class="ruby-operator">|</span> <span class="ruby-identifier">valid_opts</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">opt</span>) }
+
+  <span class="ruby-keyword">unless</span> <span class="ruby-identifier">bad_opts</span>.<span class="ruby-identifier">empty?</span>
+    <span class="ruby-identifier">bad_opts</span>.<span class="ruby-identifier">each</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">opt</span><span class="ruby-operator">|</span> <span class="ruby-identifier">warn</span> <span class="ruby-node">&quot;#{opt} is not a valid option for #{self.class}&quot;</span>}
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- check_opts-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- check_opts-method -->
+
+      
+        <div id="setup-method" class="method-detail ">
+          <a name="method-i-setup"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">setup</span><span
+              class="method-args">(opts)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Parse option hash</p>
+            
+
+            
+            <div class="method-source-code" id="setup-source">
+<pre>
+<span class="ruby-comment"># File lib/mongo/mongo_client.rb, line 585</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setup</span>(<span class="ruby-identifier">opts</span>)
+  <span class="ruby-ivar">@slave_ok</span> = <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-value">:slave_ok</span>)
+
+  <span class="ruby-ivar">@ssl</span> = <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-value">:ssl</span>)
+  <span class="ruby-ivar">@unix</span> = <span class="ruby-ivar">@host</span> <span class="ruby-operator">?</span> <span class="ruby-ivar">@host</span>.<span class="ruby-identifier">end_with?</span>(<span class="ruby-string">'.sock'</span>) <span class="ruby-operator">:</span> <span class="ruby-keyword">false</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@ssl</span>
+    <span class="ruby-ivar">@socket_class</span> = <span class="ruby-constant">Mongo</span><span class="ruby-operator">::</span><span class="ruby-constant">SSLSocket</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-ivar">@unix</span>
+    <span class="ruby-ivar">@socket_class</span> = <span class="ruby-constant">Mongo</span><span class="ruby-operator">::</span><span class="ruby-constant">UNIXSocket</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-ivar">@socket_class</span> = <span class="ruby-constant">Mongo</span><span class="ruby-operator">::</span><span class="ruby-constant">TCPSocket</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment"># Authentication objects</span>
+  <span class="ruby-ivar">@auths</span> = <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-value">:auths</span>) <span class="ruby-operator">||</span> []
+
+  <span class="ruby-comment"># Pool size and timeout.</span>
+  <span class="ruby-ivar">@pool_size</span> = <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-value">:pool_size</span>) <span class="ruby-operator">||</span> <span class="ruby-value">1</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">opts</span>[<span class="ruby-value">:timeout</span>]
+    <span class="ruby-identifier">warn</span> <span class="ruby-string">&quot;The :timeout option has been deprecated &quot;</span> <span class="ruby-operator">+</span>
+      <span class="ruby-string">&quot;and will be removed in the 2.0 release. Use :pool_timeout instead.&quot;</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-ivar">@pool_timeout</span> = <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-value">:pool_timeout</span>) <span class="ruby-operator">||</span> <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-value">:timeout</span>) <span class="ruby-operator">||</span> <span class="ruby-value">5.0</span>
+
+  <span class="ruby-comment"># Timeout on socket read operation.</span>
+  <span class="ruby-ivar">@op_timeout</span> = <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-value">:op_timeout</span>) <span class="ruby-operator">||</span> <span class="ruby-keyword">nil</span>
+
+  <span class="ruby-comment"># Timeout on socket connect.</span>
+  <span class="ruby-ivar">@connect_timeout</span> = <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-value">:connect_timeout</span>) <span class="ruby-operator">||</span> <span class="ruby-value">30</span>
+
+  <span class="ruby-ivar">@logger</span> = <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-value">:logger</span>) <span class="ruby-operator">||</span> <span class="ruby-keyword">nil</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@logger</span>
+    <span class="ruby-identifier">write_logging_startup_message</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment"># Determine read preference</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-keyword">defined?</span>(<span class="ruby-ivar">@slave_ok</span>) <span class="ruby-operator">&amp;&amp;</span> (<span class="ruby-ivar">@slave_ok</span>) <span class="ruby-operator">||</span> <span class="ruby-keyword">defined?</span>(<span class="ruby-ivar">@read_secondary</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@read_secondary</span>
+    <span class="ruby-ivar">@read</span> = <span class="ruby-value">:secondary_preferred</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-ivar">@read</span> = <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-value">:read</span>) <span class="ruby-operator">||</span> <span class="ruby-value">:primary</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-constant">Mongo</span><span class="ruby-operator">::</span><span class="ruby-constant">ReadPreference</span><span class="ruby-operator">::</span><span class="ruby-identifier">validate</span>(<span class="ruby-ivar">@read</span>)
+
+  <span class="ruby-ivar">@tag_sets</span> = <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-value">:tag_sets</span>) <span class="ruby-operator">||</span> []
+  <span class="ruby-ivar">@acceptable_latency</span> = <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-value">:secondary_acceptable_latency_ms</span>) <span class="ruby-operator">||</span> <span class="ruby-value">15</span>
+
+  <span class="ruby-comment"># Connection level write concern options.</span>
+  <span class="ruby-ivar">@write_concern</span> = <span class="ruby-identifier">get_write_concern</span>(<span class="ruby-identifier">opts</span>)
+
+  <span class="ruby-identifier">connect</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">fetch</span>(<span class="ruby-value">:connect</span>, <span class="ruby-keyword">true</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- setup-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- setup-method -->
+
+      
+        <div id="valid_opts-method" class="method-detail ">
+          <a name="method-i-valid_opts"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">valid_opts</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="valid_opts-source">
+<pre>
+<span class="ruby-comment"># File lib/mongo/mongo_client.rb, line 567</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">valid_opts</span>
+  <span class="ruby-constant">GENERIC_OPTS</span> <span class="ruby-operator">+</span>
+  <span class="ruby-constant">CLIENT_ONLY_OPTS</span> <span class="ruby-operator">+</span>
+  <span class="ruby-constant">POOL_OPTS</span> <span class="ruby-operator">+</span>
+  <span class="ruby-constant">READ_PREFERENCE_OPTS</span> <span class="ruby-operator">+</span>
+  <span class="ruby-constant">WRITE_CONCERN_OPTS</span> <span class="ruby-operator">+</span>
+  <span class="ruby-constant">TIMEOUT_OPTS</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- valid_opts-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- valid_opts-method -->
+
+      
+      </div><!-- protected-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

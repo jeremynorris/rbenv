@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"leftovers:EFI"9Puppet::Util::CommandLine::Trollop::Parser#leftovers;FI"R;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"IThe values from the commandline that were not interpreted by #parse.;T:
+@file0FI",lib/puppet/util/command_line/trollop.rb;T

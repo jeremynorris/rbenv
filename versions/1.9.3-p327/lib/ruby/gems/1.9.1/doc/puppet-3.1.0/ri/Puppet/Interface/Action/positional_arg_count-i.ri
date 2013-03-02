@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"positional_arg_count:EFI"3Puppet::Interface::Action#positional_arg_count;FI"R;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"The arity of the action;TI"@return [Integer];T:
+@file0FI"#lib/puppet/interface/action.rb;T

@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"	line:EFI""PuppetLint::Lexer::Token#line;FI"R;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"IInternal: Returns the Integer line number of the manifest text where;TI"the Token can be found.;T:
+@file0FI"#lib/puppet-lint/lexer/token.rb;T

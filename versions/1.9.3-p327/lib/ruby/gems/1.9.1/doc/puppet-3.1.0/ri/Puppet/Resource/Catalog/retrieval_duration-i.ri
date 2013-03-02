@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"retrieval_duration:EFI"1Puppet::Resource::Catalog#retrieval_duration;FI"RW;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"GHow long this catalog took to retrieve.  Used for reporting stats.;T:
+@file0FI"#lib/puppet/resource/catalog.rb;T

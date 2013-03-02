@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"	name:EFI"#Puppet::Resource::Catalog#name;FI"RW;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I")The host name this is a catalog for.;T:
+@file0FI"#lib/puppet/resource/catalog.rb;T

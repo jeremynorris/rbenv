@@ -1,0 +1,1019 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Class: Facter::Util::Resolution</title>
+
+  <link rel="stylesheet" href="../../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../../index.html">Home</a>
+          <a href="../../index.html#classes">Classes</a>
+          <a href="../../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../../lib/facter/util/resolution_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/facter/util/resolution.rb">lib/facter/util/resolution.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link"><a href="../../Object.html">Object</a></p>
+        
+      </div>
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-absolute_path-3F">::absolute_path?</a></li>
+          
+          <li><a href="#method-c-exec">::exec</a></li>
+          
+          <li><a href="#method-c-expand_command">::expand_command</a></li>
+          
+          <li><a href="#method-c-new">::new</a></li>
+          
+          <li><a href="#method-c-search_paths">::search_paths</a></li>
+          
+          <li><a href="#method-c-which">::which</a></li>
+          
+          <li><a href="#method-i-confine">#confine</a></li>
+          
+          <li><a href="#method-i-has_weight">#has_weight</a></li>
+          
+          <li><a href="#method-i-interpreter-3D">#interpreter=</a></li>
+          
+          <li><a href="#method-i-limit">#limit</a></li>
+          
+          <li><a href="#method-i-setcode">#setcode</a></li>
+          
+          <li><a href="#method-i-suitable-3F">#suitable?</a></li>
+          
+          <li><a href="#method-i-to_s">#to_s</a></li>
+          
+          <li><a href="#method-i-value">#value</a></li>
+          
+          <li><a href="#method-i-weight">#weight</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../../Facter.html">Facter</a></li>
+        
+          <li><a href="../../Facter/Application.html">Facter::Application</a></li>
+        
+          <li><a href="../../Facter/Manufacturer.html">Facter::Manufacturer</a></li>
+        
+          <li><a href="../../Facter/Memory.html">Facter::Memory</a></li>
+        
+          <li><a href="../../Facter/NetMask.html">Facter::NetMask</a></li>
+        
+          <li><a href="../../Facter/Util.html">Facter::Util</a></li>
+        
+          <li><a href="../../Facter/Util/Collection.html">Facter::Util::Collection</a></li>
+        
+          <li><a href="../../Facter/Util/Config.html">Facter::Util::Config</a></li>
+        
+          <li><a href="../../Facter/Util/Confine.html">Facter::Util::Confine</a></li>
+        
+          <li><a href="../../Facter/Util/EC2.html">Facter::Util::EC2</a></li>
+        
+          <li><a href="../../Facter/Util/Fact.html">Facter::Util::Fact</a></li>
+        
+          <li><a href="../../Facter/Util/IP.html">Facter::Util::IP</a></li>
+        
+          <li><a href="../../Facter/Util/Loader.html">Facter::Util::Loader</a></li>
+        
+          <li><a href="../../Facter/Util/Macaddress.html">Facter::Util::Macaddress</a></li>
+        
+          <li><a href="../../Facter/Util/Macaddress/Darwin.html">Facter::Util::Macaddress::Darwin</a></li>
+        
+          <li><a href="../../Facter/Util/Macaddress/Windows.html">Facter::Util::Macaddress::Windows</a></li>
+        
+          <li><a href="../../Facter/Util/Macosx.html">Facter::Util::Macosx</a></li>
+        
+          <li><a href="../../Facter/Util/MonkeyPatches.html">Facter::Util::MonkeyPatches</a></li>
+        
+          <li><a href="../../Facter/Util/MonkeyPatches/Lines.html">Facter::Util::MonkeyPatches::Lines</a></li>
+        
+          <li><a href="../../Facter/Util/Processor.html">Facter::Util::Processor</a></li>
+        
+          <li><a href="../../Facter/Util/Registry.html">Facter::Util::Registry</a></li>
+        
+          <li><a href="../../Facter/Util/Resolution.html">Facter::Util::Resolution</a></li>
+        
+          <li><a href="../../Facter/Util/Uptime.html">Facter::Util::Uptime</a></li>
+        
+          <li><a href="../../Facter/Util/Values.html">Facter::Util::Values</a></li>
+        
+          <li><a href="../../Facter/Util/Virtual.html">Facter::Util::Virtual</a></li>
+        
+          <li><a href="../../Facter/Util/Vlans.html">Facter::Util::Vlans</a></li>
+        
+          <li><a href="../../Facter/Util/WMI.html">Facter::Util::WMI</a></li>
+        
+          <li><a href="../../Facter/Util/Xendomains.html">Facter::Util::Xendomains</a></li>
+        
+          <li><a href="../../Plist.html">Plist</a></li>
+        
+          <li><a href="../../Plist/Emit.html">Plist::Emit</a></li>
+        
+          <li><a href="../../Plist/Listener.html">Plist::Listener</a></li>
+        
+          <li><a href="../../Plist/PArray.html">Plist::PArray</a></li>
+        
+          <li><a href="../../Plist/PData.html">Plist::PData</a></li>
+        
+          <li><a href="../../Plist/PDate.html">Plist::PDate</a></li>
+        
+          <li><a href="../../Plist/PDict.html">Plist::PDict</a></li>
+        
+          <li><a href="../../Plist/PFalse.html">Plist::PFalse</a></li>
+        
+          <li><a href="../../Plist/PInteger.html">Plist::PInteger</a></li>
+        
+          <li><a href="../../Plist/PKey.html">Plist::PKey</a></li>
+        
+          <li><a href="../../Plist/PList.html">Plist::PList</a></li>
+        
+          <li><a href="../../Plist/PReal.html">Plist::PReal</a></li>
+        
+          <li><a href="../../Plist/PString.html">Plist::PString</a></li>
+        
+          <li><a href="../../Plist/PTag.html">Plist::PTag</a></li>
+        
+          <li><a href="../../Plist/PTrue.html">Plist::PTrue</a></li>
+        
+          <li><a href="../../Plist/StreamParser.html">Plist::StreamParser</a></li>
+        
+          <li><a href="../../IO.html">IO</a></li>
+        
+          <li><a href="../../Object.html">Object</a></li>
+        
+          <li><a href="../../String.html">String</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">Facter::Util::Resolution</h1>
+
+    <div id="description" class="description">
+      
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+      <!-- Constants -->
+      <div id="constants-list" class="section">
+        <h3 class="section-header">Constants</h3>
+        <dl>
+        
+          <dt><a name="INTERPRETER">INTERPRETER</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+        </dl>
+      </div>
+      
+
+      
+      <!-- Attributes -->
+      <div id="attribute-method-details" class="method-section section">
+        <h3 class="section-header">Attributes</h3>
+
+        
+        <div id="code-attribute-method" class="method-detail">
+          <a name="code"></a>
+          
+          <a name="code="></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">code</span><span
+              class="attribute-access-type">[RW]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+        <div id="interpreter-attribute-method" class="method-detail">
+          <a name="interpreter"></a>
+          
+          <a name="interpreter="></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">interpreter</span><span
+              class="attribute-access-type">[RW]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+        <div id="name-attribute-method" class="method-detail">
+          <a name="name"></a>
+          
+          <a name="name="></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">name</span><span
+              class="attribute-access-type">[RW]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+        <div id="timeout-attribute-method" class="method-detail">
+          <a name="timeout"></a>
+          
+          <a name="timeout="></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">timeout</span><span
+              class="attribute-access-type">[RW]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+      </div><!-- attribute-method-details -->
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="absolute_path-3F-method" class="method-detail ">
+          <a name="method-c-absolute_path-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">absolute_path?</span><span
+              class="method-args">(path, platform=nil)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Determine in a platform-specific way whether a path is absolute. This
+defaults to the local platform if none is specified.</p>
+            
+
+            
+            <div class="method-source-code" id="absolute_path-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/facter/util/resolution.rb, line 72</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">absolute_path?</span>(<span class="ruby-identifier">path</span>, <span class="ruby-identifier">platform</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-comment"># Escape once for the string literal, and once for the regex.</span>
+  <span class="ruby-identifier">slash</span> = <span class="ruby-string">'[\\/]'</span>
+  <span class="ruby-identifier">name</span> = <span class="ruby-string">'[^\\/]+'</span>
+  <span class="ruby-identifier">regexes</span> = {
+    <span class="ruby-value">:windows</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-node">%^(([A-Z]:#{slash})|(#{slash}#{slash}#{name}#{slash}#{name})|(#{slash}#{slash}\?#{slash}#{name}))!</span>,
+    <span class="ruby-value">:posix</span>   =<span class="ruby-operator">&gt;</span> <span class="ruby-regexp">%^/!</span>,
+  }
+  <span class="ruby-identifier">platform</span> <span class="ruby-operator">||=</span> <span class="ruby-constant">Facter</span><span class="ruby-operator">::</span><span class="ruby-constant">Util</span><span class="ruby-operator">::</span><span class="ruby-constant">Config</span>.<span class="ruby-identifier">is_windows?</span> <span class="ruby-operator">?</span> <span class="ruby-value">:windows</span> <span class="ruby-operator">:</span> <span class="ruby-value">:posix</span>
+
+  <span class="ruby-operator">!</span><span class="ruby-operator">!</span> (<span class="ruby-identifier">path</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">regexes</span>[<span class="ruby-identifier">platform</span>])
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- absolute_path-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- absolute_path-3F-method -->
+
+      
+        <div id="exec-method" class="method-detail ">
+          <a name="method-c-exec"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">exec</span><span
+              class="method-args">(code, interpreter = nil)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Execute a program and return the output of that program.</p>
+
+<p>Returns nil if the program can’t be found, or if there is a problem
+executing the code.</p>
+            
+
+            
+            <div class="method-source-code" id="exec-source">
+<pre>
+<span class="ruby-comment"># File lib/facter/util/resolution.rb, line 117</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">exec</span>(<span class="ruby-identifier">code</span>, <span class="ruby-identifier">interpreter</span> = <span class="ruby-keyword">nil</span>)
+  <span class="ruby-constant">Facter</span>.<span class="ruby-identifier">warnonce</span> <span class="ruby-string">&quot;The interpreter parameter to 'exec' is deprecated and will be removed in a future version.&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">interpreter</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">expanded_code</span> = <span class="ruby-identifier">expand_command</span>(<span class="ruby-identifier">code</span>)
+    <span class="ruby-comment"># if we can find the binary, we'll run the command with the expanded path to the binary</span>
+    <span class="ruby-identifier">code</span> = <span class="ruby-identifier">expanded_code</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-comment"># if we cannot find the binary return nil on posix. On windows we'll still try to run the</span>
+    <span class="ruby-comment"># command in case it is a shell-builtin. In case it is not, windows will raise Errno::ENOENT</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">unless</span> <span class="ruby-constant">Facter</span><span class="ruby-operator">::</span><span class="ruby-constant">Util</span><span class="ruby-operator">::</span><span class="ruby-constant">Config</span>.<span class="ruby-identifier">is_windows?</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">absolute_path?</span>(<span class="ruby-identifier">code</span>)
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">out</span> = <span class="ruby-keyword">nil</span>
+
+  <span class="ruby-keyword">begin</span>
+    <span class="ruby-identifier">out</span> = <span class="ruby-node">%{#{code}}</span>.<span class="ruby-identifier">chomp</span>
+    <span class="ruby-constant">Facter</span>.<span class="ruby-identifier">warnonce</span> <span class="ruby-string">'Using Facter::Util::Resolution.exec with a shell built-in is deprecated. Most built-ins can be replaced with native ruby commands. If you really have to run a built-in, pass &quot;cmd /c your_builtin&quot; as a command'</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">expanded_code</span>
+  <span class="ruby-keyword">rescue</span> <span class="ruby-constant">Errno</span><span class="ruby-operator">::</span><span class="ruby-constant">ENOENT</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">detail</span>
+    <span class="ruby-comment"># command not found on Windows</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">rescue</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">detail</span>
+    <span class="ruby-identifier">$stderr</span>.<span class="ruby-identifier">puts</span> <span class="ruby-identifier">detail</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">out</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;&quot;</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">out</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- exec-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- exec-method -->
+
+      
+        <div id="expand_command-method" class="method-detail ">
+          <a name="method-c-expand_command"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">expand_command</span><span
+              class="method-args">(command)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Expand the executable of a commandline to an absolute path. The executable
+is the first word of the commandline. If the executable contains spaces, it
+has be but in double quotes to be properly recognized.</p>
+
+<p>Returns the commandline with the expanded binary or nil if the binary can’t
+be found. If the path to the binary contains quotes, the whole binary is
+put in quotes.</p>
+            
+
+            
+            <div class="method-source-code" id="expand_command-source">
+<pre>
+<span class="ruby-comment"># File lib/facter/util/resolution.rb, line 92</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">expand_command</span>(<span class="ruby-identifier">command</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">match</span> = <span class="ruby-regexp">/^&quot;(.+?)&quot;(?:\s+(.*))?/</span>.<span class="ruby-identifier">match</span>(<span class="ruby-identifier">command</span>)
+    <span class="ruby-identifier">exe</span>, <span class="ruby-identifier">arguments</span> = <span class="ruby-identifier">match</span>.<span class="ruby-identifier">captures</span>
+    <span class="ruby-identifier">exe</span> = <span class="ruby-identifier">which</span>(<span class="ruby-identifier">exe</span>) <span class="ruby-keyword">and</span> [ <span class="ruby-node">&quot;\&quot;#{exe}\&quot;&quot;</span>, <span class="ruby-identifier">arguments</span> ].<span class="ruby-identifier">compact</span>.<span class="ruby-identifier">join</span>(<span class="ruby-string">&quot; &quot;</span>)
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">match</span> = <span class="ruby-regexp">/^'(.+?)'(?:\s+(.*))?/</span>.<span class="ruby-identifier">match</span>(<span class="ruby-identifier">command</span>) <span class="ruby-keyword">and</span> <span class="ruby-keyword">not</span> <span class="ruby-constant">Facter</span><span class="ruby-operator">::</span><span class="ruby-constant">Util</span><span class="ruby-operator">::</span><span class="ruby-constant">Config</span>.<span class="ruby-identifier">is_windows?</span>
+    <span class="ruby-identifier">exe</span>, <span class="ruby-identifier">arguments</span> = <span class="ruby-identifier">match</span>.<span class="ruby-identifier">captures</span>
+    <span class="ruby-identifier">exe</span> = <span class="ruby-identifier">which</span>(<span class="ruby-identifier">exe</span>) <span class="ruby-keyword">and</span> [ <span class="ruby-node">&quot;'#{exe}'&quot;</span>, <span class="ruby-identifier">arguments</span> ].<span class="ruby-identifier">compact</span>.<span class="ruby-identifier">join</span>(<span class="ruby-string">&quot; &quot;</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">exe</span>, <span class="ruby-identifier">arguments</span> = <span class="ruby-identifier">command</span>.<span class="ruby-identifier">split</span>(<span class="ruby-regexp">/ /</span>,<span class="ruby-value">2</span>)
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">exe</span> = <span class="ruby-identifier">which</span>(<span class="ruby-identifier">exe</span>)
+      <span class="ruby-comment"># the binary was not quoted which means it contains no spaces. But the</span>
+      <span class="ruby-comment"># full path to the binary may do so.</span>
+      <span class="ruby-identifier">exe</span> = <span class="ruby-node">&quot;\&quot;#{exe}\&quot;&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">exe</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/\s/</span> <span class="ruby-keyword">and</span> <span class="ruby-constant">Facter</span><span class="ruby-operator">::</span><span class="ruby-constant">Util</span><span class="ruby-operator">::</span><span class="ruby-constant">Config</span>.<span class="ruby-identifier">is_windows?</span>
+      <span class="ruby-identifier">exe</span> = <span class="ruby-node">&quot;'#{exe}'&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">exe</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/\s/</span> <span class="ruby-keyword">and</span> <span class="ruby-keyword">not</span> <span class="ruby-constant">Facter</span><span class="ruby-operator">::</span><span class="ruby-constant">Util</span><span class="ruby-operator">::</span><span class="ruby-constant">Config</span>.<span class="ruby-identifier">is_windows?</span>
+      [ <span class="ruby-identifier">exe</span>, <span class="ruby-identifier">arguments</span> ].<span class="ruby-identifier">compact</span>.<span class="ruby-identifier">join</span>(<span class="ruby-string">&quot; &quot;</span>)
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- expand_command-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- expand_command-method -->
+
+      
+        <div id="new-method" class="method-detail ">
+          <a name="method-c-new"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">new</span><span
+              class="method-args">(name)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Create a new resolution mechanism.</p>
+            
+
+            
+            <div class="method-source-code" id="new-source">
+<pre>
+<span class="ruby-comment"># File lib/facter/util/resolution.rb, line 162</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">name</span>)
+  <span class="ruby-ivar">@name</span> = <span class="ruby-identifier">name</span>
+  <span class="ruby-ivar">@confines</span> = []
+  <span class="ruby-ivar">@value</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-ivar">@timeout</span> = <span class="ruby-value">0</span>
+  <span class="ruby-ivar">@weight</span> = <span class="ruby-keyword">nil</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- new-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- new-method -->
+
+      
+        <div id="search_paths-method" class="method-detail ">
+          <a name="method-c-search_paths"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">search_paths</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Returns the locations to be searched when looking for a binary. This is
+currently determined by the <tt>PATH</tt> environment variable plus
+<tt>/sbin</tt> and <tt>/usr/sbin</tt> when run on unix</p>
+            
+
+            
+            <div class="method-source-code" id="search_paths-source">
+<pre>
+<span class="ruby-comment"># File lib/facter/util/resolution.rb, line 19</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">search_paths</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">Facter</span><span class="ruby-operator">::</span><span class="ruby-constant">Util</span><span class="ruby-operator">::</span><span class="ruby-constant">Config</span>.<span class="ruby-identifier">is_windows?</span>
+    <span class="ruby-constant">ENV</span>[<span class="ruby-string">'PATH'</span>].<span class="ruby-identifier">split</span>(<span class="ruby-constant">File</span><span class="ruby-operator">::</span><span class="ruby-constant">PATH_SEPARATOR</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-comment"># Make sure facter is usable even for non-root users. Most commands</span>
+    <span class="ruby-comment"># in /sbin (like ifconfig) can be run as non priviledged users as</span>
+    <span class="ruby-comment"># long as they do not modify anything - which we do not do with facter</span>
+    <span class="ruby-constant">ENV</span>[<span class="ruby-string">'PATH'</span>].<span class="ruby-identifier">split</span>(<span class="ruby-constant">File</span><span class="ruby-operator">::</span><span class="ruby-constant">PATH_SEPARATOR</span>) <span class="ruby-operator">+</span> [ <span class="ruby-string">'/sbin'</span>, <span class="ruby-string">'/usr/sbin'</span> ]
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- search_paths-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- search_paths-method -->
+
+      
+        <div id="which-method" class="method-detail ">
+          <a name="method-c-which"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">which</span><span
+              class="method-args">(bin)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Determine the full path to a binary. If the supplied filename does not
+already describe an absolute path then different locations (determined by
+<tt>self.search_paths</tt>) will be searched for a match.</p>
+
+<p>Returns nil if no matching executable can be found otherwise returns the
+expanded pathname.</p>
+            
+
+            
+            <div class="method-source-code" id="which-source">
+<pre>
+<span class="ruby-comment"># File lib/facter/util/resolution.rb, line 36</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">which</span>(<span class="ruby-identifier">bin</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">absolute_path?</span>(<span class="ruby-identifier">bin</span>)
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">bin</span> <span class="ruby-keyword">if</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">executable?</span>(<span class="ruby-identifier">bin</span>)
+    <span class="ruby-keyword">if</span> <span class="ruby-constant">Facter</span><span class="ruby-operator">::</span><span class="ruby-constant">Util</span><span class="ruby-operator">::</span><span class="ruby-constant">Config</span>.<span class="ruby-identifier">is_windows?</span> <span class="ruby-keyword">and</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">extname</span>(<span class="ruby-identifier">bin</span>).<span class="ruby-identifier">empty?</span>
+      <span class="ruby-identifier">exts</span> = <span class="ruby-constant">ENV</span>[<span class="ruby-string">'PATHEXT'</span>]
+      <span class="ruby-identifier">exts</span> = <span class="ruby-identifier">exts</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">exts</span>.<span class="ruby-identifier">split</span>(<span class="ruby-constant">File</span><span class="ruby-operator">::</span><span class="ruby-constant">PATH_SEPARATOR</span>) <span class="ruby-operator">:</span> <span class="ruby-node">].COM .EXE .BAT .CMD]</span>
+      <span class="ruby-identifier">exts</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">ext</span><span class="ruby-operator">|</span>
+        <span class="ruby-identifier">destext</span> = <span class="ruby-identifier">bin</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">ext</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">executable?</span>(<span class="ruby-identifier">destext</span>)
+          <span class="ruby-constant">Facter</span>.<span class="ruby-identifier">warnonce</span>(<span class="ruby-node">&quot;Using Facter::Util::Resolution.which with an absolute path like #{bin} but no fileextension is deprecated. Please add the correct extension (#{ext})&quot;</span>)
+          <span class="ruby-keyword">return</span> <span class="ruby-identifier">destext</span>
+        <span class="ruby-keyword">end</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">search_paths</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">dir</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">dest</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-identifier">dir</span>, <span class="ruby-identifier">bin</span>)
+      <span class="ruby-keyword">if</span> <span class="ruby-constant">Facter</span><span class="ruby-operator">::</span><span class="ruby-constant">Util</span><span class="ruby-operator">::</span><span class="ruby-constant">Config</span>.<span class="ruby-identifier">is_windows?</span>
+        <span class="ruby-identifier">dest</span>.<span class="ruby-identifier">gsub!</span>(<span class="ruby-constant">File</span><span class="ruby-operator">::</span><span class="ruby-constant">SEPARATOR</span>, <span class="ruby-constant">File</span><span class="ruby-operator">::</span><span class="ruby-constant">ALT_SEPARATOR</span>)
+        <span class="ruby-keyword">if</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">extname</span>(<span class="ruby-identifier">dest</span>).<span class="ruby-identifier">empty?</span>
+          <span class="ruby-identifier">exts</span> = <span class="ruby-constant">ENV</span>[<span class="ruby-string">'PATHEXT'</span>]
+          <span class="ruby-identifier">exts</span> = <span class="ruby-identifier">exts</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">exts</span>.<span class="ruby-identifier">split</span>(<span class="ruby-constant">File</span><span class="ruby-operator">::</span><span class="ruby-constant">PATH_SEPARATOR</span>) <span class="ruby-operator">:</span> <span class="ruby-node">].COM .EXE .BAT .CMD]</span>
+          <span class="ruby-identifier">exts</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">ext</span><span class="ruby-operator">|</span>
+            <span class="ruby-identifier">destext</span> = <span class="ruby-identifier">dest</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">ext</span>
+            <span class="ruby-keyword">return</span> <span class="ruby-identifier">destext</span> <span class="ruby-keyword">if</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">executable?</span>(<span class="ruby-identifier">destext</span>)
+          <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">end</span>
+      <span class="ruby-keyword">end</span>
+      <span class="ruby-keyword">return</span> <span class="ruby-identifier">dest</span> <span class="ruby-keyword">if</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">executable?</span>(<span class="ruby-identifier">dest</span>)
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">nil</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- which-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- which-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="confine-method" class="method-detail ">
+          <a name="method-i-confine"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">confine</span><span
+              class="method-args">(confines)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Add a new confine to the resolution mechanism.</p>
+            
+
+            
+            <div class="method-source-code" id="confine-source">
+<pre>
+<span class="ruby-comment"># File lib/facter/util/resolution.rb, line 151</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">confine</span>(<span class="ruby-identifier">confines</span>)
+  <span class="ruby-identifier">confines</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">fact</span>, <span class="ruby-identifier">values</span><span class="ruby-operator">|</span>
+    <span class="ruby-ivar">@confines</span>.<span class="ruby-identifier">push</span> <span class="ruby-constant">Facter</span><span class="ruby-operator">::</span><span class="ruby-constant">Util</span><span class="ruby-operator">::</span><span class="ruby-constant">Confine</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">fact</span>, *<span class="ruby-identifier">values</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- confine-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- confine-method -->
+
+      
+        <div id="has_weight-method" class="method-detail ">
+          <a name="method-i-has_weight"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">has_weight</span><span
+              class="method-args">(weight)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="has_weight-source">
+<pre>
+<span class="ruby-comment"># File lib/facter/util/resolution.rb, line 157</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">has_weight</span>(<span class="ruby-identifier">weight</span>)
+  <span class="ruby-ivar">@weight</span> = <span class="ruby-identifier">weight</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- has_weight-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- has_weight-method -->
+
+      
+        <div id="interpreter-3D-method" class="method-detail ">
+          <a name="method-i-interpreter-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">interpreter=</span><span
+              class="method-args">(interp)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="interpreter-3D-source">
+<pre>
+<span class="ruby-comment"># File lib/facter/util/resolution.rb, line 205</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">interpreter=</span>(<span class="ruby-identifier">interp</span>)
+  <span class="ruby-constant">Facter</span>.<span class="ruby-identifier">warnonce</span> <span class="ruby-string">&quot;The 'Facter::Util::Resolution.interpreter=' method is deprecated and will be removed in a future version.&quot;</span>
+  <span class="ruby-ivar">@interpreter</span> = <span class="ruby-identifier">interp</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- interpreter-3D-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- interpreter-3D-method -->
+
+      
+        <div id="limit-method" class="method-detail ">
+          <a name="method-i-limit"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">limit</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>We need this as a getter for ‘timeout’, because some versions of ruby seem
+to already have a ‘timeout’ method and we can’t seem to override the
+instance methods, somehow.</p>
+            
+
+            
+            <div class="method-source-code" id="limit-source">
+<pre>
+<span class="ruby-comment"># File lib/facter/util/resolution.rb, line 182</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">limit</span>
+  <span class="ruby-ivar">@timeout</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- limit-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- limit-method -->
+
+      
+        <div id="setcode-method" class="method-detail ">
+          <a name="method-i-setcode"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">setcode</span><span
+              class="method-args">(string = nil, interp = nil, &block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Set our code for returning a value.</p>
+            
+
+            
+            <div class="method-source-code" id="setcode-source">
+<pre>
+<span class="ruby-comment"># File lib/facter/util/resolution.rb, line 187</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setcode</span>(<span class="ruby-identifier">string</span> = <span class="ruby-keyword">nil</span>, <span class="ruby-identifier">interp</span> = <span class="ruby-keyword">nil</span>, &amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-constant">Facter</span>.<span class="ruby-identifier">warnonce</span> <span class="ruby-string">&quot;The interpreter parameter to 'setcode' is deprecated and will be removed in a future version.&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">interp</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">string</span>
+    <span class="ruby-ivar">@code</span> = <span class="ruby-identifier">string</span>
+    <span class="ruby-ivar">@interpreter</span> = <span class="ruby-identifier">interp</span> <span class="ruby-operator">||</span> <span class="ruby-constant">INTERPRETER</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-keyword">unless</span> <span class="ruby-identifier">block_given?</span>
+      <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-string">&quot;You must pass either code or a block&quot;</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-ivar">@code</span> = <span class="ruby-identifier">block</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- setcode-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- setcode-method -->
+
+      
+        <div id="suitable-3F-method" class="method-detail ">
+          <a name="method-i-suitable-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">suitable?</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Is this resolution mechanism suitable on the system in question?</p>
+            
+
+            
+            <div class="method-source-code" id="suitable-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/facter/util/resolution.rb, line 211</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">suitable?</span>
+  <span class="ruby-keyword">unless</span> <span class="ruby-keyword">defined?</span> <span class="ruby-ivar">@suitable</span>
+    <span class="ruby-ivar">@suitable</span> = <span class="ruby-operator">!</span> <span class="ruby-ivar">@confines</span>.<span class="ruby-identifier">detect</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">confine</span><span class="ruby-operator">|</span> <span class="ruby-operator">!</span> <span class="ruby-identifier">confine</span>.<span class="ruby-identifier">true?</span> }
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">return</span> <span class="ruby-ivar">@suitable</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- suitable-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- suitable-3F-method -->
+
+      
+        <div id="to_s-method" class="method-detail ">
+          <a name="method-i-to_s"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">to_s</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="to_s-source">
+<pre>
+<span class="ruby-comment"># File lib/facter/util/resolution.rb, line 219</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">to_s</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">value</span>()
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- to_s-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- to_s-method -->
+
+      
+        <div id="value-method" class="method-detail ">
+          <a name="method-i-value"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">value</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>How we get a value for our resolution mechanism.</p>
+            
+
+            
+            <div class="method-source-code" id="value-source">
+<pre>
+<span class="ruby-comment"># File lib/facter/util/resolution.rb, line 224</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">value</span>
+  <span class="ruby-identifier">result</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">result</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@code</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">nil</span>
+
+  <span class="ruby-identifier">starttime</span> = <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>.<span class="ruby-identifier">to_f</span>
+
+  <span class="ruby-keyword">begin</span>
+    <span class="ruby-constant">Timeout</span>.<span class="ruby-identifier">timeout</span>(<span class="ruby-identifier">limit</span>) <span class="ruby-keyword">do</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-ivar">@code</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Proc</span>)
+        <span class="ruby-identifier">result</span> = <span class="ruby-ivar">@code</span>.<span class="ruby-identifier">call</span>()
+      <span class="ruby-keyword">else</span>
+        <span class="ruby-identifier">result</span> = <span class="ruby-constant">Facter</span><span class="ruby-operator">::</span><span class="ruby-constant">Util</span><span class="ruby-operator">::</span><span class="ruby-constant">Resolution</span>.<span class="ruby-identifier">exec</span>(<span class="ruby-ivar">@code</span>)
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">rescue</span> <span class="ruby-constant">Timeout</span><span class="ruby-operator">::</span><span class="ruby-constant">Error</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">detail</span>
+    <span class="ruby-identifier">warn</span> <span class="ruby-string">&quot;Timed out seeking value for %s&quot;</span> <span class="ruby-operator">%</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">name</span>
+
+    <span class="ruby-comment"># This call avoids zombies -- basically, create a thread that will</span>
+    <span class="ruby-comment"># dezombify all of the child processes that we're ignoring because</span>
+    <span class="ruby-comment"># of the timeout.</span>
+    <span class="ruby-constant">Thread</span>.<span class="ruby-identifier">new</span> { <span class="ruby-constant">Process</span>.<span class="ruby-identifier">waitall</span> }
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">rescue</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">details</span>
+    <span class="ruby-identifier">warn</span> <span class="ruby-string">&quot;Could not retrieve %s: %s&quot;</span> <span class="ruby-operator">%</span> [<span class="ruby-keyword">self</span>.<span class="ruby-identifier">name</span>, <span class="ruby-identifier">details</span>]
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">finishtime</span> = <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>.<span class="ruby-identifier">to_f</span>
+  <span class="ruby-identifier">ms</span> = (<span class="ruby-identifier">finishtime</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">starttime</span>) * <span class="ruby-value">1000</span>
+  <span class="ruby-constant">Facter</span>.<span class="ruby-identifier">show_time</span> <span class="ruby-node">&quot;#{self.name}: #{&quot;%.2f&quot; % ms}ms&quot;</span>
+
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">result</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;&quot;</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">result</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- value-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- value-method -->
+
+      
+        <div id="weight-method" class="method-detail ">
+          <a name="method-i-weight"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">weight</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Return the importance of this resolution.</p>
+            
+
+            
+            <div class="method-source-code" id="weight-source">
+<pre>
+<span class="ruby-comment"># File lib/facter/util/resolution.rb, line 171</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">weight</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@weight</span>
+    <span class="ruby-ivar">@weight</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-ivar">@confines</span>.<span class="ruby-identifier">length</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- weight-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- weight-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

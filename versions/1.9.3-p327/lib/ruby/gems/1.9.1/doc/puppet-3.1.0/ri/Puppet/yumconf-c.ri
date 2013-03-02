@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"yumconf:EFI"Puppet::yumconf;FI"RW;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"AThe writer is only used for testing, there should be no need;TI"6to change yumconf or inifile in any other context;T:
+@file0TI"lib/puppet/type/yumrepo.rb;T

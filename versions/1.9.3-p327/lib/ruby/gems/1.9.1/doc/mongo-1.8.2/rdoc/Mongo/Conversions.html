@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Module: Mongo::Conversions</title>
+
+  <link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="module">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../lib/mongo/util/conversions_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/mongo/util/conversions.rb">lib/mongo/util/conversions.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-i-array_as_sort_parameters">#array_as_sort_parameters</a></li>
+          
+          <li><a href="#method-i-hash_as_sort_parameters">#hash_as_sort_parameters</a></li>
+          
+          <li><a href="#method-i-sort_value">#sort_value</a></li>
+          
+          <li><a href="#method-i-string_as_sort_parameters">#string_as_sort_parameters</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../Mongo.html">Mongo</a></li>
+        
+          <li><a href="../Mongo/AuthenticationError.html">Mongo::AuthenticationError</a></li>
+        
+          <li><a href="../Mongo/Collection.html">Mongo::Collection</a></li>
+        
+          <li><a href="../Mongo/Connection.html">Mongo::Connection</a></li>
+        
+          <li><a href="../Mongo/ConnectionError.html">Mongo::ConnectionError</a></li>
+        
+          <li><a href="../Mongo/ConnectionFailure.html">Mongo::ConnectionFailure</a></li>
+        
+          <li><a href="../Mongo/ConnectionTimeoutError.html">Mongo::ConnectionTimeoutError</a></li>
+        
+          <li><a href="../Mongo/Constants.html">Mongo::Constants</a></li>
+        
+          <li><a href="../Mongo/Conversions.html">Mongo::Conversions</a></li>
+        
+          <li><a href="../Mongo/Cursor.html">Mongo::Cursor</a></li>
+        
+          <li><a href="../Mongo/DB.html">Mongo::DB</a></li>
+        
+          <li><a href="../Mongo/Grid.html">Mongo::Grid</a></li>
+        
+          <li><a href="../Mongo/GridError.html">Mongo::GridError</a></li>
+        
+          <li><a href="../Mongo/GridExt.html">Mongo::GridExt</a></li>
+        
+          <li><a href="../Mongo/GridExt/InstanceMethods.html">Mongo::GridExt::InstanceMethods</a></li>
+        
+          <li><a href="../Mongo/GridFileNotFound.html">Mongo::GridFileNotFound</a></li>
+        
+          <li><a href="../Mongo/GridFileSystem.html">Mongo::GridFileSystem</a></li>
+        
+          <li><a href="../Mongo/GridIO.html">Mongo::GridIO</a></li>
+        
+          <li><a href="../Mongo/GridMD5Failure.html">Mongo::GridMD5Failure</a></li>
+        
+          <li><a href="../Mongo/InvalidNSName.html">Mongo::InvalidNSName</a></li>
+        
+          <li><a href="../Mongo/InvalidOperation.html">Mongo::InvalidOperation</a></li>
+        
+          <li><a href="../Mongo/InvalidSortValueError.html">Mongo::InvalidSortValueError</a></li>
+        
+          <li><a href="../Mongo/LegacyWriteConcern.html">Mongo::LegacyWriteConcern</a></li>
+        
+          <li><a href="../Mongo/Logging.html">Mongo::Logging</a></li>
+        
+          <li><a href="../Mongo/Logging/Instrumenter.html">Mongo::Logging::Instrumenter</a></li>
+        
+          <li><a href="../Mongo/MongoArgumentError.html">Mongo::MongoArgumentError</a></li>
+        
+          <li><a href="../Mongo/MongoClient.html">Mongo::MongoClient</a></li>
+        
+          <li><a href="../Mongo/MongoDBError.html">Mongo::MongoDBError</a></li>
+        
+          <li><a href="../Mongo/MongoReplicaSetClient.html">Mongo::MongoReplicaSetClient</a></li>
+        
+          <li><a href="../Mongo/MongoRubyError.html">Mongo::MongoRubyError</a></li>
+        
+          <li><a href="../Mongo/MongoShardedClient.html">Mongo::MongoShardedClient</a></li>
+        
+          <li><a href="../Mongo/Networking.html">Mongo::Networking</a></li>
+        
+          <li><a href="../Mongo/Node.html">Mongo::Node</a></li>
+        
+          <li><a href="../Mongo/NodeWithTagsNotFound.html">Mongo::NodeWithTagsNotFound</a></li>
+        
+          <li><a href="../Mongo/OperationFailure.html">Mongo::OperationFailure</a></li>
+        
+          <li><a href="../Mongo/OperationTimeout.html">Mongo::OperationTimeout</a></li>
+        
+          <li><a href="../Mongo/Pool.html">Mongo::Pool</a></li>
+        
+          <li><a href="../Mongo/PoolManager.html">Mongo::PoolManager</a></li>
+        
+          <li><a href="../Mongo/ReadPreference.html">Mongo::ReadPreference</a></li>
+        
+          <li><a href="../Mongo/ReplSetConnection.html">Mongo::ReplSetConnection</a></li>
+        
+          <li><a href="../Mongo/ReplicaSetConnectionError.html">Mongo::ReplicaSetConnectionError</a></li>
+        
+          <li><a href="../Mongo/SSLSocket.html">Mongo::SSLSocket</a></li>
+        
+          <li><a href="../Mongo/ServerVersion.html">Mongo::ServerVersion</a></li>
+        
+          <li><a href="../Mongo/ShardedConnection.html">Mongo::ShardedConnection</a></li>
+        
+          <li><a href="../Mongo/ShardingPoolManager.html">Mongo::ShardingPoolManager</a></li>
+        
+          <li><a href="../Mongo/Support.html">Mongo::Support</a></li>
+        
+          <li><a href="../Mongo/TCPSocket.html">Mongo::TCPSocket</a></li>
+        
+          <li><a href="../Mongo/ThreadLocalVariableManager.html">Mongo::ThreadLocalVariableManager</a></li>
+        
+          <li><a href="../Mongo/UNIXSocket.html">Mongo::UNIXSocket</a></li>
+        
+          <li><a href="../Mongo/URIParser.html">Mongo::URIParser</a></li>
+        
+          <li><a href="../Mongo/WriteConcern.html">Mongo::WriteConcern</a></li>
+        
+          <li><a href="../Class.html">Class</a></li>
+        
+          <li><a href="../Mutex.html">Mutex</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="module">Mongo::Conversions</h1>
+
+    <div id="description" class="description">
+      
+<p>Utility module to include when needing to convert certain types of objects
+to mongo-friendly parameters.</p>
+
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+      <!-- Constants -->
+      <div id="constants-list" class="section">
+        <h3 class="section-header">Constants</h3>
+        <dl>
+        
+          <dt><a name="ASCENDING_CONVERSION">ASCENDING_CONVERSION</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="DESCENDING_CONVERSION">DESCENDING_CONVERSION</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+        </dl>
+      </div>
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="array_as_sort_parameters-method" class="method-detail ">
+          <a name="method-i-array_as_sort_parameters"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">array_as_sort_parameters</span><span
+              class="method-args">(value)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Converts the supplied <tt>Array</tt> to a <tt>Hash</tt> to pass to mongo as
+sorting parameters. The returned <tt>Hash</tt> will vary depending  on
+whether the passed <tt>Array</tt> is one or two dimensional.</p>
+
+<p>Example:</p>
+
+<p><tt>array_as_sort_parameters([[&quot;field1&quot;, :asc],
+[&quot;field2&quot;, :desc]])</tt> =&gt; <tt>{ &quot;field1&quot; =&gt; 1,
+&quot;field2&quot; =&gt; -1}</tt></p>
+            
+
+            
+            <div class="method-source-code" id="array_as_sort_parameters-source">
+<pre>
+<span class="ruby-comment"># File lib/mongo/util/conversions.rb, line 57</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">array_as_sort_parameters</span>(<span class="ruby-identifier">value</span>)
+  <span class="ruby-identifier">order_by</span> = <span class="ruby-constant">BSON</span><span class="ruby-operator">::</span><span class="ruby-constant">OrderedHash</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">value</span>.<span class="ruby-identifier">first</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">Array</span>
+    <span class="ruby-identifier">value</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">param</span><span class="ruby-operator">|</span>
+      <span class="ruby-keyword">if</span> (<span class="ruby-identifier">param</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">name</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;String&quot;</span>)
+        <span class="ruby-identifier">order_by</span>[<span class="ruby-identifier">param</span>] = <span class="ruby-value">1</span>
+      <span class="ruby-keyword">else</span>
+        <span class="ruby-identifier">order_by</span>[<span class="ruby-identifier">param</span>[<span class="ruby-value">0</span>]] = <span class="ruby-identifier">sort_value</span>(<span class="ruby-identifier">param</span>[<span class="ruby-value">1</span>]) <span class="ruby-keyword">unless</span> <span class="ruby-identifier">param</span>[<span class="ruby-value">1</span>].<span class="ruby-identifier">nil?</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-operator">!</span><span class="ruby-identifier">value</span>.<span class="ruby-identifier">empty?</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">order_by</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">==</span> <span class="ruby-value">1</span>
+      <span class="ruby-identifier">order_by</span>[<span class="ruby-identifier">value</span>.<span class="ruby-identifier">first</span>] = <span class="ruby-value">1</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">order_by</span>[<span class="ruby-identifier">value</span>.<span class="ruby-identifier">first</span>] = <span class="ruby-identifier">sort_value</span>(<span class="ruby-identifier">value</span>[<span class="ruby-value">1</span>])
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">order_by</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- array_as_sort_parameters-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- array_as_sort_parameters-method -->
+
+      
+        <div id="hash_as_sort_parameters-method" class="method-detail ">
+          <a name="method-i-hash_as_sort_parameters"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">hash_as_sort_parameters</span><span
+              class="method-args">(value)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Allows sort parameters to be defined as a Hash. Does not allow usage of
+un-ordered hashes, therefore Ruby 1.8.x users must use BSON::OrderedHash.</p>
+
+<p>Example:</p>
+
+<p><tt>hash_as_sort_parameters({:field1 =&gt; :asc, &quot;field2&quot; =&gt;
+:desc})</tt> =&gt; <tt>{ &quot;field1&quot; =&gt; 1, &quot;field2&quot;
+=&gt; -1}</tt></p>
+            
+
+            
+            <div class="method-source-code" id="hash_as_sort_parameters-source">
+<pre>
+<span class="ruby-comment"># File lib/mongo/util/conversions.rb, line 34</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">hash_as_sort_parameters</span>(<span class="ruby-identifier">value</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">RUBY_VERSION</span> <span class="ruby-operator">&lt;</span> <span class="ruby-string">'1.9'</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">value</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">BSON</span><span class="ruby-operator">::</span><span class="ruby-constant">OrderedHash</span>)
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">InvalidSortValueError</span>.<span class="ruby-identifier">new</span>(
+      <span class="ruby-string">&quot;Hashes used to supply sort order must maintain ordering.&quot;</span> <span class="ruby-operator">+</span>
+      <span class="ruby-string">&quot;Use BSON::OrderedHash.&quot;</span>
+    )
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">order_by</span> = <span class="ruby-identifier">value</span>.<span class="ruby-identifier">inject</span>({}) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">memo</span>, (<span class="ruby-identifier">key</span>, <span class="ruby-identifier">direction</span>)<span class="ruby-operator">|</span>
+      <span class="ruby-identifier">memo</span>[<span class="ruby-identifier">key</span>.<span class="ruby-identifier">to_s</span>] = <span class="ruby-identifier">sort_value</span>(<span class="ruby-identifier">direction</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">downcase</span>)
+      <span class="ruby-identifier">memo</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">order_by</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- hash_as_sort_parameters-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- hash_as_sort_parameters-method -->
+
+      
+        <div id="sort_value-method" class="method-detail ">
+          <a name="method-i-sort_value"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">sort_value</span><span
+              class="method-args">(value)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Converts the <tt>String</tt>, <tt>Symbol</tt>, or <tt>Integer</tt> to the 
+corresponding sort value in MongoDB.</p>
+
+<p>Valid conversions (case-insensitive):</p>
+
+<p><tt>ascending, asc, :ascending, :asc, 1</tt> =&gt; <tt>1</tt>
+<tt>descending, desc, :descending, :desc, -1</tt> =&gt; <tt>-1</tt></p>
+
+<p>If the value is invalid then an error will be raised.</p>
+            
+
+            
+            <div class="method-source-code" id="sort_value-source">
+<pre>
+<span class="ruby-comment"># File lib/mongo/util/conversions.rb, line 101</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">sort_value</span>(<span class="ruby-identifier">value</span>)
+  <span class="ruby-identifier">val</span> = <span class="ruby-identifier">value</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">downcase</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-value">1</span> <span class="ruby-keyword">if</span> <span class="ruby-constant">ASCENDING_CONVERSION</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">val</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-value">-1</span> <span class="ruby-keyword">if</span> <span class="ruby-constant">DESCENDING_CONVERSION</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">val</span>)
+  <span class="ruby-identifier">raise</span> <span class="ruby-constant">InvalidSortValueError</span>.<span class="ruby-identifier">new</span>(
+    <span class="ruby-node">&quot;#{self} was supplied as a sort direction when acceptable values are: &quot;</span> <span class="ruby-operator">+</span>
+    <span class="ruby-string">&quot;Mongo::ASCENDING, 'ascending', 'asc', :ascending, :asc, 1, Mongo::DESCENDING, &quot;</span> <span class="ruby-operator">+</span>
+    <span class="ruby-string">&quot;'descending', 'desc', :descending, :desc, -1.&quot;</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- sort_value-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- sort_value-method -->
+
+      
+        <div id="string_as_sort_parameters-method" class="method-detail ">
+          <a name="method-i-string_as_sort_parameters"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">string_as_sort_parameters</span><span
+              class="method-args">(value)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Converts the supplied <tt>String</tt> or <tt>Symbol</tt> to a <tt>Hash</tt>
+to pass to mongo as a sorting parameter with ascending order. If the
+<tt>String</tt> is empty then an empty <tt>Hash</tt> will be returned.</p>
+
+<p>Example:</p>
+
+<p>*DEPRECATED</p>
+
+<p><tt>string_as_sort_parameters(&quot;field&quot;)</tt> =&gt; <tt>{
+&quot;field&quot; =&gt; 1 }</tt>
+<tt>string_as_sort_parameters(&quot;&quot;)</tt> =&gt; <tt>{}</tt></p>
+            
+
+            
+            <div class="method-source-code" id="string_as_sort_parameters-source">
+<pre>
+<span class="ruby-comment"># File lib/mongo/util/conversions.rb, line 87</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">string_as_sort_parameters</span>(<span class="ruby-identifier">value</span>)
+  <span class="ruby-keyword">return</span> {} <span class="ruby-keyword">if</span> (<span class="ruby-identifier">str</span> = <span class="ruby-identifier">value</span>.<span class="ruby-identifier">to_s</span>).<span class="ruby-identifier">empty?</span>
+  { <span class="ruby-identifier">str</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span> }
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- string_as_sort_parameters-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- string_as_sort_parameters-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

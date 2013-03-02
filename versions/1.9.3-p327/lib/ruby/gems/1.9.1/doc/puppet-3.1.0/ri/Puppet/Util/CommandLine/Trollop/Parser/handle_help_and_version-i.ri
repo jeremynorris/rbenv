@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"handle_help_and_version:EFI"GPuppet::Util::CommandLine::Trollop::Parser#handle_help_and_version;FI"RW;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"VA flag indicating whether or not the parser should attempt to handle "--help" and;To:RDoc::Markup::Verbatim;	[I"W"--version" specially.  If 'false', it will treat them just like any other option.;F:
+@file0FI",lib/puppet/util/command_line/trollop.rb;T

@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"column:EFI"$PuppetLint::Lexer::Token#column;FI"R;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"LInternal: Returns the Integer column number of the line of the manifest;TI"'text where the Token can be found.;T:
+@file0FI"#lib/puppet-lint/lexer/token.rb;T

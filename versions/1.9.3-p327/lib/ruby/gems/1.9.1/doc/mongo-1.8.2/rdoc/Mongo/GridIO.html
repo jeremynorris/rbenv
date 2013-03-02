@@ -1,0 +1,1228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Class: Mongo::GridIO</title>
+
+  <link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../lib/mongo/gridfs/grid_io_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/mongo/gridfs/grid_io.rb">lib/mongo/gridfs/grid_io.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link">Object</p>
+        
+      </div>
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-new">::new</a></li>
+          
+          <li><a href="#method-i-5B-5D">#[]</a></li>
+          
+          <li><a href="#method-i-5B-5D-3D">#[]=</a></li>
+          
+          <li><a href="#method-i-close">#close</a></li>
+          
+          <li><a href="#method-i-data">#data</a></li>
+          
+          <li><a href="#method-i-each">#each</a></li>
+          
+          <li><a href="#method-i-eof">#eof</a></li>
+          
+          <li><a href="#method-i-eof-3F">#eof?</a></li>
+          
+          <li><a href="#method-i-getc">#getc</a></li>
+          
+          <li><a href="#method-i-gets">#gets</a></li>
+          
+          <li><a href="#method-i-inspect">#inspect</a></li>
+          
+          <li><a href="#method-i-pos">#pos</a></li>
+          
+          <li><a href="#method-i-read">#read</a></li>
+          
+          <li><a href="#method-i-rewind">#rewind</a></li>
+          
+          <li><a href="#method-i-seek">#seek</a></li>
+          
+          <li><a href="#method-i-tell">#tell</a></li>
+          
+          <li><a href="#method-i-write">#write</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+      <!-- Included Modules -->
+      <div id="includes-section" class="section">
+        <h3 class="section-header">Included Modules</h3>
+        <ul class="link-list">
+        
+        
+          <li><a class="include" href="WriteConcern.html">Mongo::WriteConcern</a></li>
+        
+        
+        </ul>
+      </div>
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../Mongo.html">Mongo</a></li>
+        
+          <li><a href="../Mongo/AuthenticationError.html">Mongo::AuthenticationError</a></li>
+        
+          <li><a href="../Mongo/Collection.html">Mongo::Collection</a></li>
+        
+          <li><a href="../Mongo/Connection.html">Mongo::Connection</a></li>
+        
+          <li><a href="../Mongo/ConnectionError.html">Mongo::ConnectionError</a></li>
+        
+          <li><a href="../Mongo/ConnectionFailure.html">Mongo::ConnectionFailure</a></li>
+        
+          <li><a href="../Mongo/ConnectionTimeoutError.html">Mongo::ConnectionTimeoutError</a></li>
+        
+          <li><a href="../Mongo/Constants.html">Mongo::Constants</a></li>
+        
+          <li><a href="../Mongo/Conversions.html">Mongo::Conversions</a></li>
+        
+          <li><a href="../Mongo/Cursor.html">Mongo::Cursor</a></li>
+        
+          <li><a href="../Mongo/DB.html">Mongo::DB</a></li>
+        
+          <li><a href="../Mongo/Grid.html">Mongo::Grid</a></li>
+        
+          <li><a href="../Mongo/GridError.html">Mongo::GridError</a></li>
+        
+          <li><a href="../Mongo/GridExt.html">Mongo::GridExt</a></li>
+        
+          <li><a href="../Mongo/GridExt/InstanceMethods.html">Mongo::GridExt::InstanceMethods</a></li>
+        
+          <li><a href="../Mongo/GridFileNotFound.html">Mongo::GridFileNotFound</a></li>
+        
+          <li><a href="../Mongo/GridFileSystem.html">Mongo::GridFileSystem</a></li>
+        
+          <li><a href="../Mongo/GridIO.html">Mongo::GridIO</a></li>
+        
+          <li><a href="../Mongo/GridMD5Failure.html">Mongo::GridMD5Failure</a></li>
+        
+          <li><a href="../Mongo/InvalidNSName.html">Mongo::InvalidNSName</a></li>
+        
+          <li><a href="../Mongo/InvalidOperation.html">Mongo::InvalidOperation</a></li>
+        
+          <li><a href="../Mongo/InvalidSortValueError.html">Mongo::InvalidSortValueError</a></li>
+        
+          <li><a href="../Mongo/LegacyWriteConcern.html">Mongo::LegacyWriteConcern</a></li>
+        
+          <li><a href="../Mongo/Logging.html">Mongo::Logging</a></li>
+        
+          <li><a href="../Mongo/Logging/Instrumenter.html">Mongo::Logging::Instrumenter</a></li>
+        
+          <li><a href="../Mongo/MongoArgumentError.html">Mongo::MongoArgumentError</a></li>
+        
+          <li><a href="../Mongo/MongoClient.html">Mongo::MongoClient</a></li>
+        
+          <li><a href="../Mongo/MongoDBError.html">Mongo::MongoDBError</a></li>
+        
+          <li><a href="../Mongo/MongoReplicaSetClient.html">Mongo::MongoReplicaSetClient</a></li>
+        
+          <li><a href="../Mongo/MongoRubyError.html">Mongo::MongoRubyError</a></li>
+        
+          <li><a href="../Mongo/MongoShardedClient.html">Mongo::MongoShardedClient</a></li>
+        
+          <li><a href="../Mongo/Networking.html">Mongo::Networking</a></li>
+        
+          <li><a href="../Mongo/Node.html">Mongo::Node</a></li>
+        
+          <li><a href="../Mongo/NodeWithTagsNotFound.html">Mongo::NodeWithTagsNotFound</a></li>
+        
+          <li><a href="../Mongo/OperationFailure.html">Mongo::OperationFailure</a></li>
+        
+          <li><a href="../Mongo/OperationTimeout.html">Mongo::OperationTimeout</a></li>
+        
+          <li><a href="../Mongo/Pool.html">Mongo::Pool</a></li>
+        
+          <li><a href="../Mongo/PoolManager.html">Mongo::PoolManager</a></li>
+        
+          <li><a href="../Mongo/ReadPreference.html">Mongo::ReadPreference</a></li>
+        
+          <li><a href="../Mongo/ReplSetConnection.html">Mongo::ReplSetConnection</a></li>
+        
+          <li><a href="../Mongo/ReplicaSetConnectionError.html">Mongo::ReplicaSetConnectionError</a></li>
+        
+          <li><a href="../Mongo/SSLSocket.html">Mongo::SSLSocket</a></li>
+        
+          <li><a href="../Mongo/ServerVersion.html">Mongo::ServerVersion</a></li>
+        
+          <li><a href="../Mongo/ShardedConnection.html">Mongo::ShardedConnection</a></li>
+        
+          <li><a href="../Mongo/ShardingPoolManager.html">Mongo::ShardingPoolManager</a></li>
+        
+          <li><a href="../Mongo/Support.html">Mongo::Support</a></li>
+        
+          <li><a href="../Mongo/TCPSocket.html">Mongo::TCPSocket</a></li>
+        
+          <li><a href="../Mongo/ThreadLocalVariableManager.html">Mongo::ThreadLocalVariableManager</a></li>
+        
+          <li><a href="../Mongo/UNIXSocket.html">Mongo::UNIXSocket</a></li>
+        
+          <li><a href="../Mongo/URIParser.html">Mongo::URIParser</a></li>
+        
+          <li><a href="../Mongo/WriteConcern.html">Mongo::WriteConcern</a></li>
+        
+          <li><a href="../Class.html">Class</a></li>
+        
+          <li><a href="../Mutex.html">Mutex</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">Mongo::GridIO</h1>
+
+    <div id="description" class="description">
+      
+<p><a href="GridIO.html">GridIO</a> objects represent files in the GridFS
+specification. This class manages the reading and writing of file chunks
+and metadata.</p>
+
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+      <!-- Constants -->
+      <div id="constants-list" class="section">
+        <h3 class="section-header">Constants</h3>
+        <dl>
+        
+          <dt><a name="DEFAULT_CHUNK_SIZE">DEFAULT_CHUNK_SIZE</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="DEFAULT_CONTENT_TYPE">DEFAULT_CONTENT_TYPE</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="PROTECTED_ATTRS">PROTECTED_ATTRS</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+        </dl>
+      </div>
+      
+
+      
+      <!-- Attributes -->
+      <div id="attribute-method-details" class="method-section section">
+        <h3 class="section-header">Attributes</h3>
+
+        
+        <div id="chunk_size-attribute-method" class="method-detail">
+          <a name="chunk_size"></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">chunk_size</span><span
+              class="attribute-access-type">[R]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+        <div id="client_md5-attribute-method" class="method-detail">
+          <a name="client_md5"></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">client_md5</span><span
+              class="attribute-access-type">[R]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+        <div id="content_type-attribute-method" class="method-detail">
+          <a name="content_type"></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">content_type</span><span
+              class="attribute-access-type">[R]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+        <div id="file_length-attribute-method" class="method-detail">
+          <a name="file_length"></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">file_length</span><span
+              class="attribute-access-type">[R]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+        <div id="file_position-attribute-method" class="method-detail">
+          <a name="file_position"></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">file_position</span><span
+              class="attribute-access-type">[R]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+        <div id="filename-attribute-method" class="method-detail">
+          <a name="filename"></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">filename</span><span
+              class="attribute-access-type">[R]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+        <div id="files_id-attribute-method" class="method-detail">
+          <a name="files_id"></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">files_id</span><span
+              class="attribute-access-type">[R]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+        <div id="metadata-attribute-method" class="method-detail">
+          <a name="metadata"></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">metadata</span><span
+              class="attribute-access-type">[R]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+        <div id="server_md5-attribute-method" class="method-detail">
+          <a name="server_md5"></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">server_md5</span><span
+              class="attribute-access-type">[R]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+        <div id="upload_date-attribute-method" class="method-detail">
+          <a name="upload_date"></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">upload_date</span><span
+              class="attribute-access-type">[R]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+      </div><!-- attribute-method-details -->
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="new-method" class="method-detail ">
+          <a name="method-c-new"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">new</span><span
+              class="method-args">(files, chunks, filename, mode, opts={})</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Create a new <a href="GridIO.html">GridIO</a> object. Note that most users
+will not need to use this class directly; the <a href="Grid.html">Grid</a>
+and <a href="GridFileSystem.html">GridFileSystem</a> classes will
+instantiate this class</p>
+
+<p>@param [Mongo::Collection] files a collection for storing file metadata.
+@param [Mongo::Collection] chunks a collection for storing file chunks.
+@param [String] filename the name of the file to open or write. @param
+[String] mode ‘r’ or ‘w’ or reading or creating a file.</p>
+
+<p>@option opts [Hash] :query a query selector used when opening the file in
+‘r’ mode. @option opts [Hash] :query_opts any query options to be used when
+opening the file in ‘r’ mode. @option opts [String] :fs_name the file
+system prefix. @option opts [Integer] (262144) :<a
+href="GridIO.html#attribute-i-chunk_size">chunk_size</a> size of file
+chunks in bytes. @option opts [Hash] :metadata ({}) any additional data to
+store with the file. @option opts [ObjectId] :_id (ObjectId) a unique id
+for</p>
+
+<pre>the file to be use in lieu of an automatically generated one.</pre>
+
+<p>@option opts [String] :<a
+href="GridIO.html#attribute-i-content_type">content_type</a>
+(‘binary/octet-stream’) If no content type is specified,</p>
+
+<pre>the content type will may be inferred from the filename extension if the mime-types gem can be
+loaded. Otherwise, the content type 'binary/octet-stream' will be used.</pre>
+
+<p>@option opts [String, Integer, Symbol] :w (1) Set the write concern</p>
+
+<pre>Notes on write concern:
+  When :w &gt; 0, the chunks sent to the server
+  will be validated using an md5 hash. If validation fails, an exception will be raised.</pre>
+            
+
+            
+            <div class="method-source-code" id="new-source">
+<pre>
+<span class="ruby-comment"># File lib/mongo/gridfs/grid_io.rb, line 57</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">files</span>, <span class="ruby-identifier">chunks</span>, <span class="ruby-identifier">filename</span>, <span class="ruby-identifier">mode</span>, <span class="ruby-identifier">opts</span>={})
+  <span class="ruby-ivar">@files</span>          = <span class="ruby-identifier">files</span>
+  <span class="ruby-ivar">@chunks</span>         = <span class="ruby-identifier">chunks</span>
+  <span class="ruby-ivar">@filename</span>       = <span class="ruby-identifier">filename</span>
+  <span class="ruby-ivar">@mode</span>           = <span class="ruby-identifier">mode</span>
+  <span class="ruby-identifier">opts</span>            = <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">dup</span>
+  <span class="ruby-ivar">@query</span>          = <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-value">:query</span>) <span class="ruby-operator">||</span> {}
+  <span class="ruby-ivar">@query_opts</span>     = <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-value">:query_opts</span>) <span class="ruby-operator">||</span> {}
+  <span class="ruby-ivar">@fs_name</span>        = <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-value">:fs_name</span>) <span class="ruby-operator">||</span> <span class="ruby-constant">Grid</span><span class="ruby-operator">::</span><span class="ruby-constant">DEFAULT_FS_NAME</span>
+  <span class="ruby-ivar">@write_concern</span>  = <span class="ruby-identifier">get_write_concern</span>(<span class="ruby-identifier">opts</span>)
+  <span class="ruby-ivar">@local_md5</span>      = <span class="ruby-constant">Digest</span><span class="ruby-operator">::</span><span class="ruby-constant">MD5</span>.<span class="ruby-identifier">new</span> <span class="ruby-keyword">if</span> <span class="ruby-constant">Mongo</span><span class="ruby-operator">::</span><span class="ruby-constant">WriteConcern</span>.<span class="ruby-identifier">gle?</span>(<span class="ruby-ivar">@write_concern</span>)
+  <span class="ruby-ivar">@custom_attrs</span>   = {}
+
+  <span class="ruby-keyword">case</span> <span class="ruby-ivar">@mode</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-string">'r'</span> <span class="ruby-keyword">then</span> <span class="ruby-identifier">init_read</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-string">'w'</span> <span class="ruby-keyword">then</span> <span class="ruby-identifier">init_write</span>(<span class="ruby-identifier">opts</span>)
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">raise</span> <span class="ruby-constant">GridError</span>, <span class="ruby-node">&quot;Invalid file mode #{@mode}. Mode should be 'r' or 'w'.&quot;</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- new-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- new-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="5B-5D-method" class="method-detail ">
+          <a name="method-i-5B-5D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">[]</span><span
+              class="method-args">(key)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="5B-5D-source">
+<pre>
+<span class="ruby-comment"># File lib/mongo/gridfs/grid_io.rb, line 78</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">[]</span>(<span class="ruby-identifier">key</span>)
+  <span class="ruby-ivar">@custom_attrs</span>[<span class="ruby-identifier">key</span>] <span class="ruby-operator">||</span> <span class="ruby-identifier">instance_variable_get</span>(<span class="ruby-node">&quot;@#{key.to_s}&quot;</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- 5B-5D-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- 5B-5D-method -->
+
+      
+        <div id="5B-5D-3D-method" class="method-detail ">
+          <a name="method-i-5B-5D-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">[]=</span><span
+              class="method-args">(key, value)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="5B-5D-3D-source">
+<pre>
+<span class="ruby-comment"># File lib/mongo/gridfs/grid_io.rb, line 82</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">[]=</span>(<span class="ruby-identifier">key</span>, <span class="ruby-identifier">value</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">PROTECTED_ATTRS</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">key</span>.<span class="ruby-identifier">to_sym</span>)
+    <span class="ruby-identifier">warn</span> <span class="ruby-string">&quot;Attempting to overwrite protected value.&quot;</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-ivar">@custom_attrs</span>[<span class="ruby-identifier">key</span>] = <span class="ruby-identifier">value</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- 5B-5D-3D-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- 5B-5D-3D-method -->
+
+      
+        <div id="close-method" class="method-detail ">
+          <a name="method-i-close"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">close</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Creates or updates the document from the files collection that stores the
+chunks’ metadata. The file becomes available only after this method has
+been called.</p>
+
+<p>This method will be invoked automatically when on GridIO#open is passed a
+block. Otherwise, it must be called manually.</p>
+
+<p>@return [BSON::ObjectId]</p>
+            
+
+            
+            <div class="method-source-code" id="close-source">
+<pre>
+<span class="ruby-comment"># File lib/mongo/gridfs/grid_io.rb, line 236</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">close</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@mode</span>[<span class="ruby-value">0</span>] <span class="ruby-operator">==</span> <span class="ruby-value">ww</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@current_chunk</span>[<span class="ruby-string">'n'</span>].<span class="ruby-identifier">zero?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@chunk_position</span>.<span class="ruby-identifier">zero?</span>
+      <span class="ruby-identifier">warn</span> <span class="ruby-string">&quot;Warning: Storing a file with zero length.&quot;</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-ivar">@upload_date</span> = <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>.<span class="ruby-identifier">utc</span>
+    <span class="ruby-identifier">id</span> = <span class="ruby-ivar">@files</span>.<span class="ruby-identifier">insert</span>(<span class="ruby-identifier">to_mongo_object</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">id</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- close-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- close-method -->
+
+      
+        <div id="data-method" class="method-detail method-alias">
+          <a name="method-i-data"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">data</span><span
+              class="method-args">(length=nil)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="GridIO.html#method-i-read">read</a>
+          </div>
+          
+        </div><!-- data-method -->
+
+      
+        <div id="each-method" class="method-detail ">
+          <a name="method-i-each"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">each</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Read a chunk of the data from the file and yield it to the given block.</p>
+
+<p>Note that this method reads from the current file position.</p>
+
+<p>@yield Yields on chunk per iteration as defined by this file’s</p>
+
+<pre>chunk size.</pre>
+
+<p>@return [Mongo::GridIO] self</p>
+            
+
+            
+            <div class="method-source-code" id="each-source">
+<pre>
+<span class="ruby-comment"># File lib/mongo/gridfs/grid_io.rb, line 256</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">each</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">read_all</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">block_given?</span>
+  <span class="ruby-keyword">while</span> <span class="ruby-identifier">chunk</span> = <span class="ruby-identifier">read</span>(<span class="ruby-identifier">chunk_size</span>) 
+    <span class="ruby-keyword">yield</span> <span class="ruby-identifier">chunk</span>
+    <span class="ruby-keyword">break</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">chunk</span>.<span class="ruby-identifier">empty?</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- each-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- each-method -->
+
+      
+        <div id="eof-method" class="method-detail ">
+          <a name="method-i-eof"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">eof</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Return a boolean indicating whether the position pointer is at the end of
+the file.</p>
+
+<p>@return [Boolean]</p>
+            
+
+            
+            <div class="method-source-code" id="eof-source">
+<pre>
+<span class="ruby-comment"># File lib/mongo/gridfs/grid_io.rb, line 190</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">eof</span>
+  <span class="ruby-identifier">raise</span> <span class="ruby-constant">GridError</span>, <span class="ruby-node">&quot;file not opened for read #{@mode}&quot;</span> <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@mode</span>[<span class="ruby-value">0</span>] <span class="ruby-operator">==</span> <span class="ruby-value">rr</span>
+  <span class="ruby-ivar">@file_position</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-ivar">@file_length</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- eof-source -->
+            
+          </div>
+
+          
+          <div class="aliases">
+            Also aliased as: <a href="GridIO.html#method-i-eof-3F">eof?</a>
+          </div>
+          
+
+          
+        </div><!-- eof-method -->
+
+      
+        <div id="eof-3F-method" class="method-detail method-alias">
+          <a name="method-i-eof-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">eof?</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="GridIO.html#method-i-eof">eof</a>
+          </div>
+          
+        </div><!-- eof-3F-method -->
+
+      
+        <div id="getc-method" class="method-detail ">
+          <a name="method-i-getc"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">getc</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Return the next byte from the GridFS file.</p>
+
+<p>@return [String]</p>
+            
+
+            
+            <div class="method-source-code" id="getc-source">
+<pre>
+<span class="ruby-comment"># File lib/mongo/gridfs/grid_io.rb, line 224</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getc</span>
+  <span class="ruby-identifier">read_length</span>(<span class="ruby-value">1</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- getc-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- getc-method -->
+
+      
+        <div id="gets-method" class="method-detail ">
+          <a name="method-i-gets"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">gets</span><span
+              class="method-args">(separator="\n", length=nil)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Return the next line from a GridFS file. This probably makes sense only if
+you’re storing plain text. This method has a somewhat tricky API, which it
+inherits from Ruby’s StringIO#gets.</p>
+
+<p>@param [String, Integer] separator or length. If a separator,</p>
+
+<pre>read up to the separator. If a length, read the +length+ number
+of bytes. If nil, read the entire file.</pre>
+
+<p>@param [Integer] length If a separator is provided, then</p>
+
+<pre>read until either finding the separator or
+passing over the +length+ number of bytes.</pre>
+
+<p>@return [String]</p>
+            
+
+            
+            <div class="method-source-code" id="gets-source">
+<pre>
+<span class="ruby-comment"># File lib/mongo/gridfs/grid_io.rb, line 209</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">gets</span>(<span class="ruby-identifier">separator</span>=<span class="ruby-string">&quot;\n&quot;</span>, <span class="ruby-identifier">length</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">separator</span>.<span class="ruby-identifier">nil?</span>
+    <span class="ruby-identifier">read_all</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">separator</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Integer</span>)
+    <span class="ruby-identifier">read_length</span>(<span class="ruby-identifier">separator</span>)
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">separator</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>
+    <span class="ruby-identifier">read_to_string</span>(<span class="ruby-identifier">separator</span>, <span class="ruby-identifier">length</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">read_to_character</span>(<span class="ruby-identifier">separator</span>, <span class="ruby-identifier">length</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- gets-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- gets-method -->
+
+      
+        <div id="inspect-method" class="method-detail ">
+          <a name="method-i-inspect"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">inspect</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="inspect-source">
+<pre>
+<span class="ruby-comment"># File lib/mongo/gridfs/grid_io.rb, line 265</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">inspect</span>
+  <span class="ruby-node">&quot;#&lt;GridIO _id: #{@files_id}&gt;&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- inspect-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- inspect-method -->
+
+      
+        <div id="pos-method" class="method-detail method-alias">
+          <a name="method-i-pos"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">pos</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="GridIO.html#method-i-tell">tell</a>
+          </div>
+          
+        </div><!-- pos-method -->
+
+      
+        <div id="read-method" class="method-detail ">
+          <a name="method-i-read"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">read</span><span
+              class="method-args">(length=nil)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Read the data from the file. If a length if specified, will read from the
+current file position.</p>
+
+<p>@param [Integer] length</p>
+
+<p>@return [String]</p>
+
+<pre>the data in the file</pre>
+            
+
+            
+            <div class="method-source-code" id="read-source">
+<pre>
+<span class="ruby-comment"># File lib/mongo/gridfs/grid_io.rb, line 98</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">read</span>(<span class="ruby-identifier">length</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-string">''</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@file_length</span>.<span class="ruby-identifier">zero?</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">length</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-string">''</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">length</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@file_position</span>.<span class="ruby-identifier">zero?</span>
+    <span class="ruby-identifier">read_all</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">read_length</span>(<span class="ruby-identifier">length</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- read-source -->
+            
+          </div>
+
+          
+          <div class="aliases">
+            Also aliased as: <a href="GridIO.html#method-i-data">data</a>
+          </div>
+          
+
+          
+        </div><!-- read-method -->
+
+      
+        <div id="rewind-method" class="method-detail ">
+          <a name="method-i-rewind"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">rewind</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Rewind the file. This is equivalent to seeking to the zeroth position.</p>
+
+<p>@return [Integer] the position of the file after rewinding (always zero).</p>
+            
+
+            
+            <div class="method-source-code" id="rewind-source">
+<pre>
+<span class="ruby-comment"># File lib/mongo/gridfs/grid_io.rb, line 181</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">rewind</span>
+  <span class="ruby-identifier">raise</span> <span class="ruby-constant">GridError</span>, <span class="ruby-string">&quot;file not opened for read&quot;</span> <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@mode</span>[<span class="ruby-value">0</span>] <span class="ruby-operator">==</span> <span class="ruby-value">rr</span>
+  <span class="ruby-identifier">seek</span>(<span class="ruby-value">0</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- rewind-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- rewind-method -->
+
+      
+        <div id="seek-method" class="method-detail ">
+          <a name="method-i-seek"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">seek</span><span
+              class="method-args">(pos, whence=IO::SEEK_SET)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Position the file pointer at the provided location.</p>
+
+<p>@param [Integer] pos</p>
+
+<pre>the number of bytes to advance the file pointer. this can be a negative
+number.</pre>
+
+<p>@param [Integer] whence</p>
+
+<pre>one of IO::SEEK_CUR, IO::SEEK_END, or IO::SEEK_SET</pre>
+
+<p>@return [Integer] the new file position</p>
+            
+
+            
+            <div class="method-source-code" id="seek-source">
+<pre>
+<span class="ruby-comment"># File lib/mongo/gridfs/grid_io.rb, line 149</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">seek</span>(<span class="ruby-identifier">pos</span>, <span class="ruby-identifier">whence</span>=<span class="ruby-constant">IO</span><span class="ruby-operator">::</span><span class="ruby-constant">SEEK_SET</span>)
+  <span class="ruby-identifier">raise</span> <span class="ruby-constant">GridError</span>, <span class="ruby-string">&quot;Seek is only allowed in read mode.&quot;</span> <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@mode</span> <span class="ruby-operator">==</span> <span class="ruby-string">'r'</span>
+  <span class="ruby-identifier">target_pos</span> = <span class="ruby-keyword">case</span> <span class="ruby-identifier">whence</span>
+               <span class="ruby-keyword">when</span> <span class="ruby-constant">IO</span><span class="ruby-operator">::</span><span class="ruby-constant">SEEK_CUR</span>
+                 <span class="ruby-ivar">@file_position</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">pos</span>
+               <span class="ruby-keyword">when</span> <span class="ruby-constant">IO</span><span class="ruby-operator">::</span><span class="ruby-constant">SEEK_END</span>
+                 <span class="ruby-ivar">@file_length</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">pos</span>
+               <span class="ruby-keyword">when</span> <span class="ruby-constant">IO</span><span class="ruby-operator">::</span><span class="ruby-constant">SEEK_SET</span>
+                 <span class="ruby-identifier">pos</span>
+               <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">new_chunk_number</span> = (<span class="ruby-identifier">target_pos</span> <span class="ruby-operator">/</span> <span class="ruby-ivar">@chunk_size</span>).<span class="ruby-identifier">to_i</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">new_chunk_number</span> <span class="ruby-operator">!=</span> <span class="ruby-ivar">@current_chunk</span>[<span class="ruby-string">'n'</span>]
+    <span class="ruby-identifier">save_chunk</span>(<span class="ruby-ivar">@current_chunk</span>) <span class="ruby-keyword">if</span> <span class="ruby-ivar">@mode</span>[<span class="ruby-value">0</span>] <span class="ruby-operator">==</span> <span class="ruby-value">ww</span>
+    <span class="ruby-ivar">@current_chunk</span> = <span class="ruby-identifier">get_chunk</span>(<span class="ruby-identifier">new_chunk_number</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-ivar">@file_position</span>  = <span class="ruby-identifier">target_pos</span>
+  <span class="ruby-ivar">@chunk_position</span> = <span class="ruby-ivar">@file_position</span> <span class="ruby-operator">%</span> <span class="ruby-ivar">@chunk_size</span>
+  <span class="ruby-ivar">@file_position</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- seek-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- seek-method -->
+
+      
+        <div id="tell-method" class="method-detail ">
+          <a name="method-i-tell"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">tell</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>The current position of the file.</p>
+
+<p>@return [Integer]</p>
+            
+
+            
+            <div class="method-source-code" id="tell-source">
+<pre>
+<span class="ruby-comment"># File lib/mongo/gridfs/grid_io.rb, line 173</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">tell</span>
+  <span class="ruby-ivar">@file_position</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- tell-source -->
+            
+          </div>
+
+          
+          <div class="aliases">
+            Also aliased as: <a href="GridIO.html#method-i-pos">pos</a>
+          </div>
+          
+
+          
+        </div><!-- tell-method -->
+
+      
+        <div id="write-method" class="method-detail ">
+          <a name="method-i-write"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">write</span><span
+              class="method-args">(io)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Write the given string (binary) data to the file.</p>
+
+<p>@param [String] string</p>
+
+<pre>the data to write</pre>
+
+<p>@return [Integer]</p>
+
+<pre>the number of bytes written.</pre>
+            
+
+            
+            <div class="method-source-code" id="write-source">
+<pre>
+<span class="ruby-comment"># File lib/mongo/gridfs/grid_io.rb, line 117</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">write</span>(<span class="ruby-identifier">io</span>)
+  <span class="ruby-identifier">raise</span> <span class="ruby-constant">GridError</span>, <span class="ruby-string">&quot;file not opened for write&quot;</span> <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@mode</span>[<span class="ruby-value">0</span>] <span class="ruby-operator">==</span> <span class="ruby-value">ww</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">io</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">String</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-constant">Mongo</span><span class="ruby-operator">::</span><span class="ruby-constant">WriteConcern</span>.<span class="ruby-identifier">gle?</span>(<span class="ruby-ivar">@write_concern</span>)
+      <span class="ruby-ivar">@local_md5</span>.<span class="ruby-identifier">update</span>(<span class="ruby-identifier">io</span>)
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">write_string</span>(<span class="ruby-identifier">io</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">length</span> = <span class="ruby-value">0</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-constant">Mongo</span><span class="ruby-operator">::</span><span class="ruby-constant">WriteConcern</span>.<span class="ruby-identifier">gle?</span>(<span class="ruby-ivar">@write_concern</span>)
+      <span class="ruby-keyword">while</span>(<span class="ruby-identifier">string</span> = <span class="ruby-identifier">io</span>.<span class="ruby-identifier">read</span>(<span class="ruby-ivar">@chunk_size</span>))
+        <span class="ruby-ivar">@local_md5</span>.<span class="ruby-identifier">update</span>(<span class="ruby-identifier">string</span>)
+        <span class="ruby-identifier">length</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">write_string</span>(<span class="ruby-identifier">string</span>)
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-keyword">while</span>(<span class="ruby-identifier">string</span> = <span class="ruby-identifier">io</span>.<span class="ruby-identifier">read</span>(<span class="ruby-ivar">@chunk_size</span>))
+        <span class="ruby-identifier">length</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">write_string</span>(<span class="ruby-identifier">string</span>)
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">length</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- write-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- write-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

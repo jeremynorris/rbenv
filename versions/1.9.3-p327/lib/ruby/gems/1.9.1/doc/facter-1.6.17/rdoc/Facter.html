@@ -1,0 +1,1118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Module: Facter</title>
+
+  <link rel="stylesheet" href="./rdoc.css" type="text/css" media="screen" />
+
+  <script src="./js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="module">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="./index.html">Home</a>
+          <a href="./index.html#classes">Classes</a>
+          <a href="./index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="./lib/facter/application_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/facter/application.rb">lib/facter/application.rb</a></li>
+          
+            <li><a href="./lib/facter/util/monkey_patches_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/facter/util/monkey_patches.rb">lib/facter/util/monkey_patches.rb</a></li>
+          
+            <li><a href="./lib/facter/util/processor_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/facter/util/processor.rb">lib/facter/util/processor.rb</a></li>
+          
+            <li><a href="./lib/facter/util/values_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/facter/util/values.rb">lib/facter/util/values.rb</a></li>
+          
+            <li><a href="./lib/facter/version_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/facter/version.rb">lib/facter/version.rb</a></li>
+          
+            <li><a href="./lib/facter_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/facter.rb">lib/facter.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+
+      
+
+      
+      <!-- Namespace Contents -->
+      <div id="namespace-list-section" class="section">
+        <h3 class="section-header">Namespace</h3>
+        <ul class="link-list">
+          
+          <li><span class="type">MODULE</span> <a href="Facter/Application.html">Facter::Application</a></li>
+          
+          <li><span class="type">MODULE</span> <a href="Facter/Manufacturer.html">Facter::Manufacturer</a></li>
+          
+          <li><span class="type">MODULE</span> <a href="Facter/Memory.html">Facter::Memory</a></li>
+          
+          <li><span class="type">MODULE</span> <a href="Facter/NetMask.html">Facter::NetMask</a></li>
+          
+          <li><span class="type">MODULE</span> <a href="Facter/Util.html">Facter::Util</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-5B-5D">::[]</a></li>
+          
+          <li><a href="#method-c-add">::add</a></li>
+          
+          <li><a href="#method-c-clear">::clear</a></li>
+          
+          <li><a href="#method-c-clear_messages">::clear_messages</a></li>
+          
+          <li><a href="#method-c-collection">::collection</a></li>
+          
+          <li><a href="#method-c-debug">::debug</a></li>
+          
+          <li><a href="#method-c-debugging">::debugging</a></li>
+          
+          <li><a href="#method-c-debugging-3F">::debugging?</a></li>
+          
+          <li><a href="#method-c-each">::each</a></li>
+          
+          <li><a href="#method-c-loadfacts">::loadfacts</a></li>
+          
+          <li><a href="#method-c-method_missing">::method_missing</a></li>
+          
+          <li><a href="#method-c-reset">::reset</a></li>
+          
+          <li><a href="#method-c-search">::search</a></li>
+          
+          <li><a href="#method-c-search_path">::search_path</a></li>
+          
+          <li><a href="#method-c-show_time">::show_time</a></li>
+          
+          <li><a href="#method-c-timing">::timing</a></li>
+          
+          <li><a href="#method-c-timing-3F">::timing?</a></li>
+          
+          <li><a href="#method-c-version">::version</a></li>
+          
+          <li><a href="#method-c-version-3D">::version=</a></li>
+          
+          <li><a href="#method-c-warn">::warn</a></li>
+          
+          <li><a href="#method-c-warnonce">::warnonce</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+      <!-- Included Modules -->
+      <div id="includes-section" class="section">
+        <h3 class="section-header">Included Modules</h3>
+        <ul class="link-list">
+        
+        
+          <li><span class="include">Comparable</span></li>
+        
+        
+        
+          <li><span class="include">Enumerable</span></li>
+        
+        
+        </ul>
+      </div>
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="./images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="./Facter.html">Facter</a></li>
+        
+          <li><a href="./Facter/Application.html">Facter::Application</a></li>
+        
+          <li><a href="./Facter/Manufacturer.html">Facter::Manufacturer</a></li>
+        
+          <li><a href="./Facter/Memory.html">Facter::Memory</a></li>
+        
+          <li><a href="./Facter/NetMask.html">Facter::NetMask</a></li>
+        
+          <li><a href="./Facter/Util.html">Facter::Util</a></li>
+        
+          <li><a href="./Facter/Util/Collection.html">Facter::Util::Collection</a></li>
+        
+          <li><a href="./Facter/Util/Config.html">Facter::Util::Config</a></li>
+        
+          <li><a href="./Facter/Util/Confine.html">Facter::Util::Confine</a></li>
+        
+          <li><a href="./Facter/Util/EC2.html">Facter::Util::EC2</a></li>
+        
+          <li><a href="./Facter/Util/Fact.html">Facter::Util::Fact</a></li>
+        
+          <li><a href="./Facter/Util/IP.html">Facter::Util::IP</a></li>
+        
+          <li><a href="./Facter/Util/Loader.html">Facter::Util::Loader</a></li>
+        
+          <li><a href="./Facter/Util/Macaddress.html">Facter::Util::Macaddress</a></li>
+        
+          <li><a href="./Facter/Util/Macaddress/Darwin.html">Facter::Util::Macaddress::Darwin</a></li>
+        
+          <li><a href="./Facter/Util/Macaddress/Windows.html">Facter::Util::Macaddress::Windows</a></li>
+        
+          <li><a href="./Facter/Util/Macosx.html">Facter::Util::Macosx</a></li>
+        
+          <li><a href="./Facter/Util/MonkeyPatches.html">Facter::Util::MonkeyPatches</a></li>
+        
+          <li><a href="./Facter/Util/MonkeyPatches/Lines.html">Facter::Util::MonkeyPatches::Lines</a></li>
+        
+          <li><a href="./Facter/Util/Processor.html">Facter::Util::Processor</a></li>
+        
+          <li><a href="./Facter/Util/Registry.html">Facter::Util::Registry</a></li>
+        
+          <li><a href="./Facter/Util/Resolution.html">Facter::Util::Resolution</a></li>
+        
+          <li><a href="./Facter/Util/Uptime.html">Facter::Util::Uptime</a></li>
+        
+          <li><a href="./Facter/Util/Values.html">Facter::Util::Values</a></li>
+        
+          <li><a href="./Facter/Util/Virtual.html">Facter::Util::Virtual</a></li>
+        
+          <li><a href="./Facter/Util/Vlans.html">Facter::Util::Vlans</a></li>
+        
+          <li><a href="./Facter/Util/WMI.html">Facter::Util::WMI</a></li>
+        
+          <li><a href="./Facter/Util/Xendomains.html">Facter::Util::Xendomains</a></li>
+        
+          <li><a href="./Plist.html">Plist</a></li>
+        
+          <li><a href="./Plist/Emit.html">Plist::Emit</a></li>
+        
+          <li><a href="./Plist/Listener.html">Plist::Listener</a></li>
+        
+          <li><a href="./Plist/PArray.html">Plist::PArray</a></li>
+        
+          <li><a href="./Plist/PData.html">Plist::PData</a></li>
+        
+          <li><a href="./Plist/PDate.html">Plist::PDate</a></li>
+        
+          <li><a href="./Plist/PDict.html">Plist::PDict</a></li>
+        
+          <li><a href="./Plist/PFalse.html">Plist::PFalse</a></li>
+        
+          <li><a href="./Plist/PInteger.html">Plist::PInteger</a></li>
+        
+          <li><a href="./Plist/PKey.html">Plist::PKey</a></li>
+        
+          <li><a href="./Plist/PList.html">Plist::PList</a></li>
+        
+          <li><a href="./Plist/PReal.html">Plist::PReal</a></li>
+        
+          <li><a href="./Plist/PString.html">Plist::PString</a></li>
+        
+          <li><a href="./Plist/PTag.html">Plist::PTag</a></li>
+        
+          <li><a href="./Plist/PTrue.html">Plist::PTrue</a></li>
+        
+          <li><a href="./Plist/StreamParser.html">Plist::StreamParser</a></li>
+        
+          <li><a href="./IO.html">IO</a></li>
+        
+          <li><a href="./Object.html">Object</a></li>
+        
+          <li><a href="./String.html">String</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="module">Facter</h1>
+
+    <div id="description" class="description">
+      
+<p>A util module for facter containing helper methods</p>
+
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+      <!-- Constants -->
+      <div id="constants-list" class="section">
+        <h3 class="section-header">Constants</h3>
+        <dl>
+        
+          <dt><a name="FACTERVERSION">FACTERVERSION</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="GREEN">GREEN</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="RESET">RESET</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+        </dl>
+      </div>
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="5B-5D-method" class="method-detail ">
+          <a name="method-c-5B-5D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">[]</span><span
+              class="method-args">(name)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Return a fact object by name.  If you use this, you still have to call
+‘value’ on it to retrieve the actual value.</p>
+            
+
+            
+            <div class="method-source-code" id="5B-5D-source">
+<pre>
+<span class="ruby-comment"># File lib/facter.rb, line 87</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-operator">[]</span>(<span class="ruby-identifier">name</span>)
+  <span class="ruby-identifier">collection</span>.<span class="ruby-identifier">fact</span>(<span class="ruby-identifier">name</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- 5B-5D-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- 5B-5D-method -->
+
+      
+        <div id="add-method" class="method-detail ">
+          <a name="method-c-add"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">add</span><span
+              class="method-args">(name, options = {}, &block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Add a resolution mechanism for a named fact.  This does not distinguish
+between adding a new fact and adding a new way to resolve a fact.</p>
+            
+
+            
+            <div class="method-source-code" id="add-source">
+<pre>
+<span class="ruby-comment"># File lib/facter.rb, line 109</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">add</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">options</span> = {}, &amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">collection</span>.<span class="ruby-identifier">add</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">options</span>, &amp;<span class="ruby-identifier">block</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- add-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- add-method -->
+
+      
+        <div id="clear-method" class="method-detail ">
+          <a name="method-c-clear"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">clear</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Clear all facts.  Mostly used for testing.</p>
+            
+
+            
+            <div class="method-source-code" id="clear-source">
+<pre>
+<span class="ruby-comment"># File lib/facter.rb, line 154</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">clear</span>
+  <span class="ruby-constant">Facter</span>.<span class="ruby-identifier">flush</span>
+  <span class="ruby-constant">Facter</span>.<span class="ruby-identifier">reset</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- clear-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- clear-method -->
+
+      
+        <div id="clear_messages-method" class="method-detail ">
+          <a name="method-c-clear_messages"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">clear_messages</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Clear all messages. Used only in testing. Can’t add to self.clear because
+we don’t want to warn multiple times for items that are warnonce’d</p>
+            
+
+            
+            <div class="method-source-code" id="clear_messages-source">
+<pre>
+<span class="ruby-comment"># File lib/facter.rb, line 161</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">clear_messages</span>
+  <span class="ruby-identifier">@@messages</span>.<span class="ruby-identifier">clear</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- clear_messages-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- clear_messages-method -->
+
+      
+        <div id="collection-method" class="method-detail ">
+          <a name="method-c-collection"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">collection</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>module methods</p>
+            
+
+            
+            <div class="method-source-code" id="collection-source">
+<pre>
+<span class="ruby-comment"># File lib/facter.rb, line 55</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">collection</span>
+  <span class="ruby-keyword">unless</span> <span class="ruby-keyword">defined?</span>(<span class="ruby-ivar">@collection</span>) <span class="ruby-keyword">and</span> <span class="ruby-ivar">@collection</span>
+    <span class="ruby-ivar">@collection</span> = <span class="ruby-constant">Facter</span><span class="ruby-operator">::</span><span class="ruby-constant">Util</span><span class="ruby-operator">::</span><span class="ruby-constant">Collection</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-ivar">@collection</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- collection-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- collection-method -->
+
+      
+        <div id="debug-method" class="method-detail ">
+          <a name="method-c-debug"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">debug</span><span
+              class="method-args">(string)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Add some debugging</p>
+            
+
+            
+            <div class="method-source-code" id="debug-source">
+<pre>
+<span class="ruby-comment"># File lib/facter.rb, line 63</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">debug</span>(<span class="ruby-identifier">string</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">string</span>.<span class="ruby-identifier">nil?</span>
+    <span class="ruby-keyword">return</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">debugging?</span>
+    <span class="ruby-identifier">puts</span> <span class="ruby-constant">GREEN</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">string</span> <span class="ruby-operator">+</span> <span class="ruby-constant">RESET</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- debug-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- debug-method -->
+
+      
+        <div id="debugging-method" class="method-detail ">
+          <a name="method-c-debugging"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">debugging</span><span
+              class="method-args">(bit)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Set debugging on or off.</p>
+            
+
+            
+            <div class="method-source-code" id="debugging-source">
+<pre>
+<span class="ruby-comment"># File lib/facter.rb, line 166</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">debugging</span>(<span class="ruby-identifier">bit</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">bit</span>
+    <span class="ruby-keyword">case</span> <span class="ruby-identifier">bit</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-constant">TrueClass</span>; <span class="ruby-identifier">@@debug</span> = <span class="ruby-value">1</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-constant">FalseClass</span>; <span class="ruby-identifier">@@debug</span> = <span class="ruby-value">0</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-constant">Fixnum</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">bit</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+        <span class="ruby-identifier">@@debug</span> = <span class="ruby-value">1</span>
+      <span class="ruby-keyword">else</span>
+        <span class="ruby-identifier">@@debug</span> = <span class="ruby-value">0</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-constant">String</span>;
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">bit</span>.<span class="ruby-identifier">downcase</span> <span class="ruby-operator">==</span> <span class="ruby-string">'off'</span>
+        <span class="ruby-identifier">@@debug</span> = <span class="ruby-value">0</span>
+      <span class="ruby-keyword">else</span>
+        <span class="ruby-identifier">@@debug</span> = <span class="ruby-value">1</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">@@debug</span> = <span class="ruby-value">0</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">@@debug</span> = <span class="ruby-value">0</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- debugging-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- debugging-method -->
+
+      
+        <div id="debugging-3F-method" class="method-detail ">
+          <a name="method-c-debugging-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">debugging?</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="debugging-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/facter.rb, line 72</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">debugging?</span>
+  <span class="ruby-identifier">@@debug</span> <span class="ruby-operator">!=</span> <span class="ruby-value">0</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- debugging-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- debugging-3F-method -->
+
+      
+        <div id="each-method" class="method-detail ">
+          <a name="method-c-each"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">each</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="each-source">
+<pre>
+<span class="ruby-comment"># File lib/facter.rb, line 113</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">each</span>
+  <span class="ruby-comment"># Make sure all facts are loaded.</span>
+  <span class="ruby-identifier">collection</span>.<span class="ruby-identifier">load_all</span>
+
+  <span class="ruby-identifier">collection</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span>*<span class="ruby-identifier">args</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">yield</span>(*<span class="ruby-identifier">args</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- each-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- each-method -->
+
+      
+        <div id="loadfacts-method" class="method-detail ">
+          <a name="method-c-loadfacts"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">loadfacts</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Load all of the default facts, and then everything from disk.</p>
+            
+
+            
+            <div class="method-source-code" id="loadfacts-source">
+<pre>
+<span class="ruby-comment"># File lib/facter.rb, line 229</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">loadfacts</span>
+  <span class="ruby-identifier">collection</span>.<span class="ruby-identifier">load_all</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- loadfacts-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- loadfacts-method -->
+
+      
+        <div id="method_missing-method" class="method-detail ">
+          <a name="method-c-method_missing"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">method_missing</span><span
+              class="method-args">(name, *args)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Allow users to call fact names directly on the <a
+href="Facter.html">Facter</a> class, either retrieving the value or
+comparing it to an existing value.</p>
+            
+
+            
+            <div class="method-source-code" id="method_missing-source">
+<pre>
+<span class="ruby-comment"># File lib/facter.rb, line 125</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">method_missing</span>(<span class="ruby-identifier">name</span>, *<span class="ruby-identifier">args</span>)
+  <span class="ruby-identifier">question</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">name</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/\?$/</span>
+    <span class="ruby-identifier">question</span> = <span class="ruby-keyword">true</span>
+    <span class="ruby-identifier">name</span> = <span class="ruby-identifier">name</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">sub</span>(<span class="ruby-regexp">/\?$/</span>,<span class="ruby-string">''</span>)
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">fact</span> = <span class="ruby-identifier">collection</span>.<span class="ruby-identifier">fact</span>(<span class="ruby-identifier">name</span>)
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">question</span>
+      <span class="ruby-identifier">value</span> = <span class="ruby-identifier">fact</span>.<span class="ruby-identifier">value</span>.<span class="ruby-identifier">downcase</span>
+      <span class="ruby-identifier">args</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">arg</span><span class="ruby-operator">|</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">arg</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">downcase</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">value</span>
+          <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span>
+        <span class="ruby-keyword">end</span>
+      <span class="ruby-keyword">end</span>
+
+      <span class="ruby-comment"># If we got this far, there was no match.</span>
+      <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-keyword">return</span> <span class="ruby-identifier">fact</span>.<span class="ruby-identifier">value</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-comment"># Else, fail like a normal missing method.</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">NoMethodError</span>, <span class="ruby-string">&quot;Could not find fact '%s'&quot;</span> <span class="ruby-operator">%</span> <span class="ruby-identifier">name</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- method_missing-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- method_missing-method -->
+
+      
+        <div id="reset-method" class="method-detail ">
+          <a name="method-c-reset"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">reset</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Remove them all.</p>
+            
+
+            
+            <div class="method-source-code" id="reset-source">
+<pre>
+<span class="ruby-comment"># File lib/facter.rb, line 224</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">reset</span>
+  <span class="ruby-ivar">@collection</span> = <span class="ruby-keyword">nil</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- reset-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- reset-method -->
+
+      
+        <div id="search-method" class="method-detail ">
+          <a name="method-c-search"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">search</span><span
+              class="method-args">(*dirs)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Register a directory to search through.</p>
+            
+
+            
+            <div class="method-source-code" id="search-source">
+<pre>
+<span class="ruby-comment"># File lib/facter.rb, line 236</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">search</span>(*<span class="ruby-identifier">dirs</span>)
+  <span class="ruby-ivar">@search_path</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">dirs</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- search-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- search-method -->
+
+      
+        <div id="search_path-method" class="method-detail ">
+          <a name="method-c-search_path"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">search_path</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Return our registered search directories.</p>
+            
+
+            
+            <div class="method-source-code" id="search_path-source">
+<pre>
+<span class="ruby-comment"># File lib/facter.rb, line 241</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">search_path</span>
+  <span class="ruby-ivar">@search_path</span>.<span class="ruby-identifier">dup</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- search_path-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- search_path-method -->
+
+      
+        <div id="show_time-method" class="method-detail ">
+          <a name="method-c-show_time"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">show_time</span><span
+              class="method-args">(string)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>show the timing information</p>
+            
+
+            
+            <div class="method-source-code" id="show_time-source">
+<pre>
+<span class="ruby-comment"># File lib/facter.rb, line 77</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">show_time</span>(<span class="ruby-identifier">string</span>)
+  <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;#{GREEN}#{string}#{RESET}&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">string</span> <span class="ruby-keyword">and</span> <span class="ruby-constant">Facter</span>.<span class="ruby-identifier">timing?</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- show_time-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- show_time-method -->
+
+      
+        <div id="timing-method" class="method-detail ">
+          <a name="method-c-timing"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">timing</span><span
+              class="method-args">(bit)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Set timing on or off.</p>
+            
+
+            
+            <div class="method-source-code" id="timing-source">
+<pre>
+<span class="ruby-comment"># File lib/facter.rb, line 192</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">timing</span>(<span class="ruby-identifier">bit</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">bit</span>
+    <span class="ruby-keyword">case</span> <span class="ruby-identifier">bit</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-constant">TrueClass</span>; <span class="ruby-identifier">@@timing</span> = <span class="ruby-value">1</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-constant">Fixnum</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">bit</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+        <span class="ruby-identifier">@@timing</span> = <span class="ruby-value">1</span>
+      <span class="ruby-keyword">else</span>
+        <span class="ruby-identifier">@@timing</span> = <span class="ruby-value">0</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">@@timing</span> = <span class="ruby-value">0</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- timing-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- timing-method -->
+
+      
+        <div id="timing-3F-method" class="method-detail ">
+          <a name="method-c-timing-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">timing?</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="timing-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/facter.rb, line 81</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">timing?</span>
+  <span class="ruby-identifier">@@timing</span> <span class="ruby-operator">!=</span> <span class="ruby-value">0</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- timing-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- timing-3F-method -->
+
+      
+        <div id="version-method" class="method-detail ">
+          <a name="method-c-version"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">version</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="version-source">
+<pre>
+<span class="ruby-comment"># File lib/facter/version.rb, line 6</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">version</span>
+  <span class="ruby-ivar">@facter_version</span> <span class="ruby-operator">||</span> <span class="ruby-constant">FACTERVERSION</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- version-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- version-method -->
+
+      
+        <div id="version-3D-method" class="method-detail ">
+          <a name="method-c-version-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">version=</span><span
+              class="method-args">(version)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="version-3D-source">
+<pre>
+<span class="ruby-comment"># File lib/facter/version.rb, line 10</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">version=</span>(<span class="ruby-identifier">version</span>)
+  <span class="ruby-ivar">@facter_version</span> = <span class="ruby-identifier">version</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- version-3D-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- version-3D-method -->
+
+      
+        <div id="warn-method" class="method-detail ">
+          <a name="method-c-warn"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">warn</span><span
+              class="method-args">(msg)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="warn-source">
+<pre>
+<span class="ruby-comment"># File lib/facter.rb, line 208</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">warn</span>(<span class="ruby-identifier">msg</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">Facter</span>.<span class="ruby-identifier">debugging?</span> <span class="ruby-keyword">and</span> <span class="ruby-identifier">msg</span> <span class="ruby-keyword">and</span> <span class="ruby-keyword">not</span> <span class="ruby-identifier">msg</span>.<span class="ruby-identifier">empty?</span>
+    <span class="ruby-identifier">msg</span> = [<span class="ruby-identifier">msg</span>] <span class="ruby-keyword">unless</span> <span class="ruby-identifier">msg</span>.<span class="ruby-identifier">respond_to?</span> <span class="ruby-value">:each</span>
+    <span class="ruby-identifier">msg</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">line</span><span class="ruby-operator">|</span> <span class="ruby-constant">Kernel</span>.<span class="ruby-identifier">warn</span> <span class="ruby-identifier">line</span> }
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- warn-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- warn-method -->
+
+      
+        <div id="warnonce-method" class="method-detail ">
+          <a name="method-c-warnonce"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">warnonce</span><span
+              class="method-args">(msg)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Warn once.</p>
+            
+
+            
+            <div class="method-source-code" id="warnonce-source">
+<pre>
+<span class="ruby-comment"># File lib/facter.rb, line 216</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">warnonce</span>(<span class="ruby-identifier">msg</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">msg</span> <span class="ruby-keyword">and</span> <span class="ruby-keyword">not</span> <span class="ruby-identifier">msg</span>.<span class="ruby-identifier">empty?</span> <span class="ruby-keyword">and</span> <span class="ruby-identifier">@@messages</span>[<span class="ruby-identifier">msg</span>].<span class="ruby-identifier">nil?</span>
+    <span class="ruby-identifier">@@messages</span>[<span class="ruby-identifier">msg</span>] = <span class="ruby-keyword">true</span>
+    <span class="ruby-constant">Kernel</span>.<span class="ruby-identifier">warn</span>(<span class="ruby-identifier">msg</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- warnonce-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- warnonce-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

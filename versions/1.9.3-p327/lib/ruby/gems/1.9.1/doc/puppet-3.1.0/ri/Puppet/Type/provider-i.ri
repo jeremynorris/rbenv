@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"provider:EFI"Puppet::Type#provider;FI"R;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"OThe provider that has been selected for the instance of the resource type.;TI"[@return [Puppet::Provider,nil] the selected provider or nil, if none has been selected;T:
+@file0FI"lib/puppet/type.rb;T

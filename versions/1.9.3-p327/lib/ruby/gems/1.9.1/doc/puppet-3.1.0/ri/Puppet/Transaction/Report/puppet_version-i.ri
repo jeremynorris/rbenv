@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"puppet_version:EFI"/Puppet::Transaction::Report#puppet_version;FI"R;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"8@return [String] The Puppet version in String form.;TI"@see Puppet::version();T:
+@file0FI"%lib/puppet/transaction/report.rb;T

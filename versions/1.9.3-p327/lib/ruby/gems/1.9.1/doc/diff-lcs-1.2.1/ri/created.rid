@@ -1,0 +1,19 @@
+Fri, 01 Mar 2013 22:08:20 +0100
+lib/diff/lcs/array.rb	Fri, 01 Mar 2013 22:08:13 +0100
+lib/diff/lcs/block.rb	Fri, 01 Mar 2013 22:08:13 +0100
+lib/diff/lcs/callbacks.rb	Fri, 01 Mar 2013 22:08:13 +0100
+lib/diff/lcs/change.rb	Fri, 01 Mar 2013 22:08:13 +0100
+lib/diff/lcs/htmldiff.rb	Fri, 01 Mar 2013 22:08:13 +0100
+lib/diff/lcs/hunk.rb	Fri, 01 Mar 2013 22:08:13 +0100
+lib/diff/lcs/internals.rb	Fri, 01 Mar 2013 22:08:13 +0100
+lib/diff/lcs/ldiff.rb	Fri, 01 Mar 2013 22:08:13 +0100
+lib/diff/lcs/string.rb	Fri, 01 Mar 2013 22:08:13 +0100
+lib/diff/lcs.rb	Fri, 01 Mar 2013 22:08:13 +0100
+lib/diff-lcs.rb	Fri, 01 Mar 2013 22:08:13 +0100
+Contributing.rdoc	Fri, 01 Mar 2013 22:08:13 +0100
+History.rdoc	Fri, 01 Mar 2013 22:08:13 +0100
+License.rdoc	Fri, 01 Mar 2013 22:08:13 +0100
+Manifest.txt	Fri, 01 Mar 2013 22:08:13 +0100
+README.rdoc	Fri, 01 Mar 2013 22:08:13 +0100
+docs/COPYING.txt	Fri, 01 Mar 2013 22:08:13 +0100
+docs/artistic.txt	Fri, 01 Mar 2013 22:08:13 +0100

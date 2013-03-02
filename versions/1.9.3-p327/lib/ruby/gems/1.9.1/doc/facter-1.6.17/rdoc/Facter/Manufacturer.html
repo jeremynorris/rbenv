@@ -1,0 +1,484 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Module: Facter::Manufacturer</title>
+
+  <link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="module">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../lib/facter/util/manufacturer_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/facter/util/manufacturer.rb">lib/facter/util/manufacturer.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-dmi_find_system_info">::dmi_find_system_info</a></li>
+          
+          <li><a href="#method-c-get_dmi_table">::get_dmi_table</a></li>
+          
+          <li><a href="#method-c-prtdiag_sparc_find_system_info">::prtdiag_sparc_find_system_info</a></li>
+          
+          <li><a href="#method-c-sysctl_find_system_info">::sysctl_find_system_info</a></li>
+          
+          <li><a href="#method-c-win32_find_system_info">::win32_find_system_info</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../Facter.html">Facter</a></li>
+        
+          <li><a href="../Facter/Application.html">Facter::Application</a></li>
+        
+          <li><a href="../Facter/Manufacturer.html">Facter::Manufacturer</a></li>
+        
+          <li><a href="../Facter/Memory.html">Facter::Memory</a></li>
+        
+          <li><a href="../Facter/NetMask.html">Facter::NetMask</a></li>
+        
+          <li><a href="../Facter/Util.html">Facter::Util</a></li>
+        
+          <li><a href="../Facter/Util/Collection.html">Facter::Util::Collection</a></li>
+        
+          <li><a href="../Facter/Util/Config.html">Facter::Util::Config</a></li>
+        
+          <li><a href="../Facter/Util/Confine.html">Facter::Util::Confine</a></li>
+        
+          <li><a href="../Facter/Util/EC2.html">Facter::Util::EC2</a></li>
+        
+          <li><a href="../Facter/Util/Fact.html">Facter::Util::Fact</a></li>
+        
+          <li><a href="../Facter/Util/IP.html">Facter::Util::IP</a></li>
+        
+          <li><a href="../Facter/Util/Loader.html">Facter::Util::Loader</a></li>
+        
+          <li><a href="../Facter/Util/Macaddress.html">Facter::Util::Macaddress</a></li>
+        
+          <li><a href="../Facter/Util/Macaddress/Darwin.html">Facter::Util::Macaddress::Darwin</a></li>
+        
+          <li><a href="../Facter/Util/Macaddress/Windows.html">Facter::Util::Macaddress::Windows</a></li>
+        
+          <li><a href="../Facter/Util/Macosx.html">Facter::Util::Macosx</a></li>
+        
+          <li><a href="../Facter/Util/MonkeyPatches.html">Facter::Util::MonkeyPatches</a></li>
+        
+          <li><a href="../Facter/Util/MonkeyPatches/Lines.html">Facter::Util::MonkeyPatches::Lines</a></li>
+        
+          <li><a href="../Facter/Util/Processor.html">Facter::Util::Processor</a></li>
+        
+          <li><a href="../Facter/Util/Registry.html">Facter::Util::Registry</a></li>
+        
+          <li><a href="../Facter/Util/Resolution.html">Facter::Util::Resolution</a></li>
+        
+          <li><a href="../Facter/Util/Uptime.html">Facter::Util::Uptime</a></li>
+        
+          <li><a href="../Facter/Util/Values.html">Facter::Util::Values</a></li>
+        
+          <li><a href="../Facter/Util/Virtual.html">Facter::Util::Virtual</a></li>
+        
+          <li><a href="../Facter/Util/Vlans.html">Facter::Util::Vlans</a></li>
+        
+          <li><a href="../Facter/Util/WMI.html">Facter::Util::WMI</a></li>
+        
+          <li><a href="../Facter/Util/Xendomains.html">Facter::Util::Xendomains</a></li>
+        
+          <li><a href="../Plist.html">Plist</a></li>
+        
+          <li><a href="../Plist/Emit.html">Plist::Emit</a></li>
+        
+          <li><a href="../Plist/Listener.html">Plist::Listener</a></li>
+        
+          <li><a href="../Plist/PArray.html">Plist::PArray</a></li>
+        
+          <li><a href="../Plist/PData.html">Plist::PData</a></li>
+        
+          <li><a href="../Plist/PDate.html">Plist::PDate</a></li>
+        
+          <li><a href="../Plist/PDict.html">Plist::PDict</a></li>
+        
+          <li><a href="../Plist/PFalse.html">Plist::PFalse</a></li>
+        
+          <li><a href="../Plist/PInteger.html">Plist::PInteger</a></li>
+        
+          <li><a href="../Plist/PKey.html">Plist::PKey</a></li>
+        
+          <li><a href="../Plist/PList.html">Plist::PList</a></li>
+        
+          <li><a href="../Plist/PReal.html">Plist::PReal</a></li>
+        
+          <li><a href="../Plist/PString.html">Plist::PString</a></li>
+        
+          <li><a href="../Plist/PTag.html">Plist::PTag</a></li>
+        
+          <li><a href="../Plist/PTrue.html">Plist::PTrue</a></li>
+        
+          <li><a href="../Plist/StreamParser.html">Plist::StreamParser</a></li>
+        
+          <li><a href="../IO.html">IO</a></li>
+        
+          <li><a href="../Object.html">Object</a></li>
+        
+          <li><a href="../String.html">String</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="module">Facter::Manufacturer</h1>
+
+    <div id="description" class="description">
+      
+<p>mamufacturer.rb Support methods for manufacturer specific facts</p>
+
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="dmi_find_system_info-method" class="method-detail ">
+          <a name="method-c-dmi_find_system_info"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">dmi_find_system_info</span><span
+              class="method-args">(name)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="dmi_find_system_info-source">
+<pre>
+<span class="ruby-comment"># File lib/facter/util/manufacturer.rb, line 30</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">dmi_find_system_info</span>(<span class="ruby-identifier">name</span>)
+  <span class="ruby-identifier">splitstr</span>=  <span class="ruby-constant">Facter</span>.<span class="ruby-identifier">value</span>(<span class="ruby-value">:kernel</span>) <span class="ruby-operator">==</span>  <span class="ruby-string">'SunOS'</span> <span class="ruby-operator">?</span> <span class="ruby-string">&quot;ID  SIZE TYPE&quot;</span> <span class="ruby-operator">:</span> <span class="ruby-regexp">/^Handle/</span>
+  <span class="ruby-identifier">output</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">get_dmi_table</span>()
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">output</span>.<span class="ruby-identifier">nil?</span>
+  <span class="ruby-identifier">name</span>.<span class="ruby-identifier">each_pair</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">key</span>,<span class="ruby-identifier">v</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">v</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">v2</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">v2</span>.<span class="ruby-identifier">each_pair</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">value</span>,<span class="ruby-identifier">facterkey</span><span class="ruby-operator">|</span>
+        <span class="ruby-identifier">output</span>.<span class="ruby-identifier">split</span>(<span class="ruby-identifier">splitstr</span>).<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">line</span><span class="ruby-operator">|</span>
+          <span class="ruby-keyword">if</span> <span class="ruby-identifier">line</span> <span class="ruby-operator">=~</span> <span class="ruby-node">/#{key}/</span> <span class="ruby-keyword">and</span> <span class="ruby-identifier">line</span> <span class="ruby-operator">=~</span> <span class="ruby-node">/\n\s+#{value} (.+)\n/</span>
+            <span class="ruby-identifier">result</span> = <span class="ruby-node">$1</span>.<span class="ruby-identifier">strip</span>
+            <span class="ruby-constant">Facter</span>.<span class="ruby-identifier">add</span>(<span class="ruby-identifier">facterkey</span>) <span class="ruby-keyword">do</span>
+              <span class="ruby-identifier">confine</span> <span class="ruby-value">:kernel</span> =<span class="ruby-operator">&gt;</span> [ <span class="ruby-value">:linux</span>, <span class="ruby-value">:freebsd</span>, <span class="ruby-value">:netbsd</span>, <span class="ruby-value">:sunos</span>, <span class="ruby-value">:&quot;gnu/kfreebsd&quot;</span>, <span class="ruby-value">:dragonfly</span> ]
+              <span class="ruby-identifier">setcode</span> <span class="ruby-keyword">do</span>
+                <span class="ruby-identifier">result</span>
+              <span class="ruby-keyword">end</span>
+            <span class="ruby-keyword">end</span>
+          <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">end</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- dmi_find_system_info-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- dmi_find_system_info-method -->
+
+      
+        <div id="get_dmi_table-method" class="method-detail ">
+          <a name="method-c-get_dmi_table"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">get_dmi_table</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="get_dmi_table-source">
+<pre>
+<span class="ruby-comment"># File lib/facter/util/manufacturer.rb, line 6</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">get_dmi_table</span>()
+  <span class="ruby-keyword">case</span> <span class="ruby-constant">Facter</span>.<span class="ruby-identifier">value</span>(<span class="ruby-value">:kernel</span>)
+  <span class="ruby-keyword">when</span> <span class="ruby-string">'Linux'</span>, <span class="ruby-string">'GNU/kFreeBSD'</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">unless</span> <span class="ruby-constant">FileTest</span>.<span class="ruby-identifier">exists?</span>(<span class="ruby-string">&quot;/usr/sbin/dmidecode&quot;</span>)
+
+    <span class="ruby-identifier">output</span>=<span class="ruby-value">%{/usr/sbin/dmidecode 2&gt;/dev/null}</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-string">'FreeBSD'</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">unless</span> <span class="ruby-constant">FileTest</span>.<span class="ruby-identifier">exists?</span>(<span class="ruby-string">&quot;/usr/local/sbin/dmidecode&quot;</span>)
+
+    <span class="ruby-identifier">output</span>=<span class="ruby-value">%{/usr/local/sbin/dmidecode 2&gt;/dev/null}</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-string">'NetBSD'</span>, <span class="ruby-string">'DragonFly'</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">unless</span> <span class="ruby-constant">FileTest</span>.<span class="ruby-identifier">exists?</span>(<span class="ruby-string">&quot;/usr/pkg/sbin/dmidecode&quot;</span>)
+
+    <span class="ruby-identifier">output</span>=<span class="ruby-value">%{/usr/pkg/sbin/dmidecode 2&gt;/dev/null}</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-string">'SunOS'</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">unless</span> <span class="ruby-constant">FileTest</span>.<span class="ruby-identifier">exists?</span>(<span class="ruby-string">&quot;/usr/sbin/smbios&quot;</span>)
+
+    <span class="ruby-identifier">output</span>=<span class="ruby-value">%{/usr/sbin/smbios 2&gt;/dev/null}</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">output</span>=<span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">output</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- get_dmi_table-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- get_dmi_table-method -->
+
+      
+        <div id="prtdiag_sparc_find_system_info-method" class="method-detail ">
+          <a name="method-c-prtdiag_sparc_find_system_info"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">prtdiag_sparc_find_system_info</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="prtdiag_sparc_find_system_info-source">
+<pre>
+<span class="ruby-comment"># File lib/facter/util/manufacturer.rb, line 64</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">prtdiag_sparc_find_system_info</span>()
+  <span class="ruby-comment"># Parses prtdiag for a SPARC architecture string, won't work with Solaris x86</span>
+  <span class="ruby-identifier">output</span> = <span class="ruby-constant">Facter</span><span class="ruby-operator">::</span><span class="ruby-constant">Util</span><span class="ruby-operator">::</span><span class="ruby-constant">Resolution</span>.<span class="ruby-identifier">exec</span>(<span class="ruby-string">'/usr/sbin/prtdiag 2&gt;/dev/null'</span>)
+
+  <span class="ruby-comment"># System Configuration:  Sun Microsystems  sun4u Sun SPARC Enterprise M3000 Server</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">output</span> <span class="ruby-keyword">and</span> <span class="ruby-identifier">output</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/^System Configuration:\s+(.+?)\s+(sun\d+\S+)\s+(.+)/</span>
+    <span class="ruby-constant">Facter</span>.<span class="ruby-identifier">add</span>(<span class="ruby-string">'manufacturer'</span>) <span class="ruby-keyword">do</span>
+      <span class="ruby-identifier">setcode</span> <span class="ruby-keyword">do</span>
+        <span class="ruby-node">$1</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-constant">Facter</span>.<span class="ruby-identifier">add</span>(<span class="ruby-string">'productname'</span>) <span class="ruby-keyword">do</span>
+      <span class="ruby-identifier">setcode</span> <span class="ruby-keyword">do</span>
+        <span class="ruby-node">$3</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-constant">Facter</span>.<span class="ruby-identifier">add</span>(<span class="ruby-string">'serialnumber'</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-identifier">setcode</span> <span class="ruby-keyword">do</span>
+      <span class="ruby-constant">Facter</span><span class="ruby-operator">::</span><span class="ruby-constant">Util</span><span class="ruby-operator">::</span><span class="ruby-constant">Resolution</span>.<span class="ruby-identifier">exec</span>(<span class="ruby-string">&quot;/usr/sbin/sneep&quot;</span>)
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- prtdiag_sparc_find_system_info-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- prtdiag_sparc_find_system_info-method -->
+
+      
+        <div id="sysctl_find_system_info-method" class="method-detail ">
+          <a name="method-c-sysctl_find_system_info"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">sysctl_find_system_info</span><span
+              class="method-args">(name)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="sysctl_find_system_info-source">
+<pre>
+<span class="ruby-comment"># File lib/facter/util/manufacturer.rb, line 53</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">sysctl_find_system_info</span>(<span class="ruby-identifier">name</span>)
+  <span class="ruby-identifier">name</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">sysctlkey</span>,<span class="ruby-identifier">facterkey</span><span class="ruby-operator">|</span>
+    <span class="ruby-constant">Facter</span>.<span class="ruby-identifier">add</span>(<span class="ruby-identifier">facterkey</span>) <span class="ruby-keyword">do</span>
+      <span class="ruby-identifier">confine</span> <span class="ruby-value">:kernel</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-value">:openbsd</span>, <span class="ruby-value">:darwin</span>]
+      <span class="ruby-identifier">setcode</span> <span class="ruby-keyword">do</span>
+        <span class="ruby-constant">Facter</span><span class="ruby-operator">::</span><span class="ruby-constant">Util</span><span class="ruby-operator">::</span><span class="ruby-constant">Resolution</span>.<span class="ruby-identifier">exec</span>(<span class="ruby-node">&quot;sysctl -n #{sysctlkey} 2&gt;/dev/null&quot;</span>)
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- sysctl_find_system_info-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- sysctl_find_system_info-method -->
+
+      
+        <div id="win32_find_system_info-method" class="method-detail ">
+          <a name="method-c-win32_find_system_info"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">win32_find_system_info</span><span
+              class="method-args">(name)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="win32_find_system_info-source">
+<pre>
+<span class="ruby-comment"># File lib/facter/util/manufacturer.rb, line 89</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">win32_find_system_info</span>(<span class="ruby-identifier">name</span>)
+  <span class="ruby-identifier">require</span> <span class="ruby-string">'facter/util/wmi'</span>
+  <span class="ruby-identifier">value</span> = <span class="ruby-string">&quot;&quot;</span>
+  <span class="ruby-identifier">wmi</span> = <span class="ruby-constant">Facter</span><span class="ruby-operator">::</span><span class="ruby-constant">Util</span><span class="ruby-operator">::</span><span class="ruby-constant">WMI</span>.<span class="ruby-identifier">connect</span>()
+  <span class="ruby-identifier">name</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">facterkey</span>, <span class="ruby-identifier">win32key</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">query</span> = <span class="ruby-identifier">wmi</span>.<span class="ruby-constant">ExecQuery</span>(<span class="ruby-node">&quot;select * from Win32_#{win32key.last}&quot;</span>)
+    <span class="ruby-constant">Facter</span>.<span class="ruby-identifier">add</span>(<span class="ruby-identifier">facterkey</span>) <span class="ruby-keyword">do</span>
+      <span class="ruby-identifier">confine</span> <span class="ruby-value">:kernel</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:windows</span>
+      <span class="ruby-identifier">setcode</span> <span class="ruby-keyword">do</span>
+        <span class="ruby-identifier">query</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-identifier">value</span> = <span class="ruby-identifier">x</span>.<span class="ruby-identifier">__send__</span>( (<span class="ruby-identifier">win32key</span>.<span class="ruby-identifier">first</span>).<span class="ruby-identifier">to_sym</span>) }
+        <span class="ruby-identifier">value</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- win32_find_system_info-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- win32_find_system_info-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

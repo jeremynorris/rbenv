@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"default:EFI"Puppet::Parameter::default;FI"R;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"n@return [Object] The default value of the parameter as determined by the {defaultto} method, or nil if no;To:RDoc::Markup::Verbatim;	[I"default has been set.;F:
+@file0TI"lib/puppet/parameter.rb;T

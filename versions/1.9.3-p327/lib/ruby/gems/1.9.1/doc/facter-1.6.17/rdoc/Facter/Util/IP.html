@@ -1,0 +1,1002 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Module: Facter::Util::IP</title>
+
+  <link rel="stylesheet" href="../../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="module">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../../index.html">Home</a>
+          <a href="../../index.html#classes">Classes</a>
+          <a href="../../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../../lib/facter/util/ip_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/facter/util/ip.rb">lib/facter/util/ip.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-alphafy">::alphafy</a></li>
+          
+          <li><a href="#method-c-convert_from_hex-3F">::convert_from_hex?</a></li>
+          
+          <li><a href="#method-c-get_all_interface_output">::get_all_interface_output</a></li>
+          
+          <li><a href="#method-c-get_arp_value">::get_arp_value</a></li>
+          
+          <li><a href="#method-c-get_bonding_master">::get_bonding_master</a></li>
+          
+          <li><a href="#method-c-get_ifconfig">::get_ifconfig</a></li>
+          
+          <li><a href="#method-c-get_infiniband_macaddress">::get_infiniband_macaddress</a></li>
+          
+          <li><a href="#method-c-get_interface_value">::get_interface_value</a></li>
+          
+          <li><a href="#method-c-get_interfaces">::get_interfaces</a></li>
+          
+          <li><a href="#method-c-get_network_value">::get_network_value</a></li>
+          
+          <li><a href="#method-c-get_output_for_interface_and_label">::get_output_for_interface_and_label</a></li>
+          
+          <li><a href="#method-c-get_single_interface_output">::get_single_interface_output</a></li>
+          
+          <li><a href="#method-c-hpux_ifconfig_interface">::hpux_ifconfig_interface</a></li>
+          
+          <li><a href="#method-c-hpux_lanscan">::hpux_lanscan</a></li>
+          
+          <li><a href="#method-c-hpux_netstat_in">::hpux_netstat_in</a></li>
+          
+          <li><a href="#method-c-ifconfig_interface">::ifconfig_interface</a></li>
+          
+          <li><a href="#method-c-supported_platforms">::supported_platforms</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../../Facter.html">Facter</a></li>
+        
+          <li><a href="../../Facter/Application.html">Facter::Application</a></li>
+        
+          <li><a href="../../Facter/Manufacturer.html">Facter::Manufacturer</a></li>
+        
+          <li><a href="../../Facter/Memory.html">Facter::Memory</a></li>
+        
+          <li><a href="../../Facter/NetMask.html">Facter::NetMask</a></li>
+        
+          <li><a href="../../Facter/Util.html">Facter::Util</a></li>
+        
+          <li><a href="../../Facter/Util/Collection.html">Facter::Util::Collection</a></li>
+        
+          <li><a href="../../Facter/Util/Config.html">Facter::Util::Config</a></li>
+        
+          <li><a href="../../Facter/Util/Confine.html">Facter::Util::Confine</a></li>
+        
+          <li><a href="../../Facter/Util/EC2.html">Facter::Util::EC2</a></li>
+        
+          <li><a href="../../Facter/Util/Fact.html">Facter::Util::Fact</a></li>
+        
+          <li><a href="../../Facter/Util/IP.html">Facter::Util::IP</a></li>
+        
+          <li><a href="../../Facter/Util/Loader.html">Facter::Util::Loader</a></li>
+        
+          <li><a href="../../Facter/Util/Macaddress.html">Facter::Util::Macaddress</a></li>
+        
+          <li><a href="../../Facter/Util/Macaddress/Darwin.html">Facter::Util::Macaddress::Darwin</a></li>
+        
+          <li><a href="../../Facter/Util/Macaddress/Windows.html">Facter::Util::Macaddress::Windows</a></li>
+        
+          <li><a href="../../Facter/Util/Macosx.html">Facter::Util::Macosx</a></li>
+        
+          <li><a href="../../Facter/Util/MonkeyPatches.html">Facter::Util::MonkeyPatches</a></li>
+        
+          <li><a href="../../Facter/Util/MonkeyPatches/Lines.html">Facter::Util::MonkeyPatches::Lines</a></li>
+        
+          <li><a href="../../Facter/Util/Processor.html">Facter::Util::Processor</a></li>
+        
+          <li><a href="../../Facter/Util/Registry.html">Facter::Util::Registry</a></li>
+        
+          <li><a href="../../Facter/Util/Resolution.html">Facter::Util::Resolution</a></li>
+        
+          <li><a href="../../Facter/Util/Uptime.html">Facter::Util::Uptime</a></li>
+        
+          <li><a href="../../Facter/Util/Values.html">Facter::Util::Values</a></li>
+        
+          <li><a href="../../Facter/Util/Virtual.html">Facter::Util::Virtual</a></li>
+        
+          <li><a href="../../Facter/Util/Vlans.html">Facter::Util::Vlans</a></li>
+        
+          <li><a href="../../Facter/Util/WMI.html">Facter::Util::WMI</a></li>
+        
+          <li><a href="../../Facter/Util/Xendomains.html">Facter::Util::Xendomains</a></li>
+        
+          <li><a href="../../Plist.html">Plist</a></li>
+        
+          <li><a href="../../Plist/Emit.html">Plist::Emit</a></li>
+        
+          <li><a href="../../Plist/Listener.html">Plist::Listener</a></li>
+        
+          <li><a href="../../Plist/PArray.html">Plist::PArray</a></li>
+        
+          <li><a href="../../Plist/PData.html">Plist::PData</a></li>
+        
+          <li><a href="../../Plist/PDate.html">Plist::PDate</a></li>
+        
+          <li><a href="../../Plist/PDict.html">Plist::PDict</a></li>
+        
+          <li><a href="../../Plist/PFalse.html">Plist::PFalse</a></li>
+        
+          <li><a href="../../Plist/PInteger.html">Plist::PInteger</a></li>
+        
+          <li><a href="../../Plist/PKey.html">Plist::PKey</a></li>
+        
+          <li><a href="../../Plist/PList.html">Plist::PList</a></li>
+        
+          <li><a href="../../Plist/PReal.html">Plist::PReal</a></li>
+        
+          <li><a href="../../Plist/PString.html">Plist::PString</a></li>
+        
+          <li><a href="../../Plist/PTag.html">Plist::PTag</a></li>
+        
+          <li><a href="../../Plist/PTrue.html">Plist::PTrue</a></li>
+        
+          <li><a href="../../Plist/StreamParser.html">Plist::StreamParser</a></li>
+        
+          <li><a href="../../IO.html">IO</a></li>
+        
+          <li><a href="../../Object.html">Object</a></li>
+        
+          <li><a href="../../String.html">String</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="module">Facter::Util::IP</h1>
+
+    <div id="description" class="description">
+      
+<p>A base module for collecting IP-related information from all kinds of
+platforms.</p>
+
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+      <!-- Constants -->
+      <div id="constants-list" class="section">
+        <h3 class="section-header">Constants</h3>
+        <dl>
+        
+          <dt><a name="REGEX_MAP">REGEX_MAP</a></dt>
+          
+          <dd class="description"><p>A map of all the different regexes that work for a given platform or set of
+platforms.</p></dd>
+          
+        
+        </dl>
+      </div>
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="alphafy-method" class="method-detail ">
+          <a name="method-c-alphafy"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">alphafy</span><span
+              class="method-args">(interface)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Convert an interface name into purely alphanumeric characters.</p>
+            
+
+            
+            <div class="method-source-code" id="alphafy-source">
+<pre>
+<span class="ruby-comment"># File lib/facter/util/ip.rb, line 42</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">alphafy</span>(<span class="ruby-identifier">interface</span>)
+  <span class="ruby-identifier">interface</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp">/[^a-z0-9_]/</span>, <span class="ruby-string">'_'</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- alphafy-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- alphafy-method -->
+
+      
+        <div id="convert_from_hex-3F-method" class="method-detail ">
+          <a name="method-c-convert_from_hex-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">convert_from_hex?</span><span
+              class="method-args">(kernel)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="convert_from_hex-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/facter/util/ip.rb, line 46</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">convert_from_hex?</span>(<span class="ruby-identifier">kernel</span>)
+  <span class="ruby-identifier">kernels_to_convert</span> = [<span class="ruby-value">:sunos</span>, <span class="ruby-value">:openbsd</span>, <span class="ruby-value">:netbsd</span>, <span class="ruby-value">:freebsd</span>, <span class="ruby-value">:darwin</span>, <span class="ruby-value">:&quot;hp-ux&quot;</span>, <span class="ruby-value">:&quot;gnu/kfreebsd&quot;</span>, <span class="ruby-value">:dragonfly</span>]
+  <span class="ruby-identifier">kernels_to_convert</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">kernel</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- convert_from_hex-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- convert_from_hex-3F-method -->
+
+      
+        <div id="get_all_interface_output-method" class="method-detail ">
+          <a name="method-c-get_all_interface_output"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">get_all_interface_output</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="get_all_interface_output-source">
+<pre>
+<span class="ruby-comment"># File lib/facter/util/ip.rb, line 77</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">get_all_interface_output</span>
+  <span class="ruby-keyword">case</span> <span class="ruby-constant">Facter</span>.<span class="ruby-identifier">value</span>(<span class="ruby-value">:kernel</span>)
+  <span class="ruby-keyword">when</span> <span class="ruby-string">'Linux'</span>, <span class="ruby-string">'OpenBSD'</span>, <span class="ruby-string">'NetBSD'</span>, <span class="ruby-string">'FreeBSD'</span>, <span class="ruby-string">'Darwin'</span>, <span class="ruby-string">'GNU/kFreeBSD'</span>, <span class="ruby-string">'DragonFly'</span>
+    <span class="ruby-identifier">output</span> = <span class="ruby-value">%{/sbin/ifconfig -a 2&gt;/dev/null}</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-string">'SunOS'</span>
+    <span class="ruby-identifier">output</span> = <span class="ruby-value">%{/usr/sbin/ifconfig -a}</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-string">'HP-UX'</span>
+    <span class="ruby-comment"># (#17487)[https://projects.puppetlabs.com/issues/17487]</span>
+    <span class="ruby-comment"># Handle NIC bonding where asterisks and virtual NICs are printed.</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">output</span> = <span class="ruby-identifier">hpux_netstat_in</span>
+      <span class="ruby-identifier">output</span>.<span class="ruby-identifier">gsub!</span>(<span class="ruby-regexp">/\*/</span>, <span class="ruby-string">&quot;&quot;</span>)                  <span class="ruby-comment"># delete asterisks.</span>
+      <span class="ruby-identifier">output</span>.<span class="ruby-identifier">gsub!</span>(<span class="ruby-regexp">/^[^\n]*none[^\n]*\n/</span>, <span class="ruby-string">&quot;&quot;</span>) <span class="ruby-comment"># delete lines with 'none' instead of IPs.</span>
+      <span class="ruby-identifier">output</span>.<span class="ruby-identifier">sub!</span>(<span class="ruby-regexp">/^[^\n]*\n/</span>, <span class="ruby-string">&quot;&quot;</span>)            <span class="ruby-comment"># delete the header line.</span>
+      <span class="ruby-identifier">output</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-string">'windows'</span>
+    <span class="ruby-identifier">output</span> = <span class="ruby-node">%#{ENV['SYSTEMROOT']}/system32/netsh.exe interface ip show interface|</span>
+    <span class="ruby-identifier">output</span> <span class="ruby-operator">+=</span> <span class="ruby-node">%#{ENV['SYSTEMROOT']}/system32/netsh.exe interface ipv6 show interface|</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">output</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- get_all_interface_output-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- get_all_interface_output-method -->
+
+      
+        <div id="get_arp_value-method" class="method-detail ">
+          <a name="method-c-get_arp_value"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">get_arp_value</span><span
+              class="method-args">(interface)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="get_arp_value-source">
+<pre>
+<span class="ruby-comment"># File lib/facter/util/ip.rb, line 282</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">get_arp_value</span>(<span class="ruby-identifier">interface</span>)
+  <span class="ruby-identifier">arp</span> = <span class="ruby-constant">Facter</span><span class="ruby-operator">::</span><span class="ruby-constant">Util</span><span class="ruby-operator">::</span><span class="ruby-constant">Resolution</span>.<span class="ruby-identifier">exec</span>(<span class="ruby-node">&quot;arp -en -i #{interface} | sed -e 1d&quot;</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">arp</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/^\S+\s+\w+\s+(\S+)\s+\w\s+\S+$/</span>
+   <span class="ruby-keyword">return</span> <span class="ruby-node">$1</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- get_arp_value-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- get_arp_value-method -->
+
+      
+        <div id="get_bonding_master-method" class="method-detail ">
+          <a name="method-c-get_bonding_master"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">get_bonding_master</span><span
+              class="method-args">(interface)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="get_bonding_master-source">
+<pre>
+<span class="ruby-comment"># File lib/facter/util/ip.rb, line 175</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">get_bonding_master</span>(<span class="ruby-identifier">interface</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">Facter</span>.<span class="ruby-identifier">value</span>(<span class="ruby-value">:kernel</span>) <span class="ruby-operator">!=</span> <span class="ruby-string">'Linux'</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># We need ip instead of ifconfig because it will show us</span>
+  <span class="ruby-comment"># the bonding master device.</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-keyword">not</span> <span class="ruby-constant">FileTest</span>.<span class="ruby-identifier">executable?</span>(<span class="ruby-string">&quot;/sbin/ip&quot;</span>)
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># A bonding interface can never be an alias interface. Alias</span>
+  <span class="ruby-comment"># interfaces do have a colon in their name and the ip link show</span>
+  <span class="ruby-comment"># command throws an error message when we pass it an alias</span>
+  <span class="ruby-comment"># interface.</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">interface</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/:/</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">regex</span> = <span class="ruby-regexp">/SLAVE[,&gt;].* (bond[0-9]+)/</span>
+    <span class="ruby-identifier">ethbond</span> = <span class="ruby-identifier">regex</span>.<span class="ruby-identifier">match</span>(<span class="ruby-node">%{/sbin/ip link show #{interface}}</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">ethbond</span>
+    <span class="ruby-identifier">device</span> = <span class="ruby-identifier">ethbond</span>[<span class="ruby-value">1</span>]
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">device</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">device</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- get_bonding_master-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- get_bonding_master-method -->
+
+      
+        <div id="get_ifconfig-method" class="method-detail ">
+          <a name="method-c-get_ifconfig"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">get_ifconfig</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p><a href="IP.html#method-c-get_ifconfig">get_ifconfig</a> simply delegates
+to the ifconfig command.</p>
+
+<p>@return [String] the output of `/sbin/ifconfig 2&gt;/dev/null` or nil</p>
+            
+
+            
+            <div class="method-source-code" id="get_ifconfig-source">
+<pre>
+<span class="ruby-comment"># File lib/facter/util/ip.rb, line 103</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">get_ifconfig</span>
+  <span class="ruby-constant">Facter</span><span class="ruby-operator">::</span><span class="ruby-constant">Util</span><span class="ruby-operator">::</span><span class="ruby-constant">Resolution</span>.<span class="ruby-identifier">exec</span>(<span class="ruby-string">&quot;/sbin/ifconfig 2&gt;/dev/null&quot;</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- get_ifconfig-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- get_ifconfig-method -->
+
+      
+        <div id="get_infiniband_macaddress-method" class="method-detail ">
+          <a name="method-c-get_infiniband_macaddress"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">get_infiniband_macaddress</span><span
+              class="method-args">(interface)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="get_infiniband_macaddress-source">
+<pre>
+<span class="ruby-comment"># File lib/facter/util/ip.rb, line 114</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">get_infiniband_macaddress</span>(<span class="ruby-identifier">interface</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">exists?</span>(<span class="ruby-node">&quot;/sys/class/net/#{interface}/address&quot;</span>) <span class="ruby-keyword">then</span>
+    <span class="ruby-identifier">ib_mac_address</span> = <span class="ruby-node">`cat /sys/class/net/#{interface}/address`</span>.<span class="ruby-identifier">chomp</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">exists?</span>(<span class="ruby-string">&quot;/sbin/ip&quot;</span>) <span class="ruby-keyword">then</span>
+    <span class="ruby-identifier">ip_output</span> = <span class="ruby-node">%{/sbin/ip link show #{interface}}</span>
+    <span class="ruby-identifier">ib_mac_address</span> = <span class="ruby-identifier">ip_output</span>.<span class="ruby-identifier">scan</span>(<span class="ruby-regexp">%{infiniband\s+((\w{1,2}:){5,}\w{1,2})}</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">ib_mac_address</span> = <span class="ruby-string">&quot;FF:FF:FF:FF:FF:FF:FF:FF:FF:FF:FF:FF:FF:FF:FF:FF:FF:FF:FF:FF&quot;</span>
+    <span class="ruby-constant">Facter</span>.<span class="ruby-identifier">debug</span>(<span class="ruby-node">&quot;ip.rb: nothing under /sys/class/net/#{interface}/address and /sbin/ip not available&quot;</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">ib_mac_address</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- get_infiniband_macaddress-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- get_infiniband_macaddress-method -->
+
+      
+        <div id="get_interface_value-method" class="method-detail ">
+          <a name="method-c-get_interface_value"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">get_interface_value</span><span
+              class="method-args">(interface, label)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p><a href="IP.html#method-c-get_interface_value">get_interface_value</a>
+obtains the value of a specific attribute of a specific interface.</p>
+
+<p>@param interface [String] the interface identifier, e.g. “eth0” or “bond0”</p>
+
+<p>@param label [String] the attribute of the interface to obtain a value for,
+e.g. “netmask” or “ipaddress”</p>
+
+<p>@api private</p>
+
+<p>@return [String] representing the requested value.  An empty array is
+returned if the kernel is not supported by the <a
+href="IP.html#REGEX_MAP">REGEX_MAP</a> constant.</p>
+            
+
+            
+            <div class="method-source-code" id="get_interface_value-source">
+<pre>
+<span class="ruby-comment"># File lib/facter/util/ip.rb, line 214</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">get_interface_value</span>(<span class="ruby-identifier">interface</span>, <span class="ruby-identifier">label</span>)
+  <span class="ruby-identifier">tmp1</span> = []
+
+  <span class="ruby-identifier">kernel</span> = <span class="ruby-constant">Facter</span>.<span class="ruby-identifier">value</span>(<span class="ruby-value">:kernel</span>).<span class="ruby-identifier">downcase</span>.<span class="ruby-identifier">to_sym</span>
+
+  <span class="ruby-comment"># If it's not directly in the map or aliased in the map, then we don't know how to deal with it.</span>
+  <span class="ruby-keyword">unless</span> <span class="ruby-identifier">map</span> = <span class="ruby-constant">REGEX_MAP</span>[<span class="ruby-identifier">kernel</span>] <span class="ruby-operator">||</span> <span class="ruby-constant">REGEX_MAP</span>.<span class="ruby-identifier">values</span>.<span class="ruby-identifier">find</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">tmp</span><span class="ruby-operator">|</span> <span class="ruby-identifier">tmp</span>[<span class="ruby-value">:aliases</span>] <span class="ruby-keyword">and</span> <span class="ruby-identifier">tmp</span>[<span class="ruby-value">:aliases</span>].<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">kernel</span>) }
+    <span class="ruby-keyword">return</span> []
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment"># Pull the correct regex out of the map.</span>
+  <span class="ruby-identifier">regex</span> = <span class="ruby-identifier">map</span>[<span class="ruby-identifier">label</span>.<span class="ruby-identifier">to_sym</span>]
+
+  <span class="ruby-comment"># Linux changes the MAC address reported via ifconfig when an ethernet interface</span>
+  <span class="ruby-comment"># becomes a slave of a bonding device to the master MAC address.</span>
+  <span class="ruby-comment"># We have to dig a bit to get the original/real MAC address of the interface.</span>
+  <span class="ruby-identifier">bonddev</span> = <span class="ruby-identifier">get_bonding_master</span>(<span class="ruby-identifier">interface</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">label</span> <span class="ruby-operator">==</span> <span class="ruby-string">'macaddress'</span> <span class="ruby-keyword">and</span> <span class="ruby-identifier">bonddev</span>
+    <span class="ruby-identifier">bondinfo</span> = <span class="ruby-identifier">read_proc_net_bonding</span>(<span class="ruby-node">&quot;/proc/net/bonding/#{bonddev}&quot;</span>)
+    <span class="ruby-identifier">re</span> = <span class="ruby-node">/^Slave Interface: #{interface}\b.*?\bPermanent HW addr: (([0-9A-F]{2}:?)*)$/</span><span class="ruby-identifier">m</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">match</span> = <span class="ruby-identifier">re</span>.<span class="ruby-identifier">match</span>(<span class="ruby-identifier">bondinfo</span>)
+      <span class="ruby-identifier">value</span> = <span class="ruby-identifier">match</span>[<span class="ruby-value">1</span>].<span class="ruby-identifier">upcase</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">output_int</span> = <span class="ruby-identifier">get_output_for_interface_and_label</span>(<span class="ruby-identifier">interface</span>, <span class="ruby-identifier">label</span>)
+
+    <span class="ruby-identifier">output_int</span>.<span class="ruby-identifier">each_line</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">s</span><span class="ruby-operator">|</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">s</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">regex</span>
+        <span class="ruby-identifier">value</span> = <span class="ruby-node">$1</span>
+          <span class="ruby-keyword">if</span> <span class="ruby-identifier">label</span> <span class="ruby-operator">==</span> <span class="ruby-string">'netmask'</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">convert_from_hex?</span>(<span class="ruby-identifier">kernel</span>)
+            <span class="ruby-identifier">value</span> = <span class="ruby-identifier">value</span>.<span class="ruby-identifier">scan</span>(<span class="ruby-regexp">/../</span>).<span class="ruby-identifier">collect</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">byte</span><span class="ruby-operator">|</span> <span class="ruby-identifier">byte</span>.<span class="ruby-identifier">to_i</span>(<span class="ruby-value">16</span>) <span class="ruby-keyword">end</span>.<span class="ruby-identifier">join</span>(<span class="ruby-string">'.'</span>)
+          <span class="ruby-keyword">end</span>
+        <span class="ruby-identifier">tmp1</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">value</span>)
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">tmp1</span>
+      <span class="ruby-identifier">value</span> = <span class="ruby-identifier">tmp1</span>.<span class="ruby-identifier">shift</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- get_interface_value-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- get_interface_value-method -->
+
+      
+        <div id="get_interfaces-method" class="method-detail ">
+          <a name="method-c-get_interfaces"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">get_interfaces</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="get_interfaces-source">
+<pre>
+<span class="ruby-comment"># File lib/facter/util/ip.rb, line 63</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">get_interfaces</span>
+  <span class="ruby-keyword">return</span> [] <span class="ruby-keyword">unless</span> <span class="ruby-identifier">output</span> = <span class="ruby-constant">Facter</span><span class="ruby-operator">::</span><span class="ruby-constant">Util</span><span class="ruby-operator">::</span><span class="ruby-constant">IP</span>.<span class="ruby-identifier">get_all_interface_output</span>()
+
+  <span class="ruby-comment"># windows interface names contain spaces and are quoted and can appear multiple</span>
+  <span class="ruby-comment"># times as ipv4 and ipv6</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">output</span>.<span class="ruby-identifier">scan</span>(<span class="ruby-regexp">/\s* connected\s*(\S.*)/</span>).<span class="ruby-identifier">flatten</span>.<span class="ruby-identifier">uniq</span> <span class="ruby-keyword">if</span> <span class="ruby-constant">Facter</span>.<span class="ruby-identifier">value</span>(<span class="ruby-value">:kernel</span>) <span class="ruby-operator">==</span> <span class="ruby-string">'windows'</span>
+
+  <span class="ruby-comment"># Our regex appears to be stupid, in that it leaves colons sitting</span>
+  <span class="ruby-comment"># at the end of interfaces.  So, we have to trim those trailing</span>
+  <span class="ruby-comment"># characters.  I tried making the regex better but supporting all</span>
+  <span class="ruby-comment"># platforms with a single regex is probably a bit too much.</span>
+  <span class="ruby-identifier">output</span>.<span class="ruby-identifier">scan</span>(<span class="ruby-regexp">/^\S+/</span>).<span class="ruby-identifier">collect</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-identifier">i</span>.<span class="ruby-identifier">sub</span>(<span class="ruby-regexp">/:$/</span>, <span class="ruby-string">''</span>) }.<span class="ruby-identifier">uniq</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- get_interfaces-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- get_interfaces-method -->
+
+      
+        <div id="get_network_value-method" class="method-detail ">
+          <a name="method-c-get_network_value"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">get_network_value</span><span
+              class="method-args">(interface)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="get_network_value-source">
+<pre>
+<span class="ruby-comment"># File lib/facter/util/ip.rb, line 269</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">get_network_value</span>(<span class="ruby-identifier">interface</span>)
+  <span class="ruby-identifier">require</span> <span class="ruby-string">'ipaddr'</span>
+
+  <span class="ruby-identifier">ipaddress</span> = <span class="ruby-identifier">get_interface_value</span>(<span class="ruby-identifier">interface</span>, <span class="ruby-string">&quot;ipaddress&quot;</span>)
+  <span class="ruby-identifier">netmask</span> = <span class="ruby-identifier">get_interface_value</span>(<span class="ruby-identifier">interface</span>, <span class="ruby-string">&quot;netmask&quot;</span>)
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">ipaddress</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">netmask</span>
+    <span class="ruby-identifier">ip</span> = <span class="ruby-constant">IPAddr</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ipaddress</span>, <span class="ruby-constant">Socket</span><span class="ruby-operator">::</span><span class="ruby-constant">AF_INET</span>)
+    <span class="ruby-identifier">subnet</span> = <span class="ruby-constant">IPAddr</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">netmask</span>, <span class="ruby-constant">Socket</span><span class="ruby-operator">::</span><span class="ruby-constant">AF_INET</span>)
+    <span class="ruby-identifier">network</span> = <span class="ruby-identifier">ip</span>.<span class="ruby-identifier">mask</span>(<span class="ruby-identifier">subnet</span>.<span class="ruby-identifier">to_s</span>).<span class="ruby-identifier">to_s</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- get_network_value-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- get_network_value-method -->
+
+      
+        <div id="get_output_for_interface_and_label-method" class="method-detail ">
+          <a name="method-c-get_output_for_interface_and_label"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">get_output_for_interface_and_label</span><span
+              class="method-args">(interface, label)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="get_output_for_interface_and_label-source">
+<pre>
+<span class="ruby-comment"># File lib/facter/util/ip.rb, line 164</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">get_output_for_interface_and_label</span>(<span class="ruby-identifier">interface</span>, <span class="ruby-identifier">label</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">get_single_interface_output</span>(<span class="ruby-identifier">interface</span>) <span class="ruby-keyword">unless</span> <span class="ruby-constant">Facter</span>.<span class="ruby-identifier">value</span>(<span class="ruby-value">:kernel</span>) <span class="ruby-operator">==</span> <span class="ruby-string">'windows'</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">label</span> <span class="ruby-operator">==</span> <span class="ruby-string">'ipaddress6'</span>
+    <span class="ruby-identifier">output</span> = <span class="ruby-node">%#{ENV['SYSTEMROOT']}/system32/netsh.exe interface ipv6 show address \&quot;#{interface}\&quot;|</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">output</span> = <span class="ruby-node">%#{ENV['SYSTEMROOT']}/system32/netsh.exe interface ip show address \&quot;#{interface}\&quot;|</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">output</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- get_output_for_interface_and_label-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- get_output_for_interface_and_label-method -->
+
+      
+        <div id="get_single_interface_output-method" class="method-detail ">
+          <a name="method-c-get_single_interface_output"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">get_single_interface_output</span><span
+              class="method-args">(interface)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="get_single_interface_output-source">
+<pre>
+<span class="ruby-comment"># File lib/facter/util/ip.rb, line 131</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">get_single_interface_output</span>(<span class="ruby-identifier">interface</span>)
+  <span class="ruby-identifier">output</span> = <span class="ruby-string">&quot;&quot;</span>
+  <span class="ruby-keyword">case</span> <span class="ruby-constant">Facter</span>.<span class="ruby-identifier">value</span>(<span class="ruby-value">:kernel</span>)
+  <span class="ruby-keyword">when</span> <span class="ruby-string">'OpenBSD'</span>, <span class="ruby-string">'NetBSD'</span>, <span class="ruby-string">'FreeBSD'</span>, <span class="ruby-string">'Darwin'</span>, <span class="ruby-string">'GNU/kFreeBSD'</span>, <span class="ruby-string">'DragonFly'</span>
+    <span class="ruby-identifier">output</span> = <span class="ruby-constant">Facter</span><span class="ruby-operator">::</span><span class="ruby-constant">Util</span><span class="ruby-operator">::</span><span class="ruby-constant">IP</span>.<span class="ruby-identifier">ifconfig_interface</span>(<span class="ruby-identifier">interface</span>)
+  <span class="ruby-keyword">when</span> <span class="ruby-string">'Linux'</span>
+    <span class="ruby-identifier">ifconfig_output</span> = <span class="ruby-constant">Facter</span><span class="ruby-operator">::</span><span class="ruby-constant">Util</span><span class="ruby-operator">::</span><span class="ruby-constant">IP</span>.<span class="ruby-identifier">ifconfig_interface</span>(<span class="ruby-identifier">interface</span>)
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">interface</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/^ib/</span> <span class="ruby-keyword">then</span>
+      <span class="ruby-identifier">real_mac_address</span> = <span class="ruby-identifier">get_infiniband_macaddress</span>(<span class="ruby-identifier">interface</span>)
+      <span class="ruby-identifier">output</span> = <span class="ruby-identifier">ifconfig_output</span>.<span class="ruby-identifier">sub</span>(<span class="ruby-regexp">%{(?:ether|HWaddr)\s+((\w{1,2}:){5,}\w{1,2})}</span>, <span class="ruby-node">&quot;HWaddr #{real_mac_address}&quot;</span>)
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">output</span> = <span class="ruby-identifier">ifconfig_output</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-string">'SunOS'</span>
+    <span class="ruby-identifier">output</span> = <span class="ruby-node">%{/usr/sbin/ifconfig #{interface}}</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-string">'HP-UX'</span>
+     <span class="ruby-identifier">mac</span> = <span class="ruby-string">&quot;&quot;</span>
+     <span class="ruby-identifier">ifc</span> = <span class="ruby-identifier">hpux_ifconfig_interface</span>(<span class="ruby-identifier">interface</span>)
+     <span class="ruby-identifier">hpux_lanscan</span>.<span class="ruby-identifier">scan</span>(<span class="ruby-regexp">/(\dx\S+).*UP\s+(\w+\d+)/</span>).<span class="ruby-identifier">each</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-identifier">mac</span> = <span class="ruby-identifier">i</span>[<span class="ruby-value">0</span>] <span class="ruby-keyword">if</span> <span class="ruby-identifier">i</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">interface</span>) }
+     <span class="ruby-identifier">mac</span> = <span class="ruby-identifier">mac</span>.<span class="ruby-identifier">sub</span>(<span class="ruby-regexp">/0x(\S+)/</span>,<span class="ruby-string">'\1'</span>).<span class="ruby-identifier">scan</span>(<span class="ruby-regexp">/../</span>).<span class="ruby-identifier">join</span>(<span class="ruby-string">&quot;:&quot;</span>)
+     <span class="ruby-identifier">output</span> = <span class="ruby-identifier">ifc</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;\n&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">mac</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">output</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- get_single_interface_output-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- get_single_interface_output-method -->
+
+      
+        <div id="hpux_ifconfig_interface-method" class="method-detail ">
+          <a name="method-c-hpux_ifconfig_interface"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">hpux_ifconfig_interface</span><span
+              class="method-args">(interface)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="hpux_ifconfig_interface-source">
+<pre>
+<span class="ruby-comment"># File lib/facter/util/ip.rb, line 156</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">hpux_ifconfig_interface</span>(<span class="ruby-identifier">interface</span>)
+  <span class="ruby-constant">Facter</span><span class="ruby-operator">::</span><span class="ruby-constant">Util</span><span class="ruby-operator">::</span><span class="ruby-constant">Resolution</span>.<span class="ruby-identifier">exec</span>(<span class="ruby-node">&quot;/usr/sbin/ifconfig #{interface}&quot;</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- hpux_ifconfig_interface-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- hpux_ifconfig_interface-method -->
+
+      
+        <div id="hpux_lanscan-method" class="method-detail ">
+          <a name="method-c-hpux_lanscan"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">hpux_lanscan</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="hpux_lanscan-source">
+<pre>
+<span class="ruby-comment"># File lib/facter/util/ip.rb, line 160</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">hpux_lanscan</span>
+  <span class="ruby-constant">Facter</span><span class="ruby-operator">::</span><span class="ruby-constant">Util</span><span class="ruby-operator">::</span><span class="ruby-constant">Resolution</span>.<span class="ruby-identifier">exec</span>(<span class="ruby-string">&quot;/usr/sbin/lanscan&quot;</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- hpux_lanscan-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- hpux_lanscan-method -->
+
+      
+        <div id="hpux_netstat_in-method" class="method-detail ">
+          <a name="method-c-hpux_netstat_in"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">hpux_netstat_in</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p><a href="IP.html#method-c-hpux_netstat_in">hpux_netstat_in</a> is a
+delegate method that allows us to stub netstat -in without stubbing exec.</p>
+            
+
+            
+            <div class="method-source-code" id="hpux_netstat_in-source">
+<pre>
+<span class="ruby-comment"># File lib/facter/util/ip.rb, line 110</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">hpux_netstat_in</span>
+  <span class="ruby-constant">Facter</span><span class="ruby-operator">::</span><span class="ruby-constant">Util</span><span class="ruby-operator">::</span><span class="ruby-constant">Resolution</span>.<span class="ruby-identifier">exec</span>(<span class="ruby-string">&quot;/bin/netstat -in&quot;</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- hpux_netstat_in-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- hpux_netstat_in-method -->
+
+      
+        <div id="ifconfig_interface-method" class="method-detail ">
+          <a name="method-c-ifconfig_interface"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">ifconfig_interface</span><span
+              class="method-args">(interface)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="ifconfig_interface-source">
+<pre>
+<span class="ruby-comment"># File lib/facter/util/ip.rb, line 127</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">ifconfig_interface</span>(<span class="ruby-identifier">interface</span>)
+  <span class="ruby-node">%{/sbin/ifconfig #{interface} 2&gt;/dev/null}</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- ifconfig_interface-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- ifconfig_interface-method -->
+
+      
+        <div id="supported_platforms-method" class="method-detail ">
+          <a name="method-c-supported_platforms"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">supported_platforms</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="supported_platforms-source">
+<pre>
+<span class="ruby-comment"># File lib/facter/util/ip.rb, line 51</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">supported_platforms</span>
+  <span class="ruby-constant">REGEX_MAP</span>.<span class="ruby-identifier">inject</span>([]) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">result</span>, <span class="ruby-identifier">tmp</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">key</span>, <span class="ruby-identifier">map</span> = <span class="ruby-identifier">tmp</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">map</span>[<span class="ruby-value">:aliases</span>]
+      <span class="ruby-identifier">result</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">map</span>[<span class="ruby-value">:aliases</span>]
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">result</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">key</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">result</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- supported_platforms-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- supported_platforms-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

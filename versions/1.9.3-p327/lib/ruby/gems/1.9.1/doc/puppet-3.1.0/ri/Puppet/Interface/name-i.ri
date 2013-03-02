@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"	name:EFI"Puppet::Interface#name;FI"R;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"The name of the face;TI"@return [Symbol];TI"@api private;T:
+@file0FI"lib/puppet/interface.rb;T

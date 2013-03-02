@@ -1,0 +1,758 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Module: Facter::Util::Virtual</title>
+
+  <link rel="stylesheet" href="../../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="module">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../../index.html">Home</a>
+          <a href="../../index.html#classes">Classes</a>
+          <a href="../../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../../lib/facter/util/virtual_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/facter/util/virtual.rb">lib/facter/util/virtual.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-hpvm-3F">::hpvm?</a></li>
+          
+          <li><a href="#method-c-jail-3F">::jail?</a></li>
+          
+          <li><a href="#method-c-kvm-3F">::kvm?</a></li>
+          
+          <li><a href="#method-c-kvm_type">::kvm_type</a></li>
+          
+          <li><a href="#method-c-lspci">::lspci</a></li>
+          
+          <li><a href="#method-c-openvz-3F">::openvz?</a></li>
+          
+          <li><a href="#method-c-openvz_cloudlinux-3F">::openvz_cloudlinux?</a></li>
+          
+          <li><a href="#method-c-openvz_type">::openvz_type</a></li>
+          
+          <li><a href="#method-c-virt_what">::virt_what</a></li>
+          
+          <li><a href="#method-c-vserver-3F">::vserver?</a></li>
+          
+          <li><a href="#method-c-vserver_type">::vserver_type</a></li>
+          
+          <li><a href="#method-c-xen-3F">::xen?</a></li>
+          
+          <li><a href="#method-c-zlinux-3F">::zlinux?</a></li>
+          
+          <li><a href="#method-c-zone-3F">::zone?</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../../Facter.html">Facter</a></li>
+        
+          <li><a href="../../Facter/Application.html">Facter::Application</a></li>
+        
+          <li><a href="../../Facter/Manufacturer.html">Facter::Manufacturer</a></li>
+        
+          <li><a href="../../Facter/Memory.html">Facter::Memory</a></li>
+        
+          <li><a href="../../Facter/NetMask.html">Facter::NetMask</a></li>
+        
+          <li><a href="../../Facter/Util.html">Facter::Util</a></li>
+        
+          <li><a href="../../Facter/Util/Collection.html">Facter::Util::Collection</a></li>
+        
+          <li><a href="../../Facter/Util/Config.html">Facter::Util::Config</a></li>
+        
+          <li><a href="../../Facter/Util/Confine.html">Facter::Util::Confine</a></li>
+        
+          <li><a href="../../Facter/Util/EC2.html">Facter::Util::EC2</a></li>
+        
+          <li><a href="../../Facter/Util/Fact.html">Facter::Util::Fact</a></li>
+        
+          <li><a href="../../Facter/Util/IP.html">Facter::Util::IP</a></li>
+        
+          <li><a href="../../Facter/Util/Loader.html">Facter::Util::Loader</a></li>
+        
+          <li><a href="../../Facter/Util/Macaddress.html">Facter::Util::Macaddress</a></li>
+        
+          <li><a href="../../Facter/Util/Macaddress/Darwin.html">Facter::Util::Macaddress::Darwin</a></li>
+        
+          <li><a href="../../Facter/Util/Macaddress/Windows.html">Facter::Util::Macaddress::Windows</a></li>
+        
+          <li><a href="../../Facter/Util/Macosx.html">Facter::Util::Macosx</a></li>
+        
+          <li><a href="../../Facter/Util/MonkeyPatches.html">Facter::Util::MonkeyPatches</a></li>
+        
+          <li><a href="../../Facter/Util/MonkeyPatches/Lines.html">Facter::Util::MonkeyPatches::Lines</a></li>
+        
+          <li><a href="../../Facter/Util/Processor.html">Facter::Util::Processor</a></li>
+        
+          <li><a href="../../Facter/Util/Registry.html">Facter::Util::Registry</a></li>
+        
+          <li><a href="../../Facter/Util/Resolution.html">Facter::Util::Resolution</a></li>
+        
+          <li><a href="../../Facter/Util/Uptime.html">Facter::Util::Uptime</a></li>
+        
+          <li><a href="../../Facter/Util/Values.html">Facter::Util::Values</a></li>
+        
+          <li><a href="../../Facter/Util/Virtual.html">Facter::Util::Virtual</a></li>
+        
+          <li><a href="../../Facter/Util/Vlans.html">Facter::Util::Vlans</a></li>
+        
+          <li><a href="../../Facter/Util/WMI.html">Facter::Util::WMI</a></li>
+        
+          <li><a href="../../Facter/Util/Xendomains.html">Facter::Util::Xendomains</a></li>
+        
+          <li><a href="../../Plist.html">Plist</a></li>
+        
+          <li><a href="../../Plist/Emit.html">Plist::Emit</a></li>
+        
+          <li><a href="../../Plist/Listener.html">Plist::Listener</a></li>
+        
+          <li><a href="../../Plist/PArray.html">Plist::PArray</a></li>
+        
+          <li><a href="../../Plist/PData.html">Plist::PData</a></li>
+        
+          <li><a href="../../Plist/PDate.html">Plist::PDate</a></li>
+        
+          <li><a href="../../Plist/PDict.html">Plist::PDict</a></li>
+        
+          <li><a href="../../Plist/PFalse.html">Plist::PFalse</a></li>
+        
+          <li><a href="../../Plist/PInteger.html">Plist::PInteger</a></li>
+        
+          <li><a href="../../Plist/PKey.html">Plist::PKey</a></li>
+        
+          <li><a href="../../Plist/PList.html">Plist::PList</a></li>
+        
+          <li><a href="../../Plist/PReal.html">Plist::PReal</a></li>
+        
+          <li><a href="../../Plist/PString.html">Plist::PString</a></li>
+        
+          <li><a href="../../Plist/PTag.html">Plist::PTag</a></li>
+        
+          <li><a href="../../Plist/PTrue.html">Plist::PTrue</a></li>
+        
+          <li><a href="../../Plist/StreamParser.html">Plist::StreamParser</a></li>
+        
+          <li><a href="../../IO.html">IO</a></li>
+        
+          <li><a href="../../Object.html">Object</a></li>
+        
+          <li><a href="../../String.html">String</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="module">Facter::Util::Virtual</h1>
+
+    <div id="description" class="description">
+      
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="hpvm-3F-method" class="method-detail ">
+          <a name="method-c-hpvm-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">hpvm?</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="hpvm-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/facter/util/virtual.rb, line 94</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">hpvm?</span>
+  <span class="ruby-constant">Facter</span><span class="ruby-operator">::</span><span class="ruby-constant">Util</span><span class="ruby-operator">::</span><span class="ruby-constant">Resolution</span>.<span class="ruby-identifier">exec</span>(<span class="ruby-string">&quot;/usr/bin/getconf MACHINE_MODEL&quot;</span>).<span class="ruby-identifier">chomp</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/Virtual Machine/</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- hpvm-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- hpvm-3F-method -->
+
+      
+        <div id="jail-3F-method" class="method-detail ">
+          <a name="method-c-jail-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">jail?</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="jail-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/facter/util/virtual.rb, line 86</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">jail?</span>
+  <span class="ruby-identifier">path</span> = <span class="ruby-keyword">case</span> <span class="ruby-constant">Facter</span>.<span class="ruby-identifier">value</span>(<span class="ruby-value">:kernel</span>)
+    <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;FreeBSD&quot;</span> <span class="ruby-keyword">then</span> <span class="ruby-string">&quot;/sbin&quot;</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;GNU/kFreeBSD&quot;</span> <span class="ruby-keyword">then</span> <span class="ruby-string">&quot;/bin&quot;</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-constant">Facter</span><span class="ruby-operator">::</span><span class="ruby-constant">Util</span><span class="ruby-operator">::</span><span class="ruby-constant">Resolution</span>.<span class="ruby-identifier">exec</span>(<span class="ruby-node">&quot;#{path}/sysctl -n security.jail.jailed&quot;</span>) <span class="ruby-operator">==</span> <span class="ruby-string">&quot;1&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- jail-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- jail-3F-method -->
+
+      
+        <div id="kvm-3F-method" class="method-detail ">
+          <a name="method-c-kvm-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">kvm?</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="kvm-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/facter/util/virtual.rb, line 70</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">kvm?</span>
+   <span class="ruby-identifier">txt</span> = <span class="ruby-keyword">if</span> <span class="ruby-constant">FileTest</span>.<span class="ruby-identifier">exists?</span>(<span class="ruby-string">&quot;/proc/cpuinfo&quot;</span>)
+     <span class="ruby-constant">File</span>.<span class="ruby-identifier">read</span>(<span class="ruby-string">&quot;/proc/cpuinfo&quot;</span>)
+   <span class="ruby-keyword">elsif</span> [<span class="ruby-string">&quot;FreeBSD&quot;</span>, <span class="ruby-string">&quot;OpenBSD&quot;</span>].<span class="ruby-identifier">include?</span> <span class="ruby-constant">Facter</span>.<span class="ruby-identifier">value</span>(<span class="ruby-value">:kernel</span>)
+     <span class="ruby-constant">Facter</span><span class="ruby-operator">::</span><span class="ruby-constant">Util</span><span class="ruby-operator">::</span><span class="ruby-constant">Resolution</span>.<span class="ruby-identifier">exec</span>(<span class="ruby-string">&quot;/sbin/sysctl -n hw.model&quot;</span>)
+   <span class="ruby-keyword">end</span>
+   (<span class="ruby-identifier">txt</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/QEMU Virtual CPU/</span>) <span class="ruby-operator">?</span> <span class="ruby-keyword">true</span> <span class="ruby-operator">:</span> <span class="ruby-keyword">false</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- kvm-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- kvm-3F-method -->
+
+      
+        <div id="kvm_type-method" class="method-detail ">
+          <a name="method-c-kvm_type"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">kvm_type</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="kvm_type-source">
+<pre>
+<span class="ruby-comment"># File lib/facter/util/virtual.rb, line 79</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">kvm_type</span>
+  <span class="ruby-comment"># TODO Tell the difference between kvm and qemu</span>
+  <span class="ruby-comment"># Can't work out a way to do this at the moment that doesn't</span>
+  <span class="ruby-comment"># require a special binary</span>
+  <span class="ruby-string">&quot;kvm&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- kvm_type-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- kvm_type-method -->
+
+      
+        <div id="lspci-method" class="method-detail ">
+          <a name="method-c-lspci"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">lspci</span><span
+              class="method-args">(command = "lspci 2>/dev/null")</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>lspci is a delegating helper method intended to make it easier to stub the
+system call without affecting other calls to <a
+href="Resolution.html#method-c-exec">Facter::Util::Resolution.exec</a></p>
+            
+
+            
+            <div class="method-source-code" id="lspci-source">
+<pre>
+<span class="ruby-comment"># File lib/facter/util/virtual.rb, line 13</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">lspci</span>(<span class="ruby-identifier">command</span> = <span class="ruby-string">&quot;lspci 2&gt;/dev/null&quot;</span>)
+  <span class="ruby-constant">Facter</span><span class="ruby-operator">::</span><span class="ruby-constant">Util</span><span class="ruby-operator">::</span><span class="ruby-constant">Resolution</span>.<span class="ruby-identifier">exec</span> <span class="ruby-identifier">command</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- lspci-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- lspci-method -->
+
+      
+        <div id="openvz-3F-method" class="method-detail ">
+          <a name="method-c-openvz-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">openvz?</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="openvz-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/facter/util/virtual.rb, line 17</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">openvz?</span>
+  <span class="ruby-constant">FileTest</span>.<span class="ruby-identifier">directory?</span>(<span class="ruby-string">&quot;/proc/vz&quot;</span>) <span class="ruby-keyword">and</span> <span class="ruby-keyword">not</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">openvz_cloudlinux?</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- openvz-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- openvz-3F-method -->
+
+      
+        <div id="openvz_cloudlinux-3F-method" class="method-detail ">
+          <a name="method-c-openvz_cloudlinux-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">openvz_cloudlinux?</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Cloudlinux uses OpenVZ to a degree, but always has an empty /proc/vz/ and
+has /proc/lve/list present</p>
+            
+
+            
+            <div class="method-source-code" id="openvz_cloudlinux-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/facter/util/virtual.rb, line 36</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">openvz_cloudlinux?</span>
+  <span class="ruby-constant">FileTest</span>.<span class="ruby-identifier">file?</span>(<span class="ruby-string">&quot;/proc/lve/list&quot;</span>) <span class="ruby-keyword">or</span> <span class="ruby-constant">Dir</span>.<span class="ruby-identifier">glob</span>(<span class="ruby-string">'/proc/vz/*'</span>).<span class="ruby-identifier">empty?</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- openvz_cloudlinux-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- openvz_cloudlinux-3F-method -->
+
+      
+        <div id="openvz_type-method" class="method-detail ">
+          <a name="method-c-openvz_type"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">openvz_type</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>So one can either have #6728 work on OpenVZ or Cloudlinux. Whoo.</p>
+            
+
+            
+            <div class="method-source-code" id="openvz_type-source">
+<pre>
+<span class="ruby-comment"># File lib/facter/util/virtual.rb, line 22</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">openvz_type</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span> <span class="ruby-keyword">unless</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">openvz?</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span> <span class="ruby-keyword">unless</span> <span class="ruby-constant">FileTest</span>.<span class="ruby-identifier">exists?</span>( <span class="ruby-string">'/proc/self/status'</span> )
+
+  <span class="ruby-identifier">envid</span> = <span class="ruby-constant">Facter</span><span class="ruby-operator">::</span><span class="ruby-constant">Util</span><span class="ruby-operator">::</span><span class="ruby-constant">Resolution</span>.<span class="ruby-identifier">exec</span>( <span class="ruby-string">'grep &quot;envID&quot; /proc/self/status'</span> )
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">envid</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/^envID:\s+0$/</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-string">'openvzhn'</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">envid</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/^envID:\s+(\d+)$/</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-string">'openvzve'</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- openvz_type-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- openvz_type-method -->
+
+      
+        <div id="virt_what-method" class="method-detail ">
+          <a name="method-c-virt_what"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">virt_what</span><span
+              class="method-args">(command = "virt-what")</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p><a href="Virtual.html#method-c-virt_what">virt_what</a> is a delegating
+helper method intended to make it easier to stub the system call without
+affecting other calls to <a
+href="Resolution.html#method-c-exec">Facter::Util::Resolution.exec</a></p>
+            
+
+            
+            <div class="method-source-code" id="virt_what-source">
+<pre>
+<span class="ruby-comment"># File lib/facter/util/virtual.rb, line 6</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">virt_what</span>(<span class="ruby-identifier">command</span> = <span class="ruby-string">&quot;virt-what&quot;</span>)
+  <span class="ruby-constant">Facter</span><span class="ruby-operator">::</span><span class="ruby-constant">Util</span><span class="ruby-operator">::</span><span class="ruby-constant">Resolution</span>.<span class="ruby-identifier">exec</span> <span class="ruby-identifier">command</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- virt_what-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- virt_what-method -->
+
+      
+        <div id="vserver-3F-method" class="method-detail ">
+          <a name="method-c-vserver-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">vserver?</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="vserver-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/facter/util/virtual.rb, line 47</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">vserver?</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span> <span class="ruby-keyword">unless</span> <span class="ruby-constant">FileTest</span>.<span class="ruby-identifier">exists?</span>(<span class="ruby-string">&quot;/proc/self/status&quot;</span>)
+  <span class="ruby-identifier">txt</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">read</span>(<span class="ruby-string">&quot;/proc/self/status&quot;</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">txt</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/^(s_context|VxID):[[:blank:]]*[0-9]/</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- vserver-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- vserver-3F-method -->
+
+      
+        <div id="vserver_type-method" class="method-detail ">
+          <a name="method-c-vserver_type"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">vserver_type</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="vserver_type-source">
+<pre>
+<span class="ruby-comment"># File lib/facter/util/virtual.rb, line 54</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">vserver_type</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">vserver?</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-constant">FileTest</span>.<span class="ruby-identifier">exists?</span>(<span class="ruby-string">&quot;/proc/virtual&quot;</span>)
+      <span class="ruby-string">&quot;vserver_host&quot;</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-string">&quot;vserver&quot;</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- vserver_type-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- vserver_type-method -->
+
+      
+        <div id="xen-3F-method" class="method-detail ">
+          <a name="method-c-xen-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">xen?</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="xen-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/facter/util/virtual.rb, line 64</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">xen?</span>
+  [<span class="ruby-string">&quot;/proc/sys/xen&quot;</span>, <span class="ruby-string">&quot;/sys/bus/xen&quot;</span>, <span class="ruby-string">&quot;/proc/xen&quot;</span> ].<span class="ruby-identifier">detect</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">f</span><span class="ruby-operator">|</span>
+    <span class="ruby-constant">FileTest</span>.<span class="ruby-identifier">exists?</span>(<span class="ruby-identifier">f</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- xen-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- xen-3F-method -->
+
+      
+        <div id="zlinux-3F-method" class="method-detail ">
+          <a name="method-c-zlinux-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">zlinux?</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="zlinux-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/facter/util/virtual.rb, line 98</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">zlinux?</span>
+ <span class="ruby-string">&quot;zlinux&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- zlinux-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- zlinux-3F-method -->
+
+      
+        <div id="zone-3F-method" class="method-detail ">
+          <a name="method-c-zone-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">zone?</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="zone-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/facter/util/virtual.rb, line 40</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">zone?</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">if</span> <span class="ruby-constant">FileTest</span>.<span class="ruby-identifier">directory?</span>(<span class="ruby-string">&quot;/.SUNWnative&quot;</span>)
+  <span class="ruby-identifier">z</span> = <span class="ruby-constant">Facter</span><span class="ruby-operator">::</span><span class="ruby-constant">Util</span><span class="ruby-operator">::</span><span class="ruby-constant">Resolution</span>.<span class="ruby-identifier">exec</span>(<span class="ruby-string">&quot;/sbin/zonename&quot;</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">z</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">z</span>.<span class="ruby-identifier">chomp</span> <span class="ruby-operator">!=</span> <span class="ruby-string">'global'</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- zone-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- zone-3F-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

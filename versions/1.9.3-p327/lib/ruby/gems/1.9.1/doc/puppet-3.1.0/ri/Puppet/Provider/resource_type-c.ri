@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"resource_type:EFI"$Puppet::Provider::resource_type;FI"RW;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"=@todo What is this type? A reference to a Puppet::Type ?;TI"O@return [Puppet::Type] the resource type (that this provider is ... WHAT?);T:
+@file0TI"lib/puppet/provider.rb;T

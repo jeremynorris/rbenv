@@ -1,0 +1,13 @@
+U:RDoc::Attr[iI"this_label_number:EFI""ZAML::Label#this_label_number;FI"RW;F:publico:RDoc::Markup::Document:@parts[	o:RDoc::Markup::Paragraph;	[I"GYAML only wants objects in the datastream once; if the same object;To:RDoc::Markup::Verbatim;	[I"Foccurs more than once, we need to emit a label ("&idxxx") on the
+;FI"Ffirst occurrence and then emit a back reference (*idxxx") on any
+;FI"subsequent occurrence(s).
+;Fo;
+;	[I"GTo accomplish this we keeps a hash (by object id) of the labels of;To;;	[I"Hthe things we serialize as we begin to serialize them.  The labels
+;FI"Iinitially serialize as an empty string (since most objects are only
+;FI"Egoing to be be encountered once), but can be changed to a valid
+;FI"H(by assigning it a number) the first time it is subsequently used,
+;FI"Gif it ever is.  Note that we need to do the label setup BEFORE we
+;FI"Cstart to serialize the object so that circular structures (in
+;FI"Gwhich we will encounter a reference to the object as we serialize
+;FI"it can be handled).;F:
+@file0FI"lib/puppet/util/zaml.rb;T

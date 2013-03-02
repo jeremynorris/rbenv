@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"max_nesting:EFI"-PSON::Pure::Generator::State#max_nesting;FI"RW;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"HThis integer returns the maximum level of data structure nesting in;TI"Bthe generated PSON, max_nesting = 0 if no maximum is checked.;T:
+@file0FI"/lib/puppet/external/pson/pure/generator.rb;T

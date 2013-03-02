@@ -1,0 +1,805 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>mongo-1.8.2 Documentation</title>
+
+  <link type="text/css" media="screen" href="rdoc.css" rel="stylesheet" />
+
+  <script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body class="indexpage">
+
+  
+  <h1>mongo-1.8.2 Documentation</h1>
+
+  
+  <p>This is the API documentation for 'mongo-1.8.2 Documentation'.</p>
+  
+
+  
+  
+
+  <h2 id="classes">Classes/Modules</h2>
+  <ul>
+    
+    <li class="module"><a href="Mongo.html">Mongo</a></li>
+    
+    <li class="class"><a href="Mongo/AuthenticationError.html">Mongo::AuthenticationError</a></li>
+    
+    <li class="class"><a href="Mongo/Collection.html">Mongo::Collection</a></li>
+    
+    <li class="class"><a href="Mongo/Connection.html">Mongo::Connection</a></li>
+    
+    <li class="class"><a href="Mongo/ConnectionError.html">Mongo::ConnectionError</a></li>
+    
+    <li class="class"><a href="Mongo/ConnectionFailure.html">Mongo::ConnectionFailure</a></li>
+    
+    <li class="class"><a href="Mongo/ConnectionTimeoutError.html">Mongo::ConnectionTimeoutError</a></li>
+    
+    <li class="module"><a href="Mongo/Constants.html">Mongo::Constants</a></li>
+    
+    <li class="module"><a href="Mongo/Conversions.html">Mongo::Conversions</a></li>
+    
+    <li class="class"><a href="Mongo/Cursor.html">Mongo::Cursor</a></li>
+    
+    <li class="class"><a href="Mongo/DB.html">Mongo::DB</a></li>
+    
+    <li class="class"><a href="Mongo/Grid.html">Mongo::Grid</a></li>
+    
+    <li class="class"><a href="Mongo/GridError.html">Mongo::GridError</a></li>
+    
+    <li class="module"><a href="Mongo/GridExt.html">Mongo::GridExt</a></li>
+    
+    <li class="module"><a href="Mongo/GridExt/InstanceMethods.html">Mongo::GridExt::InstanceMethods</a></li>
+    
+    <li class="class"><a href="Mongo/GridFileNotFound.html">Mongo::GridFileNotFound</a></li>
+    
+    <li class="class"><a href="Mongo/GridFileSystem.html">Mongo::GridFileSystem</a></li>
+    
+    <li class="class"><a href="Mongo/GridIO.html">Mongo::GridIO</a></li>
+    
+    <li class="class"><a href="Mongo/GridMD5Failure.html">Mongo::GridMD5Failure</a></li>
+    
+    <li class="class"><a href="Mongo/InvalidNSName.html">Mongo::InvalidNSName</a></li>
+    
+    <li class="class"><a href="Mongo/InvalidOperation.html">Mongo::InvalidOperation</a></li>
+    
+    <li class="class"><a href="Mongo/InvalidSortValueError.html">Mongo::InvalidSortValueError</a></li>
+    
+    <li class="module"><a href="Mongo/LegacyWriteConcern.html">Mongo::LegacyWriteConcern</a></li>
+    
+    <li class="module"><a href="Mongo/Logging.html">Mongo::Logging</a></li>
+    
+    <li class="module"><a href="Mongo/Logging/Instrumenter.html">Mongo::Logging::Instrumenter</a></li>
+    
+    <li class="class"><a href="Mongo/MongoArgumentError.html">Mongo::MongoArgumentError</a></li>
+    
+    <li class="class"><a href="Mongo/MongoClient.html">Mongo::MongoClient</a></li>
+    
+    <li class="class"><a href="Mongo/MongoDBError.html">Mongo::MongoDBError</a></li>
+    
+    <li class="class"><a href="Mongo/MongoReplicaSetClient.html">Mongo::MongoReplicaSetClient</a></li>
+    
+    <li class="class"><a href="Mongo/MongoRubyError.html">Mongo::MongoRubyError</a></li>
+    
+    <li class="class"><a href="Mongo/MongoShardedClient.html">Mongo::MongoShardedClient</a></li>
+    
+    <li class="module"><a href="Mongo/Networking.html">Mongo::Networking</a></li>
+    
+    <li class="class"><a href="Mongo/Node.html">Mongo::Node</a></li>
+    
+    <li class="class"><a href="Mongo/NodeWithTagsNotFound.html">Mongo::NodeWithTagsNotFound</a></li>
+    
+    <li class="class"><a href="Mongo/OperationFailure.html">Mongo::OperationFailure</a></li>
+    
+    <li class="class"><a href="Mongo/OperationTimeout.html">Mongo::OperationTimeout</a></li>
+    
+    <li class="class"><a href="Mongo/Pool.html">Mongo::Pool</a></li>
+    
+    <li class="class"><a href="Mongo/PoolManager.html">Mongo::PoolManager</a></li>
+    
+    <li class="module"><a href="Mongo/ReadPreference.html">Mongo::ReadPreference</a></li>
+    
+    <li class="class"><a href="Mongo/ReplSetConnection.html">Mongo::ReplSetConnection</a></li>
+    
+    <li class="class"><a href="Mongo/ReplicaSetConnectionError.html">Mongo::ReplicaSetConnectionError</a></li>
+    
+    <li class="class"><a href="Mongo/SSLSocket.html">Mongo::SSLSocket</a></li>
+    
+    <li class="class"><a href="Mongo/ServerVersion.html">Mongo::ServerVersion</a></li>
+    
+    <li class="class"><a href="Mongo/ShardedConnection.html">Mongo::ShardedConnection</a></li>
+    
+    <li class="class"><a href="Mongo/ShardingPoolManager.html">Mongo::ShardingPoolManager</a></li>
+    
+    <li class="module"><a href="Mongo/Support.html">Mongo::Support</a></li>
+    
+    <li class="class"><a href="Mongo/TCPSocket.html">Mongo::TCPSocket</a></li>
+    
+    <li class="module"><a href="Mongo/ThreadLocalVariableManager.html">Mongo::ThreadLocalVariableManager</a></li>
+    
+    <li class="class"><a href="Mongo/UNIXSocket.html">Mongo::UNIXSocket</a></li>
+    
+    <li class="class"><a href="Mongo/URIParser.html">Mongo::URIParser</a></li>
+    
+    <li class="module"><a href="Mongo/WriteConcern.html">Mongo::WriteConcern</a></li>
+    
+    <li class="class"><a href="Class.html">Class</a></li>
+    
+    <li class="class"><a href="Mutex.html">Mutex</a></li>
+    
+  </ul>
+
+  <h2 id="methods">Methods</h2>
+  <ul>
+    
+      <li><a href="Mongo/MongoClient.html#method-c-from_uri">::from_uri &mdash; Mongo::MongoClient</a></li>
+    
+      <li><a href="Mongo/LegacyWriteConcern.html#method-c-from_uri">::from_uri &mdash; Mongo::LegacyWriteConcern</a></li>
+    
+      <li><a href="Mongo/WriteConcern.html#method-c-gle-3F">::gle? &mdash; Mongo::WriteConcern</a></li>
+    
+      <li><a href="Mongo/Logging/Instrumenter.html#method-c-instrument">::instrument &mdash; Mongo::Logging::Instrumenter</a></li>
+    
+      <li><a href="Mongo/Logging.html#method-c-instrumenter">::instrumenter &mdash; Mongo::Logging</a></li>
+    
+      <li><a href="Mongo/Logging.html#method-c-instrumenter-3D">::instrumenter= &mdash; Mongo::Logging</a></li>
+    
+      <li><a href="Mongo/ReadPreference.html#method-c-mongos">::mongos &mdash; Mongo::ReadPreference</a></li>
+    
+      <li><a href="Mongo/MongoClient.html#method-c-multi">::multi &mdash; Mongo::MongoClient</a></li>
+    
+      <li><a href="Mongo/Node.html#method-c-new">::new &mdash; Mongo::Node</a></li>
+    
+      <li><a href="Mongo/SSLSocket.html#method-c-new">::new &mdash; Mongo::SSLSocket</a></li>
+    
+      <li><a href="Mongo/ShardingPoolManager.html#method-c-new">::new &mdash; Mongo::ShardingPoolManager</a></li>
+    
+      <li><a href="Mongo/ServerVersion.html#method-c-new">::new &mdash; Mongo::ServerVersion</a></li>
+    
+      <li><a href="Mongo/PoolManager.html#method-c-new">::new &mdash; Mongo::PoolManager</a></li>
+    
+      <li><a href="Mongo/Pool.html#method-c-new">::new &mdash; Mongo::Pool</a></li>
+    
+      <li><a href="Mongo/TCPSocket.html#method-c-new">::new &mdash; Mongo::TCPSocket</a></li>
+    
+      <li><a href="Mongo/MongoShardedClient.html#method-c-new">::new &mdash; Mongo::MongoShardedClient</a></li>
+    
+      <li><a href="Mongo/Cursor.html#method-c-new">::new &mdash; Mongo::Cursor</a></li>
+    
+      <li><a href="Mongo/MongoReplicaSetClient.html#method-c-new">::new &mdash; Mongo::MongoReplicaSetClient</a></li>
+    
+      <li><a href="Mongo/UNIXSocket.html#method-c-new">::new &mdash; Mongo::UNIXSocket</a></li>
+    
+      <li><a href="Mongo/URIParser.html#method-c-new">::new &mdash; Mongo::URIParser</a></li>
+    
+      <li><a href="Mongo/MongoClient.html#method-c-new">::new &mdash; Mongo::MongoClient</a></li>
+    
+      <li><a href="Mongo/ShardedConnection.html#method-c-new">::new &mdash; Mongo::ShardedConnection</a></li>
+    
+      <li><a href="Mongo/ReplSetConnection.html#method-c-new">::new &mdash; Mongo::ReplSetConnection</a></li>
+    
+      <li><a href="Mongo/Connection.html#method-c-new">::new &mdash; Mongo::Connection</a></li>
+    
+      <li><a href="Mongo/GridIO.html#method-c-new">::new &mdash; Mongo::GridIO</a></li>
+    
+      <li><a href="Mongo/GridFileSystem.html#method-c-new">::new &mdash; Mongo::GridFileSystem</a></li>
+    
+      <li><a href="Mongo/Grid.html#method-c-new">::new &mdash; Mongo::Grid</a></li>
+    
+      <li><a href="Mongo/MongoDBError.html#method-c-new">::new &mdash; Mongo::MongoDBError</a></li>
+    
+      <li><a href="Mongo/DB.html#method-c-new">::new &mdash; Mongo::DB</a></li>
+    
+      <li><a href="Mongo/Collection.html#method-c-new">::new &mdash; Mongo::Collection</a></li>
+    
+      <li><a href="Mongo/ReadPreference.html#method-c-validate">::validate &mdash; Mongo::ReadPreference</a></li>
+    
+      <li><a href="Mongo/Collection.html#method-i-3C-3C">#<< &mdash; Mongo::Collection</a></li>
+    
+      <li><a href="Mongo/ServerVersion.html#method-i-3C-3D-3E">#<=> &mdash; Mongo::ServerVersion</a></li>
+    
+      <li><a href="Mongo/Node.html#method-i-3D-3D">#== &mdash; Mongo::Node</a></li>
+    
+      <li><a href="Mongo/MongoClient.html#method-i-5B-5D">#[] &mdash; Mongo::MongoClient</a></li>
+    
+      <li><a href="Mongo/Collection.html#method-i-5B-5D">#[] &mdash; Mongo::Collection</a></li>
+    
+      <li><a href="Mongo/DB.html#method-i-5B-5D">#[] &mdash; Mongo::DB</a></li>
+    
+      <li><a href="Mongo/GridIO.html#method-i-5B-5D">#[] &mdash; Mongo::GridIO</a></li>
+    
+      <li><a href="Mongo/GridIO.html#method-i-5B-5D-3D">#[]= &mdash; Mongo::GridIO</a></li>
+    
+      <li><a href="Mongo/Node.html#method-i-active-3F">#active? &mdash; Mongo::Node</a></li>
+    
+      <li><a href="Mongo/MongoClient.html#method-i-active-3F">#active? &mdash; Mongo::MongoClient</a></li>
+    
+      <li><a href="Mongo/MongoClient.html#method-i-add_auth">#add_auth &mdash; Mongo::MongoClient</a></li>
+    
+      <li><a href="Mongo/Cursor.html#method-i-add_option">#add_option &mdash; Mongo::Cursor</a></li>
+    
+      <li><a href="Mongo/DB.html#method-i-add_stored_function">#add_stored_function &mdash; Mongo::DB</a></li>
+    
+      <li><a href="Mongo/DB.html#method-i-add_user">#add_user &mdash; Mongo::DB</a></li>
+    
+      <li><a href="Mongo/Collection.html#method-i-aggregate">#aggregate &mdash; Mongo::Collection</a></li>
+    
+      <li><a href="Mongo/Cursor.html#method-i-alive-3F">#alive? &mdash; Mongo::Cursor</a></li>
+    
+      <li><a href="Mongo/MongoClient.html#method-i-apply_saved_authentication">#apply_saved_authentication &mdash; Mongo::MongoClient</a></li>
+    
+      <li><a href="Mongo/MongoReplicaSetClient.html#method-i-arbiters">#arbiters &mdash; Mongo::MongoReplicaSetClient</a></li>
+    
+      <li><a href="Mongo/Node.html#method-i-arbiters">#arbiters &mdash; Mongo::Node</a></li>
+    
+      <li><a href="Mongo/Conversions.html#method-i-array_as_sort_parameters">#array_as_sort_parameters &mdash; Mongo::Conversions</a></li>
+    
+      <li><a href="Mongo/Support.html#method-i-auth_key">#auth_key &mdash; Mongo::Support</a></li>
+    
+      <li><a href="Mongo/DB.html#method-i-authenticate">#authenticate &mdash; Mongo::DB</a></li>
+    
+      <li><a href="Mongo/Pool.html#method-i-authenticate_existing">#authenticate_existing &mdash; Mongo::Pool</a></li>
+    
+      <li><a href="Mongo/MongoReplicaSetClient.html#method-i-authenticate_pools">#authenticate_pools &mdash; Mongo::MongoReplicaSetClient</a></li>
+    
+      <li><a href="Mongo/MongoClient.html#method-i-authenticate_pools">#authenticate_pools &mdash; Mongo::MongoClient</a></li>
+    
+      <li><a href="Mongo/Cursor.html#method-i-batch_size">#batch_size &mdash; Mongo::Cursor</a></li>
+    
+      <li><a href="Mongo/ShardingPoolManager.html#method-i-best">#best &mdash; Mongo::ShardingPoolManager</a></li>
+    
+      <li><a href="Mongo/Collection.html#method-i-capped-3F">#capped? &mdash; Mongo::Collection</a></li>
+    
+      <li><a href="Mongo/PoolManager.html#method-i-check_connection_health">#check_connection_health &mdash; Mongo::PoolManager</a></li>
+    
+      <li><a href="Mongo/ShardingPoolManager.html#method-i-check_connection_health">#check_connection_health &mdash; Mongo::ShardingPoolManager</a></li>
+    
+      <li><a href="Mongo/MongoClient.html#method-i-check_opts">#check_opts &mdash; Mongo::MongoClient</a></li>
+    
+      <li><a href="Mongo/Node.html#method-i-check_set_membership">#check_set_membership &mdash; Mongo::Node</a></li>
+    
+      <li><a href="Mongo/Node.html#method-i-check_set_name">#check_set_name &mdash; Mongo::Node</a></li>
+    
+      <li><a href="Mongo/MongoReplicaSetClient.html#method-i-checkin">#checkin &mdash; Mongo::MongoReplicaSetClient</a></li>
+    
+      <li><a href="Mongo/MongoClient.html#method-i-checkin">#checkin &mdash; Mongo::MongoClient</a></li>
+    
+      <li><a href="Mongo/Pool.html#method-i-checkin">#checkin &mdash; Mongo::Pool</a></li>
+    
+      <li><a href="Mongo/Pool.html#method-i-checkout">#checkout &mdash; Mongo::Pool</a></li>
+    
+      <li><a href="Mongo/MongoShardedClient.html#method-i-checkout">#checkout &mdash; Mongo::MongoShardedClient</a></li>
+    
+      <li><a href="Mongo/MongoReplicaSetClient.html#method-i-checkout">#checkout &mdash; Mongo::MongoReplicaSetClient</a></li>
+    
+      <li><a href="Mongo/Pool.html#method-i-checkout_existing_socket">#checkout_existing_socket &mdash; Mongo::Pool</a></li>
+    
+      <li><a href="Mongo/Pool.html#method-i-checkout_new_socket">#checkout_new_socket &mdash; Mongo::Pool</a></li>
+    
+      <li><a href="Mongo/MongoReplicaSetClient.html#method-i-checkout_reader">#checkout_reader &mdash; Mongo::MongoReplicaSetClient</a></li>
+    
+      <li><a href="Mongo/MongoClient.html#method-i-checkout_reader">#checkout_reader &mdash; Mongo::MongoClient</a></li>
+    
+      <li><a href="Mongo/MongoClient.html#method-i-checkout_writer">#checkout_writer &mdash; Mongo::MongoClient</a></li>
+    
+      <li><a href="Mongo/MongoReplicaSetClient.html#method-i-checkout_writer">#checkout_writer &mdash; Mongo::MongoReplicaSetClient</a></li>
+    
+      <li><a href="Mongo/MongoClient.html#method-i-clear_auths">#clear_auths &mdash; Mongo::MongoClient</a></li>
+    
+      <li><a href="Mongo/TCPSocket.html#method-i-close">#close &mdash; Mongo::TCPSocket</a></li>
+    
+      <li><a href="Mongo/PoolManager.html#method-i-close">#close &mdash; Mongo::PoolManager</a></li>
+    
+      <li><a href="Mongo/Pool.html#method-i-close">#close &mdash; Mongo::Pool</a></li>
+    
+      <li><a href="Mongo/Cursor.html#method-i-close">#close &mdash; Mongo::Cursor</a></li>
+    
+      <li><a href="Mongo/GridIO.html#method-i-close">#close &mdash; Mongo::GridIO</a></li>
+    
+      <li><a href="Mongo/Node.html#method-i-close">#close &mdash; Mongo::Node</a></li>
+    
+      <li><a href="Mongo/MongoReplicaSetClient.html#method-i-close">#close &mdash; Mongo::MongoReplicaSetClient</a></li>
+    
+      <li><a href="Mongo/MongoClient.html#method-i-close">#close &mdash; Mongo::MongoClient</a></li>
+    
+      <li><a href="Mongo/SSLSocket.html#method-i-close">#close &mdash; Mongo::SSLSocket</a></li>
+    
+      <li><a href="Mongo/Pool.html#method-i-closed-3F">#closed? &mdash; Mongo::Pool</a></li>
+    
+      <li><a href="Mongo/TCPSocket.html#method-i-closed-3F">#closed? &mdash; Mongo::TCPSocket</a></li>
+    
+      <li><a href="Mongo/Cursor.html#method-i-closed-3F">#closed? &mdash; Mongo::Cursor</a></li>
+    
+      <li><a href="Mongo/SSLSocket.html#method-i-closed-3F">#closed? &mdash; Mongo::SSLSocket</a></li>
+    
+      <li><a href="Mongo/PoolManager.html#method-i-closed-3F">#closed? &mdash; Mongo::PoolManager</a></li>
+    
+      <li><a href="Mongo/DB.html#method-i-collection">#collection &mdash; Mongo::DB</a></li>
+    
+      <li><a href="Mongo/DB.html#method-i-collection_names">#collection_names &mdash; Mongo::DB</a></li>
+    
+      <li><a href="Mongo/DB.html#method-i-collections">#collections &mdash; Mongo::DB</a></li>
+    
+      <li><a href="Mongo/DB.html#method-i-collections_info">#collections_info &mdash; Mongo::DB</a></li>
+    
+      <li><a href="Mongo/DB.html#method-i-command">#command &mdash; Mongo::DB</a></li>
+    
+      <li><a href="Mongo/Collection.html#method-i-command_options">#command_options &mdash; Mongo::Collection</a></li>
+    
+      <li><a href="Mongo/Node.html#method-i-config">#config &mdash; Mongo::Node</a></li>
+    
+      <li><a href="Mongo/MongoClient.html#method-i-connect">#connect &mdash; Mongo::MongoClient</a></li>
+    
+      <li><a href="Mongo/MongoShardedClient.html#method-i-connect">#connect &mdash; Mongo::MongoShardedClient</a></li>
+    
+      <li><a href="Mongo/TCPSocket.html#method-i-connect">#connect &mdash; Mongo::TCPSocket</a></li>
+    
+      <li><a href="Mongo/MongoReplicaSetClient.html#method-i-connect">#connect &mdash; Mongo::MongoReplicaSetClient</a></li>
+    
+      <li><a href="Mongo/PoolManager.html#method-i-connect">#connect &mdash; Mongo::PoolManager</a></li>
+    
+      <li><a href="Mongo/ShardingPoolManager.html#method-i-connect">#connect &mdash; Mongo::ShardingPoolManager</a></li>
+    
+      <li><a href="Mongo/SSLSocket.html#method-i-connect">#connect &mdash; Mongo::SSLSocket</a></li>
+    
+      <li><a href="Mongo/Node.html#method-i-connect">#connect &mdash; Mongo::Node</a></li>
+    
+      <li><a href="Mongo/URIParser.html#method-i-connect-3F">#connect? &mdash; Mongo::URIParser</a></li>
+    
+      <li><a href="Mongo/Node.html#method-i-connected-3F">#connected? &mdash; Mongo::Node</a></li>
+    
+      <li><a href="Mongo/MongoReplicaSetClient.html#method-i-connected-3F">#connected? &mdash; Mongo::MongoReplicaSetClient</a></li>
+    
+      <li><a href="Mongo/MongoShardedClient.html#method-i-connected-3F">#connected? &mdash; Mongo::MongoShardedClient</a></li>
+    
+      <li><a href="Mongo/MongoClient.html#method-i-connected-3F">#connected? &mdash; Mongo::MongoClient</a></li>
+    
+      <li><a href="Mongo/MongoReplicaSetClient.html#method-i-connecting-3F">#connecting? &mdash; Mongo::MongoReplicaSetClient</a></li>
+    
+      <li><a href="Mongo/URIParser.html#method-i-connection">#connection &mdash; Mongo::URIParser</a></li>
+    
+      <li><a href="Mongo/URIParser.html#method-i-connection_options">#connection_options &mdash; Mongo::URIParser</a></li>
+    
+      <li><a href="Mongo/MongoClient.html#method-i-copy_database">#copy_database &mdash; Mongo::MongoClient</a></li>
+    
+      <li><a href="Mongo/Collection.html#method-i-count">#count &mdash; Mongo::Collection</a></li>
+    
+      <li><a href="Mongo/Cursor.html#method-i-count">#count &mdash; Mongo::Cursor</a></li>
+    
+      <li><a href="Mongo/DB.html#method-i-create_collection">#create_collection &mdash; Mongo::DB</a></li>
+    
+      <li><a href="Mongo/Collection.html#method-i-create_index">#create_index &mdash; Mongo::Collection</a></li>
+    
+      <li><a href="Mongo/GridIO.html#method-i-data">#data &mdash; Mongo::GridIO</a></li>
+    
+      <li><a href="Mongo/MongoClient.html#method-i-database_info">#database_info &mdash; Mongo::MongoClient</a></li>
+    
+      <li><a href="Mongo/MongoClient.html#method-i-database_names">#database_names &mdash; Mongo::MongoClient</a></li>
+    
+      <li><a href="Mongo/MongoClient.html#method-i-db">#db &mdash; Mongo::MongoClient</a></li>
+    
+      <li><a href="Mongo/GridFileSystem.html#method-i-delete">#delete &mdash; Mongo::GridFileSystem</a></li>
+    
+      <li><a href="Mongo/Grid.html#method-i-delete">#delete &mdash; Mongo::Grid</a></li>
+    
+      <li><a href="Mongo/DB.html#method-i-dereference">#dereference &mdash; Mongo::DB</a></li>
+    
+      <li><a href="Mongo/URIParser.html#method-i-direct-3F">#direct? &mdash; Mongo::URIParser</a></li>
+    
+      <li><a href="Mongo/Collection.html#method-i-distinct">#distinct &mdash; Mongo::Collection</a></li>
+    
+      <li><a href="Mongo/Collection.html#method-i-drop">#drop &mdash; Mongo::Collection</a></li>
+    
+      <li><a href="Mongo/DB.html#method-i-drop_collection">#drop_collection &mdash; Mongo::DB</a></li>
+    
+      <li><a href="Mongo/MongoClient.html#method-i-drop_database">#drop_database &mdash; Mongo::MongoClient</a></li>
+    
+      <li><a href="Mongo/Collection.html#method-i-drop_index">#drop_index &mdash; Mongo::Collection</a></li>
+    
+      <li><a href="Mongo/DB.html#method-i-drop_index">#drop_index &mdash; Mongo::DB</a></li>
+    
+      <li><a href="Mongo/Collection.html#method-i-drop_indexes">#drop_indexes &mdash; Mongo::Collection</a></li>
+    
+      <li><a href="Mongo/Cursor.html#method-i-each">#each &mdash; Mongo::Cursor</a></li>
+    
+      <li><a href="Mongo/GridIO.html#method-i-each">#each &mdash; Mongo::GridIO</a></li>
+    
+      <li><a href="Mongo/Collection.html#method-i-ensure_index">#ensure_index &mdash; Mongo::Collection</a></li>
+    
+      <li><a href="Mongo/MongoReplicaSetClient.html#method-i-ensure_manager">#ensure_manager &mdash; Mongo::MongoReplicaSetClient</a></li>
+    
+      <li><a href="Mongo/GridIO.html#method-i-eof">#eof &mdash; Mongo::GridIO</a></li>
+    
+      <li><a href="Mongo/GridIO.html#method-i-eof-3F">#eof? &mdash; Mongo::GridIO</a></li>
+    
+      <li><a href="Mongo/Node.html#method-i-eql-3F">#eql? &mdash; Mongo::Node</a></li>
+    
+      <li><a href="Mongo/DB.html#method-i-error-3F">#error? &mdash; Mongo::DB</a></li>
+    
+      <li><a href="Mongo/DB.html#method-i-eval">#eval &mdash; Mongo::DB</a></li>
+    
+      <li><a href="Mongo/GridExt/InstanceMethods.html#method-i-exist-3F">#exist? &mdash; Mongo::GridExt::InstanceMethods</a></li>
+    
+      <li><a href="Mongo/Cursor.html#method-i-explain">#explain &mdash; Mongo::Cursor</a></li>
+    
+      <li><a href="Mongo/Collection.html#method-i-find">#find &mdash; Mongo::Collection</a></li>
+    
+      <li><a href="Mongo/Collection.html#method-i-find_and_modify">#find_and_modify &mdash; Mongo::Collection</a></li>
+    
+      <li><a href="Mongo/Collection.html#method-i-find_one">#find_one &mdash; Mongo::Collection</a></li>
+    
+      <li><a href="Mongo/Support.html#method-i-format_order_clause">#format_order_clause &mdash; Mongo::Support</a></li>
+    
+      <li><a href="Mongo/DB.html#method-i-full_collection_name">#full_collection_name &mdash; Mongo::DB</a></li>
+    
+      <li><a href="Mongo/Grid.html#method-i-get">#get &mdash; Mongo::Grid</a></li>
+    
+      <li><a href="Mongo/DB.html#method-i-get_last_error">#get_last_error &mdash; Mongo::DB</a></li>
+    
+      <li><a href="Mongo/MongoReplicaSetClient.html#method-i-get_socket_from_pool">#get_socket_from_pool &mdash; Mongo::MongoReplicaSetClient</a></li>
+    
+      <li><a href="Mongo/WriteConcern.html#method-i-get_write_concern">#get_write_concern &mdash; Mongo::WriteConcern</a></li>
+    
+      <li><a href="Mongo/GridIO.html#method-i-getc">#getc &mdash; Mongo::GridIO</a></li>
+    
+      <li><a href="Mongo/GridIO.html#method-i-gets">#gets &mdash; Mongo::GridIO</a></li>
+    
+      <li><a href="Mongo/Collection.html#method-i-group">#group &mdash; Mongo::Collection</a></li>
+    
+      <li><a href="Mongo/MongoShardedClient.html#method-i-hard_refresh-21">#hard_refresh! &mdash; Mongo::MongoShardedClient</a></li>
+    
+      <li><a href="Mongo/MongoReplicaSetClient.html#method-i-hard_refresh-21">#hard_refresh! &mdash; Mongo::MongoReplicaSetClient</a></li>
+    
+      <li><a href="Mongo/Cursor.html#method-i-has_next-3F">#has_next? &mdash; Mongo::Cursor</a></li>
+    
+      <li><a href="Mongo/Node.html#method-i-hash">#hash &mdash; Mongo::Node</a></li>
+    
+      <li><a href="Mongo/Conversions.html#method-i-hash_as_sort_parameters">#hash_as_sort_parameters &mdash; Mongo::Conversions</a></li>
+    
+      <li><a href="Mongo/Support.html#method-i-hash_password">#hash_password &mdash; Mongo::Support</a></li>
+    
+      <li><a href="Mongo/Node.html#method-i-healthy-3F">#healthy? &mdash; Mongo::Node</a></li>
+    
+      <li><a href="Mongo/Collection.html#method-i-hint-3D">#hint= &mdash; Mongo::Collection</a></li>
+    
+      <li><a href="Mongo/URIParser.html#method-i-host">#host &mdash; Mongo::URIParser</a></li>
+    
+      <li><a href="Mongo/MongoReplicaSetClient.html#method-i-host">#host &mdash; Mongo::MongoReplicaSetClient</a></li>
+    
+      <li><a href="Mongo/MongoClient.html#method-i-host">#host &mdash; Mongo::MongoClient</a></li>
+    
+      <li><a href="Mongo/Pool.html#method-i-host_port">#host_port &mdash; Mongo::Pool</a></li>
+    
+      <li><a href="Mongo/Node.html#method-i-host_port">#host_port &mdash; Mongo::Node</a></li>
+    
+      <li><a href="Mongo/MongoClient.html#method-i-host_port">#host_port &mdash; Mongo::MongoClient</a></li>
+    
+      <li><a href="Mongo/Node.html#method-i-host_string">#host_string &mdash; Mongo::Node</a></li>
+    
+      <li><a href="Mongo/Pool.html#method-i-host_string">#host_string &mdash; Mongo::Pool</a></li>
+    
+      <li><a href="Mongo/MongoReplicaSetClient.html#method-i-hosts">#hosts &mdash; Mongo::MongoReplicaSetClient</a></li>
+    
+      <li><a href="Mongo/Collection.html#method-i-index_information">#index_information &mdash; Mongo::Collection</a></li>
+    
+      <li><a href="Mongo/DB.html#method-i-index_information">#index_information &mdash; Mongo::DB</a></li>
+    
+      <li><a href="Mongo/Collection.html#method-i-insert">#insert &mdash; Mongo::Collection</a></li>
+    
+      <li><a href="Mongo/MongoShardedClient.html#method-i-inspect">#inspect &mdash; Mongo::MongoShardedClient</a></li>
+    
+      <li><a href="Mongo/Cursor.html#method-i-inspect">#inspect &mdash; Mongo::Cursor</a></li>
+    
+      <li><a href="Mongo/GridIO.html#method-i-inspect">#inspect &mdash; Mongo::GridIO</a></li>
+    
+      <li><a href="Mongo/Node.html#method-i-inspect">#inspect &mdash; Mongo::Node</a></li>
+    
+      <li><a href="Mongo/Pool.html#method-i-inspect">#inspect &mdash; Mongo::Pool</a></li>
+    
+      <li><a href="Mongo/ShardingPoolManager.html#method-i-inspect">#inspect &mdash; Mongo::ShardingPoolManager</a></li>
+    
+      <li><a href="Mongo/MongoReplicaSetClient.html#method-i-inspect">#inspect &mdash; Mongo::MongoReplicaSetClient</a></li>
+    
+      <li><a href="Mongo/PoolManager.html#method-i-inspect">#inspect &mdash; Mongo::PoolManager</a></li>
+    
+      <li><a href="Mongo/Logging.html#method-i-instrument">#instrument &mdash; Mongo::Logging</a></li>
+    
+      <li><a href="Mongo/Support.html#method-i-is_i-3F">#is_i? &mdash; Mongo::Support</a></li>
+    
+      <li><a href="Mongo/DB.html#method-i-issue_authentication">#issue_authentication &mdash; Mongo::DB</a></li>
+    
+      <li><a href="Mongo/DB.html#method-i-issue_logout">#issue_logout &mdash; Mongo::DB</a></li>
+    
+      <li><a href="Mongo/Cursor.html#method-i-limit">#limit &mdash; Mongo::Cursor</a></li>
+    
+      <li><a href="Mongo/MongoReplicaSetClient.html#method-i-local_manager">#local_manager &mdash; Mongo::MongoReplicaSetClient</a></li>
+    
+      <li><a href="Mutex.html#method-i-lock">#lock &mdash; Mutex</a></li>
+    
+      <li><a href="Mongo/MongoClient.html#method-i-lock-21">#lock! &mdash; Mongo::MongoClient</a></li>
+    
+      <li><a href="Mutex.html#method-i-lock_with_hack">#lock_with_hack &mdash; Mutex</a></li>
+    
+      <li><a href="Mutex.html#method-i-lock_without_hack">#lock_without_hack &mdash; Mutex</a></li>
+    
+      <li><a href="Mongo/MongoClient.html#method-i-locked-3F">#locked? &mdash; Mongo::MongoClient</a></li>
+    
+      <li><a href="Mongo/Logging.html#method-i-log">#log &mdash; Mongo::Logging</a></li>
+    
+      <li><a href="Mongo/Logging.html#method-i-log_operation">#log_operation &mdash; Mongo::Logging</a></li>
+    
+      <li><a href="Mongo/DB.html#method-i-logout">#logout &mdash; Mongo::DB</a></li>
+    
+      <li><a href="Mongo/Pool.html#method-i-logout_existing">#logout_existing &mdash; Mongo::Pool</a></li>
+    
+      <li><a href="Mongo/MongoReplicaSetClient.html#method-i-logout_pools">#logout_pools &mdash; Mongo::MongoReplicaSetClient</a></li>
+    
+      <li><a href="Mongo/MongoClient.html#method-i-logout_pools">#logout_pools &mdash; Mongo::MongoClient</a></li>
+    
+      <li><a href="Mongo/Collection.html#method-i-map_reduce">#map_reduce &mdash; Mongo::Collection</a></li>
+    
+      <li><a href="Mongo/Collection.html#method-i-mapreduce">#mapreduce &mdash; Mongo::Collection</a></li>
+    
+      <li><a href="Mongo/Pool.html#method-i-matches_mode">#matches_mode &mdash; Mongo::Pool</a></li>
+    
+      <li><a href="Mongo/Pool.html#method-i-matches_tag_set">#matches_tag_set &mdash; Mongo::Pool</a></li>
+    
+      <li><a href="Mongo/Pool.html#method-i-matches_tag_sets">#matches_tag_sets &mdash; Mongo::Pool</a></li>
+    
+      <li><a href="Mongo/MongoClient.html#method-i-max_bson_size">#max_bson_size &mdash; Mongo::MongoClient</a></li>
+    
+      <li><a href="Mongo/MongoReplicaSetClient.html#method-i-max_bson_size">#max_bson_size &mdash; Mongo::MongoReplicaSetClient</a></li>
+    
+      <li><a href="Class.html#method-i-mongo_thread_local_accessor">#mongo_thread_local_accessor &mdash; Class</a></li>
+    
+      <li><a href="Mongo/MongoClient.html#method-i-mongos-3F">#mongos? &mdash; Mongo::MongoClient</a></li>
+    
+      <li><a href="Mongo/Cursor.html#method-i-next">#next &mdash; Mongo::Cursor</a></li>
+    
+      <li><a href="Mongo/Cursor.html#method-i-next_document">#next_document &mdash; Mongo::Cursor</a></li>
+    
+      <li><a href="Mongo/Node.html#method-i-node_list">#node_list &mdash; Mongo::Node</a></li>
+    
+      <li><a href="Mongo/URIParser.html#method-i-node_strings">#node_strings &mdash; Mongo::URIParser</a></li>
+    
+      <li><a href="Mongo/MongoReplicaSetClient.html#method-i-nodes">#nodes &mdash; Mongo::MongoReplicaSetClient</a></li>
+    
+      <li><a href="Mongo/Collection.html#method-i-normalize_hint_fields">#normalize_hint_fields &mdash; Mongo::Collection</a></li>
+    
+      <li><a href="Mongo/Support.html#method-i-ok-3F">#ok? &mdash; Mongo::Support</a></li>
+    
+      <li><a href="Mongo/DB.html#method-i-ok-3F">#ok? &mdash; Mongo::DB</a></li>
+    
+      <li><a href="Mongo/GridFileSystem.html#method-i-open">#open &mdash; Mongo::GridFileSystem</a></li>
+    
+      <li><a href="Mongo/Collection.html#method-i-options">#options &mdash; Mongo::Collection</a></li>
+    
+      <li><a href="Mongo/MongoClient.html#method-i-parse_init">#parse_init &mdash; Mongo::MongoClient</a></li>
+    
+      <li><a href="Mongo/MongoClient.html#method-i-pin_pool">#pin_pool &mdash; Mongo::MongoClient</a></li>
+    
+      <li><a href="Mongo/MongoReplicaSetClient.html#method-i-pin_pool">#pin_pool &mdash; Mongo::MongoReplicaSetClient</a></li>
+    
+      <li><a href="Mongo/MongoClient.html#method-i-ping">#ping &mdash; Mongo::MongoClient</a></li>
+    
+      <li><a href="Mongo/Pool.html#method-i-ping">#ping &mdash; Mongo::Pool</a></li>
+    
+      <li><a href="Mongo/Pool.html#method-i-ping_time">#ping_time &mdash; Mongo::Pool</a></li>
+    
+      <li><a href="Mongo/DB.html#method-i-pk_factory">#pk_factory &mdash; Mongo::DB</a></li>
+    
+      <li><a href="Mongo/DB.html#method-i-pk_factory-3D">#pk_factory= &mdash; Mongo::DB</a></li>
+    
+      <li><a href="Mongo/PoolManager.html#method-i-pools">#pools &mdash; Mongo::PoolManager</a></li>
+    
+      <li><a href="Mongo/URIParser.html#method-i-port">#port &mdash; Mongo::URIParser</a></li>
+    
+      <li><a href="Mongo/MongoClient.html#method-i-port">#port &mdash; Mongo::MongoClient</a></li>
+    
+      <li><a href="Mongo/MongoReplicaSetClient.html#method-i-port">#port &mdash; Mongo::MongoReplicaSetClient</a></li>
+    
+      <li><a href="Mongo/GridIO.html#method-i-pos">#pos &mdash; Mongo::GridIO</a></li>
+    
+      <li><a href="Mongo/DB.html#method-i-previous_error">#previous_error &mdash; Mongo::DB</a></li>
+    
+      <li><a href="Mongo/MongoReplicaSetClient.html#method-i-primary">#primary &mdash; Mongo::MongoReplicaSetClient</a></li>
+    
+      <li><a href="Mongo/MongoClient.html#method-i-primary-3F">#primary? &mdash; Mongo::MongoClient</a></li>
+    
+      <li><a href="Mongo/Node.html#method-i-primary-3F">#primary? &mdash; Mongo::Node</a></li>
+    
+      <li><a href="Mongo/MongoReplicaSetClient.html#method-i-primary_pool">#primary_pool &mdash; Mongo::MongoReplicaSetClient</a></li>
+    
+      <li><a href="Mongo/DB.html#method-i-profiling_info">#profiling_info &mdash; Mongo::DB</a></li>
+    
+      <li><a href="Mongo/DB.html#method-i-profiling_level">#profiling_level &mdash; Mongo::DB</a></li>
+    
+      <li><a href="Mongo/DB.html#method-i-profiling_level-3D">#profiling_level= &mdash; Mongo::DB</a></li>
+    
+      <li><a href="Mongo/Grid.html#method-i-put">#put &mdash; Mongo::Grid</a></li>
+    
+      <li><a href="Mongo/Cursor.html#method-i-query_options_hash">#query_options_hash &mdash; Mongo::Cursor</a></li>
+    
+      <li><a href="Mongo/Cursor.html#method-i-query_opts">#query_opts &mdash; Mongo::Cursor</a></li>
+    
+      <li><a href="Mongo/SSLSocket.html#method-i-read">#read &mdash; Mongo::SSLSocket</a></li>
+    
+      <li><a href="Mongo/GridIO.html#method-i-read">#read &mdash; Mongo::GridIO</a></li>
+    
+      <li><a href="Mongo/TCPSocket.html#method-i-read">#read &mdash; Mongo::TCPSocket</a></li>
+    
+      <li><a href="Mongo/PoolManager.html#method-i-read">#read &mdash; Mongo::PoolManager</a></li>
+    
+      <li><a href="Mongo/MongoClient.html#method-i-read_pool">#read_pool &mdash; Mongo::MongoClient</a></li>
+    
+      <li><a href="Mongo/PoolManager.html#method-i-read_pool">#read_pool &mdash; Mongo::PoolManager</a></li>
+    
+      <li><a href="Mongo/MongoReplicaSetClient.html#method-i-read_pool">#read_pool &mdash; Mongo::MongoReplicaSetClient</a></li>
+    
+      <li><a href="Mongo/MongoReplicaSetClient.html#method-i-read_primary-3F">#read_primary? &mdash; Mongo::MongoReplicaSetClient</a></li>
+    
+      <li><a href="Mongo/MongoClient.html#method-i-read_primary-3F">#read_primary? &mdash; Mongo::MongoClient</a></li>
+    
+      <li><a href="Mongo/Networking.html#method-i-receive_message">#receive_message &mdash; Mongo::Networking</a></li>
+    
+      <li><a href="Mongo/MongoClient.html#method-i-reconnect">#reconnect &mdash; Mongo::MongoClient</a></li>
+    
+      <li><a href="Mongo/MongoClient.html#method-i-refresh">#refresh &mdash; Mongo::MongoClient</a></li>
+    
+      <li><a href="Mongo/MongoReplicaSetClient.html#method-i-refresh">#refresh &mdash; Mongo::MongoReplicaSetClient</a></li>
+    
+      <li><a href="Mongo/Pool.html#method-i-refresh_ping_time">#refresh_ping_time &mdash; Mongo::Pool</a></li>
+    
+      <li><a href="Mongo/PoolManager.html#method-i-refresh_required-3F">#refresh_required? &mdash; Mongo::PoolManager</a></li>
+    
+      <li><a href="Mongo/Collection.html#method-i-remove">#remove &mdash; Mongo::Collection</a></li>
+    
+      <li><a href="Mongo/MongoClient.html#method-i-remove_auth">#remove_auth &mdash; Mongo::MongoClient</a></li>
+    
+      <li><a href="Mongo/Cursor.html#method-i-remove_option">#remove_option &mdash; Mongo::Cursor</a></li>
+    
+      <li><a href="Mongo/DB.html#method-i-remove_stored_function">#remove_stored_function &mdash; Mongo::DB</a></li>
+    
+      <li><a href="Mongo/DB.html#method-i-remove_user">#remove_user &mdash; Mongo::DB</a></li>
+    
+      <li><a href="Mongo/Collection.html#method-i-rename">#rename &mdash; Mongo::Collection</a></li>
+    
+      <li><a href="Mongo/DB.html#method-i-rename_collection">#rename_collection &mdash; Mongo::DB</a></li>
+    
+      <li><a href="Mongo/URIParser.html#method-i-replicaset-3F">#replicaset? &mdash; Mongo::URIParser</a></li>
+    
+      <li><a href="Mongo/MongoReplicaSetClient.html#method-i-reset_connection">#reset_connection &mdash; Mongo::MongoReplicaSetClient</a></li>
+    
+      <li><a href="Mongo/DB.html#method-i-reset_error_history">#reset_error_history &mdash; Mongo::DB</a></li>
+    
+      <li><a href="Mongo/GridIO.html#method-i-rewind">#rewind &mdash; Mongo::GridIO</a></li>
+    
+      <li><a href="Mongo/Cursor.html#method-i-rewind-21">#rewind! &mdash; Mongo::Cursor</a></li>
+    
+      <li><a href="Mongo/LegacyWriteConcern.html#method-i-safe">#safe &mdash; Mongo::LegacyWriteConcern</a></li>
+    
+      <li><a href="Mongo/LegacyWriteConcern.html#method-i-safe-3D">#safe= &mdash; Mongo::LegacyWriteConcern</a></li>
+    
+      <li><a href="Mongo/Collection.html#method-i-save">#save &mdash; Mongo::Collection</a></li>
+    
+      <li><a href="Mongo/MongoReplicaSetClient.html#method-i-secondaries">#secondaries &mdash; Mongo::MongoReplicaSetClient</a></li>
+    
+      <li><a href="Mongo/Node.html#method-i-secondary-3F">#secondary? &mdash; Mongo::Node</a></li>
+    
+      <li><a href="Mongo/Support.html#method-i-secondary_ok-3F">#secondary_ok? &mdash; Mongo::Support</a></li>
+    
+      <li><a href="Mongo/MongoReplicaSetClient.html#method-i-secondary_pool">#secondary_pool &mdash; Mongo::MongoReplicaSetClient</a></li>
+    
+      <li><a href="Mongo/MongoReplicaSetClient.html#method-i-secondary_pools">#secondary_pools &mdash; Mongo::MongoReplicaSetClient</a></li>
+    
+      <li><a href="Mongo/GridIO.html#method-i-seek">#seek &mdash; Mongo::GridIO</a></li>
+    
+      <li><a href="Mongo/ReadPreference.html#method-i-select_near_pool">#select_near_pool &mdash; Mongo::ReadPreference</a></li>
+    
+      <li><a href="Mongo/ReadPreference.html#method-i-select_pool">#select_pool &mdash; Mongo::ReadPreference</a></li>
+    
+      <li><a href="Mongo/ReadPreference.html#method-i-select_secondary_pool">#select_secondary_pool &mdash; Mongo::ReadPreference</a></li>
+    
+      <li><a href="Mongo/SSLSocket.html#method-i-send">#send &mdash; Mongo::SSLSocket</a></li>
+    
+      <li><a href="Mongo/TCPSocket.html#method-i-send">#send &mdash; Mongo::TCPSocket</a></li>
+    
+      <li><a href="Mongo/Networking.html#method-i-send_message">#send_message &mdash; Mongo::Networking</a></li>
+    
+      <li><a href="Mongo/Networking.html#method-i-send_message_with_gle">#send_message_with_gle &mdash; Mongo::Networking</a></li>
+    
+      <li><a href="Mongo/MongoClient.html#method-i-server_info">#server_info &mdash; Mongo::MongoClient</a></li>
+    
+      <li><a href="Mongo/MongoClient.html#method-i-server_version">#server_version &mdash; Mongo::MongoClient</a></li>
+    
+      <li><a href="Mongo/Node.html#method-i-set_config">#set_config &mdash; Mongo::Node</a></li>
+    
+      <li><a href="Mongo/MongoClient.html#method-i-setup">#setup &mdash; Mongo::MongoClient</a></li>
+    
+      <li><a href="Mongo/Collection.html#method-i-size">#size &mdash; Mongo::Collection</a></li>
+    
+      <li><a href="Mongo/Cursor.html#method-i-skip">#skip &mdash; Mongo::Cursor</a></li>
+    
+      <li><a href="Mongo/MongoShardedClient.html#method-i-slave_ok-3F">#slave_ok? &mdash; Mongo::MongoShardedClient</a></li>
+    
+      <li><a href="Mongo/MongoReplicaSetClient.html#method-i-slave_ok-3F">#slave_ok? &mdash; Mongo::MongoReplicaSetClient</a></li>
+    
+      <li><a href="Mongo/MongoClient.html#method-i-slave_ok-3F">#slave_ok? &mdash; Mongo::MongoClient</a></li>
+    
+      <li><a href="Mongo/Cursor.html#method-i-sort">#sort &mdash; Mongo::Cursor</a></li>
+    
+      <li><a href="Mongo/Conversions.html#method-i-sort_value">#sort_value &mdash; Mongo::Conversions</a></li>
+    
+      <li><a href="Mongo/Node.html#method-i-split_node">#split_node &mdash; Mongo::Node</a></li>
+    
+      <li><a href="Mongo/DB.html#method-i-stats">#stats &mdash; Mongo::DB</a></li>
+    
+      <li><a href="Mongo/Collection.html#method-i-stats">#stats &mdash; Mongo::Collection</a></li>
+    
+      <li><a href="Mongo/DB.html#method-i-strict-3F">#strict? &mdash; Mongo::DB</a></li>
+    
+      <li><a href="Mongo/Conversions.html#method-i-string_as_sort_parameters">#string_as_sort_parameters &mdash; Mongo::Conversions</a></li>
+    
+      <li><a href="Mongo/MongoReplicaSetClient.html#method-i-tag_map">#tag_map &mdash; Mongo::MongoReplicaSetClient</a></li>
+    
+      <li><a href="Mongo/Node.html#method-i-tags">#tags &mdash; Mongo::Node</a></li>
+    
+      <li><a href="Mongo/Pool.html#method-i-tags">#tags &mdash; Mongo::Pool</a></li>
+    
+      <li><a href="Mongo/GridIO.html#method-i-tell">#tell &mdash; Mongo::GridIO</a></li>
+    
+      <li><a href="Mongo/ThreadLocalVariableManager.html#method-i-thread_local">#thread_local &mdash; Mongo::ThreadLocalVariableManager</a></li>
+    
+      <li><a href="Mongo/Cursor.html#method-i-to_a">#to_a &mdash; Mongo::Cursor</a></li>
+    
+      <li><a href="Mongo/ServerVersion.html#method-i-to_a">#to_a &mdash; Mongo::ServerVersion</a></li>
+    
+      <li><a href="Mongo/ServerVersion.html#method-i-to_s">#to_s &mdash; Mongo::ServerVersion</a></li>
+    
+      <li><a href="Mongo/GridFileSystem.html#method-i-unlink">#unlink &mdash; Mongo::GridFileSystem</a></li>
+    
+      <li><a href="Mongo/MongoClient.html#method-i-unlock-21">#unlock! &mdash; Mongo::MongoClient</a></li>
+    
+      <li><a href="Mongo/MongoClient.html#method-i-unpin_pool">#unpin_pool &mdash; Mongo::MongoClient</a></li>
+    
+      <li><a href="Mongo/MongoReplicaSetClient.html#method-i-unpin_pool">#unpin_pool &mdash; Mongo::MongoReplicaSetClient</a></li>
+    
+      <li><a href="Mongo/Pool.html#method-i-up-3F">#up? &mdash; Mongo::Pool</a></li>
+    
+      <li><a href="Mongo/Collection.html#method-i-update">#update &mdash; Mongo::Collection</a></li>
+    
+      <li><a href="Mongo/MongoShardedClient.html#method-i-valid_opts">#valid_opts &mdash; Mongo::MongoShardedClient</a></li>
+    
+      <li><a href="Mongo/MongoReplicaSetClient.html#method-i-valid_opts">#valid_opts &mdash; Mongo::MongoReplicaSetClient</a></li>
+    
+      <li><a href="Mongo/MongoClient.html#method-i-valid_opts">#valid_opts &mdash; Mongo::MongoClient</a></li>
+    
+      <li><a href="Mongo/DB.html#method-i-validate_collection">#validate_collection &mdash; Mongo::DB</a></li>
+    
+      <li><a href="Mongo/Support.html#method-i-validate_db_name">#validate_db_name &mdash; Mongo::Support</a></li>
+    
+      <li><a href="Mongo/GridIO.html#method-i-write">#write &mdash; Mongo::GridIO</a></li>
+    
+      <li><a href="Mongo/WriteConcern.html#method-i-write_concern_from_legacy">#write_concern_from_legacy &mdash; Mongo::WriteConcern</a></li>
+    
+      <li><a href="Mongo/Logging.html#method-i-write_logging_startup_message">#write_logging_startup_message &mdash; Mongo::Logging</a></li>
+    
+  </ul>
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>File: aix.rb [puppet-3.1.0 Documentation]</title>
+
+  <link type="text/css" media="screen" href="../../../../rdoc.css" rel="stylesheet" />
+
+  <script src="../../../../js/jquery.js" type="text/javascript"
+    charset="utf-8"></script>
+  <script src="../../../../js/thickbox-compressed.js" type="text/javascript"
+    charset="utf-8"></script>
+  <script src="../../../../js/quicksearch.js" type="text/javascript"
+    charset="utf-8"></script>
+  <script src="../../../../js/darkfish.js" type="text/javascript"
+    charset="utf-8"></script>
+</head>
+
+<body class="file file-popup">
+  <div id="metadata">
+    <dl>
+      <dt class="modified-date">Last Modified</dt>
+      <dd class="modified-date">2013-03-01 22:14:15 +0100</dd>
+
+      
+      <dt class="requires">Requires</dt>
+      <dd class="requires">
+        <ul>
+        
+          <li>puppet/provider/aixobject</li>
+        
+          <li>tempfile</li>
+        
+          <li>date</li>
+        
+        </ul>
+      </dd>
+      
+
+      
+    </dl>
+  </div>
+
+  <div id="documentation">
+    
+    <div class="description">
+      <h2>Description</h2>
+      
+<p>User <a href="../../../../Puppet.html">Puppet</a> provider for AIX. It uses
+standard commands to manage users:</p>
+
+<pre>mkuser, rmuser, lsuser, chuser</pre>
+
+<p>Notes:</p>
+<ul><li>
+<p>AIX users can have expiry date defined with minute granularity, but puppet
+does not allow it. There is a ticket open for that (#5431)</p>
+</li><li>
+<p>AIX maximum password age is in WEEKs, not days</p>
+</li></ul>
+
+<p>See  <a
+href="http://projects.puppetlabs.com/projects/puppet/wiki/Development_Provider_Development">projects.puppetlabs.com/projects/puppet/wiki/Development_Provider_Development</a>
+for more information</p>
+<table class="rdoc-list"><tr><td class="rdoc-term"><p>Author</p></td>
+<td>
+<p>Hector Rivas Gandara &lt;keymon@gmail.com&gt;</p>
+</td></tr></table>
+
+    </div>
+    
+  </div>
+</body>
+</html>
+

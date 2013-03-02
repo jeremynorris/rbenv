@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Class: Mongo::Grid</title>
+
+  <link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../lib/mongo/gridfs/grid_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/mongo/gridfs/grid.rb">lib/mongo/gridfs/grid.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link">Object</p>
+        
+      </div>
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-new">::new</a></li>
+          
+          <li><a href="#method-i-delete">#delete</a></li>
+          
+          <li><a href="#method-i-get">#get</a></li>
+          
+          <li><a href="#method-i-put">#put</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+      <!-- Included Modules -->
+      <div id="includes-section" class="section">
+        <h3 class="section-header">Included Modules</h3>
+        <ul class="link-list">
+        
+        
+          <li><a class="include" href="GridExt/InstanceMethods.html">Mongo::GridExt::InstanceMethods</a></li>
+        
+        
+        </ul>
+      </div>
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../Mongo.html">Mongo</a></li>
+        
+          <li><a href="../Mongo/AuthenticationError.html">Mongo::AuthenticationError</a></li>
+        
+          <li><a href="../Mongo/Collection.html">Mongo::Collection</a></li>
+        
+          <li><a href="../Mongo/Connection.html">Mongo::Connection</a></li>
+        
+          <li><a href="../Mongo/ConnectionError.html">Mongo::ConnectionError</a></li>
+        
+          <li><a href="../Mongo/ConnectionFailure.html">Mongo::ConnectionFailure</a></li>
+        
+          <li><a href="../Mongo/ConnectionTimeoutError.html">Mongo::ConnectionTimeoutError</a></li>
+        
+          <li><a href="../Mongo/Constants.html">Mongo::Constants</a></li>
+        
+          <li><a href="../Mongo/Conversions.html">Mongo::Conversions</a></li>
+        
+          <li><a href="../Mongo/Cursor.html">Mongo::Cursor</a></li>
+        
+          <li><a href="../Mongo/DB.html">Mongo::DB</a></li>
+        
+          <li><a href="../Mongo/Grid.html">Mongo::Grid</a></li>
+        
+          <li><a href="../Mongo/GridError.html">Mongo::GridError</a></li>
+        
+          <li><a href="../Mongo/GridExt.html">Mongo::GridExt</a></li>
+        
+          <li><a href="../Mongo/GridExt/InstanceMethods.html">Mongo::GridExt::InstanceMethods</a></li>
+        
+          <li><a href="../Mongo/GridFileNotFound.html">Mongo::GridFileNotFound</a></li>
+        
+          <li><a href="../Mongo/GridFileSystem.html">Mongo::GridFileSystem</a></li>
+        
+          <li><a href="../Mongo/GridIO.html">Mongo::GridIO</a></li>
+        
+          <li><a href="../Mongo/GridMD5Failure.html">Mongo::GridMD5Failure</a></li>
+        
+          <li><a href="../Mongo/InvalidNSName.html">Mongo::InvalidNSName</a></li>
+        
+          <li><a href="../Mongo/InvalidOperation.html">Mongo::InvalidOperation</a></li>
+        
+          <li><a href="../Mongo/InvalidSortValueError.html">Mongo::InvalidSortValueError</a></li>
+        
+          <li><a href="../Mongo/LegacyWriteConcern.html">Mongo::LegacyWriteConcern</a></li>
+        
+          <li><a href="../Mongo/Logging.html">Mongo::Logging</a></li>
+        
+          <li><a href="../Mongo/Logging/Instrumenter.html">Mongo::Logging::Instrumenter</a></li>
+        
+          <li><a href="../Mongo/MongoArgumentError.html">Mongo::MongoArgumentError</a></li>
+        
+          <li><a href="../Mongo/MongoClient.html">Mongo::MongoClient</a></li>
+        
+          <li><a href="../Mongo/MongoDBError.html">Mongo::MongoDBError</a></li>
+        
+          <li><a href="../Mongo/MongoReplicaSetClient.html">Mongo::MongoReplicaSetClient</a></li>
+        
+          <li><a href="../Mongo/MongoRubyError.html">Mongo::MongoRubyError</a></li>
+        
+          <li><a href="../Mongo/MongoShardedClient.html">Mongo::MongoShardedClient</a></li>
+        
+          <li><a href="../Mongo/Networking.html">Mongo::Networking</a></li>
+        
+          <li><a href="../Mongo/Node.html">Mongo::Node</a></li>
+        
+          <li><a href="../Mongo/NodeWithTagsNotFound.html">Mongo::NodeWithTagsNotFound</a></li>
+        
+          <li><a href="../Mongo/OperationFailure.html">Mongo::OperationFailure</a></li>
+        
+          <li><a href="../Mongo/OperationTimeout.html">Mongo::OperationTimeout</a></li>
+        
+          <li><a href="../Mongo/Pool.html">Mongo::Pool</a></li>
+        
+          <li><a href="../Mongo/PoolManager.html">Mongo::PoolManager</a></li>
+        
+          <li><a href="../Mongo/ReadPreference.html">Mongo::ReadPreference</a></li>
+        
+          <li><a href="../Mongo/ReplSetConnection.html">Mongo::ReplSetConnection</a></li>
+        
+          <li><a href="../Mongo/ReplicaSetConnectionError.html">Mongo::ReplicaSetConnectionError</a></li>
+        
+          <li><a href="../Mongo/SSLSocket.html">Mongo::SSLSocket</a></li>
+        
+          <li><a href="../Mongo/ServerVersion.html">Mongo::ServerVersion</a></li>
+        
+          <li><a href="../Mongo/ShardedConnection.html">Mongo::ShardedConnection</a></li>
+        
+          <li><a href="../Mongo/ShardingPoolManager.html">Mongo::ShardingPoolManager</a></li>
+        
+          <li><a href="../Mongo/Support.html">Mongo::Support</a></li>
+        
+          <li><a href="../Mongo/TCPSocket.html">Mongo::TCPSocket</a></li>
+        
+          <li><a href="../Mongo/ThreadLocalVariableManager.html">Mongo::ThreadLocalVariableManager</a></li>
+        
+          <li><a href="../Mongo/UNIXSocket.html">Mongo::UNIXSocket</a></li>
+        
+          <li><a href="../Mongo/URIParser.html">Mongo::URIParser</a></li>
+        
+          <li><a href="../Mongo/WriteConcern.html">Mongo::WriteConcern</a></li>
+        
+          <li><a href="../Class.html">Class</a></li>
+        
+          <li><a href="../Mutex.html">Mutex</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">Mongo::Grid</h1>
+
+    <div id="description" class="description">
+      
+<p>Implementation of the MongoDB GridFS specification. A file store.</p>
+
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+      <!-- Constants -->
+      <div id="constants-list" class="section">
+        <h3 class="section-header">Constants</h3>
+        <dl>
+        
+          <dt><a name="DEFAULT_FS_NAME">DEFAULT_FS_NAME</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+        </dl>
+      </div>
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="new-method" class="method-detail ">
+          <a name="method-c-new"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">new</span><span
+              class="method-args">(db, fs_name=DEFAULT_FS_NAME)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Initialize a new <a href="Grid.html">Grid</a> instance, consisting of a
+MongoDB database and a filesystem prefix if not using the default.</p>
+
+<p>@core gridfs</p>
+
+<p>@see <a href="GridFileSystem.html">GridFileSystem</a></p>
+            
+
+            
+            <div class="method-source-code" id="new-source">
+<pre>
+<span class="ruby-comment"># File lib/mongo/gridfs/grid.rb, line 32</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">db</span>, <span class="ruby-identifier">fs_name</span>=<span class="ruby-constant">DEFAULT_FS_NAME</span>)
+  <span class="ruby-identifier">raise</span> <span class="ruby-constant">MongoArgumentError</span>, <span class="ruby-string">&quot;db must be a Mongo::DB.&quot;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">db</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Mongo</span><span class="ruby-operator">::</span><span class="ruby-constant">DB</span>)
+
+  <span class="ruby-ivar">@db</span>      = <span class="ruby-identifier">db</span>
+  <span class="ruby-ivar">@files</span>   = <span class="ruby-ivar">@db</span>[<span class="ruby-node">&quot;#{fs_name}.files&quot;</span>]
+  <span class="ruby-ivar">@chunks</span>  = <span class="ruby-ivar">@db</span>[<span class="ruby-node">&quot;#{fs_name}.chunks&quot;</span>]
+  <span class="ruby-ivar">@fs_name</span> = <span class="ruby-identifier">fs_name</span>
+
+  <span class="ruby-comment"># Create indexes only if we're connected to a primary node.</span>
+  <span class="ruby-identifier">connection</span> = <span class="ruby-ivar">@db</span>.<span class="ruby-identifier">connection</span>
+  <span class="ruby-keyword">if</span> (<span class="ruby-identifier">connection</span>.<span class="ruby-identifier">class</span> <span class="ruby-operator">==</span> <span class="ruby-constant">MongoClient</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">connection</span>.<span class="ruby-identifier">read_primary?</span>) <span class="ruby-operator">||</span>
+      (<span class="ruby-identifier">connection</span>.<span class="ruby-identifier">class</span> <span class="ruby-operator">==</span> <span class="ruby-constant">MongoReplicaSetClient</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">connection</span>.<span class="ruby-identifier">primary</span>)
+    <span class="ruby-ivar">@chunks</span>.<span class="ruby-identifier">create_index</span>([[<span class="ruby-string">'files_id'</span>, <span class="ruby-constant">Mongo</span><span class="ruby-operator">::</span><span class="ruby-constant">ASCENDING</span>], [<span class="ruby-string">'n'</span>, <span class="ruby-constant">Mongo</span><span class="ruby-operator">::</span><span class="ruby-constant">ASCENDING</span>]], <span class="ruby-value">:unique</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">true</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- new-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- new-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="delete-method" class="method-detail ">
+          <a name="method-i-delete"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">delete</span><span
+              class="method-args">(id)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Delete a file from the store.</p>
+
+<p>Note that deleting a GridFS file can result in read errors if another
+process is attempting to read a file while it’s being deleted. While the
+odds for this kind of race condition are small, it’s important to be aware
+of.</p>
+
+<p>@param [] id</p>
+
+<p>@return [Boolean]</p>
+            
+
+            
+            <div class="method-source-code" id="delete-source">
+<pre>
+<span class="ruby-comment"># File lib/mongo/gridfs/grid.rb, line 100</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">delete</span>(<span class="ruby-identifier">id</span>)
+  <span class="ruby-ivar">@files</span>.<span class="ruby-identifier">remove</span>({<span class="ruby-string">&quot;_id&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">id</span>})
+  <span class="ruby-ivar">@chunks</span>.<span class="ruby-identifier">remove</span>({<span class="ruby-string">&quot;files_id&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">id</span>})
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- delete-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- delete-method -->
+
+      
+        <div id="get-method" class="method-detail ">
+          <a name="method-i-get"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">get</span><span
+              class="method-args">(id)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Read a file from the file store.</p>
+
+<p>@param [] id the file’s unique id.</p>
+
+<p>@return [Mongo::GridIO]</p>
+            
+
+            
+            <div class="method-source-code" id="get-source">
+<pre>
+<span class="ruby-comment"># File lib/mongo/gridfs/grid.rb, line 86</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">get</span>(<span class="ruby-identifier">id</span>)
+  <span class="ruby-identifier">opts</span> = {<span class="ruby-value">:query</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-string">'_id'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">id</span>}}.<span class="ruby-identifier">merge!</span>(<span class="ruby-identifier">default_grid_io_opts</span>)
+  <span class="ruby-constant">GridIO</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@files</span>, <span class="ruby-ivar">@chunks</span>, <span class="ruby-keyword">nil</span>, <span class="ruby-string">'r'</span>, <span class="ruby-identifier">opts</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- get-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- get-method -->
+
+      
+        <div id="put-method" class="method-detail ">
+          <a name="method-i-put"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">put</span><span
+              class="method-args">(data, opts={})</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Store a file in the file store. This method is designed only for writing
+new files; if you need to update a given file, first delete it using <a
+href="Grid.html#method-i-delete">Grid#delete</a>.</p>
+
+<p>Note that arbitrary metadata attributes can be saved to the file by passing
+them in as options.</p>
+
+<p>@param [String, read] data a string or io-like object to store.</p>
+
+<p>@option opts [String] :filename (nil) a name for the file. @option opts
+[Hash] :metadata ({}) any additional data to store with the file. @option
+opts [ObjectId] :_id (ObjectId) a unique id for</p>
+
+<pre>the file to be use in lieu of an automatically generated one.</pre>
+
+<p>@option opts [String] :content_type (‘binary/octet-stream’) If no content
+type is specified,</p>
+
+<pre>the content type will may be inferred from the filename extension if the mime-types gem can be
+loaded. Otherwise, the content type 'binary/octet-stream' will be used.</pre>
+
+<p>@option opts [Integer] (262144) :chunk_size size of file chunks in bytes.
+@option opts [String, Integer, Symbol] :w (1) Set write concern</p>
+
+<pre>Notes on write concern:  
+   When :w &gt; 0, the chunks sent to the server are validated using an md5 hash. 
+   If validation fails, an exception will be raised.</pre>
+
+<p>@return [BSON::ObjectId] the file’s id.</p>
+            
+
+            
+            <div class="method-source-code" id="put-source">
+<pre>
+<span class="ruby-comment"># File lib/mongo/gridfs/grid.rb, line 71</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">put</span>(<span class="ruby-identifier">data</span>, <span class="ruby-identifier">opts</span>={})
+  <span class="ruby-identifier">opts</span>     = <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">dup</span>
+  <span class="ruby-identifier">filename</span> = <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-value">:filename</span>)
+  <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">merge!</span>(<span class="ruby-identifier">default_grid_io_opts</span>)
+  <span class="ruby-identifier">file</span> = <span class="ruby-constant">GridIO</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@files</span>, <span class="ruby-ivar">@chunks</span>, <span class="ruby-identifier">filename</span>, <span class="ruby-string">'w'</span>, <span class="ruby-identifier">opts</span>)
+  <span class="ruby-identifier">file</span>.<span class="ruby-identifier">write</span>(<span class="ruby-identifier">data</span>)
+  <span class="ruby-identifier">file</span>.<span class="ruby-identifier">close</span>  
+  <span class="ruby-identifier">file</span>.<span class="ruby-identifier">files_id</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- put-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- put-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Module: Mongo::WriteConcern</title>
+
+  <link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="module">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../lib/mongo/util/write_concern_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/mongo/util/write_concern.rb">lib/mongo/util/write_concern.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-gle-3F">::gle?</a></li>
+          
+          <li><a href="#method-i-get_write_concern">#get_write_concern</a></li>
+          
+          <li><a href="#method-i-write_concern_from_legacy">#write_concern_from_legacy</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../Mongo.html">Mongo</a></li>
+        
+          <li><a href="../Mongo/AuthenticationError.html">Mongo::AuthenticationError</a></li>
+        
+          <li><a href="../Mongo/Collection.html">Mongo::Collection</a></li>
+        
+          <li><a href="../Mongo/Connection.html">Mongo::Connection</a></li>
+        
+          <li><a href="../Mongo/ConnectionError.html">Mongo::ConnectionError</a></li>
+        
+          <li><a href="../Mongo/ConnectionFailure.html">Mongo::ConnectionFailure</a></li>
+        
+          <li><a href="../Mongo/ConnectionTimeoutError.html">Mongo::ConnectionTimeoutError</a></li>
+        
+          <li><a href="../Mongo/Constants.html">Mongo::Constants</a></li>
+        
+          <li><a href="../Mongo/Conversions.html">Mongo::Conversions</a></li>
+        
+          <li><a href="../Mongo/Cursor.html">Mongo::Cursor</a></li>
+        
+          <li><a href="../Mongo/DB.html">Mongo::DB</a></li>
+        
+          <li><a href="../Mongo/Grid.html">Mongo::Grid</a></li>
+        
+          <li><a href="../Mongo/GridError.html">Mongo::GridError</a></li>
+        
+          <li><a href="../Mongo/GridExt.html">Mongo::GridExt</a></li>
+        
+          <li><a href="../Mongo/GridExt/InstanceMethods.html">Mongo::GridExt::InstanceMethods</a></li>
+        
+          <li><a href="../Mongo/GridFileNotFound.html">Mongo::GridFileNotFound</a></li>
+        
+          <li><a href="../Mongo/GridFileSystem.html">Mongo::GridFileSystem</a></li>
+        
+          <li><a href="../Mongo/GridIO.html">Mongo::GridIO</a></li>
+        
+          <li><a href="../Mongo/GridMD5Failure.html">Mongo::GridMD5Failure</a></li>
+        
+          <li><a href="../Mongo/InvalidNSName.html">Mongo::InvalidNSName</a></li>
+        
+          <li><a href="../Mongo/InvalidOperation.html">Mongo::InvalidOperation</a></li>
+        
+          <li><a href="../Mongo/InvalidSortValueError.html">Mongo::InvalidSortValueError</a></li>
+        
+          <li><a href="../Mongo/LegacyWriteConcern.html">Mongo::LegacyWriteConcern</a></li>
+        
+          <li><a href="../Mongo/Logging.html">Mongo::Logging</a></li>
+        
+          <li><a href="../Mongo/Logging/Instrumenter.html">Mongo::Logging::Instrumenter</a></li>
+        
+          <li><a href="../Mongo/MongoArgumentError.html">Mongo::MongoArgumentError</a></li>
+        
+          <li><a href="../Mongo/MongoClient.html">Mongo::MongoClient</a></li>
+        
+          <li><a href="../Mongo/MongoDBError.html">Mongo::MongoDBError</a></li>
+        
+          <li><a href="../Mongo/MongoReplicaSetClient.html">Mongo::MongoReplicaSetClient</a></li>
+        
+          <li><a href="../Mongo/MongoRubyError.html">Mongo::MongoRubyError</a></li>
+        
+          <li><a href="../Mongo/MongoShardedClient.html">Mongo::MongoShardedClient</a></li>
+        
+          <li><a href="../Mongo/Networking.html">Mongo::Networking</a></li>
+        
+          <li><a href="../Mongo/Node.html">Mongo::Node</a></li>
+        
+          <li><a href="../Mongo/NodeWithTagsNotFound.html">Mongo::NodeWithTagsNotFound</a></li>
+        
+          <li><a href="../Mongo/OperationFailure.html">Mongo::OperationFailure</a></li>
+        
+          <li><a href="../Mongo/OperationTimeout.html">Mongo::OperationTimeout</a></li>
+        
+          <li><a href="../Mongo/Pool.html">Mongo::Pool</a></li>
+        
+          <li><a href="../Mongo/PoolManager.html">Mongo::PoolManager</a></li>
+        
+          <li><a href="../Mongo/ReadPreference.html">Mongo::ReadPreference</a></li>
+        
+          <li><a href="../Mongo/ReplSetConnection.html">Mongo::ReplSetConnection</a></li>
+        
+          <li><a href="../Mongo/ReplicaSetConnectionError.html">Mongo::ReplicaSetConnectionError</a></li>
+        
+          <li><a href="../Mongo/SSLSocket.html">Mongo::SSLSocket</a></li>
+        
+          <li><a href="../Mongo/ServerVersion.html">Mongo::ServerVersion</a></li>
+        
+          <li><a href="../Mongo/ShardedConnection.html">Mongo::ShardedConnection</a></li>
+        
+          <li><a href="../Mongo/ShardingPoolManager.html">Mongo::ShardingPoolManager</a></li>
+        
+          <li><a href="../Mongo/Support.html">Mongo::Support</a></li>
+        
+          <li><a href="../Mongo/TCPSocket.html">Mongo::TCPSocket</a></li>
+        
+          <li><a href="../Mongo/ThreadLocalVariableManager.html">Mongo::ThreadLocalVariableManager</a></li>
+        
+          <li><a href="../Mongo/UNIXSocket.html">Mongo::UNIXSocket</a></li>
+        
+          <li><a href="../Mongo/URIParser.html">Mongo::URIParser</a></li>
+        
+          <li><a href="../Mongo/WriteConcern.html">Mongo::WriteConcern</a></li>
+        
+          <li><a href="../Class.html">Class</a></li>
+        
+          <li><a href="../Mutex.html">Mutex</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="module">Mongo::WriteConcern</h1>
+
+    <div id="description" class="description">
+      
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+      <!-- Attributes -->
+      <div id="attribute-method-details" class="method-section section">
+        <h3 class="section-header">Attributes</h3>
+
+        
+        <div id="legacy_write_concern-attribute-method" class="method-detail">
+          <a name="legacy_write_concern"></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">legacy_write_concern</span><span
+              class="attribute-access-type">[R]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+      </div><!-- attribute-method-details -->
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="gle-3F-method" class="method-detail ">
+          <a name="method-c-gle-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">gle?</span><span
+              class="method-args">(write_concern)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="gle-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/mongo/util/write_concern.rb, line 61</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">gle?</span>(<span class="ruby-identifier">write_concern</span>)
+  (<span class="ruby-identifier">write_concern</span>[<span class="ruby-value">:w</span>].<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">Symbol</span>) <span class="ruby-operator">||</span>
+  (<span class="ruby-identifier">write_concern</span>[<span class="ruby-value">:w</span>].<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">String</span>) <span class="ruby-operator">||</span>
+  <span class="ruby-identifier">write_concern</span>[<span class="ruby-value">:w</span>] <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> <span class="ruby-operator">||</span>
+  <span class="ruby-identifier">write_concern</span>[<span class="ruby-value">:j</span>] <span class="ruby-operator">||</span>
+  <span class="ruby-identifier">write_concern</span>[<span class="ruby-value">:fsync</span>] <span class="ruby-operator">||</span>
+  <span class="ruby-identifier">write_concern</span>[<span class="ruby-value">:wtimeout</span>]
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- gle-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- gle-3F-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="get_write_concern-method" class="method-detail ">
+          <a name="method-i-get_write_concern"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">get_write_concern</span><span
+              class="method-args">(opts, parent=nil)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>todo: throw exception for conflicting write concern options</p>
+            
+
+            
+            <div class="method-source-code" id="get_write_concern-source">
+<pre>
+<span class="ruby-comment"># File lib/mongo/util/write_concern.rb, line 48</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_write_concern</span>(<span class="ruby-identifier">opts</span>, <span class="ruby-identifier">parent</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-identifier">write_concern_from_legacy</span>(<span class="ruby-identifier">opts</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">key?</span>(<span class="ruby-value">:safe</span>) <span class="ruby-operator">||</span> <span class="ruby-ivar">@legacy_write_concern</span>
+  <span class="ruby-identifier">write_concern</span> = {
+    <span class="ruby-value">:w</span>        =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>,
+    <span class="ruby-value">:j</span>        =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">false</span>,
+    <span class="ruby-value">:fsync</span>    =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">false</span>,
+    <span class="ruby-value">:wtimeout</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">nil</span>
+  }
+  <span class="ruby-identifier">write_concern</span>.<span class="ruby-identifier">merge!</span>(<span class="ruby-identifier">parent</span>.<span class="ruby-identifier">write_concern</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">parent</span>
+  <span class="ruby-identifier">write_concern</span>.<span class="ruby-identifier">merge!</span>(<span class="ruby-identifier">opts</span>.<span class="ruby-identifier">reject</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">k</span>,<span class="ruby-identifier">v</span><span class="ruby-operator">|</span> <span class="ruby-operator">!</span><span class="ruby-identifier">write_concern</span>.<span class="ruby-identifier">keys</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">k</span>)})
+  <span class="ruby-identifier">write_concern</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- get_write_concern-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- get_write_concern-method -->
+
+      
+        <div id="write_concern_from_legacy-method" class="method-detail ">
+          <a name="method-i-write_concern_from_legacy"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">write_concern_from_legacy</span><span
+              class="method-args">(opts)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="write_concern_from_legacy-source">
+<pre>
+<span class="ruby-comment"># File lib/mongo/util/write_concern.rb, line 24</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">write_concern_from_legacy</span>(<span class="ruby-identifier">opts</span>)
+  <span class="ruby-comment"># Warn if 'safe' parameter is being used,</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">key?</span>(<span class="ruby-value">:safe</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">@@safe_warn</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-constant">ENV</span>[<span class="ruby-string">'TEST_MODE'</span>]
+    <span class="ruby-identifier">warn</span> <span class="ruby-string">&quot;[DEPRECATED] The 'safe' write concern option has been deprecated in favor of 'w'.&quot;</span>
+    <span class="ruby-identifier">@@safe_warn</span> = <span class="ruby-keyword">true</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment"># nil:   set :w =&gt; 0</span>
+  <span class="ruby-comment"># false: set :w =&gt; 0</span>
+  <span class="ruby-comment"># true:  set :w =&gt; 1</span>
+  <span class="ruby-comment"># hash:  set :w =&gt; 0 and merge with opts</span>
+
+  <span class="ruby-keyword">unless</span> <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-value">:w</span>)
+    <span class="ruby-identifier">opts</span>[<span class="ruby-value">:w</span>] = <span class="ruby-value">0</span> <span class="ruby-comment"># legacy default, unacknowledged</span>
+    <span class="ruby-identifier">safe</span>     = <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-value">:safe</span>)
+    <span class="ruby-keyword">if</span>(<span class="ruby-identifier">safe</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">safe</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Hash</span>))
+      <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">merge!</span>(<span class="ruby-identifier">safe</span>)
+    <span class="ruby-keyword">elsif</span>(<span class="ruby-identifier">safe</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">true</span>)
+      <span class="ruby-identifier">opts</span>[<span class="ruby-value">:w</span>] = <span class="ruby-value">1</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- write_concern_from_legacy-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- write_concern_from_legacy-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"	file:EFI"Puppet::Type#file;FI"RW;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"C@return [String] The file from which this type originates from;T:
+@file0FI"lib/puppet/type.rb;T

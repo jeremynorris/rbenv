@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>File: ipaddress.rb [facter-1.6.17 Documentation]</title>
+
+  <link type="text/css" media="screen" href="../../rdoc.css" rel="stylesheet" />
+
+  <script src="../../js/jquery.js" type="text/javascript"
+    charset="utf-8"></script>
+  <script src="../../js/thickbox-compressed.js" type="text/javascript"
+    charset="utf-8"></script>
+  <script src="../../js/quicksearch.js" type="text/javascript"
+    charset="utf-8"></script>
+  <script src="../../js/darkfish.js" type="text/javascript"
+    charset="utf-8"></script>
+</head>
+
+<body class="file file-popup">
+  <div id="metadata">
+    <dl>
+      <dt class="modified-date">Last Modified</dt>
+      <dd class="modified-date">2013-03-01 22:14:08 +0100</dd>
+
+      
+      <dt class="requires">Requires</dt>
+      <dd class="requires">
+        <ul>
+        
+          <li>facter/util/ip</li>
+        
+          <li>socket</li>
+        
+          <li>win32/resolv</li>
+        
+          <li>resolv</li>
+        
+        </ul>
+      </dd>
+      
+
+      
+    </dl>
+  </div>
+
+  <div id="documentation">
+    
+    <div class="description">
+      <h2>Description</h2>
+      
+<p>Fact: ipaddress</p>
+
+<p>Purpose: Return the main IP address for a host.</p>
+
+<p>Resolution:</p>
+
+<pre>On the Unixes does an ifconfig, and returns the first non 127.0.0.0/8
+subnetted IP it finds.
+On Windows, it attempts to use the socket library and resolve the machine's
+hostname via DNS.
+
+On LDAP based hosts it tries to use either the win32/resolv library to
+resolve the hostname to an IP address, or on Unix, it uses the resolv
+library.
+
+As a fall back for undefined systems, it tries to run the &quot;host&quot; command to
+resolve the machine's hostname using the system DNS.</pre>
+
+<p>Caveats:</p>
+
+<pre>DNS resolution relies on working DNS infrastructure and resolvers on the
+host system.
+The ifconfig parsing purely takes the first IP address it finds without any
+checking this is a useful IP address.</pre>
+
+    </div>
+    
+  </div>
+</body>
+</html>
+

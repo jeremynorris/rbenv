@@ -1,0 +1,13 @@
+{:ancestors{	I"
+Hiera:EF[I"Object;FI"!Hiera::Backend::Json_backend;F[I"Object;FI"!Hiera::Backend::Yaml_backend;F[I"Object;FI"Hiera::Config;F[I"Object;F:attributes{I"
+Hiera;F[I"attr_reader config;FI"attr_reader logger;FI"attr_reader options;F:class_methods{I"
+Hiera;F[I"
+debug;FI"logger;FI"logger=;FI"new;FI"version;FI"	warn;F@
+[I"new;F@[I"new;FI"Hiera::Config;F[	I"[];FI"include?;FI"	load;FI"load_backends;FI"Hiera::Backend;F[I"datadir;FI"datafile;FI"datasources;FI"lookup;FI"parse_answer;FI"parse_string;FI"resolve_answer;FI"Hiera::Console_logger;F[I"
+debug;FI"	warn;FI"Hiera::Noop_logger;F[I"
+debug;FI"	warn;FI"Hiera::Puppet_logger;F[I"
+debug;FI"	warn;F:encodingIu:Encoding
+UTF-8;F:instance_methods{	I"
+Hiera;F[I"config;FI"lookup;FI"options;F@
+[I"lookup;F@[I"lookup;FI"stale?;FI"Hiera::Util;F[I"common_appdata;FI"config_dir;FI"file_alt_separator;FI"microsoft_windows?;FI"posix?;FI"var_dir;F:modules[I"
+Hiera;FI"Hiera::Backend;FI"!Hiera::Backend::Json_backend;FI"!Hiera::Backend::Yaml_backend;FI"Hiera::Config;FI"Hiera::Console_logger;FI"Hiera::Noop_logger;FI"Hiera::Puppet_logger;FI"Hiera::Util;F

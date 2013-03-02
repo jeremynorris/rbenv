@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"client_version:EFI"-Puppet::Resource::Catalog#client_version;FI"RW;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"QSome metadata to help us compile and generally respond to the current state.;T:
+@file0FI"#lib/puppet/resource/catalog.rb;T

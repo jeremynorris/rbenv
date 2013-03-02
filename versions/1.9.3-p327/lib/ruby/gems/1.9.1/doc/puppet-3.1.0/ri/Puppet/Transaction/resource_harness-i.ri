@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"resource_harness:EFI")Puppet::Transaction#resource_harness;FI"R;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I":Handles most of the actual interacting with resources;T:
+@file0FI"lib/puppet/transaction.rb;T

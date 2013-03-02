@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Module: PuppetlabsSpec::Fixtures</title>
+
+  <link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="module">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../lib/puppetlabs_spec_helper/puppetlabs_spec/fixtures_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/puppetlabs_spec_helper/puppetlabs_spec/fixtures.rb">lib/puppetlabs_spec_helper/puppetlabs_spec/fixtures.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-i-fixtures">#fixtures</a></li>
+          
+          <li><a href="#method-i-my_fixture">#my_fixture</a></li>
+          
+          <li><a href="#method-i-my_fixture_dir">#my_fixture_dir</a></li>
+          
+          <li><a href="#method-i-my_fixture_read">#my_fixture_read</a></li>
+          
+          <li><a href="#method-i-my_fixtures">#my_fixtures</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../Puppet.html">Puppet</a></li>
+        
+          <li><a href="../Puppet/PuppetSpecInitializer.html">Puppet::PuppetSpecInitializer</a></li>
+        
+          <li><a href="../Puppet/Test.html">Puppet::Test</a></li>
+        
+          <li><a href="../Puppet/Test/LogCollector.html">Puppet::Test::LogCollector</a></li>
+        
+          <li><a href="../PuppetlabsSpec.html">PuppetlabsSpec</a></li>
+        
+          <li><a href="../PuppetlabsSpec/Files.html">PuppetlabsSpec::Files</a></li>
+        
+          <li><a href="../PuppetlabsSpec/Fixtures.html">PuppetlabsSpec::Fixtures</a></li>
+        
+          <li><a href="../PuppetlabsSpec/PuppetInternals.html">PuppetlabsSpec::PuppetInternals</a></li>
+        
+          <li><a href="../RSpec.html">RSpec</a></li>
+        
+          <li><a href="../RSpec/Matchers.html">RSpec::Matchers</a></li>
+        
+          <li><a href="../RSpec/Matchers/BlockAliases.html">RSpec::Matchers::BlockAliases</a></li>
+        
+          <li><a href="../Object.html">Object</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="module">PuppetlabsSpec::Fixtures</h1>
+
+    <div id="description" class="description">
+      
+<p>This module provides some helper methods to assist with fixtures. It’s
+methods are designed to help when you have a conforming fixture layout so
+we get project consistency.</p>
+
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="fixtures-method" class="method-detail ">
+          <a name="method-i-fixtures"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">fixtures</span><span
+              class="method-args">(*rest)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Returns the joined path of the global FIXTURE_DIR plus any path given to it</p>
+            
+
+            
+            <div class="method-source-code" id="fixtures-source">
+<pre>
+<span class="ruby-comment"># File lib/puppetlabs_spec_helper/puppetlabs_spec/fixtures.rb, line 7</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">fixtures</span>(*<span class="ruby-identifier">rest</span>)
+  <span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-constant">PuppetlabsSpec</span><span class="ruby-operator">::</span><span class="ruby-constant">FIXTURE_DIR</span>, *<span class="ruby-identifier">rest</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- fixtures-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- fixtures-method -->
+
+      
+        <div id="my_fixture-method" class="method-detail ">
+          <a name="method-i-my_fixture"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">my_fixture</span><span
+              class="method-args">(name)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Given a name, returns the full path of a file from your relative fixture
+dir as returned by my_fixture_dir.</p>
+            
+
+            
+            <div class="method-source-code" id="my_fixture-source">
+<pre>
+<span class="ruby-comment"># File lib/puppetlabs_spec_helper/puppetlabs_spec/fixtures.rb, line 25</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">my_fixture</span>(<span class="ruby-identifier">name</span>)
+  <span class="ruby-identifier">file</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-identifier">my_fixture_dir</span>, <span class="ruby-identifier">name</span>)
+  <span class="ruby-keyword">unless</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">readable?</span> <span class="ruby-identifier">file</span> <span class="ruby-keyword">then</span>
+    <span class="ruby-identifier">fail</span> <span class="ruby-node">&quot;fixture '#{name}' for #{my_fixture_dir} is not readable&quot;</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">file</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- my_fixture-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- my_fixture-method -->
+
+      
+        <div id="my_fixture_dir-method" class="method-detail ">
+          <a name="method-i-my_fixture_dir"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">my_fixture_dir</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Returns the path to your relative fixture dir. So if your spec test is
+&lt;project&gt;/spec/unit/facter/foo_spec.rb then your relative dir will be
+&lt;project&gt;/spec/fixture/unit/facter/foo</p>
+            
+
+            
+            <div class="method-source-code" id="my_fixture_dir-source">
+<pre>
+<span class="ruby-comment"># File lib/puppetlabs_spec_helper/puppetlabs_spec/fixtures.rb, line 14</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">my_fixture_dir</span>
+  <span class="ruby-identifier">callers</span> = <span class="ruby-identifier">caller</span>
+  <span class="ruby-keyword">while</span> <span class="ruby-identifier">line</span> = <span class="ruby-identifier">callers</span>.<span class="ruby-identifier">shift</span> <span class="ruby-keyword">do</span>
+    <span class="ruby-keyword">next</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">found</span> = <span class="ruby-identifier">line</span>.<span class="ruby-identifier">match</span>(<span class="ruby-regexp">%{/spec/(.*)_spec\.rb:}</span>)
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">fixtures</span>(<span class="ruby-identifier">found</span>[<span class="ruby-value">1</span>])
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">fail</span> <span class="ruby-string">&quot;sorry, I couldn't work out your path from the caller stack!&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- my_fixture_dir-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- my_fixture_dir-method -->
+
+      
+        <div id="my_fixture_read-method" class="method-detail ">
+          <a name="method-i-my_fixture_read"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">my_fixture_read</span><span
+              class="method-args">(name)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Return the contents of the file using read when given a name. Uses <a
+href="Fixtures.html#method-i-my_fixture">my_fixture</a> to work out the
+relative path.</p>
+            
+
+            
+            <div class="method-source-code" id="my_fixture_read-source">
+<pre>
+<span class="ruby-comment"># File lib/puppetlabs_spec_helper/puppetlabs_spec/fixtures.rb, line 35</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">my_fixture_read</span>(<span class="ruby-identifier">name</span>)
+  <span class="ruby-constant">File</span>.<span class="ruby-identifier">read</span>(<span class="ruby-identifier">my_fixture</span>(<span class="ruby-identifier">name</span>))
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- my_fixture_read-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- my_fixture_read-method -->
+
+      
+        <div id="my_fixtures-method" class="method-detail ">
+          <a name="method-i-my_fixtures"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">my_fixtures</span><span
+              class="method-args">(glob = '*', flags = 0)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Provides a block mechanism for iterating across the files in your fixture
+area.</p>
+            
+
+            
+            <div class="method-source-code" id="my_fixtures-source">
+<pre>
+<span class="ruby-comment"># File lib/puppetlabs_spec_helper/puppetlabs_spec/fixtures.rb, line 41</span>
+  <span class="ruby-keyword">def</span> <span class="ruby-identifier">my_fixtures</span>(<span class="ruby-identifier">glob</span> = <span class="ruby-string">'*'</span>, <span class="ruby-identifier">flags</span> = <span class="ruby-value">0</span>)
+    <span class="ruby-identifier">files</span> = <span class="ruby-constant">Dir</span>.<span class="ruby-identifier">glob</span>(<span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-identifier">my_fixture_dir</span>, <span class="ruby-identifier">glob</span>), <span class="ruby-identifier">flags</span>)
+    <span class="ruby-keyword">unless</span> <span class="ruby-identifier">files</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> <span class="ruby-keyword">then</span>
+      <span class="ruby-identifier">fail</span> <span class="ruby-node">&quot;fixture '#{glob}' for #{my_fixture_dir} had no files!&quot;</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">block_given?</span> <span class="ruby-keyword">and</span> <span class="ruby-identifier">files</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">file</span><span class="ruby-operator">|</span> <span class="ruby-keyword">yield</span> <span class="ruby-identifier">file</span> <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">files</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- my_fixtures-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- my_fixtures-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

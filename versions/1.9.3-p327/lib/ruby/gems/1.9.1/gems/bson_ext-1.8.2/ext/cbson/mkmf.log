@@ -1,0 +1,58 @@
+have_func: checking for asprintf()... -------------------- yes
+
+"gcc -o conftest -I/vagrant/.rbenv/versions/1.9.3-p327/include/ruby-1.9.1/x86_64-linux -I/vagrant/.rbenv/versions/1.9.3-p327/include/ruby-1.9.1/ruby/backward -I/vagrant/.rbenv/versions/1.9.3-p327/include/ruby-1.9.1 -I. -I'/vagrant/.rbenv/versions/1.9.3-p327/include'   -I'/vagrant/.rbenv/versions/1.9.3-p327/include'    conftest.c  -L. -L/vagrant/.rbenv/versions/1.9.3-p327/lib -Wl,-R/vagrant/.rbenv/versions/1.9.3-p327/lib -L. -L'/vagrant/.rbenv/versions/1.9.3-p327/lib'  -rdynamic -Wl,-export-dynamic     -Wl,-R -Wl,/vagrant/.rbenv/versions/1.9.3-p327/lib -L/vagrant/.rbenv/versions/1.9.3-p327/lib -lruby-static  -lpthread -lrt -ldl -lcrypt -lm   -lc"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main() {return 0;}
+/* end */
+
+"gcc -o conftest -I/vagrant/.rbenv/versions/1.9.3-p327/include/ruby-1.9.1/x86_64-linux -I/vagrant/.rbenv/versions/1.9.3-p327/include/ruby-1.9.1/ruby/backward -I/vagrant/.rbenv/versions/1.9.3-p327/include/ruby-1.9.1 -I. -I'/vagrant/.rbenv/versions/1.9.3-p327/include'   -I'/vagrant/.rbenv/versions/1.9.3-p327/include'    conftest.c  -L. -L/vagrant/.rbenv/versions/1.9.3-p327/lib -Wl,-R/vagrant/.rbenv/versions/1.9.3-p327/lib -L. -L'/vagrant/.rbenv/versions/1.9.3-p327/lib'  -rdynamic -Wl,-export-dynamic     -Wl,-R -Wl,/vagrant/.rbenv/versions/1.9.3-p327/lib -L/vagrant/.rbenv/versions/1.9.3-p327/lib -lruby-static  -lpthread -lrt -ldl -lcrypt -lm   -lc"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { void ((*volatile p)()); p = (void ((*)()))asprintf; return 0; }
+/* end */
+
+--------------------
+
+have_header: checking for ruby/st.h... -------------------- yes
+
+"gcc -E -I/vagrant/.rbenv/versions/1.9.3-p327/include/ruby-1.9.1/x86_64-linux -I/vagrant/.rbenv/versions/1.9.3-p327/include/ruby-1.9.1/ruby/backward -I/vagrant/.rbenv/versions/1.9.3-p327/include/ruby-1.9.1 -I. -I'/vagrant/.rbenv/versions/1.9.3-p327/include'   -I'/vagrant/.rbenv/versions/1.9.3-p327/include'     conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <ruby/st.h>
+/* end */
+
+--------------------
+
+have_header: checking for ruby/regex.h... -------------------- yes
+
+"gcc -E -I/vagrant/.rbenv/versions/1.9.3-p327/include/ruby-1.9.1/x86_64-linux -I/vagrant/.rbenv/versions/1.9.3-p327/include/ruby-1.9.1/ruby/backward -I/vagrant/.rbenv/versions/1.9.3-p327/include/ruby-1.9.1 -I. -I'/vagrant/.rbenv/versions/1.9.3-p327/include'   -I'/vagrant/.rbenv/versions/1.9.3-p327/include'     conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <ruby/regex.h>
+/* end */
+
+--------------------
+
+have_header: checking for ruby/encoding.h... -------------------- yes
+
+"gcc -E -I/vagrant/.rbenv/versions/1.9.3-p327/include/ruby-1.9.1/x86_64-linux -I/vagrant/.rbenv/versions/1.9.3-p327/include/ruby-1.9.1/ruby/backward -I/vagrant/.rbenv/versions/1.9.3-p327/include/ruby-1.9.1 -I. -I'/vagrant/.rbenv/versions/1.9.3-p327/include'   -I'/vagrant/.rbenv/versions/1.9.3-p327/include'     conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <ruby/encoding.h>
+/* end */
+
+--------------------
+

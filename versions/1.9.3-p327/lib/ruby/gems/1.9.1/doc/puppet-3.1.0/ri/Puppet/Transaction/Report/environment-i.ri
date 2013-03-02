@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"environment:EFI",Puppet::Transaction::Report#environment;FI"RW;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"/The name of the environment the host is in;TI"*@return [String] the environment name;T:
+@file0FI"%lib/puppet/transaction/report.rb;T

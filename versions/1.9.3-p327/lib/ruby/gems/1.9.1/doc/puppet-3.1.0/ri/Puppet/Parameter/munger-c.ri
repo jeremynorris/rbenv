@@ -1,0 +1,4 @@
+U:RDoc::Attr[iI"munger:EFI"Puppet::Parameter::munger;FI"R;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"Unused?;TI"n@todo The term "munger" only appears in this location in the Puppet code base. There is munge and unmunge;To:RDoc::Markup::Verbatim;	[I"Nand they seem to work perfectly fine without this attribute declaration.
+;Fo;
+;	[I"@api private;T:
+@file0TI"lib/puppet/parameter.rb;T

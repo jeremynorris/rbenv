@@ -1,0 +1,2094 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Class: Mocha::Expectation</title>
+
+  <link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../lib/mocha/expectation_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/mocha/expectation.rb">lib/mocha/expectation.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link"><a href="../Object.html">Object</a></p>
+        
+      </div>
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-new">::new</a></li>
+          
+          <li><a href="#method-i-add_in_sequence_ordering_constraint">#add_in_sequence_ordering_constraint</a></li>
+          
+          <li><a href="#method-i-add_ordering_constraint">#add_ordering_constraint</a></li>
+          
+          <li><a href="#method-i-add_side_effect">#add_side_effect</a></li>
+          
+          <li><a href="#method-i-at_least">#at_least</a></li>
+          
+          <li><a href="#method-i-at_least_once">#at_least_once</a></li>
+          
+          <li><a href="#method-i-at_most">#at_most</a></li>
+          
+          <li><a href="#method-i-at_most_once">#at_most_once</a></li>
+          
+          <li><a href="#method-i-in_correct_order-3F">#in_correct_order?</a></li>
+          
+          <li><a href="#method-i-in_sequence">#in_sequence</a></li>
+          
+          <li><a href="#method-i-inspect">#inspect</a></li>
+          
+          <li><a href="#method-i-invocations_allowed-3F">#invocations_allowed?</a></li>
+          
+          <li><a href="#method-i-invoke">#invoke</a></li>
+          
+          <li><a href="#method-i-match-3F">#match?</a></li>
+          
+          <li><a href="#method-i-matches_method-3F">#matches_method?</a></li>
+          
+          <li><a href="#method-i-method_signature">#method_signature</a></li>
+          
+          <li><a href="#method-i-mocha_inspect">#mocha_inspect</a></li>
+          
+          <li><a href="#method-i-multiple_yields">#multiple_yields</a></li>
+          
+          <li><a href="#method-i-never">#never</a></li>
+          
+          <li><a href="#method-i-once">#once</a></li>
+          
+          <li><a href="#method-i-perform_side_effects">#perform_side_effects</a></li>
+          
+          <li><a href="#method-i-raises">#raises</a></li>
+          
+          <li><a href="#method-i-returns">#returns</a></li>
+          
+          <li><a href="#method-i-satisfied-3F">#satisfied?</a></li>
+          
+          <li><a href="#method-i-then">#then</a></li>
+          
+          <li><a href="#method-i-throws">#throws</a></li>
+          
+          <li><a href="#method-i-times">#times</a></li>
+          
+          <li><a href="#method-i-twice">#twice</a></li>
+          
+          <li><a href="#method-i-used-3F">#used?</a></li>
+          
+          <li><a href="#method-i-verified-3F">#verified?</a></li>
+          
+          <li><a href="#method-i-when">#when</a></li>
+          
+          <li><a href="#method-i-with">#with</a></li>
+          
+          <li><a href="#method-i-yields">#yields</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../Mocha.html">Mocha</a></li>
+        
+          <li><a href="../Mocha/API.html">Mocha::API</a></li>
+        
+          <li><a href="../Mocha/AnyInstanceMethod.html">Mocha::AnyInstanceMethod</a></li>
+        
+          <li><a href="../Mocha/ArgumentIterator.html">Mocha::ArgumentIterator</a></li>
+        
+          <li><a href="../Mocha/ArrayMethods.html">Mocha::ArrayMethods</a></li>
+        
+          <li><a href="../Mocha/BacktraceFilter.html">Mocha::BacktraceFilter</a></li>
+        
+          <li><a href="../Mocha/Cardinality.html">Mocha::Cardinality</a></li>
+        
+          <li><a href="../Mocha/Central.html">Mocha::Central</a></li>
+        
+          <li><a href="../Mocha/ChangeStateSideEffect.html">Mocha::ChangeStateSideEffect</a></li>
+        
+          <li><a href="../Mocha/ClassMethod.html">Mocha::ClassMethod</a></li>
+        
+          <li><a href="../Mocha/ClassMethods.html">Mocha::ClassMethods</a></li>
+        
+          <li><a href="../Mocha/ClassMethods/AnyInstance.html">Mocha::ClassMethods::AnyInstance</a></li>
+        
+          <li><a href="../Mocha/Configuration.html">Mocha::Configuration</a></li>
+        
+          <li><a href="../Mocha/DateMethods.html">Mocha::DateMethods</a></li>
+        
+          <li><a href="../Mocha/Debug.html">Mocha::Debug</a></li>
+        
+          <li><a href="../Mocha/DefaultName.html">Mocha::DefaultName</a></li>
+        
+          <li><a href="../Mocha/Deprecation.html">Mocha::Deprecation</a></li>
+        
+          <li><a href="../Mocha/ExceptionRaiser.html">Mocha::ExceptionRaiser</a></li>
+        
+          <li><a href="../Mocha/Expectation.html">Mocha::Expectation</a></li>
+        
+          <li><a href="../Mocha/ExpectationError.html">Mocha::ExpectationError</a></li>
+        
+          <li><a href="../Mocha/ExpectationErrorFactory.html">Mocha::ExpectationErrorFactory</a></li>
+        
+          <li><a href="../Mocha/ExpectationList.html">Mocha::ExpectationList</a></li>
+        
+          <li><a href="../Mocha/HashMethods.html">Mocha::HashMethods</a></li>
+        
+          <li><a href="../Mocha/Hooks.html">Mocha::Hooks</a></li>
+        
+          <li><a href="../Mocha/ImpersonatingAnyInstanceName.html">Mocha::ImpersonatingAnyInstanceName</a></li>
+        
+          <li><a href="../Mocha/ImpersonatingName.html">Mocha::ImpersonatingName</a></li>
+        
+          <li><a href="../Mocha/InStateOrderingConstraint.html">Mocha::InStateOrderingConstraint</a></li>
+        
+          <li><a href="../Mocha/InstanceMethod.html">Mocha::InstanceMethod</a></li>
+        
+          <li><a href="../Mocha/Integration.html">Mocha::Integration</a></li>
+        
+          <li><a href="../Mocha/Integration/AssertionCounter.html">Mocha::Integration::AssertionCounter</a></li>
+        
+          <li><a href="../Mocha/Integration/MiniTest.html">Mocha::Integration::MiniTest</a></li>
+        
+          <li><a href="../Mocha/Integration/MiniTest/Adapter.html">Mocha::Integration::MiniTest::Adapter</a></li>
+        
+          <li><a href="../Mocha/Integration/MiniTest/Nothing.html">Mocha::Integration::MiniTest::Nothing</a></li>
+        
+          <li><a href="../Mocha/Integration/MiniTest/Version13.html">Mocha::Integration::MiniTest::Version13</a></li>
+        
+          <li><a href="../Mocha/Integration/MiniTest/Version13/RunMethodPatch.html">Mocha::Integration::MiniTest::Version13::RunMethodPatch</a></li>
+        
+          <li><a href="../Mocha/Integration/MiniTest/Version140.html">Mocha::Integration::MiniTest::Version140</a></li>
+        
+          <li><a href="../Mocha/Integration/MiniTest/Version140/RunMethodPatch.html">Mocha::Integration::MiniTest::Version140::RunMethodPatch</a></li>
+        
+          <li><a href="../Mocha/Integration/MiniTest/Version141.html">Mocha::Integration::MiniTest::Version141</a></li>
+        
+          <li><a href="../Mocha/Integration/MiniTest/Version141/RunMethodPatch.html">Mocha::Integration::MiniTest::Version141::RunMethodPatch</a></li>
+        
+          <li><a href="../Mocha/Integration/MiniTest/Version142To172.html">Mocha::Integration::MiniTest::Version142To172</a></li>
+        
+          <li><a href="../Mocha/Integration/MiniTest/Version142To172/RunMethodPatch.html">Mocha::Integration::MiniTest::Version142To172::RunMethodPatch</a></li>
+        
+          <li><a href="../Mocha/Integration/MiniTest/Version200.html">Mocha::Integration::MiniTest::Version200</a></li>
+        
+          <li><a href="../Mocha/Integration/MiniTest/Version200/RunMethodPatch.html">Mocha::Integration::MiniTest::Version200::RunMethodPatch</a></li>
+        
+          <li><a href="../Mocha/Integration/MiniTest/Version201To222.html">Mocha::Integration::MiniTest::Version201To222</a></li>
+        
+          <li><a href="../Mocha/Integration/MiniTest/Version201To222/RunMethodPatch.html">Mocha::Integration::MiniTest::Version201To222::RunMethodPatch</a></li>
+        
+          <li><a href="../Mocha/Integration/MiniTest/Version2110To2111.html">Mocha::Integration::MiniTest::Version2110To2111</a></li>
+        
+          <li><a href="../Mocha/Integration/MiniTest/Version2110To2111/RunMethodPatch.html">Mocha::Integration::MiniTest::Version2110To2111::RunMethodPatch</a></li>
+        
+          <li><a href="../Mocha/Integration/MiniTest/Version2112To320.html">Mocha::Integration::MiniTest::Version2112To320</a></li>
+        
+          <li><a href="../Mocha/Integration/MiniTest/Version2112To320/RunMethodPatch.html">Mocha::Integration::MiniTest::Version2112To320::RunMethodPatch</a></li>
+        
+          <li><a href="../Mocha/Integration/MiniTest/Version230To2101.html">Mocha::Integration::MiniTest::Version230To2101</a></li>
+        
+          <li><a href="../Mocha/Integration/MiniTest/Version230To2101/RunMethodPatch.html">Mocha::Integration::MiniTest::Version230To2101::RunMethodPatch</a></li>
+        
+          <li><a href="../Mocha/Integration/MonkeyPatcher.html">Mocha::Integration::MonkeyPatcher</a></li>
+        
+          <li><a href="../Mocha/Integration/TestUnit.html">Mocha::Integration::TestUnit</a></li>
+        
+          <li><a href="../Mocha/Integration/TestUnit/Adapter.html">Mocha::Integration::TestUnit::Adapter</a></li>
+        
+          <li><a href="../Mocha/Integration/TestUnit/GemVersion200.html">Mocha::Integration::TestUnit::GemVersion200</a></li>
+        
+          <li><a href="../Mocha/Integration/TestUnit/GemVersion200/RunMethodPatch.html">Mocha::Integration::TestUnit::GemVersion200::RunMethodPatch</a></li>
+        
+          <li><a href="../Mocha/Integration/TestUnit/GemVersion201To202.html">Mocha::Integration::TestUnit::GemVersion201To202</a></li>
+        
+          <li><a href="../Mocha/Integration/TestUnit/GemVersion201To202/RunMethodPatch.html">Mocha::Integration::TestUnit::GemVersion201To202::RunMethodPatch</a></li>
+        
+          <li><a href="../Mocha/Integration/TestUnit/GemVersion203To220.html">Mocha::Integration::TestUnit::GemVersion203To220</a></li>
+        
+          <li><a href="../Mocha/Integration/TestUnit/GemVersion203To220/RunMethodPatch.html">Mocha::Integration::TestUnit::GemVersion203To220::RunMethodPatch</a></li>
+        
+          <li><a href="../Mocha/Integration/TestUnit/GemVersion230To250.html">Mocha::Integration::TestUnit::GemVersion230To250</a></li>
+        
+          <li><a href="../Mocha/Integration/TestUnit/GemVersion230To250/RunMethodPatch.html">Mocha::Integration::TestUnit::GemVersion230To250::RunMethodPatch</a></li>
+        
+          <li><a href="../Mocha/Integration/TestUnit/Nothing.html">Mocha::Integration::TestUnit::Nothing</a></li>
+        
+          <li><a href="../Mocha/Integration/TestUnit/RubyVersion185AndBelow.html">Mocha::Integration::TestUnit::RubyVersion185AndBelow</a></li>
+        
+          <li><a href="../Mocha/Integration/TestUnit/RubyVersion185AndBelow/RunMethodPatch.html">Mocha::Integration::TestUnit::RubyVersion185AndBelow::RunMethodPatch</a></li>
+        
+          <li><a href="../Mocha/Integration/TestUnit/RubyVersion186AndAbove.html">Mocha::Integration::TestUnit::RubyVersion186AndAbove</a></li>
+        
+          <li><a href="../Mocha/Integration/TestUnit/RubyVersion186AndAbove/RunMethodPatch.html">Mocha::Integration::TestUnit::RubyVersion186AndAbove::RunMethodPatch</a></li>
+        
+          <li><a href="../Mocha/Logger.html">Mocha::Logger</a></li>
+        
+          <li><a href="../Mocha/MethodMatcher.html">Mocha::MethodMatcher</a></li>
+        
+          <li><a href="../Mocha/Mock.html">Mocha::Mock</a></li>
+        
+          <li><a href="../Mocha/Mockery.html">Mocha::Mockery</a></li>
+        
+          <li><a href="../Mocha/ModuleMethod.html">Mocha::ModuleMethod</a></li>
+        
+          <li><a href="../Mocha/ModuleMethods.html">Mocha::ModuleMethods</a></li>
+        
+          <li><a href="../Mocha/MultipleYields.html">Mocha::MultipleYields</a></li>
+        
+          <li><a href="../Mocha/Name.html">Mocha::Name</a></li>
+        
+          <li><a href="../Mocha/NoYields.html">Mocha::NoYields</a></li>
+        
+          <li><a href="../Mocha/ObjectMethods.html">Mocha::ObjectMethods</a></li>
+        
+          <li><a href="../Mocha/ParameterMatchers.html">Mocha::ParameterMatchers</a></li>
+        
+          <li><a href="../Mocha/ParameterMatchers/AllOf.html">Mocha::ParameterMatchers::AllOf</a></li>
+        
+          <li><a href="../Mocha/ParameterMatchers/AnyOf.html">Mocha::ParameterMatchers::AnyOf</a></li>
+        
+          <li><a href="../Mocha/ParameterMatchers/AnyParameters.html">Mocha::ParameterMatchers::AnyParameters</a></li>
+        
+          <li><a href="../Mocha/ParameterMatchers/Anything.html">Mocha::ParameterMatchers::Anything</a></li>
+        
+          <li><a href="../Mocha/ParameterMatchers/Base.html">Mocha::ParameterMatchers::Base</a></li>
+        
+          <li><a href="../Mocha/ParameterMatchers/Equals.html">Mocha::ParameterMatchers::Equals</a></li>
+        
+          <li><a href="../Mocha/ParameterMatchers/HasEntries.html">Mocha::ParameterMatchers::HasEntries</a></li>
+        
+          <li><a href="../Mocha/ParameterMatchers/HasEntry.html">Mocha::ParameterMatchers::HasEntry</a></li>
+        
+          <li><a href="../Mocha/ParameterMatchers/HasKey.html">Mocha::ParameterMatchers::HasKey</a></li>
+        
+          <li><a href="../Mocha/ParameterMatchers/HasValue.html">Mocha::ParameterMatchers::HasValue</a></li>
+        
+          <li><a href="../Mocha/ParameterMatchers/Includes.html">Mocha::ParameterMatchers::Includes</a></li>
+        
+          <li><a href="../Mocha/ParameterMatchers/InstanceOf.html">Mocha::ParameterMatchers::InstanceOf</a></li>
+        
+          <li><a href="../Mocha/ParameterMatchers/IsA.html">Mocha::ParameterMatchers::IsA</a></li>
+        
+          <li><a href="../Mocha/ParameterMatchers/KindOf.html">Mocha::ParameterMatchers::KindOf</a></li>
+        
+          <li><a href="../Mocha/ParameterMatchers/Not.html">Mocha::ParameterMatchers::Not</a></li>
+        
+          <li><a href="../Mocha/ParameterMatchers/Optionally.html">Mocha::ParameterMatchers::Optionally</a></li>
+        
+          <li><a href="../Mocha/ParameterMatchers/QueryStringMatches.html">Mocha::ParameterMatchers::QueryStringMatches</a></li>
+        
+          <li><a href="../Mocha/ParameterMatchers/RegexpMatches.html">Mocha::ParameterMatchers::RegexpMatches</a></li>
+        
+          <li><a href="../Mocha/ParameterMatchers/RespondsWith.html">Mocha::ParameterMatchers::RespondsWith</a></li>
+        
+          <li><a href="../Mocha/ParameterMatchers/YamlEquivalent.html">Mocha::ParameterMatchers::YamlEquivalent</a></li>
+        
+          <li><a href="../Mocha/ParametersMatcher.html">Mocha::ParametersMatcher</a></li>
+        
+          <li><a href="../Mocha/PrettyParameters.html">Mocha::PrettyParameters</a></li>
+        
+          <li><a href="../Mocha/ReturnValues.html">Mocha::ReturnValues</a></li>
+        
+          <li><a href="../Mocha/Sequence.html">Mocha::Sequence</a></li>
+        
+          <li><a href="../Mocha/Sequence/InSequenceOrderingConstraint.html">Mocha::Sequence::InSequenceOrderingConstraint</a></li>
+        
+          <li><a href="../Mocha/SingleReturnValue.html">Mocha::SingleReturnValue</a></li>
+        
+          <li><a href="../Mocha/SingleYield.html">Mocha::SingleYield</a></li>
+        
+          <li><a href="../Mocha/StateMachine.html">Mocha::StateMachine</a></li>
+        
+          <li><a href="../Mocha/StateMachine/State.html">Mocha::StateMachine::State</a></li>
+        
+          <li><a href="../Mocha/StateMachine/StatePredicate.html">Mocha::StateMachine::StatePredicate</a></li>
+        
+          <li><a href="../Mocha/StringMethods.html">Mocha::StringMethods</a></li>
+        
+          <li><a href="../Mocha/StubbingError.html">Mocha::StubbingError</a></li>
+        
+          <li><a href="../Mocha/Thrower.html">Mocha::Thrower</a></li>
+        
+          <li><a href="../Mocha/TimeMethods.html">Mocha::TimeMethods</a></li>
+        
+          <li><a href="../Mocha/UnexpectedInvocation.html">Mocha::UnexpectedInvocation</a></li>
+        
+          <li><a href="../Mocha/YieldParameters.html">Mocha::YieldParameters</a></li>
+        
+          <li><a href="../Array.html">Array</a></li>
+        
+          <li><a href="../Date.html">Date</a></li>
+        
+          <li><a href="../Hash.html">Hash</a></li>
+        
+          <li><a href="../Object.html">Object</a></li>
+        
+          <li><a href="../String.html">String</a></li>
+        
+          <li><a href="../Time.html">Time</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">Mocha::Expectation</h1>
+
+    <div id="description" class="description">
+      
+<p>Methods on expectations returned from {<a
+href="Mock.html#method-i-expects">Mock#expects</a>}, {<a
+href="Mock.html#method-i-stubs">Mock#stubs</a>}, {<a
+href="ObjectMethods.html#method-i-expects">ObjectMethods#expects</a>} and
+{<a href="ObjectMethods.html#method-i-stubs">ObjectMethods#stubs</a>}.</p>
+
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+      <!-- Attributes -->
+      <div id="attribute-method-details" class="method-section section">
+        <h3 class="section-header">Attributes</h3>
+
+        
+        <div id="backtrace-attribute-method" class="method-detail">
+          <a name="backtrace"></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">backtrace</span><span
+              class="attribute-access-type">[R]</span>
+          </div>
+
+          <div class="method-description">
+          
+          <p>@private</p>
+          
+          </div>
+        </div>
+        
+      </div><!-- attribute-method-details -->
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="new-method" class="method-detail ">
+          <a name="method-c-new"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">new</span><span
+              class="method-args">(mock, expected_method_name, backtrace = nil)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@private</p>
+            
+
+            
+            <div class="method-source-code" id="new-source">
+<pre>
+<span class="ruby-comment"># File lib/mocha/expectation.rb, line 503</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">mock</span>, <span class="ruby-identifier">expected_method_name</span>, <span class="ruby-identifier">backtrace</span> = <span class="ruby-keyword">nil</span>)
+  <span class="ruby-ivar">@mock</span> = <span class="ruby-identifier">mock</span>
+  <span class="ruby-ivar">@method_matcher</span> = <span class="ruby-constant">MethodMatcher</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">expected_method_name</span>.<span class="ruby-identifier">to_sym</span>)
+  <span class="ruby-ivar">@parameters_matcher</span> = <span class="ruby-constant">ParametersMatcher</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-ivar">@ordering_constraints</span> = []
+  <span class="ruby-ivar">@side_effects</span> = []
+  <span class="ruby-ivar">@cardinality</span>, <span class="ruby-ivar">@invocation_count</span> = <span class="ruby-constant">Cardinality</span>.<span class="ruby-identifier">exactly</span>(<span class="ruby-value">1</span>), <span class="ruby-value">0</span>
+  <span class="ruby-ivar">@return_values</span> = <span class="ruby-constant">ReturnValues</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-ivar">@yield_parameters</span> = <span class="ruby-constant">YieldParameters</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-ivar">@backtrace</span> = <span class="ruby-identifier">backtrace</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">caller</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- new-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- new-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="add_in_sequence_ordering_constraint-method" class="method-detail ">
+          <a name="method-i-add_in_sequence_ordering_constraint"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">add_in_sequence_ordering_constraint</span><span
+              class="method-args">(sequence)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@private</p>
+            
+
+            
+            <div class="method-source-code" id="add_in_sequence_ordering_constraint-source">
+<pre>
+<span class="ruby-comment"># File lib/mocha/expectation.rb, line 521</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">add_in_sequence_ordering_constraint</span>(<span class="ruby-identifier">sequence</span>)
+  <span class="ruby-identifier">sequence</span>.<span class="ruby-identifier">constrain_as_next_in_sequence</span>(<span class="ruby-keyword">self</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- add_in_sequence_ordering_constraint-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- add_in_sequence_ordering_constraint-method -->
+
+      
+        <div id="add_ordering_constraint-method" class="method-detail ">
+          <a name="method-i-add_ordering_constraint"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">add_ordering_constraint</span><span
+              class="method-args">(ordering_constraint)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@private</p>
+            
+
+            
+            <div class="method-source-code" id="add_ordering_constraint-source">
+<pre>
+<span class="ruby-comment"># File lib/mocha/expectation.rb, line 516</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">add_ordering_constraint</span>(<span class="ruby-identifier">ordering_constraint</span>)
+  <span class="ruby-ivar">@ordering_constraints</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">ordering_constraint</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- add_ordering_constraint-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- add_ordering_constraint-method -->
+
+      
+        <div id="add_side_effect-method" class="method-detail ">
+          <a name="method-i-add_side_effect"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">add_side_effect</span><span
+              class="method-args">(side_effect)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@private</p>
+            
+
+            
+            <div class="method-source-code" id="add_side_effect-source">
+<pre>
+<span class="ruby-comment"># File lib/mocha/expectation.rb, line 526</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">add_side_effect</span>(<span class="ruby-identifier">side_effect</span>)
+  <span class="ruby-ivar">@side_effects</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">side_effect</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- add_side_effect-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- add_side_effect-method -->
+
+      
+        <div id="at_least-method" class="method-detail ">
+          <a name="method-i-at_least"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">at_least</span><span
+              class="method-args">(minimum_number_of_times)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Modifies expectation so that the expected method must be called at least a
+<tt>minimum_number_of_times</tt>.</p>
+
+<p>@param [Integer] minimum_number_of_times minimum number of expected
+invocations. @return [Expectation] the same expectation, thereby allowing
+invocations of other {Expectation} methods to be chained.</p>
+
+<p>@example Expected method must be called at least twice.</p>
+
+<pre>object = mock()
+object.expects(:expected_method).at_least(2)
+3.times { object.expected_method }
+# =&gt; verify succeeds
+
+object = mock()
+object.expects(:expected_method).at_least(2)
+object.expected_method
+# =&gt; verify fails</pre>
+            
+
+            
+            <div class="method-source-code" id="at_least-source">
+<pre>
+<span class="ruby-comment"># File lib/mocha/expectation.rb, line 132</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">at_least</span>(<span class="ruby-identifier">minimum_number_of_times</span>)
+  <span class="ruby-ivar">@cardinality</span> = <span class="ruby-constant">Cardinality</span>.<span class="ruby-identifier">at_least</span>(<span class="ruby-identifier">minimum_number_of_times</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- at_least-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- at_least-method -->
+
+      
+        <div id="at_least_once-method" class="method-detail ">
+          <a name="method-i-at_least_once"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">at_least_once</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Modifies expectation so that the expected method must be called at least
+once.</p>
+
+<p>@return [Expectation] the same expectation, thereby allowing invocations of
+other {Expectation} methods to be chained.</p>
+
+<p>@example Expected method must be called at least once.</p>
+
+<pre>object = mock()
+object.expects(:expected_method).at_least_once
+object.expected_method
+# =&gt; verify succeeds
+
+object = mock()
+object.expects(:expected_method).at_least_once
+# =&gt; verify fails</pre>
+            
+
+            
+            <div class="method-source-code" id="at_least_once-source">
+<pre>
+<span class="ruby-comment"># File lib/mocha/expectation.rb, line 150</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">at_least_once</span>
+  <span class="ruby-identifier">at_least</span>(<span class="ruby-value">1</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- at_least_once-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- at_least_once-method -->
+
+      
+        <div id="at_most-method" class="method-detail ">
+          <a name="method-i-at_most"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">at_most</span><span
+              class="method-args">(maximum_number_of_times)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Modifies expectation so that the expected method must be called at most a
+<tt>maximum_number_of_times</tt>.</p>
+
+<p>@param [Integer] maximum_number_of_times maximum number of expected
+invocations. @return [Expectation] the same expectation, thereby allowing
+invocations of other {Expectation} methods to be chained.</p>
+
+<p>@example Expected method must be called at most twice.</p>
+
+<pre>object = mock()
+object.expects(:expected_method).at_most(2)
+2.times { object.expected_method }
+# =&gt; verify succeeds
+
+object = mock()
+object.expects(:expected_method).at_most(2)
+3.times { object.expected_method } # =&gt; unexpected invocation</pre>
+            
+
+            
+            <div class="method-source-code" id="at_most-source">
+<pre>
+<span class="ruby-comment"># File lib/mocha/expectation.rb, line 169</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">at_most</span>(<span class="ruby-identifier">maximum_number_of_times</span>)
+  <span class="ruby-ivar">@cardinality</span> = <span class="ruby-constant">Cardinality</span>.<span class="ruby-identifier">at_most</span>(<span class="ruby-identifier">maximum_number_of_times</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- at_most-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- at_most-method -->
+
+      
+        <div id="at_most_once-method" class="method-detail ">
+          <a name="method-i-at_most_once"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">at_most_once</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Modifies expectation so that the expected method must be called at most
+once.</p>
+
+<p>@return [Expectation] the same expectation, thereby allowing invocations of
+other {Expectation} methods to be chained.</p>
+
+<p>@example Expected method must be called at most once.</p>
+
+<pre>object = mock()
+object.expects(:expected_method).at_most_once
+object.expected_method
+# =&gt; verify succeeds
+
+object = mock()
+object.expects(:expected_method).at_most_once
+2.times { object.expected_method } # =&gt; unexpected invocation</pre>
+            
+
+            
+            <div class="method-source-code" id="at_most_once-source">
+<pre>
+<span class="ruby-comment"># File lib/mocha/expectation.rb, line 187</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">at_most_once</span>()
+  <span class="ruby-identifier">at_most</span>(<span class="ruby-value">1</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- at_most_once-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- at_most_once-method -->
+
+      
+        <div id="in_correct_order-3F-method" class="method-detail ">
+          <a name="method-i-in_correct_order-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">in_correct_order?</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@private</p>
+            
+
+            
+            <div class="method-source-code" id="in_correct_order-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/mocha/expectation.rb, line 536</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">in_correct_order?</span>
+  <span class="ruby-ivar">@ordering_constraints</span>.<span class="ruby-identifier">all?</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">ordering_constraint</span><span class="ruby-operator">|</span> <span class="ruby-identifier">ordering_constraint</span>.<span class="ruby-identifier">allows_invocation_now?</span> }
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- in_correct_order-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- in_correct_order-3F-method -->
+
+      
+        <div id="in_sequence-method" class="method-detail ">
+          <a name="method-i-in_sequence"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">in_sequence</span><span
+              class="method-args">(*sequences)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Constrains the expectation so that it must be invoked at the current point
+in the <tt>sequence</tt>.</p>
+
+<p>To expect a sequence of invocations, write the expectations in order and
+add the +<a
+href="Expectation.html#method-i-in_sequence">in_sequence</a>(sequence)+
+clause to each one.</p>
+
+<p>Expectations in a <tt>sequence</tt> can have any invocation count.</p>
+
+<p>If an expectation in a sequence is stubbed, rather than expected, it can be
+skipped in the <tt>sequence</tt>.</p>
+
+<p>An expected method can appear in multiple sequences.</p>
+
+<p>@param [*<a href="../Array.html">Array</a>&lt;Sequence&gt;] sequences
+sequences in which expected method should appear. @return [Expectation] the
+same expectation, thereby allowing invocations of other {Expectation}
+methods to be chained.</p>
+
+<p>@see <a href="API.html#method-i-sequence">API#sequence</a></p>
+
+<p>@example Ensure methods are invoked in a specified order.</p>
+
+<pre>breakfast = sequence('breakfast')
+
+egg = mock('egg')
+egg.expects(:crack).in_sequence(breakfast)
+egg.expects(:fry).in_sequence(breakfast)
+egg.expects(:eat).in_sequence(breakfast)</pre>
+            
+
+            
+            <div class="method-source-code" id="in_sequence-source">
+<pre>
+<span class="ruby-comment"># File lib/mocha/expectation.rb, line 494</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">in_sequence</span>(*<span class="ruby-identifier">sequences</span>)
+  <span class="ruby-identifier">sequences</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">sequence</span><span class="ruby-operator">|</span> <span class="ruby-identifier">add_in_sequence_ordering_constraint</span>(<span class="ruby-identifier">sequence</span>) }
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- in_sequence-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- in_sequence-method -->
+
+      
+        <div id="inspect-method" class="method-detail ">
+          <a name="method-i-inspect"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">inspect</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@private</p>
+            
+
+            
+            <div class="method-source-code" id="inspect-source">
+<pre>
+<span class="ruby-comment"># File lib/mocha/expectation.rb, line 584</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">inspect</span>
+  <span class="ruby-identifier">address</span> = <span class="ruby-identifier">__id__</span> * <span class="ruby-value">2</span>
+  <span class="ruby-identifier">address</span> <span class="ruby-operator">+=</span> <span class="ruby-value">0x100000000</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">address</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">0</span>
+  <span class="ruby-node">&quot;#&lt;Expectation:0x#{'%x' % address} #{mocha_inspect} &gt;&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- inspect-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- inspect-method -->
+
+      
+        <div id="invocations_allowed-3F-method" class="method-detail ">
+          <a name="method-i-invocations_allowed-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">invocations_allowed?</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@private</p>
+            
+
+            
+            <div class="method-source-code" id="invocations_allowed-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/mocha/expectation.rb, line 551</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">invocations_allowed?</span>
+  <span class="ruby-ivar">@cardinality</span>.<span class="ruby-identifier">invocations_allowed?</span>(<span class="ruby-ivar">@invocation_count</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- invocations_allowed-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- invocations_allowed-3F-method -->
+
+      
+        <div id="invoke-method" class="method-detail ">
+          <a name="method-i-invoke"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">invoke</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@private</p>
+            
+
+            
+            <div class="method-source-code" id="invoke-source">
+<pre>
+<span class="ruby-comment"># File lib/mocha/expectation.rb, line 561</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">invoke</span>
+  <span class="ruby-ivar">@invocation_count</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+  <span class="ruby-identifier">perform_side_effects</span>()
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">block_given?</span> <span class="ruby-keyword">then</span>
+    <span class="ruby-ivar">@yield_parameters</span>.<span class="ruby-identifier">next_invocation</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">yield_parameters</span><span class="ruby-operator">|</span>
+      <span class="ruby-keyword">yield</span>(*<span class="ruby-identifier">yield_parameters</span>)
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-ivar">@return_values</span>.<span class="ruby-identifier">next</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- invoke-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- invoke-method -->
+
+      
+        <div id="match-3F-method" class="method-detail ">
+          <a name="method-i-match-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">match?</span><span
+              class="method-args">(actual_method_name, *actual_parameters)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@private</p>
+            
+
+            
+            <div class="method-source-code" id="match-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/mocha/expectation.rb, line 546</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">match?</span>(<span class="ruby-identifier">actual_method_name</span>, *<span class="ruby-identifier">actual_parameters</span>)
+  <span class="ruby-ivar">@method_matcher</span>.<span class="ruby-identifier">match?</span>(<span class="ruby-identifier">actual_method_name</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@parameters_matcher</span>.<span class="ruby-identifier">match?</span>(<span class="ruby-identifier">actual_parameters</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">in_correct_order?</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- match-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- match-3F-method -->
+
+      
+        <div id="matches_method-3F-method" class="method-detail ">
+          <a name="method-i-matches_method-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">matches_method?</span><span
+              class="method-args">(method_name)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@private</p>
+            
+
+            
+            <div class="method-source-code" id="matches_method-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/mocha/expectation.rb, line 541</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">matches_method?</span>(<span class="ruby-identifier">method_name</span>)
+  <span class="ruby-ivar">@method_matcher</span>.<span class="ruby-identifier">match?</span>(<span class="ruby-identifier">method_name</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- matches_method-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- matches_method-3F-method -->
+
+      
+        <div id="method_signature-method" class="method-detail ">
+          <a name="method-i-method_signature"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">method_signature</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@private</p>
+            
+
+            
+            <div class="method-source-code" id="method_signature-source">
+<pre>
+<span class="ruby-comment"># File lib/mocha/expectation.rb, line 606</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">method_signature</span>
+  <span class="ruby-node">&quot;#{@mock.mocha_inspect}.#{@method_matcher.mocha_inspect}#{@parameters_matcher.mocha_inspect}&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- method_signature-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- method_signature-method -->
+
+      
+        <div id="mocha_inspect-method" class="method-detail ">
+          <a name="method-i-mocha_inspect"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">mocha_inspect</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@private</p>
+            
+
+            
+            <div class="method-source-code" id="mocha_inspect-source">
+<pre>
+<span class="ruby-comment"># File lib/mocha/expectation.rb, line 591</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">mocha_inspect</span>
+  <span class="ruby-identifier">message</span> = <span class="ruby-node">&quot;#{@cardinality.mocha_inspect}, &quot;</span>
+  <span class="ruby-identifier">message</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-keyword">case</span> <span class="ruby-ivar">@invocation_count</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-value">0</span> <span class="ruby-keyword">then</span> <span class="ruby-string">&quot;not yet invoked&quot;</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-value">1</span> <span class="ruby-keyword">then</span> <span class="ruby-string">&quot;invoked once&quot;</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-value">2</span> <span class="ruby-keyword">then</span> <span class="ruby-string">&quot;invoked twice&quot;</span>
+    <span class="ruby-keyword">else</span> <span class="ruby-node">&quot;invoked #{@invocation_count} times&quot;</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">message</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&quot;: &quot;</span>
+  <span class="ruby-identifier">message</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">method_signature</span>
+  <span class="ruby-identifier">message</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;; #{@ordering_constraints.map { |oc| oc.mocha_inspect }.join(&quot;; &quot;)}&quot;</span> <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@ordering_constraints</span>.<span class="ruby-identifier">empty?</span>
+  <span class="ruby-identifier">message</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- mocha_inspect-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- mocha_inspect-method -->
+
+      
+        <div id="multiple_yields-method" class="method-detail ">
+          <a name="method-i-multiple_yields"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">multiple_yields</span><span
+              class="method-args">(*parameter_groups)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Modifies expectation so that when the expected method is called, it yields
+multiple times per invocation with the specified <tt>parameter_groups</tt>.</p>
+
+<p>@param [*<a href="../Array.html">Array</a>&lt;Array&gt;] parameter_groups
+each element of <tt>parameter_groups</tt> should iself be an <tt>Array</tt>
+representing the parameters to be passed to the block for a single yield.
+@return [Expectation] the same expectation, thereby allowing invocations of
+other {Expectation} methods to be chained. @see <a
+href="Expectation.html#method-i-then">then</a></p>
+
+<p>@example When the <tt>expected_method</tt> is called, the stub will invoke
+the block twice, the first time it passes +‘result_1’+, +‘result_2’+ as the
+parameters, and the second time it passes ‘result_3’ as the parameters.</p>
+
+<pre>object = mock()
+object.expects(:expected_method).multiple_yields(['result_1', 'result_2'], ['result_3'])
+yielded_values = []
+object.expected_method { |*values| yielded_values &lt;&lt; values }
+yielded_values # =&gt; [['result_1', 'result_2'], ['result_3]]</pre>
+
+<p>@example Yield different groups of parameters on different invocations of
+the expected method.</p>
+
+<pre>object = mock()
+object.stubs(:expected_method).multiple_yields([1, 2], [3]).then.multiple_yields([4], [5, 6])
+yielded_values_from_first_invocation = []
+yielded_values_from_second_invocation = []
+object.expected_method { |*values| yielded_values_from_first_invocation &lt;&lt; values } # first invocation
+object.expected_method { |*values| yielded_values_from_second_invocation &lt;&lt; values } # second invocation
+yielded_values_from_first_invocation # =&gt; [[1, 2], [3]]
+yielded_values_from_second_invocation # =&gt; [[4], [5, 6]]</pre>
+            
+
+            
+            <div class="method-source-code" id="multiple_yields-source">
+<pre>
+<span class="ruby-comment"># File lib/mocha/expectation.rb, line 279</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">multiple_yields</span>(*<span class="ruby-identifier">parameter_groups</span>)
+  <span class="ruby-ivar">@yield_parameters</span>.<span class="ruby-identifier">multiple_add</span>(*<span class="ruby-identifier">parameter_groups</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- multiple_yields-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- multiple_yields-method -->
+
+      
+        <div id="never-method" class="method-detail ">
+          <a name="method-i-never"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">never</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Modifies expectation so that the expected method must never be called.</p>
+
+<p>@return [Expectation] the same expectation, thereby allowing invocations of
+other {Expectation} methods to be chained.</p>
+
+<p>@example Expected method must never be called.</p>
+
+<pre>object = mock()
+object.expects(:expected_method).never
+object.expected_method # =&gt; unexpected invocation
+
+object = mock()
+object.expects(:expected_method).never
+# =&gt; verify succeeds</pre>
+            
+
+            
+            <div class="method-source-code" id="never-source">
+<pre>
+<span class="ruby-comment"># File lib/mocha/expectation.rb, line 112</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">never</span>
+  <span class="ruby-ivar">@cardinality</span> = <span class="ruby-constant">Cardinality</span>.<span class="ruby-identifier">exactly</span>(<span class="ruby-value">0</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- never-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- never-method -->
+
+      
+        <div id="once-method" class="method-detail ">
+          <a name="method-i-once"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">once</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Modifies expectation so that the expected method must be called exactly
+once.</p>
+
+<p>Note that this is the default behaviour for an expectation, but you may
+wish to use it for clarity/emphasis.</p>
+
+<p>@return [Expectation] the same expectation, thereby allowing invocations of
+other {Expectation} methods to be chained.</p>
+
+<p>@example Expected method must be invoked exactly once.</p>
+
+<pre>object = mock()
+object.expects(:expected_method).once
+object.expected_method
+# =&gt; verify succeeds
+
+object = mock()
+object.expects(:expected_method).once
+object.expected_method
+object.expected_method # =&gt; unexpected invocation
+
+object = mock()
+object.expects(:expected_method).once
+# =&gt; verify fails</pre>
+            
+
+            
+            <div class="method-source-code" id="once-source">
+<pre>
+<span class="ruby-comment"># File lib/mocha/expectation.rb, line 95</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">once</span>
+  <span class="ruby-ivar">@cardinality</span> = <span class="ruby-constant">Cardinality</span>.<span class="ruby-identifier">exactly</span>(<span class="ruby-value">1</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- once-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- once-method -->
+
+      
+        <div id="perform_side_effects-method" class="method-detail ">
+          <a name="method-i-perform_side_effects"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">perform_side_effects</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@private</p>
+            
+
+            
+            <div class="method-source-code" id="perform_side_effects-source">
+<pre>
+<span class="ruby-comment"># File lib/mocha/expectation.rb, line 531</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">perform_side_effects</span>
+  <span class="ruby-ivar">@side_effects</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">side_effect</span><span class="ruby-operator">|</span> <span class="ruby-identifier">side_effect</span>.<span class="ruby-identifier">perform</span> }
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- perform_side_effects-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- perform_side_effects-method -->
+
+      
+        <div id="raises-method" class="method-detail ">
+          <a name="method-i-raises"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">raises</span><span
+              class="method-args">(exception = RuntimeError, message = nil)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Modifies expectation so that when the expected method is called, it raises
+the specified <tt>exception</tt> with the specified <tt>message</tt> i.e.
+calls +Kernel#raise(exception, message)+.</p>
+
+<p>@param [Class,Exception,<a href="../String.html">String</a>,exception]
+exception exception to be raised or message to be passed to RuntimeError.
+@param [String] message exception message. @return [Expectation] the same
+expectation, thereby allowing invocations of other {Expectation} methods to
+be chained.</p>
+
+<p>@see Kernel#raise @see <a href="Expectation.html#method-i-then">then</a></p>
+
+<p>@overload def raises @overload def raises(exception) @overload def
+raises(exception, message)</p>
+
+<p>@example Raise specified exception if expected method is invoked.</p>
+
+<pre>object = stub()
+object.stubs(:expected_method).raises(Exception, 'message')
+object.expected_method # =&gt; raises exception of class Exception and with message 'message'</pre>
+
+<p>@example Raise custom exception with extra constructor parameters by
+passing in an instance of the exception.</p>
+
+<pre>object = stub()
+object.stubs(:expected_method).raises(MyException.new('message', 1, 2, 3))
+object.expected_method # =&gt; raises the specified instance of MyException</pre>
+
+<p>@example Raise different exceptions on consecutive invocations of the
+expected method.</p>
+
+<pre>object = stub()
+object.stubs(:expected_method).raises(Exception1).then.raises(Exception2)
+object.expected_method # =&gt; raises exception of class Exception1
+object.expected_method # =&gt; raises exception of class Exception2</pre>
+
+<p>@example Raise an exception on first invocation of expected method and then
+return values on subsequent invocations.</p>
+
+<pre>object = stub()
+object.stubs(:expected_method).raises(Exception).then.returns(2, 3)
+object.expected_method # =&gt; raises exception of class Exception1
+object.expected_method # =&gt; 2
+object.expected_method # =&gt; 3</pre>
+            
+
+            
+            <div class="method-source-code" id="raises-source">
+<pre>
+<span class="ruby-comment"># File lib/mocha/expectation.rb, line 366</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">raises</span>(<span class="ruby-identifier">exception</span> = <span class="ruby-constant">RuntimeError</span>, <span class="ruby-identifier">message</span> = <span class="ruby-keyword">nil</span>)
+  <span class="ruby-ivar">@return_values</span> <span class="ruby-operator">+=</span> <span class="ruby-constant">ReturnValues</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">ExceptionRaiser</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">exception</span>, <span class="ruby-identifier">message</span>))
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- raises-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- raises-method -->
+
+      
+        <div id="returns-method" class="method-detail ">
+          <a name="method-i-returns"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">returns</span><span
+              class="method-args">(*values)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Modifies expectation so that when the expected method is called, it returns
+the specified <tt>value</tt>.</p>
+
+<p>@return [Expectation] the same expectation, thereby allowing invocations of
+other {Expectation} methods to be chained. @see <a
+href="Expectation.html#method-i-then">then</a></p>
+
+<p>@overload def returns(value)</p>
+
+<pre>@param [Object] value value to return on invocation of expected method.</pre>
+
+<p>@overload def returns(*values)</p>
+
+<pre>@param [*Array] values values to return on consecutive invocations of expected method.</pre>
+
+<p>@example Return the same value on every invocation.</p>
+
+<pre>object = mock()
+object.stubs(:stubbed_method).returns('result')
+object.stubbed_method # =&gt; 'result'
+object.stubbed_method # =&gt; 'result'</pre>
+
+<p>@example Return a different value on consecutive invocations.</p>
+
+<pre>object = mock()
+object.stubs(:stubbed_method).returns(1, 2)
+object.stubbed_method # =&gt; 1
+object.stubbed_method # =&gt; 2</pre>
+
+<p>@example Alternative way to return a different value on consecutive
+invocations.</p>
+
+<pre>object = mock()
+object.stubs(:expected_method).returns(1, 2).then.returns(3)
+object.expected_method # =&gt; 1
+object.expected_method # =&gt; 2
+object.expected_method # =&gt; 3</pre>
+
+<p>@example May be called in conjunction with {<a
+href="Expectation.html#method-i-raises">raises</a>} on the same
+expectation.</p>
+
+<pre>object = mock()
+object.stubs(:expected_method).returns(1, 2).then.raises(Exception)
+object.expected_method # =&gt; 1
+object.expected_method # =&gt; 2
+object.expected_method # =&gt; raises exception of class Exception1</pre>
+
+<p>@example Note that in Ruby a method returning multiple values is exactly
+equivalent to a method returning an <tt>Array</tt> of those values.</p>
+
+<pre>object = mock()
+object.stubs(:expected_method).returns([1, 2])
+x, y = object.expected_method
+x # =&gt; 1
+y # =&gt; 2</pre>
+            
+
+            
+            <div class="method-source-code" id="returns-source">
+<pre>
+<span class="ruby-comment"># File lib/mocha/expectation.rb, line 326</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">returns</span>(*<span class="ruby-identifier">values</span>)
+  <span class="ruby-ivar">@return_values</span> <span class="ruby-operator">+=</span> <span class="ruby-constant">ReturnValues</span>.<span class="ruby-identifier">build</span>(*<span class="ruby-identifier">values</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- returns-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- returns-method -->
+
+      
+        <div id="satisfied-3F-method" class="method-detail ">
+          <a name="method-i-satisfied-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">satisfied?</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@private</p>
+            
+
+            
+            <div class="method-source-code" id="satisfied-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/mocha/expectation.rb, line 556</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">satisfied?</span>
+  <span class="ruby-ivar">@cardinality</span>.<span class="ruby-identifier">satisfied?</span>(<span class="ruby-ivar">@invocation_count</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- satisfied-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- satisfied-3F-method -->
+
+      
+        <div id="then-method" class="method-detail ">
+          <a name="method-i-then"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">then</span><span
+              class="method-args">(*parameters)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@overload def then</p>
+
+<pre>Used as syntactic sugar to improve readability. It has no effect on state of the expectation.</pre>
+
+<p>@overload def then(state_machine.is(state_name))</p>
+
+<pre>Used to change the +state_machine+ to the state specified by +state_name+ when the expected invocation occurs.
+@param [StateMachine::State] state_machine.is(state_name) provides a mechanism to change the +state_machine+ into the state specified by +state_name+ when the expected method is invoked.
+
+@see API#states
+@see StateMachine
+@see #when</pre>
+
+<p>@return [Expectation] the same expectation, thereby allowing invocations of
+other {Expectation} methods to be chained.</p>
+
+<p>@example Using {<a href="Expectation.html#method-i-then">then</a>} as
+syntactic sugar when specifying values to be returned and exceptions to be
+raised on consecutive invocations of the expected method.</p>
+
+<pre>object = mock()
+object.stubs(:expected_method).returns(1, 2).then.raises(Exception).then.returns(4)
+object.expected_method # =&gt; 1
+object.expected_method # =&gt; 2
+object.expected_method # =&gt; raises exception of class Exception
+object.expected_method # =&gt; 4</pre>
+
+<p>@example Using {<a href="Expectation.html#method-i-then">then</a>} to
+change the <tt>state</tt> of a <tt>state_machine</tt> on the invocation of
+an expected method.</p>
+
+<pre>power = states('power').starts_as('off')
+
+radio = mock('radio')
+radio.expects(:switch_on).then(power.is('on'))
+radio.expects(:select_channel).with('BBC Radio 4').when(power.is('on'))
+radio.expects(:adjust_volume).with(+5).when(power.is('on'))
+radio.expects(:select_channel).with('BBC World Service').when(power.is('on'))
+radio.expects(:adjust_volume).with(-5).when(power.is('on'))
+radio.expects(:switch_off).then(power.is('off'))</pre>
+            
+
+            
+            <div class="method-source-code" id="then-source">
+<pre>
+<span class="ruby-comment"># File lib/mocha/expectation.rb, line 440</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">then</span>(*<span class="ruby-identifier">parameters</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">parameters</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">==</span> <span class="ruby-value">1</span>
+    <span class="ruby-identifier">state</span> = <span class="ruby-identifier">parameters</span>.<span class="ruby-identifier">first</span>
+    <span class="ruby-identifier">add_side_effect</span>(<span class="ruby-constant">ChangeStateSideEffect</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">state</span>))
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- then-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- then-method -->
+
+      
+        <div id="throws-method" class="method-detail ">
+          <a name="method-i-throws"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">throws</span><span
+              class="method-args">(tag, object = nil)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Modifies expectation so that when the expected method is called, it throws
+the specified <tt>tag</tt> with the specific return value <tt>object</tt>
+i.e. calls +Kernel#throw(tag, object)+.</p>
+
+<p>@param [Symbol,String] tag tag to throw to transfer control to the active
+catch block. @param [Object] object return value for the catch block.
+@return [Expectation] the same expectation, thereby allowing invocations of
+other {Expectation} methods to be chained.</p>
+
+<p>@see Kernel#throw @see <a href="Expectation.html#method-i-then">then</a></p>
+
+<p>@overload def throw(tag) @overload def throw(tag, object)</p>
+
+<p>@example Throw tag when expected method is invoked.</p>
+
+<pre>object = stub()
+object.stubs(:expected_method).throws(:done)
+object.expected_method # =&gt; throws tag :done</pre>
+
+<p>@example Throw tag with return value <tt>object</tt> c.f. +Kernel#throw+.</p>
+
+<pre>object = stub()
+object.stubs(:expected_method).throws(:done, 'result')
+object.expected_method # =&gt; throws tag :done and causes catch block to return 'result'</pre>
+
+<p>@example Throw different tags on consecutive invocations of the expected
+method.</p>
+
+<pre>object = stub()
+object.stubs(:expected_method).throws(:done).then.throws(:continue)
+object.expected_method # =&gt; throws :done
+object.expected_method # =&gt; throws :continue</pre>
+
+<p>@example Throw tag on first invocation of expected method and then return
+values for subsequent invocations.</p>
+
+<pre>object = stub()
+object.stubs(:expected_method).throws(:done).then.returns(2, 3)
+object.expected_method # =&gt; throws :done
+object.expected_method # =&gt; 2
+object.expected_method # =&gt; 3</pre>
+            
+
+            
+            <div class="method-source-code" id="throws-source">
+<pre>
+<span class="ruby-comment"># File lib/mocha/expectation.rb, line 405</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">throws</span>(<span class="ruby-identifier">tag</span>, <span class="ruby-identifier">object</span> = <span class="ruby-keyword">nil</span>)
+  <span class="ruby-ivar">@return_values</span> <span class="ruby-operator">+=</span> <span class="ruby-constant">ReturnValues</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">Thrower</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">tag</span>, <span class="ruby-identifier">object</span>))
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- throws-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- throws-method -->
+
+      
+        <div id="times-method" class="method-detail ">
+          <a name="method-i-times"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">times</span><span
+              class="method-args">(range)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Modifies expectation so that the number of calls to the expected method
+must be within a specific <tt>range</tt>.</p>
+
+<p>@param [Range,Integer] range specifies the allowable range in the number of
+expected invocations. @return [Expectation] the same expectation, thereby
+allowing invocations of other {Expectation} methods to be chained.</p>
+
+<p>@example Specifying a specific number of expected invocations.</p>
+
+<pre>object = mock()
+object.expects(:expected_method).times(3)
+3.times { object.expected_method }
+# =&gt; verify succeeds
+
+object = mock()
+object.expects(:expected_method).times(3)
+2.times { object.expected_method }
+# =&gt; verify fails</pre>
+
+<p>@example Specifying a range in the number of expected invocations.</p>
+
+<pre>object = mock()
+object.expects(:expected_method).times(2..4)
+3.times { object.expected_method }
+# =&gt; verify succeeds
+
+object = mock()
+object.expects(:expected_method).times(2..4)
+object.expected_method
+# =&gt; verify fails</pre>
+            
+
+            
+            <div class="method-source-code" id="times-source">
+<pre>
+<span class="ruby-comment"># File lib/mocha/expectation.rb, line 44</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">times</span>(<span class="ruby-identifier">range</span>)
+  <span class="ruby-ivar">@cardinality</span> = <span class="ruby-constant">Cardinality</span>.<span class="ruby-identifier">times</span>(<span class="ruby-identifier">range</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- times-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- times-method -->
+
+      
+        <div id="twice-method" class="method-detail ">
+          <a name="method-i-twice"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">twice</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Modifies expectation so that the expected method must be called exactly
+twice.</p>
+
+<p>@return [Expectation] the same expectation, thereby allowing invocations of
+other {Expectation} methods to be chained.</p>
+
+<p>@example Expected method must be invoked exactly twice.</p>
+
+<pre>object = mock()
+object.expects(:expected_method).twice
+object.expected_method
+object.expected_method
+# =&gt; verify succeeds
+
+object = mock()
+object.expects(:expected_method).twice
+object.expected_method
+object.expected_method
+object.expected_method # =&gt; unexpected invocation
+
+object = mock()
+object.expects(:expected_method).twice
+object.expected_method
+# =&gt; verify fails</pre>
+            
+
+            
+            <div class="method-source-code" id="twice-source">
+<pre>
+<span class="ruby-comment"># File lib/mocha/expectation.rb, line 70</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">twice</span>
+  <span class="ruby-ivar">@cardinality</span> = <span class="ruby-constant">Cardinality</span>.<span class="ruby-identifier">exactly</span>(<span class="ruby-value">2</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- twice-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- twice-method -->
+
+      
+        <div id="used-3F-method" class="method-detail ">
+          <a name="method-i-used-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">used?</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@private</p>
+            
+
+            
+            <div class="method-source-code" id="used-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/mocha/expectation.rb, line 579</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">used?</span>
+  <span class="ruby-ivar">@cardinality</span>.<span class="ruby-identifier">used?</span>(<span class="ruby-ivar">@invocation_count</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- used-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- used-3F-method -->
+
+      
+        <div id="verified-3F-method" class="method-detail ">
+          <a name="method-i-verified-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">verified?</span><span
+              class="method-args">(assertion_counter = nil)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>@private</p>
+            
+
+            
+            <div class="method-source-code" id="verified-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/mocha/expectation.rb, line 573</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">verified?</span>(<span class="ruby-identifier">assertion_counter</span> = <span class="ruby-keyword">nil</span>)
+  <span class="ruby-identifier">assertion_counter</span>.<span class="ruby-identifier">increment</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">assertion_counter</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@cardinality</span>.<span class="ruby-identifier">needs_verifying?</span>
+  <span class="ruby-ivar">@cardinality</span>.<span class="ruby-identifier">verified?</span>(<span class="ruby-ivar">@invocation_count</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- verified-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- verified-3F-method -->
+
+      
+        <div id="when-method" class="method-detail ">
+          <a name="method-i-when"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">when</span><span
+              class="method-args">(state_predicate)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Constrains the expectation to occur only when the <tt>state_machine</tt> is
+in the state specified by <tt>state_name</tt>.</p>
+
+<p>@param [StateMachine::StatePredicate] state_machine.is(state_name) provides
+a mechanism to determine whether the <tt>state_machine</tt> is in the state
+specified by <tt>state_name</tt> when the expected method is invoked.
+@return [Expectation] the same expectation, thereby allowing invocations of
+other {Expectation} methods to be chained.</p>
+
+<p>@see <a href="API.html#method-i-states">API#states</a> @see <a
+href="StateMachine.html">StateMachine</a> @see <a
+href="Expectation.html#method-i-then">then</a></p>
+
+<p>@example Using {<a href="Expectation.html#method-i-when">when</a>} to only
+allow invocation of methods when “power” state machine is in the “on”
+state.</p>
+
+<pre>power = states('power').starts_as('off')
+
+radio = mock('radio')
+radio.expects(:switch_on).then(power.is('on'))
+radio.expects(:select_channel).with('BBC Radio 4').when(power.is('on'))
+radio.expects(:adjust_volume).with(+5).when(power.is('on'))
+radio.expects(:select_channel).with('BBC World Service').when(power.is('on'))
+radio.expects(:adjust_volume).with(-5).when(power.is('on'))
+radio.expects(:switch_off).then(power.is('off'))</pre>
+            
+
+            
+            <div class="method-source-code" id="when-source">
+<pre>
+<span class="ruby-comment"># File lib/mocha/expectation.rb, line 467</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">when</span>(<span class="ruby-identifier">state_predicate</span>)
+  <span class="ruby-identifier">add_ordering_constraint</span>(<span class="ruby-constant">InStateOrderingConstraint</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">state_predicate</span>))
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- when-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- when-method -->
+
+      
+        <div id="with-method" class="method-detail ">
+          <a name="method-i-with"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">with</span><span
+              class="method-args">(*expected_parameters, &matching_block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Modifies expectation so that the expected method must be called with
+<tt>expected_parameters</tt>.</p>
+
+<p>May be used with parameter matchers in {ParameterMatchers}.</p>
+
+<p>@param [*Array] expected_parameters parameters expected. @yield optional
+block specifying custom matching. @yieldparam [*Array] actual_parameters
+parameters with which expected method was invoked. @yieldreturn [Boolean]
+<tt>true</tt> if <tt>actual_parameters</tt> are acceptable. @return
+[Expectation] the same expectation, thereby allowing invocations of other
+{Expectation} methods to be chained.</p>
+
+<p>@example Expected method must be called with expected parameters.</p>
+
+<pre>object = mock()
+object.expects(:expected_method).with(:param1, :param2)
+object.expected_method(:param1, :param2)
+# =&gt; verify succeeds
+
+object = mock()
+object.expects(:expected_method).with(:param1, :param2)
+object.expected_method(:param3)
+# =&gt; verify fails</pre>
+
+<p>@example Expected method must be called with a value divisible by 4.</p>
+
+<pre>object = mock()
+object.expects(:expected_method).with() { |value| value % 4 == 0 }
+object.expected_method(16)
+# =&gt; verify succeeds
+
+object = mock()
+object.expects(:expected_method).with() { |value| value % 4 == 0 }
+object.expected_method(17)
+# =&gt; verify fails</pre>
+            
+
+            
+            <div class="method-source-code" id="with-source">
+<pre>
+<span class="ruby-comment"># File lib/mocha/expectation.rb, line 223</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">with</span>(*<span class="ruby-identifier">expected_parameters</span>, &amp;<span class="ruby-identifier">matching_block</span>)
+  <span class="ruby-ivar">@parameters_matcher</span> = <span class="ruby-constant">ParametersMatcher</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">expected_parameters</span>, &amp;<span class="ruby-identifier">matching_block</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- with-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- with-method -->
+
+      
+        <div id="yields-method" class="method-detail ">
+          <a name="method-i-yields"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">yields</span><span
+              class="method-args">(*parameters)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Modifies expectation so that when the expected method is called, it yields
+with the specified <tt>parameters</tt>.</p>
+
+<p>May be called multiple times on the same expectation for consecutive
+invocations.</p>
+
+<p>@param [*Array] parameters parameters to be yielded. @return [Expectation]
+the same expectation, thereby allowing invocations of other {Expectation}
+methods to be chained. @see <a
+href="Expectation.html#method-i-then">then</a></p>
+
+<p>@example Yield parameters when expected method is invoked.</p>
+
+<pre>object = mock()
+object.expects(:expected_method).yields('result')
+yielded_value = nil
+object.expected_method { |value| yielded_value = value }
+yielded_value # =&gt; 'result'</pre>
+
+<p>@example Yield different parameters on different invocations of the
+expected method.</p>
+
+<pre>object = mock()
+object.stubs(:expected_method).yields(1).then.yields(2)
+yielded_values_from_first_invocation = []
+yielded_values_from_second_invocation = []
+object.expected_method { |value| yielded_values_from_first_invocation &lt;&lt; value } # first invocation
+object.expected_method { |value| yielded_values_from_second_invocation &lt;&lt; value } # second invocation
+yielded_values_from_first_invocation # =&gt; [1]
+yielded_values_from_second_invocation # =&gt; [2]</pre>
+            
+
+            
+            <div class="method-source-code" id="yields-source">
+<pre>
+<span class="ruby-comment"># File lib/mocha/expectation.rb, line 252</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">yields</span>(*<span class="ruby-identifier">parameters</span>)
+  <span class="ruby-ivar">@yield_parameters</span>.<span class="ruby-identifier">add</span>(*<span class="ruby-identifier">parameters</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- yields-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- yields-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

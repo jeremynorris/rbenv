@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"parser:EFI"PSON::parser;FI"R;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"NReturns the PSON parser class, that is used by PSON. This might be either;TI"-PSON::Ext::Parser or PSON::Pure::Parser.;T:
+@file0TI"'lib/puppet/external/pson/common.rb;T

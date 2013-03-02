@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"generator:EFI"PSON::generator;FI"R;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"JReturns the PSON generator modul, that is used by PSON. This might be;TI":either PSON::Ext::Generator or PSON::Pure::Generator.;T:
+@file0TI"'lib/puppet/external/pson/common.rb;T

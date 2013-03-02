@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"resource:EFI"Puppet::Provider#resource;FI"RW;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"s@return [???] This resource is what? Is an instance of a provider attached to one particular Puppet::Resource?;T:
+@file0FI"lib/puppet/provider.rb;T

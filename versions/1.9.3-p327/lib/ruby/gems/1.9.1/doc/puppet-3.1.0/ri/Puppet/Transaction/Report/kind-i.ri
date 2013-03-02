@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"	kind:EFI"%Puppet::Transaction::Report#kind;FI"R;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"\The 'kind' of report is the name of operation that triggered the report to be produced.;TI"Typically "apply".;TI"X@return [String] the kind of operation that triggered the generation of the report.;T:
+@file0FI"%lib/puppet/transaction/report.rb;T

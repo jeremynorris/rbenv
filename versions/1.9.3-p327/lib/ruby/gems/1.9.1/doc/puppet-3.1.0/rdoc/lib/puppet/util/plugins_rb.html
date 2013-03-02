@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>File: plugins.rb [puppet-3.1.0 Documentation]</title>
+
+  <link type="text/css" media="screen" href="../../../rdoc.css" rel="stylesheet" />
+
+  <script src="../../../js/jquery.js" type="text/javascript"
+    charset="utf-8"></script>
+  <script src="../../../js/thickbox-compressed.js" type="text/javascript"
+    charset="utf-8"></script>
+  <script src="../../../js/quicksearch.js" type="text/javascript"
+    charset="utf-8"></script>
+  <script src="../../../js/darkfish.js" type="text/javascript"
+    charset="utf-8"></script>
+</head>
+
+<body class="file file-popup">
+  <div id="metadata">
+    <dl>
+      <dt class="modified-date">Last Modified</dt>
+      <dd class="modified-date">2013-03-01 22:14:16 +0100</dd>
+
+      
+      <dt class="requires">Requires</dt>
+      <dd class="requires">
+        <ul>
+        
+        </ul>
+      </dd>
+      
+
+      
+    </dl>
+  </div>
+
+  <div id="documentation">
+    
+    <div class="description">
+      <h2>Description</h2>
+      
+<p>This system manages an extensible set of metadata about plugins which it</p>
+
+<pre>collects by searching for files named &quot;plugin_init.rb&quot; in a series of
+directories.  Initially, these are simply the $LOAD_PATH.</pre>
+
+<p>The contents of each file found is executed in the context of a <a
+href="../../../Puppet/Plugins.html">Puppet::Plugins</a></p>
+
+<pre>object (and thus scoped).  An example file might contain:</pre>
+<hr style="height: 10px">
+
+<pre>@name = &quot;Greet the CA&quot;
+
+@description = %q{
+  This plugin causes a friendly greeting to print out on a master
+  that is operating as the CA, after it has been set up but before
+  it does anything.
+}
+
+def after_application_setup(options)
+  if options[:application_object].is_a?(Puppet::Application::Master) &amp;&amp; Puppet::SSL::CertificateAuthority.ca?
+    puts &quot;Hey, this is the CA!&quot;
+  end
+end</pre>
+<hr style="height: 10px">
+
+<p>Note that the instance variables are local to this Puppet::Plugin (and so
+may be used</p>
+
+<pre>for maintaining state, etc.) but the plugin system does not provide any thread safety
+assurances, so they may not be adequate for some complex use cases.</pre>
+
+    </div>
+    
+  </div>
+</body>
+</html>
+

@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"relative_path:EFI",Puppet::FileServing::Base#relative_path;FI"R;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I">Set a relative path; this is used for recursion, and sets;TI"=the file's path relative to the initial recursion point.;T:
+@file0FI"$lib/puppet/file_serving/base.rb;T

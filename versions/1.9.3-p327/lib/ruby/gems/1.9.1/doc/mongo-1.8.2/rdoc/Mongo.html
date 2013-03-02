@@ -1,0 +1,642 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Module: Mongo</title>
+
+  <link rel="stylesheet" href="./rdoc.css" type="text/css" media="screen" />
+
+  <script src="./js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="module">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="./index.html">Home</a>
+          <a href="./index.html#classes">Classes</a>
+          <a href="./index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="./lib/mongo/collection_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/mongo/collection.rb">lib/mongo/collection.rb</a></li>
+          
+            <li><a href="./lib/mongo/cursor_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/mongo/cursor.rb">lib/mongo/cursor.rb</a></li>
+          
+            <li><a href="./lib/mongo/db_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/mongo/db.rb">lib/mongo/db.rb</a></li>
+          
+            <li><a href="./lib/mongo/exceptions_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/mongo/exceptions.rb">lib/mongo/exceptions.rb</a></li>
+          
+            <li><a href="./lib/mongo/gridfs/grid_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/mongo/gridfs/grid.rb">lib/mongo/gridfs/grid.rb</a></li>
+          
+            <li><a href="./lib/mongo/gridfs/grid_ext_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/mongo/gridfs/grid_ext.rb">lib/mongo/gridfs/grid_ext.rb</a></li>
+          
+            <li><a href="./lib/mongo/gridfs/grid_file_system_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/mongo/gridfs/grid_file_system.rb">lib/mongo/gridfs/grid_file_system.rb</a></li>
+          
+            <li><a href="./lib/mongo/gridfs/grid_io_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/mongo/gridfs/grid_io.rb">lib/mongo/gridfs/grid_io.rb</a></li>
+          
+            <li><a href="./lib/mongo/legacy_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/mongo/legacy.rb">lib/mongo/legacy.rb</a></li>
+          
+            <li><a href="./lib/mongo/mongo_client_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/mongo/mongo_client.rb">lib/mongo/mongo_client.rb</a></li>
+          
+            <li><a href="./lib/mongo/mongo_replica_set_client_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/mongo/mongo_replica_set_client.rb">lib/mongo/mongo_replica_set_client.rb</a></li>
+          
+            <li><a href="./lib/mongo/mongo_sharded_client_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/mongo/mongo_sharded_client.rb">lib/mongo/mongo_sharded_client.rb</a></li>
+          
+            <li><a href="./lib/mongo/networking_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/mongo/networking.rb">lib/mongo/networking.rb</a></li>
+          
+            <li><a href="./lib/mongo/util/conversions_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/mongo/util/conversions.rb">lib/mongo/util/conversions.rb</a></li>
+          
+            <li><a href="./lib/mongo/util/logging_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/mongo/util/logging.rb">lib/mongo/util/logging.rb</a></li>
+          
+            <li><a href="./lib/mongo/util/node_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/mongo/util/node.rb">lib/mongo/util/node.rb</a></li>
+          
+            <li><a href="./lib/mongo/util/pool_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/mongo/util/pool.rb">lib/mongo/util/pool.rb</a></li>
+          
+            <li><a href="./lib/mongo/util/pool_manager_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/mongo/util/pool_manager.rb">lib/mongo/util/pool_manager.rb</a></li>
+          
+            <li><a href="./lib/mongo/util/read_preference_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/mongo/util/read_preference.rb">lib/mongo/util/read_preference.rb</a></li>
+          
+            <li><a href="./lib/mongo/util/server_version_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/mongo/util/server_version.rb">lib/mongo/util/server_version.rb</a></li>
+          
+            <li><a href="./lib/mongo/util/sharding_pool_manager_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/mongo/util/sharding_pool_manager.rb">lib/mongo/util/sharding_pool_manager.rb</a></li>
+          
+            <li><a href="./lib/mongo/util/ssl_socket_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/mongo/util/ssl_socket.rb">lib/mongo/util/ssl_socket.rb</a></li>
+          
+            <li><a href="./lib/mongo/util/support_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/mongo/util/support.rb">lib/mongo/util/support.rb</a></li>
+          
+            <li><a href="./lib/mongo/util/tcp_socket_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/mongo/util/tcp_socket.rb">lib/mongo/util/tcp_socket.rb</a></li>
+          
+            <li><a href="./lib/mongo/util/thread_local_variable_manager_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/mongo/util/thread_local_variable_manager.rb">lib/mongo/util/thread_local_variable_manager.rb</a></li>
+          
+            <li><a href="./lib/mongo/util/unix_socket_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/mongo/util/unix_socket.rb">lib/mongo/util/unix_socket.rb</a></li>
+          
+            <li><a href="./lib/mongo/util/uri_parser_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/mongo/util/uri_parser.rb">lib/mongo/util/uri_parser.rb</a></li>
+          
+            <li><a href="./lib/mongo/util/write_concern_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/mongo/util/write_concern.rb">lib/mongo/util/write_concern.rb</a></li>
+          
+            <li><a href="./lib/mongo_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/mongo.rb">lib/mongo.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+
+      
+
+      
+      <!-- Namespace Contents -->
+      <div id="namespace-list-section" class="section">
+        <h3 class="section-header">Namespace</h3>
+        <ul class="link-list">
+          
+          <li><span class="type">MODULE</span> <a href="Mongo/Constants.html">Mongo::Constants</a></li>
+          
+          <li><span class="type">MODULE</span> <a href="Mongo/Conversions.html">Mongo::Conversions</a></li>
+          
+          <li><span class="type">MODULE</span> <a href="Mongo/GridExt.html">Mongo::GridExt</a></li>
+          
+          <li><span class="type">MODULE</span> <a href="Mongo/LegacyWriteConcern.html">Mongo::LegacyWriteConcern</a></li>
+          
+          <li><span class="type">MODULE</span> <a href="Mongo/Logging.html">Mongo::Logging</a></li>
+          
+          <li><span class="type">MODULE</span> <a href="Mongo/Networking.html">Mongo::Networking</a></li>
+          
+          <li><span class="type">MODULE</span> <a href="Mongo/ReadPreference.html">Mongo::ReadPreference</a></li>
+          
+          <li><span class="type">MODULE</span> <a href="Mongo/Support.html">Mongo::Support</a></li>
+          
+          <li><span class="type">MODULE</span> <a href="Mongo/ThreadLocalVariableManager.html">Mongo::ThreadLocalVariableManager</a></li>
+          
+          <li><span class="type">MODULE</span> <a href="Mongo/WriteConcern.html">Mongo::WriteConcern</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="Mongo/AuthenticationError.html">Mongo::AuthenticationError</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="Mongo/Collection.html">Mongo::Collection</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="Mongo/Connection.html">Mongo::Connection</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="Mongo/ConnectionError.html">Mongo::ConnectionError</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="Mongo/ConnectionFailure.html">Mongo::ConnectionFailure</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="Mongo/ConnectionTimeoutError.html">Mongo::ConnectionTimeoutError</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="Mongo/Cursor.html">Mongo::Cursor</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="Mongo/DB.html">Mongo::DB</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="Mongo/Grid.html">Mongo::Grid</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="Mongo/GridError.html">Mongo::GridError</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="Mongo/GridFileNotFound.html">Mongo::GridFileNotFound</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="Mongo/GridFileSystem.html">Mongo::GridFileSystem</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="Mongo/GridIO.html">Mongo::GridIO</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="Mongo/GridMD5Failure.html">Mongo::GridMD5Failure</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="Mongo/InvalidNSName.html">Mongo::InvalidNSName</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="Mongo/InvalidOperation.html">Mongo::InvalidOperation</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="Mongo/InvalidSortValueError.html">Mongo::InvalidSortValueError</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="Mongo/MongoArgumentError.html">Mongo::MongoArgumentError</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="Mongo/MongoClient.html">Mongo::MongoClient</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="Mongo/MongoDBError.html">Mongo::MongoDBError</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="Mongo/MongoReplicaSetClient.html">Mongo::MongoReplicaSetClient</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="Mongo/MongoRubyError.html">Mongo::MongoRubyError</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="Mongo/MongoShardedClient.html">Mongo::MongoShardedClient</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="Mongo/Node.html">Mongo::Node</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="Mongo/NodeWithTagsNotFound.html">Mongo::NodeWithTagsNotFound</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="Mongo/OperationFailure.html">Mongo::OperationFailure</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="Mongo/OperationTimeout.html">Mongo::OperationTimeout</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="Mongo/Pool.html">Mongo::Pool</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="Mongo/PoolManager.html">Mongo::PoolManager</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="Mongo/ReplSetConnection.html">Mongo::ReplSetConnection</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="Mongo/ReplicaSetConnectionError.html">Mongo::ReplicaSetConnectionError</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="Mongo/SSLSocket.html">Mongo::SSLSocket</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="Mongo/ServerVersion.html">Mongo::ServerVersion</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="Mongo/ShardedConnection.html">Mongo::ShardedConnection</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="Mongo/ShardingPoolManager.html">Mongo::ShardingPoolManager</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="Mongo/TCPSocket.html">Mongo::TCPSocket</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="Mongo/UNIXSocket.html">Mongo::UNIXSocket</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="Mongo/URIParser.html">Mongo::URIParser</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="./images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="./Mongo.html">Mongo</a></li>
+        
+          <li><a href="./Mongo/AuthenticationError.html">Mongo::AuthenticationError</a></li>
+        
+          <li><a href="./Mongo/Collection.html">Mongo::Collection</a></li>
+        
+          <li><a href="./Mongo/Connection.html">Mongo::Connection</a></li>
+        
+          <li><a href="./Mongo/ConnectionError.html">Mongo::ConnectionError</a></li>
+        
+          <li><a href="./Mongo/ConnectionFailure.html">Mongo::ConnectionFailure</a></li>
+        
+          <li><a href="./Mongo/ConnectionTimeoutError.html">Mongo::ConnectionTimeoutError</a></li>
+        
+          <li><a href="./Mongo/Constants.html">Mongo::Constants</a></li>
+        
+          <li><a href="./Mongo/Conversions.html">Mongo::Conversions</a></li>
+        
+          <li><a href="./Mongo/Cursor.html">Mongo::Cursor</a></li>
+        
+          <li><a href="./Mongo/DB.html">Mongo::DB</a></li>
+        
+          <li><a href="./Mongo/Grid.html">Mongo::Grid</a></li>
+        
+          <li><a href="./Mongo/GridError.html">Mongo::GridError</a></li>
+        
+          <li><a href="./Mongo/GridExt.html">Mongo::GridExt</a></li>
+        
+          <li><a href="./Mongo/GridExt/InstanceMethods.html">Mongo::GridExt::InstanceMethods</a></li>
+        
+          <li><a href="./Mongo/GridFileNotFound.html">Mongo::GridFileNotFound</a></li>
+        
+          <li><a href="./Mongo/GridFileSystem.html">Mongo::GridFileSystem</a></li>
+        
+          <li><a href="./Mongo/GridIO.html">Mongo::GridIO</a></li>
+        
+          <li><a href="./Mongo/GridMD5Failure.html">Mongo::GridMD5Failure</a></li>
+        
+          <li><a href="./Mongo/InvalidNSName.html">Mongo::InvalidNSName</a></li>
+        
+          <li><a href="./Mongo/InvalidOperation.html">Mongo::InvalidOperation</a></li>
+        
+          <li><a href="./Mongo/InvalidSortValueError.html">Mongo::InvalidSortValueError</a></li>
+        
+          <li><a href="./Mongo/LegacyWriteConcern.html">Mongo::LegacyWriteConcern</a></li>
+        
+          <li><a href="./Mongo/Logging.html">Mongo::Logging</a></li>
+        
+          <li><a href="./Mongo/Logging/Instrumenter.html">Mongo::Logging::Instrumenter</a></li>
+        
+          <li><a href="./Mongo/MongoArgumentError.html">Mongo::MongoArgumentError</a></li>
+        
+          <li><a href="./Mongo/MongoClient.html">Mongo::MongoClient</a></li>
+        
+          <li><a href="./Mongo/MongoDBError.html">Mongo::MongoDBError</a></li>
+        
+          <li><a href="./Mongo/MongoReplicaSetClient.html">Mongo::MongoReplicaSetClient</a></li>
+        
+          <li><a href="./Mongo/MongoRubyError.html">Mongo::MongoRubyError</a></li>
+        
+          <li><a href="./Mongo/MongoShardedClient.html">Mongo::MongoShardedClient</a></li>
+        
+          <li><a href="./Mongo/Networking.html">Mongo::Networking</a></li>
+        
+          <li><a href="./Mongo/Node.html">Mongo::Node</a></li>
+        
+          <li><a href="./Mongo/NodeWithTagsNotFound.html">Mongo::NodeWithTagsNotFound</a></li>
+        
+          <li><a href="./Mongo/OperationFailure.html">Mongo::OperationFailure</a></li>
+        
+          <li><a href="./Mongo/OperationTimeout.html">Mongo::OperationTimeout</a></li>
+        
+          <li><a href="./Mongo/Pool.html">Mongo::Pool</a></li>
+        
+          <li><a href="./Mongo/PoolManager.html">Mongo::PoolManager</a></li>
+        
+          <li><a href="./Mongo/ReadPreference.html">Mongo::ReadPreference</a></li>
+        
+          <li><a href="./Mongo/ReplSetConnection.html">Mongo::ReplSetConnection</a></li>
+        
+          <li><a href="./Mongo/ReplicaSetConnectionError.html">Mongo::ReplicaSetConnectionError</a></li>
+        
+          <li><a href="./Mongo/SSLSocket.html">Mongo::SSLSocket</a></li>
+        
+          <li><a href="./Mongo/ServerVersion.html">Mongo::ServerVersion</a></li>
+        
+          <li><a href="./Mongo/ShardedConnection.html">Mongo::ShardedConnection</a></li>
+        
+          <li><a href="./Mongo/ShardingPoolManager.html">Mongo::ShardingPoolManager</a></li>
+        
+          <li><a href="./Mongo/Support.html">Mongo::Support</a></li>
+        
+          <li><a href="./Mongo/TCPSocket.html">Mongo::TCPSocket</a></li>
+        
+          <li><a href="./Mongo/ThreadLocalVariableManager.html">Mongo::ThreadLocalVariableManager</a></li>
+        
+          <li><a href="./Mongo/UNIXSocket.html">Mongo::UNIXSocket</a></li>
+        
+          <li><a href="./Mongo/URIParser.html">Mongo::URIParser</a></li>
+        
+          <li><a href="./Mongo/WriteConcern.html">Mongo::WriteConcern</a></li>
+        
+          <li><a href="./Class.html">Class</a></li>
+        
+          <li><a href="./Mutex.html">Mutex</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="module">Mongo</h1>
+
+    <div id="description" class="description">
+      
+<p>– Copyright (C) 2008-2012 10gen Inc.</p>
+
+<p>Licensed under the Apache License, Version 2.0 (the “License”); you may not
+use this file except in compliance with the License. You may obtain a copy
+of the License at</p>
+
+<pre>http://www.apache.org/licenses/LICENSE-2.0</pre>
+
+<p>Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an “AS IS” BASIS, WITHOUT
+WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+License for the specific language governing permissions and limitations
+under the License.</p>
+<hr style="height: 1px">
+
+<p>Copyright (C) 2008-2012 10gen Inc.</p>
+
+<p>Licensed under the Apache License, Version 2.0 (the “License”); you may not
+use this file except in compliance with the License. You may obtain a copy
+of the License at</p>
+
+<pre>http://www.apache.org/licenses/LICENSE-2.0</pre>
+
+<p>Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an “AS IS” BASIS, WITHOUT
+WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+License for the specific language governing permissions and limitations
+under the License.</p>
+<hr style="height: 1px">
+
+<p>– Copyright (C) 2008-2012 10gen Inc.</p>
+
+<p>Licensed under the Apache License, Version 2.0 (the “License”); you may not
+use this file except in compliance with the License. You may obtain a copy
+of the License at</p>
+
+<pre>http://www.apache.org/licenses/LICENSE-2.0</pre>
+
+<p>Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an “AS IS” BASIS, WITHOUT
+WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+License for the specific language governing permissions and limitations
+under the License. ++</p>
+<hr style="height: 1px">
+
+<p>– Copyright (C) 2008-2012 10gen Inc.</p>
+
+<p>Licensed under the Apache License, Version 2.0 (the “License”); you may not
+use this file except in compliance with the License. You may obtain a copy
+of the License at</p>
+
+<pre>http://www.apache.org/licenses/LICENSE-2.0</pre>
+
+<p>Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an “AS IS” BASIS, WITHOUT
+WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+License for the specific language governing permissions and limitations
+under the License. ++</p>
+<hr style="height: 1px">
+
+<p>– Copyright (C) 2008-2012 10gen Inc.</p>
+
+<p>Licensed under the Apache License, Version 2.0 (the “License”); you may not
+use this file except in compliance with the License. You may obtain a copy
+of the License at</p>
+
+<pre>http://www.apache.org/licenses/LICENSE-2.0</pre>
+
+<p>Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an “AS IS” BASIS, WITHOUT
+WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+License for the specific language governing permissions and limitations
+under the License. ++</p>
+<hr style="height: 1px">
+
+<p>– Copyright (C) 2008-2012 10gen Inc.</p>
+
+<p>Licensed under the Apache License, Version 2.0 (the “License”); you may not
+use this file except in compliance with the License. You may obtain a copy
+of the License at</p>
+
+<pre>http://www.apache.org/licenses/LICENSE-2.0</pre>
+
+<p>Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an “AS IS” BASIS, WITHOUT
+WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+License for the specific language governing permissions and limitations
+under the License. ++</p>
+<hr style="height: 1px">
+
+<p>– Copyright (C) 2008-2012 10gen Inc.</p>
+
+<p>Licensed under the Apache License, Version 2.0 (the “License”); you may not
+use this file except in compliance with the License. You may obtain a copy
+of the License at</p>
+
+<pre>http://www.apache.org/licenses/LICENSE-2.0</pre>
+
+<p>Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an “AS IS” BASIS, WITHOUT
+WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+License for the specific language governing permissions and limitations
+under the License. ++</p>
+<hr style="height: 1px">
+
+<p>– Copyright (C) 2008-2012 10gen Inc.</p>
+
+<p>Licensed under the Apache License, Version 2.0 (the “License”); you may not
+use this file except in compliance with the License. You may obtain a copy
+of the License at</p>
+
+<pre>http://www.apache.org/licenses/LICENSE-2.0</pre>
+
+<p>Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an “AS IS” BASIS, WITHOUT
+WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+License for the specific language governing permissions and limitations
+under the License. ++</p>
+<hr style="height: 1px">
+
+<p>– Copyright (C) 2008-2012 10gen Inc.</p>
+
+<p>Licensed under the Apache License, Version 2.0 (the “License”); you may not
+use this file except in compliance with the License. You may obtain a copy
+of the License at</p>
+
+<pre>http://www.apache.org/licenses/LICENSE-2.0</pre>
+
+<p>Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an “AS IS” BASIS, WITHOUT
+WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+License for the specific language governing permissions and limitations
+under the License. ++</p>
+<hr style="height: 1px">
+
+<p>– Copyright (C) 2008-2012 10gen Inc.</p>
+
+<p>Licensed under the Apache License, Version 2.0 (the “License”); you may not
+use this file except in compliance with the License. You may obtain a copy
+of the License at</p>
+
+<pre>http://www.apache.org/licenses/LICENSE-2.0</pre>
+
+<p>Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an “AS IS” BASIS, WITHOUT
+WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+License for the specific language governing permissions and limitations
+under the License.</p>
+<hr style="height: 1px">
+
+<p>– Copyright (C) 2008-2012 10gen Inc.</p>
+
+<p>Licensed under the Apache License, Version 2.0 (the “License”); you may not
+use this file except in compliance with the License. You may obtain a copy
+of the License at</p>
+
+<pre>http://www.apache.org/licenses/LICENSE-2.0</pre>
+
+<p>Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an “AS IS” BASIS, WITHOUT
+WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+License for the specific language governing permissions and limitations
+under the License. ++</p>
+<hr style="height: 1px">
+<hr style="height: 1px">
+
+<p>– Copyright (C) 2008-2011 10gen Inc.</p>
+
+<p>Licensed under the Apache License, Version 2.0 (the “License”); you may not
+use this file except in compliance with the License. You may obtain a copy
+of the License at</p>
+
+<pre>http://www.apache.org/licenses/LICENSE-2.0</pre>
+
+<p>Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an “AS IS” BASIS, WITHOUT
+WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+License for the specific language governing permissions and limitations
+under the License. ++</p>
+<hr style="height: 1px">
+
+<p>– Copyright (C) 2008-2012 10gen Inc.</p>
+
+<p>Licensed under the Apache License, Version 2.0 (the “License”); you may not
+use this file except in compliance with the License. You may obtain a copy
+of the License at</p>
+
+<pre>http://www.apache.org/licenses/LICENSE-2.0</pre>
+
+<p>Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an “AS IS” BASIS, WITHOUT
+WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+License for the specific language governing permissions and limitations
+under the License. ++</p>
+
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+      <!-- Constants -->
+      <div id="constants-list" class="section">
+        <h3 class="section-header">Constants</h3>
+        <dl>
+        
+          <dt><a name="ASCENDING">ASCENDING</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="DEFAULT_MAX_BSON_SIZE">DEFAULT_MAX_BSON_SIZE</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="DESCENDING">DESCENDING</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="GEO2D">GEO2D</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="GEOHAYSTACK">GEOHAYSTACK</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+        </dl>
+      </div>
+      
+
+      
+
+      <!-- Methods -->
+      
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

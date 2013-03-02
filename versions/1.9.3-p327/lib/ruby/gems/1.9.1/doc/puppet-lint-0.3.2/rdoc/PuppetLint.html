@@ -1,0 +1,690 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Class: PuppetLint</title>
+
+  <link rel="stylesheet" href="./rdoc.css" type="text/css" media="screen" />
+
+  <script src="./js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="./index.html">Home</a>
+          <a href="./index.html#classes">Classes</a>
+          <a href="./index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="./lib/puppet-lint/configuration_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/puppet-lint/configuration.rb">lib/puppet-lint/configuration.rb</a></li>
+          
+            <li><a href="./lib/puppet-lint/lexer/token_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/puppet-lint/lexer/token.rb">lib/puppet-lint/lexer/token.rb</a></li>
+          
+            <li><a href="./lib/puppet-lint/lexer_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/puppet-lint/lexer.rb">lib/puppet-lint/lexer.rb</a></li>
+          
+            <li><a href="./lib/puppet-lint/plugins_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/puppet-lint/plugins.rb">lib/puppet-lint/plugins.rb</a></li>
+          
+            <li><a href="./lib/puppet-lint/tasks/puppet-lint_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/puppet-lint/tasks/puppet-lint.rb">lib/puppet-lint/tasks/puppet-lint.rb</a></li>
+          
+            <li><a href="./lib/puppet-lint/version_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/puppet-lint/version.rb">lib/puppet-lint/version.rb</a></li>
+          
+            <li><a href="./lib/puppet-lint_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/puppet-lint.rb">lib/puppet-lint.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link">Object</p>
+        
+      </div>
+      
+
+      
+
+      
+      <!-- Namespace Contents -->
+      <div id="namespace-list-section" class="section">
+        <h3 class="section-header">Namespace</h3>
+        <ul class="link-list">
+          
+          <li><span class="type">CLASS</span> <a href="PuppetLint/Bin.html">PuppetLint::Bin</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="PuppetLint/CheckPlugin.html">PuppetLint::CheckPlugin</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="PuppetLint/Checks.html">PuppetLint::Checks</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="PuppetLint/Configuration.html">PuppetLint::Configuration</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="PuppetLint/Lexer.html">PuppetLint::Lexer</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="PuppetLint/LexerError.html">PuppetLint::LexerError</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="PuppetLint/NoCodeError.html">PuppetLint::NoCodeError</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="PuppetLint/Plugins.html">PuppetLint::Plugins</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="PuppetLint/RakeTask.html">PuppetLint::RakeTask</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-configuration">::configuration</a></li>
+          
+          <li><a href="#method-c-new">::new</a></li>
+          
+          <li><a href="#method-i-code-3D">#code=</a></li>
+          
+          <li><a href="#method-i-configuration">#configuration</a></li>
+          
+          <li><a href="#method-i-errors-3F">#errors?</a></li>
+          
+          <li><a href="#method-i-file-3D">#file=</a></li>
+          
+          <li><a href="#method-i-format_message">#format_message</a></li>
+          
+          <li><a href="#method-i-log_format">#log_format</a></li>
+          
+          <li><a href="#method-i-print_context">#print_context</a></li>
+          
+          <li><a href="#method-i-report">#report</a></li>
+          
+          <li><a href="#method-i-run">#run</a></li>
+          
+          <li><a href="#method-i-warnings-3F">#warnings?</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="./images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="./PuppetLint.html">PuppetLint</a></li>
+        
+          <li><a href="./PuppetLint/Bin.html">PuppetLint::Bin</a></li>
+        
+          <li><a href="./PuppetLint/CheckPlugin.html">PuppetLint::CheckPlugin</a></li>
+        
+          <li><a href="./PuppetLint/Checks.html">PuppetLint::Checks</a></li>
+        
+          <li><a href="./PuppetLint/Configuration.html">PuppetLint::Configuration</a></li>
+        
+          <li><a href="./PuppetLint/Lexer.html">PuppetLint::Lexer</a></li>
+        
+          <li><a href="./PuppetLint/Lexer/Token.html">PuppetLint::Lexer::Token</a></li>
+        
+          <li><a href="./PuppetLint/LexerError.html">PuppetLint::LexerError</a></li>
+        
+          <li><a href="./PuppetLint/NoCodeError.html">PuppetLint::NoCodeError</a></li>
+        
+          <li><a href="./PuppetLint/Plugins.html">PuppetLint::Plugins</a></li>
+        
+          <li><a href="./PuppetLint/Plugins/CheckClasses.html">PuppetLint::Plugins::CheckClasses</a></li>
+        
+          <li><a href="./PuppetLint/Plugins/CheckComments.html">PuppetLint::Plugins::CheckComments</a></li>
+        
+          <li><a href="./PuppetLint/Plugins/CheckConditionals.html">PuppetLint::Plugins::CheckConditionals</a></li>
+        
+          <li><a href="./PuppetLint/Plugins/CheckDocumentation.html">PuppetLint::Plugins::CheckDocumentation</a></li>
+        
+          <li><a href="./PuppetLint/Plugins/CheckResources.html">PuppetLint::Plugins::CheckResources</a></li>
+        
+          <li><a href="./PuppetLint/Plugins/CheckStrings.html">PuppetLint::Plugins::CheckStrings</a></li>
+        
+          <li><a href="./PuppetLint/Plugins/CheckVariables.html">PuppetLint::Plugins::CheckVariables</a></li>
+        
+          <li><a href="./PuppetLint/Plugins/CheckWhitespace.html">PuppetLint::Plugins::CheckWhitespace</a></li>
+        
+          <li><a href="./PuppetLint/RakeTask.html">PuppetLint::RakeTask</a></li>
+        
+          <li><a href="./String.html">String</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">PuppetLint</h1>
+
+    <div id="description" class="description">
+      
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="configuration-method" class="method-detail ">
+          <a name="method-c-configuration"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">configuration</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="configuration-source">
+<pre>
+<span class="ruby-comment"># File lib/puppet-lint.rb, line 79</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">configuration</span>
+  <span class="ruby-ivar">@configuration</span> <span class="ruby-operator">||=</span> <span class="ruby-constant">PuppetLint</span><span class="ruby-operator">::</span><span class="ruby-constant">Configuration</span>.<span class="ruby-identifier">new</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- configuration-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- configuration-method -->
+
+      
+        <div id="new-method" class="method-detail ">
+          <a name="method-c-new"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">new</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="new-source">
+<pre>
+<span class="ruby-comment"># File lib/puppet-lint.rb, line 73</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>
+  <span class="ruby-ivar">@data</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-ivar">@statistics</span> = {<span class="ruby-value">:error</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>, <span class="ruby-value">:warning</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>}
+  <span class="ruby-ivar">@fileinfo</span> = {<span class="ruby-value">:path</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">''</span>}
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- new-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- new-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="code-3D-method" class="method-detail ">
+          <a name="method-i-code-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">code=</span><span
+              class="method-args">(value)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="code-3D-source">
+<pre>
+<span class="ruby-comment"># File lib/puppet-lint.rb, line 96</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">code=</span>(<span class="ruby-identifier">value</span>)
+  <span class="ruby-ivar">@data</span> = <span class="ruby-identifier">value</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- code-3D-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- code-3D-method -->
+
+      
+        <div id="configuration-method" class="method-detail ">
+          <a name="method-i-configuration"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">configuration</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="configuration-source">
+<pre>
+<span class="ruby-comment"># File lib/puppet-lint.rb, line 83</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">configuration</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">configuration</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- configuration-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- configuration-method -->
+
+      
+        <div id="errors-3F-method" class="method-detail ">
+          <a name="method-i-errors-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">errors?</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="errors-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/puppet-lint.rb, line 141</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">errors?</span>
+  <span class="ruby-ivar">@statistics</span>[<span class="ruby-value">:error</span>] <span class="ruby-operator">!=</span> <span class="ruby-value">0</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- errors-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- errors-3F-method -->
+
+      
+        <div id="file-3D-method" class="method-detail ">
+          <a name="method-i-file-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">file=</span><span
+              class="method-args">(path)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="file-3D-source">
+<pre>
+<span class="ruby-comment"># File lib/puppet-lint.rb, line 87</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">file=</span>(<span class="ruby-identifier">path</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">exist?</span> <span class="ruby-identifier">path</span>
+    <span class="ruby-ivar">@fileinfo</span>[<span class="ruby-value">:path</span>] = <span class="ruby-identifier">path</span>
+    <span class="ruby-ivar">@fileinfo</span>[<span class="ruby-value">:fullpath</span>] = <span class="ruby-constant">File</span>.<span class="ruby-identifier">expand_path</span>(<span class="ruby-identifier">path</span>)
+    <span class="ruby-ivar">@fileinfo</span>[<span class="ruby-value">:filename</span>] = <span class="ruby-constant">File</span>.<span class="ruby-identifier">basename</span>(<span class="ruby-identifier">path</span>)
+    <span class="ruby-ivar">@data</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">read</span>(<span class="ruby-identifier">path</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- file-3D-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- file-3D-method -->
+
+      
+        <div id="format_message-method" class="method-detail ">
+          <a name="method-i-format_message"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">format_message</span><span
+              class="method-args">(message)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="format_message-source">
+<pre>
+<span class="ruby-comment"># File lib/puppet-lint.rb, line 112</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">format_message</span>(<span class="ruby-identifier">message</span>)
+  <span class="ruby-identifier">format</span> = <span class="ruby-identifier">log_format</span>
+  <span class="ruby-identifier">puts</span> <span class="ruby-identifier">format</span> <span class="ruby-operator">%</span> <span class="ruby-identifier">message</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- format_message-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- format_message-method -->
+
+      
+        <div id="log_format-method" class="method-detail ">
+          <a name="method-i-log_format"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">log_format</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="log_format-source">
+<pre>
+<span class="ruby-comment"># File lib/puppet-lint.rb, line 100</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">log_format</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">configuration</span>.<span class="ruby-identifier">log_format</span> <span class="ruby-operator">==</span> <span class="ruby-string">''</span>
+    <span class="ruby-comment">## recreate previous old log format as far as thats possible.</span>
+    <span class="ruby-identifier">format</span> = <span class="ruby-string">'%{KIND}: %{message} on line %{linenumber}'</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">configuration</span>.<span class="ruby-identifier">with_filename</span>
+      <span class="ruby-identifier">format</span>.<span class="ruby-identifier">prepend</span> <span class="ruby-string">'%{path} - '</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">configuration</span>.<span class="ruby-identifier">log_format</span> = <span class="ruby-identifier">format</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">configuration</span>.<span class="ruby-identifier">log_format</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- log_format-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- log_format-method -->
+
+      
+        <div id="print_context-method" class="method-detail ">
+          <a name="method-i-print_context"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">print_context</span><span
+              class="method-args">(message, linter)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="print_context-source">
+<pre>
+<span class="ruby-comment"># File lib/puppet-lint.rb, line 117</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">print_context</span>(<span class="ruby-identifier">message</span>, <span class="ruby-identifier">linter</span>)
+  <span class="ruby-comment"># XXX: I don't really like the way this has been implemented (passing the</span>
+  <span class="ruby-comment"># linter object down through layers of functions.  Refactor me!</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">message</span>[<span class="ruby-value">:check</span>] <span class="ruby-operator">==</span> <span class="ruby-string">'documentation'</span>
+  <span class="ruby-identifier">line</span> = <span class="ruby-identifier">linter</span>.<span class="ruby-identifier">manifest_lines</span>[<span class="ruby-identifier">message</span>[<span class="ruby-value">:linenumber</span>] <span class="ruby-operator">-</span> <span class="ruby-value">1</span>]
+  <span class="ruby-identifier">offset</span> = <span class="ruby-identifier">line</span>.<span class="ruby-identifier">index</span>(<span class="ruby-regexp">/\S/</span>)
+  <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;\n  #{line.strip}&quot;</span>
+  <span class="ruby-identifier">printf</span> <span class="ruby-node">&quot;%#{message[:column] + 2 - offset}s\n\n&quot;</span>, <span class="ruby-string">'^'</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- print_context-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- print_context-method -->
+
+      
+        <div id="report-method" class="method-detail ">
+          <a name="method-i-report"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">report</span><span
+              class="method-args">(problems, linter)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="report-source">
+<pre>
+<span class="ruby-comment"># File lib/puppet-lint.rb, line 127</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">report</span>(<span class="ruby-identifier">problems</span>, <span class="ruby-identifier">linter</span>)
+  <span class="ruby-identifier">problems</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">message</span><span class="ruby-operator">|</span>
+    <span class="ruby-ivar">@statistics</span>[<span class="ruby-identifier">message</span>[<span class="ruby-value">:kind</span>]] <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+    <span class="ruby-comment">## Add some default attributes.</span>
+    <span class="ruby-identifier">message</span>.<span class="ruby-identifier">merge!</span>(<span class="ruby-ivar">@fileinfo</span>) {<span class="ruby-operator">|</span><span class="ruby-identifier">key</span>, <span class="ruby-identifier">v1</span>, <span class="ruby-identifier">v2</span><span class="ruby-operator">|</span> <span class="ruby-identifier">v1</span> }
+    <span class="ruby-identifier">message</span>[<span class="ruby-value">:KIND</span>] = <span class="ruby-identifier">message</span>[<span class="ruby-value">:kind</span>].<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">upcase</span>
+
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">configuration</span>.<span class="ruby-identifier">error_level</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">message</span>[<span class="ruby-value">:kind</span>] <span class="ruby-keyword">or</span> <span class="ruby-identifier">configuration</span>.<span class="ruby-identifier">error_level</span> <span class="ruby-operator">==</span> <span class="ruby-value">:all</span>
+      <span class="ruby-identifier">format_message</span> <span class="ruby-identifier">message</span>
+      <span class="ruby-identifier">print_context</span>(<span class="ruby-identifier">message</span>, <span class="ruby-identifier">linter</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">configuration</span>.<span class="ruby-identifier">with_context</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- report-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- report-method -->
+
+      
+        <div id="run-method" class="method-detail ">
+          <a name="method-i-run"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">run</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="run-source">
+<pre>
+<span class="ruby-comment"># File lib/puppet-lint.rb, line 149</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">run</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@data</span>.<span class="ruby-identifier">nil?</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">PuppetLint</span><span class="ruby-operator">::</span><span class="ruby-constant">NoCodeError</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">linter</span> = <span class="ruby-constant">PuppetLint</span><span class="ruby-operator">::</span><span class="ruby-constant">Checks</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-identifier">problems</span> = <span class="ruby-identifier">linter</span>.<span class="ruby-identifier">run</span>(<span class="ruby-ivar">@fileinfo</span>, <span class="ruby-ivar">@data</span>)
+  <span class="ruby-identifier">report</span> <span class="ruby-identifier">problems</span>, <span class="ruby-identifier">linter</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- run-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- run-method -->
+
+      
+        <div id="warnings-3F-method" class="method-detail ">
+          <a name="method-i-warnings-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">warnings?</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="warnings-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/puppet-lint.rb, line 145</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">warnings?</span>
+  <span class="ruby-ivar">@statistics</span>[<span class="ruby-value">:warning</span>] <span class="ruby-operator">!=</span> <span class="ruby-value">0</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- warnings-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- warnings-3F-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

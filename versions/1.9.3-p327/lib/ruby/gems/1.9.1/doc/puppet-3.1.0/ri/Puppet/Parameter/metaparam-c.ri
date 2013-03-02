@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"metaparam:EFI"!Puppet::Parameter::metaparam;FI"RW;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"Y@return [Boolean] Flag indicating whether this parameter is a meta-parameter or not.;T:
+@file0TI"lib/puppet/parameter.rb;T

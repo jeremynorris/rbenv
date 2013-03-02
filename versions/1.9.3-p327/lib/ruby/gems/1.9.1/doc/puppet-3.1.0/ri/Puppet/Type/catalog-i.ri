@@ -1,0 +1,4 @@
+U:RDoc::Attr[iI"catalog:EFI"Puppet::Type#catalog;FI"RW;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"t@todo what does this mean "this resource" (sounds like this if for an instance of the type, not the meta Type),;To:RDoc::Markup::Verbatim;	[I"Pbut not sure if this is about the catalog where the meta Type is included)
+;Fo;
+;	[I"D@return [??? TODO] The catalog that this resource is stored in.;T:
+@file0FI"lib/puppet/type.rb;T

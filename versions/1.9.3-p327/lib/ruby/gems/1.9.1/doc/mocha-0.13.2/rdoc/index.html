@@ -1,0 +1,1083 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>mocha-0.13.2 Documentation</title>
+
+  <link type="text/css" media="screen" href="rdoc.css" rel="stylesheet" />
+
+  <script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body class="indexpage">
+
+  
+  <h1>mocha-0.13.2 Documentation</h1>
+
+  
+  <p>This is the API documentation for 'mocha-0.13.2 Documentation'.</p>
+  
+
+  
+  
+
+  <h2 id="classes">Classes/Modules</h2>
+  <ul>
+    
+    <li class="module"><a href="Mocha.html">Mocha</a></li>
+    
+    <li class="module"><a href="Mocha/API.html">Mocha::API</a></li>
+    
+    <li class="class"><a href="Mocha/AnyInstanceMethod.html">Mocha::AnyInstanceMethod</a></li>
+    
+    <li class="class"><a href="Mocha/ArgumentIterator.html">Mocha::ArgumentIterator</a></li>
+    
+    <li class="module"><a href="Mocha/ArrayMethods.html">Mocha::ArrayMethods</a></li>
+    
+    <li class="class"><a href="Mocha/BacktraceFilter.html">Mocha::BacktraceFilter</a></li>
+    
+    <li class="class"><a href="Mocha/Cardinality.html">Mocha::Cardinality</a></li>
+    
+    <li class="class"><a href="Mocha/Central.html">Mocha::Central</a></li>
+    
+    <li class="class"><a href="Mocha/ChangeStateSideEffect.html">Mocha::ChangeStateSideEffect</a></li>
+    
+    <li class="class"><a href="Mocha/ClassMethod.html">Mocha::ClassMethod</a></li>
+    
+    <li class="module"><a href="Mocha/ClassMethods.html">Mocha::ClassMethods</a></li>
+    
+    <li class="class"><a href="Mocha/ClassMethods/AnyInstance.html">Mocha::ClassMethods::AnyInstance</a></li>
+    
+    <li class="class"><a href="Mocha/Configuration.html">Mocha::Configuration</a></li>
+    
+    <li class="module"><a href="Mocha/DateMethods.html">Mocha::DateMethods</a></li>
+    
+    <li class="module"><a href="Mocha/Debug.html">Mocha::Debug</a></li>
+    
+    <li class="class"><a href="Mocha/DefaultName.html">Mocha::DefaultName</a></li>
+    
+    <li class="class"><a href="Mocha/Deprecation.html">Mocha::Deprecation</a></li>
+    
+    <li class="class"><a href="Mocha/ExceptionRaiser.html">Mocha::ExceptionRaiser</a></li>
+    
+    <li class="class"><a href="Mocha/Expectation.html">Mocha::Expectation</a></li>
+    
+    <li class="class"><a href="Mocha/ExpectationError.html">Mocha::ExpectationError</a></li>
+    
+    <li class="class"><a href="Mocha/ExpectationErrorFactory.html">Mocha::ExpectationErrorFactory</a></li>
+    
+    <li class="class"><a href="Mocha/ExpectationList.html">Mocha::ExpectationList</a></li>
+    
+    <li class="module"><a href="Mocha/HashMethods.html">Mocha::HashMethods</a></li>
+    
+    <li class="module"><a href="Mocha/Hooks.html">Mocha::Hooks</a></li>
+    
+    <li class="class"><a href="Mocha/ImpersonatingAnyInstanceName.html">Mocha::ImpersonatingAnyInstanceName</a></li>
+    
+    <li class="class"><a href="Mocha/ImpersonatingName.html">Mocha::ImpersonatingName</a></li>
+    
+    <li class="class"><a href="Mocha/InStateOrderingConstraint.html">Mocha::InStateOrderingConstraint</a></li>
+    
+    <li class="class"><a href="Mocha/InstanceMethod.html">Mocha::InstanceMethod</a></li>
+    
+    <li class="module"><a href="Mocha/Integration.html">Mocha::Integration</a></li>
+    
+    <li class="class"><a href="Mocha/Integration/AssertionCounter.html">Mocha::Integration::AssertionCounter</a></li>
+    
+    <li class="module"><a href="Mocha/Integration/MiniTest.html">Mocha::Integration::MiniTest</a></li>
+    
+    <li class="module"><a href="Mocha/Integration/MiniTest/Adapter.html">Mocha::Integration::MiniTest::Adapter</a></li>
+    
+    <li class="module"><a href="Mocha/Integration/MiniTest/Nothing.html">Mocha::Integration::MiniTest::Nothing</a></li>
+    
+    <li class="module"><a href="Mocha/Integration/MiniTest/Version13.html">Mocha::Integration::MiniTest::Version13</a></li>
+    
+    <li class="module"><a href="Mocha/Integration/MiniTest/Version13/RunMethodPatch.html">Mocha::Integration::MiniTest::Version13::RunMethodPatch</a></li>
+    
+    <li class="module"><a href="Mocha/Integration/MiniTest/Version140.html">Mocha::Integration::MiniTest::Version140</a></li>
+    
+    <li class="module"><a href="Mocha/Integration/MiniTest/Version140/RunMethodPatch.html">Mocha::Integration::MiniTest::Version140::RunMethodPatch</a></li>
+    
+    <li class="module"><a href="Mocha/Integration/MiniTest/Version141.html">Mocha::Integration::MiniTest::Version141</a></li>
+    
+    <li class="module"><a href="Mocha/Integration/MiniTest/Version141/RunMethodPatch.html">Mocha::Integration::MiniTest::Version141::RunMethodPatch</a></li>
+    
+    <li class="module"><a href="Mocha/Integration/MiniTest/Version142To172.html">Mocha::Integration::MiniTest::Version142To172</a></li>
+    
+    <li class="module"><a href="Mocha/Integration/MiniTest/Version142To172/RunMethodPatch.html">Mocha::Integration::MiniTest::Version142To172::RunMethodPatch</a></li>
+    
+    <li class="module"><a href="Mocha/Integration/MiniTest/Version200.html">Mocha::Integration::MiniTest::Version200</a></li>
+    
+    <li class="module"><a href="Mocha/Integration/MiniTest/Version200/RunMethodPatch.html">Mocha::Integration::MiniTest::Version200::RunMethodPatch</a></li>
+    
+    <li class="module"><a href="Mocha/Integration/MiniTest/Version201To222.html">Mocha::Integration::MiniTest::Version201To222</a></li>
+    
+    <li class="module"><a href="Mocha/Integration/MiniTest/Version201To222/RunMethodPatch.html">Mocha::Integration::MiniTest::Version201To222::RunMethodPatch</a></li>
+    
+    <li class="module"><a href="Mocha/Integration/MiniTest/Version2110To2111.html">Mocha::Integration::MiniTest::Version2110To2111</a></li>
+    
+    <li class="module"><a href="Mocha/Integration/MiniTest/Version2110To2111/RunMethodPatch.html">Mocha::Integration::MiniTest::Version2110To2111::RunMethodPatch</a></li>
+    
+    <li class="module"><a href="Mocha/Integration/MiniTest/Version2112To320.html">Mocha::Integration::MiniTest::Version2112To320</a></li>
+    
+    <li class="module"><a href="Mocha/Integration/MiniTest/Version2112To320/RunMethodPatch.html">Mocha::Integration::MiniTest::Version2112To320::RunMethodPatch</a></li>
+    
+    <li class="module"><a href="Mocha/Integration/MiniTest/Version230To2101.html">Mocha::Integration::MiniTest::Version230To2101</a></li>
+    
+    <li class="module"><a href="Mocha/Integration/MiniTest/Version230To2101/RunMethodPatch.html">Mocha::Integration::MiniTest::Version230To2101::RunMethodPatch</a></li>
+    
+    <li class="module"><a href="Mocha/Integration/MonkeyPatcher.html">Mocha::Integration::MonkeyPatcher</a></li>
+    
+    <li class="module"><a href="Mocha/Integration/TestUnit.html">Mocha::Integration::TestUnit</a></li>
+    
+    <li class="module"><a href="Mocha/Integration/TestUnit/Adapter.html">Mocha::Integration::TestUnit::Adapter</a></li>
+    
+    <li class="module"><a href="Mocha/Integration/TestUnit/GemVersion200.html">Mocha::Integration::TestUnit::GemVersion200</a></li>
+    
+    <li class="module"><a href="Mocha/Integration/TestUnit/GemVersion200/RunMethodPatch.html">Mocha::Integration::TestUnit::GemVersion200::RunMethodPatch</a></li>
+    
+    <li class="module"><a href="Mocha/Integration/TestUnit/GemVersion201To202.html">Mocha::Integration::TestUnit::GemVersion201To202</a></li>
+    
+    <li class="module"><a href="Mocha/Integration/TestUnit/GemVersion201To202/RunMethodPatch.html">Mocha::Integration::TestUnit::GemVersion201To202::RunMethodPatch</a></li>
+    
+    <li class="module"><a href="Mocha/Integration/TestUnit/GemVersion203To220.html">Mocha::Integration::TestUnit::GemVersion203To220</a></li>
+    
+    <li class="module"><a href="Mocha/Integration/TestUnit/GemVersion203To220/RunMethodPatch.html">Mocha::Integration::TestUnit::GemVersion203To220::RunMethodPatch</a></li>
+    
+    <li class="module"><a href="Mocha/Integration/TestUnit/GemVersion230To250.html">Mocha::Integration::TestUnit::GemVersion230To250</a></li>
+    
+    <li class="module"><a href="Mocha/Integration/TestUnit/GemVersion230To250/RunMethodPatch.html">Mocha::Integration::TestUnit::GemVersion230To250::RunMethodPatch</a></li>
+    
+    <li class="module"><a href="Mocha/Integration/TestUnit/Nothing.html">Mocha::Integration::TestUnit::Nothing</a></li>
+    
+    <li class="module"><a href="Mocha/Integration/TestUnit/RubyVersion185AndBelow.html">Mocha::Integration::TestUnit::RubyVersion185AndBelow</a></li>
+    
+    <li class="module"><a href="Mocha/Integration/TestUnit/RubyVersion185AndBelow/RunMethodPatch.html">Mocha::Integration::TestUnit::RubyVersion185AndBelow::RunMethodPatch</a></li>
+    
+    <li class="module"><a href="Mocha/Integration/TestUnit/RubyVersion186AndAbove.html">Mocha::Integration::TestUnit::RubyVersion186AndAbove</a></li>
+    
+    <li class="module"><a href="Mocha/Integration/TestUnit/RubyVersion186AndAbove/RunMethodPatch.html">Mocha::Integration::TestUnit::RubyVersion186AndAbove::RunMethodPatch</a></li>
+    
+    <li class="class"><a href="Mocha/Logger.html">Mocha::Logger</a></li>
+    
+    <li class="class"><a href="Mocha/MethodMatcher.html">Mocha::MethodMatcher</a></li>
+    
+    <li class="class"><a href="Mocha/Mock.html">Mocha::Mock</a></li>
+    
+    <li class="class"><a href="Mocha/Mockery.html">Mocha::Mockery</a></li>
+    
+    <li class="class"><a href="Mocha/ModuleMethod.html">Mocha::ModuleMethod</a></li>
+    
+    <li class="module"><a href="Mocha/ModuleMethods.html">Mocha::ModuleMethods</a></li>
+    
+    <li class="class"><a href="Mocha/MultipleYields.html">Mocha::MultipleYields</a></li>
+    
+    <li class="class"><a href="Mocha/Name.html">Mocha::Name</a></li>
+    
+    <li class="class"><a href="Mocha/NoYields.html">Mocha::NoYields</a></li>
+    
+    <li class="module"><a href="Mocha/ObjectMethods.html">Mocha::ObjectMethods</a></li>
+    
+    <li class="module"><a href="Mocha/ParameterMatchers.html">Mocha::ParameterMatchers</a></li>
+    
+    <li class="class"><a href="Mocha/ParameterMatchers/AllOf.html">Mocha::ParameterMatchers::AllOf</a></li>
+    
+    <li class="class"><a href="Mocha/ParameterMatchers/AnyOf.html">Mocha::ParameterMatchers::AnyOf</a></li>
+    
+    <li class="class"><a href="Mocha/ParameterMatchers/AnyParameters.html">Mocha::ParameterMatchers::AnyParameters</a></li>
+    
+    <li class="class"><a href="Mocha/ParameterMatchers/Anything.html">Mocha::ParameterMatchers::Anything</a></li>
+    
+    <li class="class"><a href="Mocha/ParameterMatchers/Base.html">Mocha::ParameterMatchers::Base</a></li>
+    
+    <li class="class"><a href="Mocha/ParameterMatchers/Equals.html">Mocha::ParameterMatchers::Equals</a></li>
+    
+    <li class="class"><a href="Mocha/ParameterMatchers/HasEntries.html">Mocha::ParameterMatchers::HasEntries</a></li>
+    
+    <li class="class"><a href="Mocha/ParameterMatchers/HasEntry.html">Mocha::ParameterMatchers::HasEntry</a></li>
+    
+    <li class="class"><a href="Mocha/ParameterMatchers/HasKey.html">Mocha::ParameterMatchers::HasKey</a></li>
+    
+    <li class="class"><a href="Mocha/ParameterMatchers/HasValue.html">Mocha::ParameterMatchers::HasValue</a></li>
+    
+    <li class="class"><a href="Mocha/ParameterMatchers/Includes.html">Mocha::ParameterMatchers::Includes</a></li>
+    
+    <li class="class"><a href="Mocha/ParameterMatchers/InstanceOf.html">Mocha::ParameterMatchers::InstanceOf</a></li>
+    
+    <li class="class"><a href="Mocha/ParameterMatchers/IsA.html">Mocha::ParameterMatchers::IsA</a></li>
+    
+    <li class="class"><a href="Mocha/ParameterMatchers/KindOf.html">Mocha::ParameterMatchers::KindOf</a></li>
+    
+    <li class="class"><a href="Mocha/ParameterMatchers/Not.html">Mocha::ParameterMatchers::Not</a></li>
+    
+    <li class="class"><a href="Mocha/ParameterMatchers/Optionally.html">Mocha::ParameterMatchers::Optionally</a></li>
+    
+    <li class="class"><a href="Mocha/ParameterMatchers/QueryStringMatches.html">Mocha::ParameterMatchers::QueryStringMatches</a></li>
+    
+    <li class="class"><a href="Mocha/ParameterMatchers/RegexpMatches.html">Mocha::ParameterMatchers::RegexpMatches</a></li>
+    
+    <li class="class"><a href="Mocha/ParameterMatchers/RespondsWith.html">Mocha::ParameterMatchers::RespondsWith</a></li>
+    
+    <li class="class"><a href="Mocha/ParameterMatchers/YamlEquivalent.html">Mocha::ParameterMatchers::YamlEquivalent</a></li>
+    
+    <li class="class"><a href="Mocha/ParametersMatcher.html">Mocha::ParametersMatcher</a></li>
+    
+    <li class="class"><a href="Mocha/PrettyParameters.html">Mocha::PrettyParameters</a></li>
+    
+    <li class="class"><a href="Mocha/ReturnValues.html">Mocha::ReturnValues</a></li>
+    
+    <li class="class"><a href="Mocha/Sequence.html">Mocha::Sequence</a></li>
+    
+    <li class="class"><a href="Mocha/Sequence/InSequenceOrderingConstraint.html">Mocha::Sequence::InSequenceOrderingConstraint</a></li>
+    
+    <li class="class"><a href="Mocha/SingleReturnValue.html">Mocha::SingleReturnValue</a></li>
+    
+    <li class="class"><a href="Mocha/SingleYield.html">Mocha::SingleYield</a></li>
+    
+    <li class="class"><a href="Mocha/StateMachine.html">Mocha::StateMachine</a></li>
+    
+    <li class="class"><a href="Mocha/StateMachine/State.html">Mocha::StateMachine::State</a></li>
+    
+    <li class="class"><a href="Mocha/StateMachine/StatePredicate.html">Mocha::StateMachine::StatePredicate</a></li>
+    
+    <li class="module"><a href="Mocha/StringMethods.html">Mocha::StringMethods</a></li>
+    
+    <li class="class"><a href="Mocha/StubbingError.html">Mocha::StubbingError</a></li>
+    
+    <li class="class"><a href="Mocha/Thrower.html">Mocha::Thrower</a></li>
+    
+    <li class="module"><a href="Mocha/TimeMethods.html">Mocha::TimeMethods</a></li>
+    
+    <li class="class"><a href="Mocha/UnexpectedInvocation.html">Mocha::UnexpectedInvocation</a></li>
+    
+    <li class="class"><a href="Mocha/YieldParameters.html">Mocha::YieldParameters</a></li>
+    
+    <li class="class"><a href="Array.html">Array</a></li>
+    
+    <li class="class"><a href="Date.html">Date</a></li>
+    
+    <li class="class"><a href="Hash.html">Hash</a></li>
+    
+    <li class="class"><a href="Object.html">Object</a></li>
+    
+    <li class="class"><a href="String.html">String</a></li>
+    
+    <li class="class"><a href="Time.html">Time</a></li>
+    
+  </ul>
+
+  <h2 id="methods">Methods</h2>
+  <ul>
+    
+      <li><a href="Mocha/Integration/TestUnit.html#method-c-activate">::activate &mdash; Mocha::Integration::TestUnit</a></li>
+    
+      <li><a href="Mocha/Integration/MiniTest.html#method-c-activate">::activate &mdash; Mocha::Integration::MiniTest</a></li>
+    
+      <li><a href="Mocha.html#method-c-activate">::activate &mdash; Mocha</a></li>
+    
+      <li><a href="Mocha/Integration.html#method-c-activate">::activate &mdash; Mocha::Integration</a></li>
+    
+      <li><a href="Mocha/Configuration.html#method-c-allow">::allow &mdash; Mocha::Configuration</a></li>
+    
+      <li><a href="Mocha/Configuration.html#method-c-allow-3F">::allow? &mdash; Mocha::Configuration</a></li>
+    
+      <li><a href="Mocha/Integration/TestUnit/RubyVersion186AndAbove.html#method-c-applicable_to-3F">::applicable_to? &mdash; Mocha::Integration::TestUnit::RubyVersion186AndAbove</a></li>
+    
+      <li><a href="Mocha/Integration/MiniTest/Version230To2101.html#method-c-applicable_to-3F">::applicable_to? &mdash; Mocha::Integration::MiniTest::Version230To2101</a></li>
+    
+      <li><a href="Mocha/Integration/MiniTest/Version142To172.html#method-c-applicable_to-3F">::applicable_to? &mdash; Mocha::Integration::MiniTest::Version142To172</a></li>
+    
+      <li><a href="Mocha/Integration/MiniTest/Nothing.html#method-c-applicable_to-3F">::applicable_to? &mdash; Mocha::Integration::MiniTest::Nothing</a></li>
+    
+      <li><a href="Mocha/Integration/MiniTest/Version2112To320.html#method-c-applicable_to-3F">::applicable_to? &mdash; Mocha::Integration::MiniTest::Version2112To320</a></li>
+    
+      <li><a href="Mocha/Integration/TestUnit/GemVersion201To202.html#method-c-applicable_to-3F">::applicable_to? &mdash; Mocha::Integration::TestUnit::GemVersion201To202</a></li>
+    
+      <li><a href="Mocha/Integration/TestUnit/GemVersion230To250.html#method-c-applicable_to-3F">::applicable_to? &mdash; Mocha::Integration::TestUnit::GemVersion230To250</a></li>
+    
+      <li><a href="Mocha/Integration/MiniTest/Version140.html#method-c-applicable_to-3F">::applicable_to? &mdash; Mocha::Integration::MiniTest::Version140</a></li>
+    
+      <li><a href="Mocha/Integration/MiniTest/Version2110To2111.html#method-c-applicable_to-3F">::applicable_to? &mdash; Mocha::Integration::MiniTest::Version2110To2111</a></li>
+    
+      <li><a href="Mocha/Integration/MiniTest/Version200.html#method-c-applicable_to-3F">::applicable_to? &mdash; Mocha::Integration::MiniTest::Version200</a></li>
+    
+      <li><a href="Mocha/Integration/TestUnit/GemVersion200.html#method-c-applicable_to-3F">::applicable_to? &mdash; Mocha::Integration::TestUnit::GemVersion200</a></li>
+    
+      <li><a href="Mocha/Integration/TestUnit/GemVersion203To220.html#method-c-applicable_to-3F">::applicable_to? &mdash; Mocha::Integration::TestUnit::GemVersion203To220</a></li>
+    
+      <li><a href="Mocha/Integration/MiniTest/Version13.html#method-c-applicable_to-3F">::applicable_to? &mdash; Mocha::Integration::MiniTest::Version13</a></li>
+    
+      <li><a href="Mocha/Integration/MiniTest/Version201To222.html#method-c-applicable_to-3F">::applicable_to? &mdash; Mocha::Integration::MiniTest::Version201To222</a></li>
+    
+      <li><a href="Mocha/Integration/MiniTest/Version141.html#method-c-applicable_to-3F">::applicable_to? &mdash; Mocha::Integration::MiniTest::Version141</a></li>
+    
+      <li><a href="Mocha/Integration/MiniTest/Adapter.html#method-c-applicable_to-3F">::applicable_to? &mdash; Mocha::Integration::MiniTest::Adapter</a></li>
+    
+      <li><a href="Mocha/Integration/TestUnit/Nothing.html#method-c-applicable_to-3F">::applicable_to? &mdash; Mocha::Integration::TestUnit::Nothing</a></li>
+    
+      <li><a href="Mocha/Integration/TestUnit/RubyVersion185AndBelow.html#method-c-applicable_to-3F">::applicable_to? &mdash; Mocha::Integration::TestUnit::RubyVersion185AndBelow</a></li>
+    
+      <li><a href="Mocha/Integration/TestUnit/Adapter.html#method-c-applicable_to-3F">::applicable_to? &mdash; Mocha::Integration::TestUnit::Adapter</a></li>
+    
+      <li><a href="Mocha/Integration/MonkeyPatcher.html#method-c-apply">::apply &mdash; Mocha::Integration::MonkeyPatcher</a></li>
+    
+      <li><a href="Mocha/Cardinality.html#method-c-at_least">::at_least &mdash; Mocha::Cardinality</a></li>
+    
+      <li><a href="Mocha/Cardinality.html#method-c-at_most">::at_most &mdash; Mocha::Cardinality</a></li>
+    
+      <li><a href="Mocha/ExpectationErrorFactory.html#method-c-build">::build &mdash; Mocha::ExpectationErrorFactory</a></li>
+    
+      <li><a href="Mocha/ReturnValues.html#method-c-build">::build &mdash; Mocha::ReturnValues</a></li>
+    
+      <li><a href="Mocha/Integration/MiniTest/Adapter.html#method-c-description">::description &mdash; Mocha::Integration::MiniTest::Adapter</a></li>
+    
+      <li><a href="Mocha/Integration/MiniTest/Nothing.html#method-c-description">::description &mdash; Mocha::Integration::MiniTest::Nothing</a></li>
+    
+      <li><a href="Mocha/Integration/MiniTest/Version140.html#method-c-description">::description &mdash; Mocha::Integration::MiniTest::Version140</a></li>
+    
+      <li><a href="Mocha/Integration/TestUnit/GemVersion200.html#method-c-description">::description &mdash; Mocha::Integration::TestUnit::GemVersion200</a></li>
+    
+      <li><a href="Mocha/Integration/MiniTest/Version200.html#method-c-description">::description &mdash; Mocha::Integration::MiniTest::Version200</a></li>
+    
+      <li><a href="Mocha/Integration/MiniTest/Version230To2101.html#method-c-description">::description &mdash; Mocha::Integration::MiniTest::Version230To2101</a></li>
+    
+      <li><a href="Mocha/Integration/MiniTest/Version201To222.html#method-c-description">::description &mdash; Mocha::Integration::MiniTest::Version201To222</a></li>
+    
+      <li><a href="Mocha/Integration/MiniTest/Version13.html#method-c-description">::description &mdash; Mocha::Integration::MiniTest::Version13</a></li>
+    
+      <li><a href="Mocha/Integration/TestUnit/Nothing.html#method-c-description">::description &mdash; Mocha::Integration::TestUnit::Nothing</a></li>
+    
+      <li><a href="Mocha/Integration/TestUnit/RubyVersion186AndAbove.html#method-c-description">::description &mdash; Mocha::Integration::TestUnit::RubyVersion186AndAbove</a></li>
+    
+      <li><a href="Mocha/Integration/TestUnit/Adapter.html#method-c-description">::description &mdash; Mocha::Integration::TestUnit::Adapter</a></li>
+    
+      <li><a href="Mocha/Integration/MiniTest/Version142To172.html#method-c-description">::description &mdash; Mocha::Integration::MiniTest::Version142To172</a></li>
+    
+      <li><a href="Mocha/Integration/MiniTest/Version141.html#method-c-description">::description &mdash; Mocha::Integration::MiniTest::Version141</a></li>
+    
+      <li><a href="Mocha/Integration/MiniTest/Version2110To2111.html#method-c-description">::description &mdash; Mocha::Integration::MiniTest::Version2110To2111</a></li>
+    
+      <li><a href="Mocha/Integration/TestUnit/GemVersion230To250.html#method-c-description">::description &mdash; Mocha::Integration::TestUnit::GemVersion230To250</a></li>
+    
+      <li><a href="Mocha/Integration/MiniTest/Version2112To320.html#method-c-description">::description &mdash; Mocha::Integration::MiniTest::Version2112To320</a></li>
+    
+      <li><a href="Mocha/Integration/TestUnit/RubyVersion185AndBelow.html#method-c-description">::description &mdash; Mocha::Integration::TestUnit::RubyVersion185AndBelow</a></li>
+    
+      <li><a href="Mocha/Integration/TestUnit/GemVersion203To220.html#method-c-description">::description &mdash; Mocha::Integration::TestUnit::GemVersion203To220</a></li>
+    
+      <li><a href="Mocha/Integration/TestUnit/GemVersion201To202.html#method-c-description">::description &mdash; Mocha::Integration::TestUnit::GemVersion201To202</a></li>
+    
+      <li><a href="Mocha/Cardinality.html#method-c-exactly">::exactly &mdash; Mocha::Cardinality</a></li>
+    
+      <li><a href="Mocha/Integration/TestUnit/Nothing.html#method-c-included">::included &mdash; Mocha::Integration::TestUnit::Nothing</a></li>
+    
+      <li><a href="Mocha/Integration/TestUnit/RubyVersion185AndBelow.html#method-c-included">::included &mdash; Mocha::Integration::TestUnit::RubyVersion185AndBelow</a></li>
+    
+      <li><a href="Mocha/Integration/MiniTest/Version142To172.html#method-c-included">::included &mdash; Mocha::Integration::MiniTest::Version142To172</a></li>
+    
+      <li><a href="Mocha/Integration/TestUnit/GemVersion200.html#method-c-included">::included &mdash; Mocha::Integration::TestUnit::GemVersion200</a></li>
+    
+      <li><a href="Mocha/Integration/MiniTest/Version13.html#method-c-included">::included &mdash; Mocha::Integration::MiniTest::Version13</a></li>
+    
+      <li><a href="Mocha/Integration/TestUnit/RubyVersion186AndAbove.html#method-c-included">::included &mdash; Mocha::Integration::TestUnit::RubyVersion186AndAbove</a></li>
+    
+      <li><a href="Mocha/Integration/MiniTest/Version200.html#method-c-included">::included &mdash; Mocha::Integration::MiniTest::Version200</a></li>
+    
+      <li><a href="Mocha/Integration/TestUnit/GemVersion201To202.html#method-c-included">::included &mdash; Mocha::Integration::TestUnit::GemVersion201To202</a></li>
+    
+      <li><a href="Mocha/Integration/MiniTest/Version140.html#method-c-included">::included &mdash; Mocha::Integration::MiniTest::Version140</a></li>
+    
+      <li><a href="Mocha/Integration/MiniTest/Version2110To2111.html#method-c-included">::included &mdash; Mocha::Integration::MiniTest::Version2110To2111</a></li>
+    
+      <li><a href="Mocha/Integration/TestUnit/GemVersion203To220.html#method-c-included">::included &mdash; Mocha::Integration::TestUnit::GemVersion203To220</a></li>
+    
+      <li><a href="Mocha/Integration/MiniTest/Adapter.html#method-c-included">::included &mdash; Mocha::Integration::MiniTest::Adapter</a></li>
+    
+      <li><a href="Mocha/Integration/TestUnit/GemVersion230To250.html#method-c-included">::included &mdash; Mocha::Integration::TestUnit::GemVersion230To250</a></li>
+    
+      <li><a href="Mocha/Integration/MiniTest/Version230To2101.html#method-c-included">::included &mdash; Mocha::Integration::MiniTest::Version230To2101</a></li>
+    
+      <li><a href="Mocha/Integration/MiniTest/Version201To222.html#method-c-included">::included &mdash; Mocha::Integration::MiniTest::Version201To222</a></li>
+    
+      <li><a href="Mocha/Integration/MiniTest/Nothing.html#method-c-included">::included &mdash; Mocha::Integration::MiniTest::Nothing</a></li>
+    
+      <li><a href="Mocha/Integration/MiniTest/Version141.html#method-c-included">::included &mdash; Mocha::Integration::MiniTest::Version141</a></li>
+    
+      <li><a href="Mocha/API.html#method-c-included">::included &mdash; Mocha::API</a></li>
+    
+      <li><a href="Mocha/Integration/MiniTest/Version2112To320.html#method-c-included">::included &mdash; Mocha::Integration::MiniTest::Version2112To320</a></li>
+    
+      <li><a href="Mocha/Integration/TestUnit/Adapter.html#method-c-included">::included &mdash; Mocha::Integration::TestUnit::Adapter</a></li>
+    
+      <li><a href="Mocha/Mockery.html#method-c-instance">::instance &mdash; Mocha::Mockery</a></li>
+    
+      <li><a href="Mocha/StateMachine.html#method-c-new">::new &mdash; Mocha::StateMachine</a></li>
+    
+      <li><a href="Mocha/ExceptionRaiser.html#method-c-new">::new &mdash; Mocha::ExceptionRaiser</a></li>
+    
+      <li><a href="Mocha/ParameterMatchers/RespondsWith.html#method-c-new">::new &mdash; Mocha::ParameterMatchers::RespondsWith</a></li>
+    
+      <li><a href="Mocha/ParameterMatchers/RegexpMatches.html#method-c-new">::new &mdash; Mocha::ParameterMatchers::RegexpMatches</a></li>
+    
+      <li><a href="Mocha/MultipleYields.html#method-c-new">::new &mdash; Mocha::MultipleYields</a></li>
+    
+      <li><a href="Mocha/Expectation.html#method-c-new">::new &mdash; Mocha::Expectation</a></li>
+    
+      <li><a href="Mocha/StateMachine/State.html#method-c-new">::new &mdash; Mocha::StateMachine::State</a></li>
+    
+      <li><a href="Mocha/ImpersonatingName.html#method-c-new">::new &mdash; Mocha::ImpersonatingName</a></li>
+    
+      <li><a href="Mocha/ParameterMatchers/QueryStringMatches.html#method-c-new">::new &mdash; Mocha::ParameterMatchers::QueryStringMatches</a></li>
+    
+      <li><a href="Mocha/ImpersonatingAnyInstanceName.html#method-c-new">::new &mdash; Mocha::ImpersonatingAnyInstanceName</a></li>
+    
+      <li><a href="Mocha/ParameterMatchers/Optionally.html#method-c-new">::new &mdash; Mocha::ParameterMatchers::Optionally</a></li>
+    
+      <li><a href="Mocha/SingleYield.html#method-c-new">::new &mdash; Mocha::SingleYield</a></li>
+    
+      <li><a href="Mocha/Name.html#method-c-new">::new &mdash; Mocha::Name</a></li>
+    
+      <li><a href="Mocha/SingleReturnValue.html#method-c-new">::new &mdash; Mocha::SingleReturnValue</a></li>
+    
+      <li><a href="Mocha/ParameterMatchers/Not.html#method-c-new">::new &mdash; Mocha::ParameterMatchers::Not</a></li>
+    
+      <li><a href="Mocha/ClassMethod.html#method-c-new">::new &mdash; Mocha::ClassMethod</a></li>
+    
+      <li><a href="Mocha/StateMachine/StatePredicate.html#method-c-new">::new &mdash; Mocha::StateMachine::StatePredicate</a></li>
+    
+      <li><a href="Mocha/DefaultName.html#method-c-new">::new &mdash; Mocha::DefaultName</a></li>
+    
+      <li><a href="Mocha/Sequence/InSequenceOrderingConstraint.html#method-c-new">::new &mdash; Mocha::Sequence::InSequenceOrderingConstraint</a></li>
+    
+      <li><a href="Mocha/ParameterMatchers/YamlEquivalent.html#method-c-new">::new &mdash; Mocha::ParameterMatchers::YamlEquivalent</a></li>
+    
+      <li><a href="Mocha/ChangeStateSideEffect.html#method-c-new">::new &mdash; Mocha::ChangeStateSideEffect</a></li>
+    
+      <li><a href="Mocha/ParameterMatchers/KindOf.html#method-c-new">::new &mdash; Mocha::ParameterMatchers::KindOf</a></li>
+    
+      <li><a href="Mocha/ExpectationList.html#method-c-new">::new &mdash; Mocha::ExpectationList</a></li>
+    
+      <li><a href="Mocha/ParameterMatchers/AllOf.html#method-c-new">::new &mdash; Mocha::ParameterMatchers::AllOf</a></li>
+    
+      <li><a href="Mocha/StubbingError.html#method-c-new">::new &mdash; Mocha::StubbingError</a></li>
+    
+      <li><a href="Mocha/Sequence.html#method-c-new">::new &mdash; Mocha::Sequence</a></li>
+    
+      <li><a href="Mocha/Central.html#method-c-new">::new &mdash; Mocha::Central</a></li>
+    
+      <li><a href="Mocha/Thrower.html#method-c-new">::new &mdash; Mocha::Thrower</a></li>
+    
+      <li><a href="Mocha/ParameterMatchers/IsA.html#method-c-new">::new &mdash; Mocha::ParameterMatchers::IsA</a></li>
+    
+      <li><a href="Mocha/UnexpectedInvocation.html#method-c-new">::new &mdash; Mocha::UnexpectedInvocation</a></li>
+    
+      <li><a href="Mocha/ParameterMatchers/InstanceOf.html#method-c-new">::new &mdash; Mocha::ParameterMatchers::InstanceOf</a></li>
+    
+      <li><a href="Mocha/ParametersMatcher.html#method-c-new">::new &mdash; Mocha::ParametersMatcher</a></li>
+    
+      <li><a href="Mocha/YieldParameters.html#method-c-new">::new &mdash; Mocha::YieldParameters</a></li>
+    
+      <li><a href="Mocha/InStateOrderingConstraint.html#method-c-new">::new &mdash; Mocha::InStateOrderingConstraint</a></li>
+    
+      <li><a href="Mocha/ParameterMatchers/AnyOf.html#method-c-new">::new &mdash; Mocha::ParameterMatchers::AnyOf</a></li>
+    
+      <li><a href="Mocha/ReturnValues.html#method-c-new">::new &mdash; Mocha::ReturnValues</a></li>
+    
+      <li><a href="Mocha/ParameterMatchers/Includes.html#method-c-new">::new &mdash; Mocha::ParameterMatchers::Includes</a></li>
+    
+      <li><a href="Mocha/Integration/AssertionCounter.html#method-c-new">::new &mdash; Mocha::Integration::AssertionCounter</a></li>
+    
+      <li><a href="Mocha/PrettyParameters.html#method-c-new">::new &mdash; Mocha::PrettyParameters</a></li>
+    
+      <li><a href="Mocha/Logger.html#method-c-new">::new &mdash; Mocha::Logger</a></li>
+    
+      <li><a href="Mocha/Cardinality.html#method-c-new">::new &mdash; Mocha::Cardinality</a></li>
+    
+      <li><a href="Mocha/MethodMatcher.html#method-c-new">::new &mdash; Mocha::MethodMatcher</a></li>
+    
+      <li><a href="Mocha/ParameterMatchers/HasValue.html#method-c-new">::new &mdash; Mocha::ParameterMatchers::HasValue</a></li>
+    
+      <li><a href="Mocha/BacktraceFilter.html#method-c-new">::new &mdash; Mocha::BacktraceFilter</a></li>
+    
+      <li><a href="Mocha/ParameterMatchers/HasKey.html#method-c-new">::new &mdash; Mocha::ParameterMatchers::HasKey</a></li>
+    
+      <li><a href="Mocha/ArgumentIterator.html#method-c-new">::new &mdash; Mocha::ArgumentIterator</a></li>
+    
+      <li><a href="Mocha/ParameterMatchers/HasEntry.html#method-c-new">::new &mdash; Mocha::ParameterMatchers::HasEntry</a></li>
+    
+      <li><a href="Mocha/ParameterMatchers/HasEntries.html#method-c-new">::new &mdash; Mocha::ParameterMatchers::HasEntries</a></li>
+    
+      <li><a href="Mocha/ParameterMatchers/Equals.html#method-c-new">::new &mdash; Mocha::ParameterMatchers::Equals</a></li>
+    
+      <li><a href="Mocha/Mock.html#method-c-new">::new &mdash; Mocha::Mock</a></li>
+    
+      <li><a href="Mocha/ClassMethods/AnyInstance.html#method-c-new">::new &mdash; Mocha::ClassMethods::AnyInstance</a></li>
+    
+      <li><a href="Mocha/Configuration.html#method-c-prevent">::prevent &mdash; Mocha::Configuration</a></li>
+    
+      <li><a href="Mocha/Configuration.html#method-c-prevent-3F">::prevent? &mdash; Mocha::Configuration</a></li>
+    
+      <li><a href="Mocha/Debug.html#method-c-puts">::puts &mdash; Mocha::Debug</a></li>
+    
+      <li><a href="Mocha/Configuration.html#method-c-reset_configuration">::reset_configuration &mdash; Mocha::Configuration</a></li>
+    
+      <li><a href="Mocha/Mockery.html#method-c-reset_instance">::reset_instance &mdash; Mocha::Mockery</a></li>
+    
+      <li><a href="Mocha/Cardinality.html#method-c-times">::times &mdash; Mocha::Cardinality</a></li>
+    
+      <li><a href="Mocha/Integration/MiniTest.html#method-c-translate">::translate &mdash; Mocha::Integration::MiniTest</a></li>
+    
+      <li><a href="Mocha/Configuration.html#method-c-warn_when">::warn_when &mdash; Mocha::Configuration</a></li>
+    
+      <li><a href="Mocha/Configuration.html#method-c-warn_when-3F">::warn_when? &mdash; Mocha::Configuration</a></li>
+    
+      <li><a href="Mocha/Deprecation.html#method-c-warning">::warning &mdash; Mocha::Deprecation</a></li>
+    
+      <li><a href="Mocha/ParameterMatchers/Base.html#method-i-26">#& &mdash; Mocha::ParameterMatchers::Base</a></li>
+    
+      <li><a href="Mocha/ReturnValues.html#method-i-2B">#+ &mdash; Mocha::ReturnValues</a></li>
+    
+      <li><a href="Mocha/ParameterMatchers.html#method-i-Not">#Not &mdash; Mocha::ParameterMatchers</a></li>
+    
+      <li><a href="Mocha/Mock.html#method-i-__expectations__">#__expectations__ &mdash; Mocha::Mock</a></li>
+    
+      <li><a href="Mocha/Mock.html#method-i-__expects__">#__expects__ &mdash; Mocha::Mock</a></li>
+    
+      <li><a href="Mocha/Mock.html#method-i-__stubs__">#__stubs__ &mdash; Mocha::Mock</a></li>
+    
+      <li><a href="Mocha/Mock.html#method-i-__verified__-3F">#__verified__? &mdash; Mocha::Mock</a></li>
+    
+      <li><a href="Mocha/StateMachine/State.html#method-i-activate">#activate &mdash; Mocha::StateMachine::State</a></li>
+    
+      <li><a href="Mocha/StateMachine/State.html#method-i-active-3F">#active? &mdash; Mocha::StateMachine::State</a></li>
+    
+      <li><a href="Mocha/StateMachine/StatePredicate.html#method-i-active-3F">#active? &mdash; Mocha::StateMachine::StatePredicate</a></li>
+    
+      <li><a href="Mocha/ExpectationList.html#method-i-add">#add &mdash; Mocha::ExpectationList</a></li>
+    
+      <li><a href="Mocha/YieldParameters.html#method-i-add">#add &mdash; Mocha::YieldParameters</a></li>
+    
+      <li><a href="Mocha/Expectation.html#method-i-add_in_sequence_ordering_constraint">#add_in_sequence_ordering_constraint &mdash; Mocha::Expectation</a></li>
+    
+      <li><a href="Mocha/Expectation.html#method-i-add_ordering_constraint">#add_ordering_constraint &mdash; Mocha::Expectation</a></li>
+    
+      <li><a href="Mocha/Expectation.html#method-i-add_side_effect">#add_side_effect &mdash; Mocha::Expectation</a></li>
+    
+      <li><a href="Mocha/Integration/MiniTest/Adapter.html#method-i-after_teardown">#after_teardown &mdash; Mocha::Integration::MiniTest::Adapter</a></li>
+    
+      <li><a href="Mocha/ParameterMatchers.html#method-i-all_of">#all_of &mdash; Mocha::ParameterMatchers</a></li>
+    
+      <li><a href="Mocha/Cardinality.html#method-i-allowed_any_number_of_times-3F">#allowed_any_number_of_times? &mdash; Mocha::Cardinality</a></li>
+    
+      <li><a href="Mocha/Sequence/InSequenceOrderingConstraint.html#method-i-allows_invocation_now-3F">#allows_invocation_now? &mdash; Mocha::Sequence::InSequenceOrderingConstraint</a></li>
+    
+      <li><a href="Mocha/InStateOrderingConstraint.html#method-i-allows_invocation_now-3F">#allows_invocation_now? &mdash; Mocha::InStateOrderingConstraint</a></li>
+    
+      <li><a href="Mocha/ExpectationList.html#method-i-any-3F">#any? &mdash; Mocha::ExpectationList</a></li>
+    
+      <li><a href="Mocha/Mock.html#method-i-any_expectations-3F">#any_expectations? &mdash; Mocha::Mock</a></li>
+    
+      <li><a href="Mocha/ClassMethods.html#method-i-any_instance">#any_instance &mdash; Mocha::ClassMethods</a></li>
+    
+      <li><a href="Mocha/ParameterMatchers.html#method-i-any_of">#any_of &mdash; Mocha::ParameterMatchers</a></li>
+    
+      <li><a href="Mocha/ParameterMatchers.html#method-i-any_parameters">#any_parameters &mdash; Mocha::ParameterMatchers</a></li>
+    
+      <li><a href="Mocha/ParameterMatchers.html#method-i-anything">#anything &mdash; Mocha::ParameterMatchers</a></li>
+    
+      <li><a href="Mocha/Expectation.html#method-i-at_least">#at_least &mdash; Mocha::Expectation</a></li>
+    
+      <li><a href="Mocha/Expectation.html#method-i-at_least_once">#at_least_once &mdash; Mocha::Expectation</a></li>
+    
+      <li><a href="Mocha/Expectation.html#method-i-at_most">#at_most &mdash; Mocha::Expectation</a></li>
+    
+      <li><a href="Mocha/Expectation.html#method-i-at_most_once">#at_most_once &mdash; Mocha::Expectation</a></li>
+    
+      <li><a href="Mocha/StateMachine.html#method-i-become">#become &mdash; Mocha::StateMachine</a></li>
+    
+      <li><a href="Mocha/Integration/MiniTest/Adapter.html#method-i-before_setup">#before_setup &mdash; Mocha::Integration::MiniTest::Adapter</a></li>
+    
+      <li><a href="Mocha/Integration/MiniTest/Adapter.html#method-i-before_teardown">#before_teardown &mdash; Mocha::Integration::MiniTest::Adapter</a></li>
+    
+      <li><a href="Mocha/Sequence.html#method-i-constrain_as_next_in_sequence">#constrain_as_next_in_sequence &mdash; Mocha::Sequence</a></li>
+    
+      <li><a href="Mocha/AnyInstanceMethod.html#method-i-define_new_method">#define_new_method &mdash; Mocha::AnyInstanceMethod</a></li>
+    
+      <li><a href="Mocha/ClassMethod.html#method-i-define_new_method">#define_new_method &mdash; Mocha::ClassMethod</a></li>
+    
+      <li><a href="Mocha/MultipleYields.html#method-i-each">#each &mdash; Mocha::MultipleYields</a></li>
+    
+      <li><a href="Mocha/SingleYield.html#method-i-each">#each &mdash; Mocha::SingleYield</a></li>
+    
+      <li><a href="Mocha/ArgumentIterator.html#method-i-each">#each &mdash; Mocha::ArgumentIterator</a></li>
+    
+      <li><a href="Mocha/NoYields.html#method-i-each">#each &mdash; Mocha::NoYields</a></li>
+    
+      <li><a href="Mocha/Mock.html#method-i-ensure_method_not_already_defined">#ensure_method_not_already_defined &mdash; Mocha::Mock</a></li>
+    
+      <li><a href="Mocha/ParameterMatchers.html#method-i-equals">#equals &mdash; Mocha::ParameterMatchers</a></li>
+    
+      <li><a href="Mocha/ExceptionRaiser.html#method-i-evaluate">#evaluate &mdash; Mocha::ExceptionRaiser</a></li>
+    
+      <li><a href="Mocha/SingleReturnValue.html#method-i-evaluate">#evaluate &mdash; Mocha::SingleReturnValue</a></li>
+    
+      <li><a href="Mocha/Thrower.html#method-i-evaluate">#evaluate &mdash; Mocha::Thrower</a></li>
+    
+      <li><a href="Mocha/Mock.html#method-i-expects">#expects &mdash; Mocha::Mock</a></li>
+    
+      <li><a href="Mocha/ObjectMethods.html#method-i-expects">#expects &mdash; Mocha::ObjectMethods</a></li>
+    
+      <li><a href="Mocha/BacktraceFilter.html#method-i-filtered">#filtered &mdash; Mocha::BacktraceFilter</a></li>
+    
+      <li><a href="Mocha/ParameterMatchers.html#method-i-has_entries">#has_entries &mdash; Mocha::ParameterMatchers</a></li>
+    
+      <li><a href="Mocha/ParameterMatchers.html#method-i-has_entry">#has_entry &mdash; Mocha::ParameterMatchers</a></li>
+    
+      <li><a href="Mocha/ParameterMatchers.html#method-i-has_equivalent_query_string">#has_equivalent_query_string &mdash; Mocha::ParameterMatchers</a></li>
+    
+      <li><a href="Mocha/ParameterMatchers.html#method-i-has_key">#has_key &mdash; Mocha::ParameterMatchers</a></li>
+    
+      <li><a href="Mocha/ParameterMatchers.html#method-i-has_value">#has_value &mdash; Mocha::ParameterMatchers</a></li>
+    
+      <li><a href="Mocha/ClassMethod.html#method-i-hide_original_method">#hide_original_method &mdash; Mocha::ClassMethod</a></li>
+    
+      <li><a href="Mocha/AnyInstanceMethod.html#method-i-hide_original_method">#hide_original_method &mdash; Mocha::AnyInstanceMethod</a></li>
+    
+      <li><a href="Mocha/Expectation.html#method-i-in_correct_order-3F">#in_correct_order? &mdash; Mocha::Expectation</a></li>
+    
+      <li><a href="Mocha/Expectation.html#method-i-in_sequence">#in_sequence &mdash; Mocha::Expectation</a></li>
+    
+      <li><a href="Mocha/ParameterMatchers.html#method-i-includes">#includes &mdash; Mocha::ParameterMatchers</a></li>
+    
+      <li><a href="Mocha/Integration/AssertionCounter.html#method-i-increment">#increment &mdash; Mocha::Integration::AssertionCounter</a></li>
+    
+      <li><a href="Mocha/Cardinality.html#method-i-infinite-3F">#infinite? &mdash; Mocha::Cardinality</a></li>
+    
+      <li><a href="Mocha/Expectation.html#method-i-inspect">#inspect &mdash; Mocha::Expectation</a></li>
+    
+      <li><a href="Mocha/Mock.html#method-i-inspect">#inspect &mdash; Mocha::Mock</a></li>
+    
+      <li><a href="Mocha/ParameterMatchers.html#method-i-instance_of">#instance_of &mdash; Mocha::ParameterMatchers</a></li>
+    
+      <li><a href="Mocha/Expectation.html#method-i-invocations_allowed-3F">#invocations_allowed? &mdash; Mocha::Expectation</a></li>
+    
+      <li><a href="Mocha/Cardinality.html#method-i-invocations_allowed-3F">#invocations_allowed? &mdash; Mocha::Cardinality</a></li>
+    
+      <li><a href="Mocha/Expectation.html#method-i-invoke">#invoke &mdash; Mocha::Expectation</a></li>
+    
+      <li><a href="Mocha/StateMachine.html#method-i-is">#is &mdash; Mocha::StateMachine</a></li>
+    
+      <li><a href="Mocha/ParameterMatchers.html#method-i-is_a">#is_a &mdash; Mocha::ParameterMatchers</a></li>
+    
+      <li><a href="Mocha/StateMachine.html#method-i-is_not">#is_not &mdash; Mocha::StateMachine</a></li>
+    
+      <li><a href="Mocha/ParameterMatchers.html#method-i-kind_of">#kind_of &mdash; Mocha::ParameterMatchers</a></li>
+    
+      <li><a href="Mocha/ExpectationList.html#method-i-length">#length &mdash; Mocha::ExpectationList</a></li>
+    
+      <li><a href="Mocha/Mockery.html#method-i-logger">#logger &mdash; Mocha::Mockery</a></li>
+    
+      <li><a href="Mocha/ExpectationList.html#method-i-match">#match &mdash; Mocha::ExpectationList</a></li>
+    
+      <li><a href="Mocha/MethodMatcher.html#method-i-match-3F">#match? &mdash; Mocha::MethodMatcher</a></li>
+    
+      <li><a href="Mocha/Expectation.html#method-i-match-3F">#match? &mdash; Mocha::Expectation</a></li>
+    
+      <li><a href="Mocha/ParametersMatcher.html#method-i-match-3F">#match? &mdash; Mocha::ParametersMatcher</a></li>
+    
+      <li><a href="Mocha/ExpectationList.html#method-i-match_allowing_invocation">#match_allowing_invocation &mdash; Mocha::ExpectationList</a></li>
+    
+      <li><a href="Mocha/ParametersMatcher.html#method-i-matchers">#matchers &mdash; Mocha::ParametersMatcher</a></li>
+    
+      <li><a href="Mocha/ParameterMatchers/RespondsWith.html#method-i-matches-3F">#matches? &mdash; Mocha::ParameterMatchers::RespondsWith</a></li>
+    
+      <li><a href="Mocha/ParameterMatchers/IsA.html#method-i-matches-3F">#matches? &mdash; Mocha::ParameterMatchers::IsA</a></li>
+    
+      <li><a href="Mocha/ClassMethod.html#method-i-matches-3F">#matches? &mdash; Mocha::ClassMethod</a></li>
+    
+      <li><a href="Mocha/ParameterMatchers/QueryStringMatches.html#method-i-matches-3F">#matches? &mdash; Mocha::ParameterMatchers::QueryStringMatches</a></li>
+    
+      <li><a href="Mocha/ParameterMatchers/Optionally.html#method-i-matches-3F">#matches? &mdash; Mocha::ParameterMatchers::Optionally</a></li>
+    
+      <li><a href="Mocha/ParameterMatchers/Equals.html#method-i-matches-3F">#matches? &mdash; Mocha::ParameterMatchers::Equals</a></li>
+    
+      <li><a href="Mocha/ParameterMatchers/RegexpMatches.html#method-i-matches-3F">#matches? &mdash; Mocha::ParameterMatchers::RegexpMatches</a></li>
+    
+      <li><a href="Mocha/ParameterMatchers/AllOf.html#method-i-matches-3F">#matches? &mdash; Mocha::ParameterMatchers::AllOf</a></li>
+    
+      <li><a href="Mocha/ParameterMatchers/InstanceOf.html#method-i-matches-3F">#matches? &mdash; Mocha::ParameterMatchers::InstanceOf</a></li>
+    
+      <li><a href="Mocha/ParameterMatchers/KindOf.html#method-i-matches-3F">#matches? &mdash; Mocha::ParameterMatchers::KindOf</a></li>
+    
+      <li><a href="Mocha/ParameterMatchers/Includes.html#method-i-matches-3F">#matches? &mdash; Mocha::ParameterMatchers::Includes</a></li>
+    
+      <li><a href="Mocha/ParameterMatchers/Anything.html#method-i-matches-3F">#matches? &mdash; Mocha::ParameterMatchers::Anything</a></li>
+    
+      <li><a href="Mocha/ParameterMatchers/YamlEquivalent.html#method-i-matches-3F">#matches? &mdash; Mocha::ParameterMatchers::YamlEquivalent</a></li>
+    
+      <li><a href="Mocha/ParameterMatchers/HasEntries.html#method-i-matches-3F">#matches? &mdash; Mocha::ParameterMatchers::HasEntries</a></li>
+    
+      <li><a href="Mocha/ParameterMatchers/AnyOf.html#method-i-matches-3F">#matches? &mdash; Mocha::ParameterMatchers::AnyOf</a></li>
+    
+      <li><a href="Mocha/ParameterMatchers/AnyParameters.html#method-i-matches-3F">#matches? &mdash; Mocha::ParameterMatchers::AnyParameters</a></li>
+    
+      <li><a href="Mocha/ParameterMatchers/HasEntry.html#method-i-matches-3F">#matches? &mdash; Mocha::ParameterMatchers::HasEntry</a></li>
+    
+      <li><a href="Mocha/ParameterMatchers/HasKey.html#method-i-matches-3F">#matches? &mdash; Mocha::ParameterMatchers::HasKey</a></li>
+    
+      <li><a href="Mocha/ParameterMatchers/Not.html#method-i-matches-3F">#matches? &mdash; Mocha::ParameterMatchers::Not</a></li>
+    
+      <li><a href="Mocha/ParameterMatchers/HasValue.html#method-i-matches-3F">#matches? &mdash; Mocha::ParameterMatchers::HasValue</a></li>
+    
+      <li><a href="Mocha/Expectation.html#method-i-matches_method-3F">#matches_method? &mdash; Mocha::Expectation</a></li>
+    
+      <li><a href="Mocha/ExpectationList.html#method-i-matches_method-3F">#matches_method? &mdash; Mocha::ExpectationList</a></li>
+    
+      <li><a href="Mocha/AnyInstanceMethod.html#method-i-method_exists-3F">#method_exists? &mdash; Mocha::AnyInstanceMethod</a></li>
+    
+      <li><a href="Mocha/ModuleMethod.html#method-i-method_exists-3F">#method_exists? &mdash; Mocha::ModuleMethod</a></li>
+    
+      <li><a href="Mocha/ObjectMethods.html#method-i-method_exists-3F">#method_exists? &mdash; Mocha::ObjectMethods</a></li>
+    
+      <li><a href="Mocha/ClassMethods/AnyInstance.html#method-i-method_exists-3F">#method_exists? &mdash; Mocha::ClassMethods::AnyInstance</a></li>
+    
+      <li><a href="Mocha/InstanceMethod.html#method-i-method_exists-3F">#method_exists? &mdash; Mocha::InstanceMethod</a></li>
+    
+      <li><a href="Mocha/ClassMethod.html#method-i-method_exists-3F">#method_exists? &mdash; Mocha::ClassMethod</a></li>
+    
+      <li><a href="Mocha/Mock.html#method-i-method_missing">#method_missing &mdash; Mocha::Mock</a></li>
+    
+      <li><a href="Mocha/Expectation.html#method-i-method_signature">#method_signature &mdash; Mocha::Expectation</a></li>
+    
+      <li><a href="Mocha/ObjectMethods.html#method-i-mocha">#mocha &mdash; Mocha::ObjectMethods</a></li>
+    
+      <li><a href="Mocha/ClassMethods/AnyInstance.html#method-i-mocha">#mocha &mdash; Mocha::ClassMethods::AnyInstance</a></li>
+    
+      <li><a href="Mocha/StateMachine/StatePredicate.html#method-i-mocha_inspect">#mocha_inspect &mdash; Mocha::StateMachine::StatePredicate</a></li>
+    
+      <li><a href="Mocha/Sequence/InSequenceOrderingConstraint.html#method-i-mocha_inspect">#mocha_inspect &mdash; Mocha::Sequence::InSequenceOrderingConstraint</a></li>
+    
+      <li><a href="Mocha/Expectation.html#method-i-mocha_inspect">#mocha_inspect &mdash; Mocha::Expectation</a></li>
+    
+      <li><a href="Mocha/InStateOrderingConstraint.html#method-i-mocha_inspect">#mocha_inspect &mdash; Mocha::InStateOrderingConstraint</a></li>
+    
+      <li><a href="Mocha/MethodMatcher.html#method-i-mocha_inspect">#mocha_inspect &mdash; Mocha::MethodMatcher</a></li>
+    
+      <li><a href="Mocha/ParametersMatcher.html#method-i-mocha_inspect">#mocha_inspect &mdash; Mocha::ParametersMatcher</a></li>
+    
+      <li><a href="Mocha/Mock.html#method-i-mocha_inspect">#mocha_inspect &mdash; Mocha::Mock</a></li>
+    
+      <li><a href="Mocha/ParameterMatchers/YamlEquivalent.html#method-i-mocha_inspect">#mocha_inspect &mdash; Mocha::ParameterMatchers::YamlEquivalent</a></li>
+    
+      <li><a href="Mocha/Mockery.html#method-i-mocha_inspect">#mocha_inspect &mdash; Mocha::Mockery</a></li>
+    
+      <li><a href="Mocha/ParameterMatchers/RespondsWith.html#method-i-mocha_inspect">#mocha_inspect &mdash; Mocha::ParameterMatchers::RespondsWith</a></li>
+    
+      <li><a href="Mocha/ParameterMatchers/RegexpMatches.html#method-i-mocha_inspect">#mocha_inspect &mdash; Mocha::ParameterMatchers::RegexpMatches</a></li>
+    
+      <li><a href="Mocha/StateMachine.html#method-i-mocha_inspect">#mocha_inspect &mdash; Mocha::StateMachine</a></li>
+    
+      <li><a href="Mocha/ParameterMatchers/QueryStringMatches.html#method-i-mocha_inspect">#mocha_inspect &mdash; Mocha::ParameterMatchers::QueryStringMatches</a></li>
+    
+      <li><a href="Mocha/ImpersonatingName.html#method-i-mocha_inspect">#mocha_inspect &mdash; Mocha::ImpersonatingName</a></li>
+    
+      <li><a href="Mocha/ParameterMatchers/Optionally.html#method-i-mocha_inspect">#mocha_inspect &mdash; Mocha::ParameterMatchers::Optionally</a></li>
+    
+      <li><a href="Mocha/StateMachine/State.html#method-i-mocha_inspect">#mocha_inspect &mdash; Mocha::StateMachine::State</a></li>
+    
+      <li><a href="Mocha/ChangeStateSideEffect.html#method-i-mocha_inspect">#mocha_inspect &mdash; Mocha::ChangeStateSideEffect</a></li>
+    
+      <li><a href="Mocha/ImpersonatingAnyInstanceName.html#method-i-mocha_inspect">#mocha_inspect &mdash; Mocha::ImpersonatingAnyInstanceName</a></li>
+    
+      <li><a href="Mocha/Sequence.html#method-i-mocha_inspect">#mocha_inspect &mdash; Mocha::Sequence</a></li>
+    
+      <li><a href="Mocha/ParameterMatchers/Not.html#method-i-mocha_inspect">#mocha_inspect &mdash; Mocha::ParameterMatchers::Not</a></li>
+    
+      <li><a href="Mocha/Name.html#method-i-mocha_inspect">#mocha_inspect &mdash; Mocha::Name</a></li>
+    
+      <li><a href="Mocha/ParameterMatchers/KindOf.html#method-i-mocha_inspect">#mocha_inspect &mdash; Mocha::ParameterMatchers::KindOf</a></li>
+    
+      <li><a href="Mocha/Cardinality.html#method-i-mocha_inspect">#mocha_inspect &mdash; Mocha::Cardinality</a></li>
+    
+      <li><a href="Mocha/ObjectMethods.html#method-i-mocha_inspect">#mocha_inspect &mdash; Mocha::ObjectMethods</a></li>
+    
+      <li><a href="Mocha/ParameterMatchers/IsA.html#method-i-mocha_inspect">#mocha_inspect &mdash; Mocha::ParameterMatchers::IsA</a></li>
+    
+      <li><a href="Mocha/ParameterMatchers/InstanceOf.html#method-i-mocha_inspect">#mocha_inspect &mdash; Mocha::ParameterMatchers::InstanceOf</a></li>
+    
+      <li><a href="Mocha/ParameterMatchers/AllOf.html#method-i-mocha_inspect">#mocha_inspect &mdash; Mocha::ParameterMatchers::AllOf</a></li>
+    
+      <li><a href="Mocha/ParameterMatchers/Includes.html#method-i-mocha_inspect">#mocha_inspect &mdash; Mocha::ParameterMatchers::Includes</a></li>
+    
+      <li><a href="Mocha/ParameterMatchers/HasValue.html#method-i-mocha_inspect">#mocha_inspect &mdash; Mocha::ParameterMatchers::HasValue</a></li>
+    
+      <li><a href="Mocha/ParameterMatchers/AnyOf.html#method-i-mocha_inspect">#mocha_inspect &mdash; Mocha::ParameterMatchers::AnyOf</a></li>
+    
+      <li><a href="Mocha/ParameterMatchers/HasKey.html#method-i-mocha_inspect">#mocha_inspect &mdash; Mocha::ParameterMatchers::HasKey</a></li>
+    
+      <li><a href="Mocha/DateMethods.html#method-i-mocha_inspect">#mocha_inspect &mdash; Mocha::DateMethods</a></li>
+    
+      <li><a href="Mocha/TimeMethods.html#method-i-mocha_inspect">#mocha_inspect &mdash; Mocha::TimeMethods</a></li>
+    
+      <li><a href="Mocha/HashMethods.html#method-i-mocha_inspect">#mocha_inspect &mdash; Mocha::HashMethods</a></li>
+    
+      <li><a href="Mocha/ArrayMethods.html#method-i-mocha_inspect">#mocha_inspect &mdash; Mocha::ArrayMethods</a></li>
+    
+      <li><a href="Mocha/StringMethods.html#method-i-mocha_inspect">#mocha_inspect &mdash; Mocha::StringMethods</a></li>
+    
+      <li><a href="Mocha/ParameterMatchers/HasEntry.html#method-i-mocha_inspect">#mocha_inspect &mdash; Mocha::ParameterMatchers::HasEntry</a></li>
+    
+      <li><a href="Mocha/ParameterMatchers/AnyParameters.html#method-i-mocha_inspect">#mocha_inspect &mdash; Mocha::ParameterMatchers::AnyParameters</a></li>
+    
+      <li><a href="Mocha/ParameterMatchers/Anything.html#method-i-mocha_inspect">#mocha_inspect &mdash; Mocha::ParameterMatchers::Anything</a></li>
+    
+      <li><a href="Mocha/ParameterMatchers/Equals.html#method-i-mocha_inspect">#mocha_inspect &mdash; Mocha::ParameterMatchers::Equals</a></li>
+    
+      <li><a href="Mocha/ParameterMatchers/HasEntries.html#method-i-mocha_inspect">#mocha_inspect &mdash; Mocha::ParameterMatchers::HasEntries</a></li>
+    
+      <li><a href="Mocha/DefaultName.html#method-i-mocha_inspect">#mocha_inspect &mdash; Mocha::DefaultName</a></li>
+    
+      <li><a href="Mocha/Hooks.html#method-i-mocha_setup">#mocha_setup &mdash; Mocha::Hooks</a></li>
+    
+      <li><a href="Mocha/Hooks.html#method-i-mocha_teardown">#mocha_teardown &mdash; Mocha::Hooks</a></li>
+    
+      <li><a href="Mocha/Hooks.html#method-i-mocha_verify">#mocha_verify &mdash; Mocha::Hooks</a></li>
+    
+      <li><a href="Mocha/AnyInstanceMethod.html#method-i-mock">#mock &mdash; Mocha::AnyInstanceMethod</a></li>
+    
+      <li><a href="Mocha/API.html#method-i-mock">#mock &mdash; Mocha::API</a></li>
+    
+      <li><a href="Mocha/ClassMethod.html#method-i-mock">#mock &mdash; Mocha::ClassMethod</a></li>
+    
+      <li><a href="Mocha/Mockery.html#method-i-mock_impersonating">#mock_impersonating &mdash; Mocha::Mockery</a></li>
+    
+      <li><a href="Mocha/Mockery.html#method-i-mock_impersonating_any_instance_of">#mock_impersonating_any_instance_of &mdash; Mocha::Mockery</a></li>
+    
+      <li><a href="Mocha/Mockery.html#method-i-mocks">#mocks &mdash; Mocha::Mockery</a></li>
+    
+      <li><a href="Mocha/YieldParameters.html#method-i-multiple_add">#multiple_add &mdash; Mocha::YieldParameters</a></li>
+    
+      <li><a href="Mocha/Expectation.html#method-i-multiple_yields">#multiple_yields &mdash; Mocha::Expectation</a></li>
+    
+      <li><a href="Mocha/Mockery.html#method-i-named_mock">#named_mock &mdash; Mocha::Mockery</a></li>
+    
+      <li><a href="Mocha/Cardinality.html#method-i-needs_verifying-3F">#needs_verifying? &mdash; Mocha::Cardinality</a></li>
+    
+      <li><a href="Mocha/Expectation.html#method-i-never">#never &mdash; Mocha::Expectation</a></li>
+    
+      <li><a href="Mocha/Mockery.html#method-i-new_state_machine">#new_state_machine &mdash; Mocha::Mockery</a></li>
+    
+      <li><a href="Mocha/ReturnValues.html#method-i-next">#next &mdash; Mocha::ReturnValues</a></li>
+    
+      <li><a href="Mocha/YieldParameters.html#method-i-next_invocation">#next_invocation &mdash; Mocha::YieldParameters</a></li>
+    
+      <li><a href="Mocha/Mockery.html#method-i-on_stubbing">#on_stubbing &mdash; Mocha::Mockery</a></li>
+    
+      <li><a href="Mocha/Mockery.html#method-i-on_stubbing_method_on_nil">#on_stubbing_method_on_nil &mdash; Mocha::Mockery</a></li>
+    
+      <li><a href="Mocha/Mockery.html#method-i-on_stubbing_method_on_non_mock_object">#on_stubbing_method_on_non_mock_object &mdash; Mocha::Mockery</a></li>
+    
+      <li><a href="Mocha/Mockery.html#method-i-on_stubbing_method_unnecessarily">#on_stubbing_method_unnecessarily &mdash; Mocha::Mockery</a></li>
+    
+      <li><a href="Mocha/Mockery.html#method-i-on_stubbing_non_existent_method">#on_stubbing_non_existent_method &mdash; Mocha::Mockery</a></li>
+    
+      <li><a href="Mocha/Mockery.html#method-i-on_stubbing_non_public_method">#on_stubbing_non_public_method &mdash; Mocha::Mockery</a></li>
+    
+      <li><a href="Mocha/Expectation.html#method-i-once">#once &mdash; Mocha::Expectation</a></li>
+    
+      <li><a href="Mocha/ParameterMatchers.html#method-i-optionally">#optionally &mdash; Mocha::ParameterMatchers</a></li>
+    
+      <li><a href="Mocha/ParametersMatcher.html#method-i-parameters_match-3F">#parameters_match? &mdash; Mocha::ParametersMatcher</a></li>
+    
+      <li><a href="Mocha/ChangeStateSideEffect.html#method-i-perform">#perform &mdash; Mocha::ChangeStateSideEffect</a></li>
+    
+      <li><a href="Mocha/Expectation.html#method-i-perform_side_effects">#perform_side_effects &mdash; Mocha::Expectation</a></li>
+    
+      <li><a href="Mocha/PrettyParameters.html#method-i-pretty">#pretty &mdash; Mocha::PrettyParameters</a></li>
+    
+      <li><a href="Mocha/Mock.html#method-i-quacks_like">#quacks_like &mdash; Mocha::Mock</a></li>
+    
+      <li><a href="Mocha/Mock.html#method-i-quacks_like_instance_of">#quacks_like_instance_of &mdash; Mocha::Mock</a></li>
+    
+      <li><a href="Mocha/Expectation.html#method-i-raises">#raises &mdash; Mocha::Expectation</a></li>
+    
+      <li><a href="Mocha/ParameterMatchers.html#method-i-regexp_matches">#regexp_matches &mdash; Mocha::ParameterMatchers</a></li>
+    
+      <li><a href="Mocha/ExpectationList.html#method-i-remove_all_matching_method">#remove_all_matching_method &mdash; Mocha::ExpectationList</a></li>
+    
+      <li><a href="Mocha/AnyInstanceMethod.html#method-i-remove_new_method">#remove_new_method &mdash; Mocha::AnyInstanceMethod</a></li>
+    
+      <li><a href="Mocha/ClassMethod.html#method-i-remove_new_method">#remove_new_method &mdash; Mocha::ClassMethod</a></li>
+    
+      <li><a href="Mocha/PrettyParameters.html#method-i-remove_outer_array_braces-21">#remove_outer_array_braces! &mdash; Mocha::PrettyParameters</a></li>
+    
+      <li><a href="Mocha/PrettyParameters.html#method-i-remove_outer_hash_braces-21">#remove_outer_hash_braces! &mdash; Mocha::PrettyParameters</a></li>
+    
+      <li><a href="Mocha/ClassMethod.html#method-i-reset_mocha">#reset_mocha &mdash; Mocha::ClassMethod</a></li>
+    
+      <li><a href="Mocha/ObjectMethods.html#method-i-reset_mocha">#reset_mocha &mdash; Mocha::ObjectMethods</a></li>
+    
+      <li><a href="Mocha/AnyInstanceMethod.html#method-i-reset_mocha">#reset_mocha &mdash; Mocha::AnyInstanceMethod</a></li>
+    
+      <li><a href="Mocha/Mock.html#method-i-respond_to-3F">#respond_to? &mdash; Mocha::Mock</a></li>
+    
+      <li><a href="Mocha/Mock.html#method-i-responds_like">#responds_like &mdash; Mocha::Mock</a></li>
+    
+      <li><a href="Mocha/Mock.html#method-i-responds_like_instance_of">#responds_like_instance_of &mdash; Mocha::Mock</a></li>
+    
+      <li><a href="Mocha/ParameterMatchers.html#method-i-responds_with">#responds_with &mdash; Mocha::ParameterMatchers</a></li>
+    
+      <li><a href="Mocha/ClassMethod.html#method-i-restore_original_method">#restore_original_method &mdash; Mocha::ClassMethod</a></li>
+    
+      <li><a href="Mocha/AnyInstanceMethod.html#method-i-restore_original_method">#restore_original_method &mdash; Mocha::AnyInstanceMethod</a></li>
+    
+      <li><a href="Mocha/Expectation.html#method-i-returns">#returns &mdash; Mocha::Expectation</a></li>
+    
+      <li><a href="Mocha/Integration/MiniTest/Version140/RunMethodPatch.html#method-i-run">#run &mdash; Mocha::Integration::MiniTest::Version140::RunMethodPatch</a></li>
+    
+      <li><a href="Mocha/Integration/MiniTest/Version201To222/RunMethodPatch.html#method-i-run">#run &mdash; Mocha::Integration::MiniTest::Version201To222::RunMethodPatch</a></li>
+    
+      <li><a href="Mocha/Integration/MiniTest/Version142To172/RunMethodPatch.html#method-i-run">#run &mdash; Mocha::Integration::MiniTest::Version142To172::RunMethodPatch</a></li>
+    
+      <li><a href="Mocha/Integration/TestUnit/GemVersion200/RunMethodPatch.html#method-i-run">#run &mdash; Mocha::Integration::TestUnit::GemVersion200::RunMethodPatch</a></li>
+    
+      <li><a href="Mocha/Integration/MiniTest/Version141/RunMethodPatch.html#method-i-run">#run &mdash; Mocha::Integration::MiniTest::Version141::RunMethodPatch</a></li>
+    
+      <li><a href="Mocha/Integration/MiniTest/Version2110To2111/RunMethodPatch.html#method-i-run">#run &mdash; Mocha::Integration::MiniTest::Version2110To2111::RunMethodPatch</a></li>
+    
+      <li><a href="Mocha/Integration/TestUnit/RubyVersion185AndBelow/RunMethodPatch.html#method-i-run">#run &mdash; Mocha::Integration::TestUnit::RubyVersion185AndBelow::RunMethodPatch</a></li>
+    
+      <li><a href="Mocha/Integration/MiniTest/Version200/RunMethodPatch.html#method-i-run">#run &mdash; Mocha::Integration::MiniTest::Version200::RunMethodPatch</a></li>
+    
+      <li><a href="Mocha/Integration/MiniTest/Version13/RunMethodPatch.html#method-i-run">#run &mdash; Mocha::Integration::MiniTest::Version13::RunMethodPatch</a></li>
+    
+      <li><a href="Mocha/Integration/MiniTest/Version2112To320/RunMethodPatch.html#method-i-run">#run &mdash; Mocha::Integration::MiniTest::Version2112To320::RunMethodPatch</a></li>
+    
+      <li><a href="Mocha/Integration/TestUnit/RubyVersion186AndAbove/RunMethodPatch.html#method-i-run">#run &mdash; Mocha::Integration::TestUnit::RubyVersion186AndAbove::RunMethodPatch</a></li>
+    
+      <li><a href="Mocha/Integration/TestUnit/GemVersion201To202/RunMethodPatch.html#method-i-run">#run &mdash; Mocha::Integration::TestUnit::GemVersion201To202::RunMethodPatch</a></li>
+    
+      <li><a href="Mocha/Integration/TestUnit/GemVersion203To220/RunMethodPatch.html#method-i-run">#run &mdash; Mocha::Integration::TestUnit::GemVersion203To220::RunMethodPatch</a></li>
+    
+      <li><a href="Mocha/Integration/MiniTest/Version230To2101/RunMethodPatch.html#method-i-run">#run &mdash; Mocha::Integration::MiniTest::Version230To2101::RunMethodPatch</a></li>
+    
+      <li><a href="Mocha/Integration/TestUnit/GemVersion230To250/RunMethodPatch.html#method-i-run">#run &mdash; Mocha::Integration::TestUnit::GemVersion230To250::RunMethodPatch</a></li>
+    
+      <li><a href="Mocha/Expectation.html#method-i-satisfied-3F">#satisfied? &mdash; Mocha::Expectation</a></li>
+    
+      <li><a href="Mocha/Cardinality.html#method-i-satisfied-3F">#satisfied? &mdash; Mocha::Cardinality</a></li>
+    
+      <li><a href="Mocha/Sequence.html#method-i-satisfied_to_index-3F">#satisfied_to_index? &mdash; Mocha::Sequence</a></li>
+    
+      <li><a href="Mocha/API.html#method-i-sequence">#sequence &mdash; Mocha::API</a></li>
+    
+      <li><a href="Mocha/StateMachine.html#method-i-starts_as">#starts_as &mdash; Mocha::StateMachine</a></li>
+    
+      <li><a href="Mocha/Mockery.html#method-i-state_machines">#state_machines &mdash; Mocha::Mockery</a></li>
+    
+      <li><a href="Mocha/API.html#method-i-states">#states &mdash; Mocha::API</a></li>
+    
+      <li><a href="Mocha/ClassMethod.html#method-i-stub">#stub &mdash; Mocha::ClassMethod</a></li>
+    
+      <li><a href="Mocha/Central.html#method-i-stub">#stub &mdash; Mocha::Central</a></li>
+    
+      <li><a href="Mocha/API.html#method-i-stub">#stub &mdash; Mocha::API</a></li>
+    
+      <li><a href="Mocha/Mock.html#method-i-stub_everything">#stub_everything &mdash; Mocha::Mock</a></li>
+    
+      <li><a href="Mocha/API.html#method-i-stub_everything">#stub_everything &mdash; Mocha::API</a></li>
+    
+      <li><a href="Mocha/Mockery.html#method-i-stubba">#stubba &mdash; Mocha::Mockery</a></li>
+    
+      <li><a href="Mocha/ClassMethods.html#method-i-stubba_method">#stubba_method &mdash; Mocha::ClassMethods</a></li>
+    
+      <li><a href="Mocha/ObjectMethods.html#method-i-stubba_method">#stubba_method &mdash; Mocha::ObjectMethods</a></li>
+    
+      <li><a href="Mocha/ModuleMethods.html#method-i-stubba_method">#stubba_method &mdash; Mocha::ModuleMethods</a></li>
+    
+      <li><a href="Mocha/ClassMethods/AnyInstance.html#method-i-stubba_method">#stubba_method &mdash; Mocha::ClassMethods::AnyInstance</a></li>
+    
+      <li><a href="Mocha/ObjectMethods.html#method-i-stubba_object">#stubba_object &mdash; Mocha::ObjectMethods</a></li>
+    
+      <li><a href="Mocha/ClassMethods/AnyInstance.html#method-i-stubba_object">#stubba_object &mdash; Mocha::ClassMethods::AnyInstance</a></li>
+    
+      <li><a href="Mocha/Mock.html#method-i-stubs">#stubs &mdash; Mocha::Mock</a></li>
+    
+      <li><a href="Mocha/ObjectMethods.html#method-i-stubs">#stubs &mdash; Mocha::ObjectMethods</a></li>
+    
+      <li><a href="Mocha/Mockery.html#method-i-teardown">#teardown &mdash; Mocha::Mockery</a></li>
+    
+      <li><a href="Mocha/Expectation.html#method-i-then">#then &mdash; Mocha::Expectation</a></li>
+    
+      <li><a href="Mocha/Expectation.html#method-i-throws">#throws &mdash; Mocha::Expectation</a></li>
+    
+      <li><a href="Mocha/Expectation.html#method-i-times">#times &mdash; Mocha::Expectation</a></li>
+    
+      <li><a href="Mocha/Cardinality.html#method-i-times">#times &mdash; Mocha::Cardinality</a></li>
+    
+      <li><a href="Mocha/ExpectationList.html#method-i-to_a">#to_a &mdash; Mocha::ExpectationList</a></li>
+    
+      <li><a href="Mocha/ParameterMatchers/Base.html#method-i-to_matcher">#to_matcher &mdash; Mocha::ParameterMatchers::Base</a></li>
+    
+      <li><a href="Mocha/ObjectMethods.html#method-i-to_matcher">#to_matcher &mdash; Mocha::ObjectMethods</a></li>
+    
+      <li><a href="Mocha/ClassMethod.html#method-i-to_s">#to_s &mdash; Mocha::ClassMethod</a></li>
+    
+      <li><a href="Mocha/UnexpectedInvocation.html#method-i-to_s">#to_s &mdash; Mocha::UnexpectedInvocation</a></li>
+    
+      <li><a href="Mocha/ExpectationList.html#method-i-to_set">#to_set &mdash; Mocha::ExpectationList</a></li>
+    
+      <li><a href="Mocha/Expectation.html#method-i-twice">#twice &mdash; Mocha::Expectation</a></li>
+    
+      <li><a href="Mocha/Mockery.html#method-i-unnamed_mock">#unnamed_mock &mdash; Mocha::Mockery</a></li>
+    
+      <li><a href="Mocha/ClassMethod.html#method-i-unstub">#unstub &mdash; Mocha::ClassMethod</a></li>
+    
+      <li><a href="Mocha/ObjectMethods.html#method-i-unstub">#unstub &mdash; Mocha::ObjectMethods</a></li>
+    
+      <li><a href="Mocha/Central.html#method-i-unstub">#unstub &mdash; Mocha::Central</a></li>
+    
+      <li><a href="Mocha/Mock.html#method-i-unstub">#unstub &mdash; Mocha::Mock</a></li>
+    
+      <li><a href="Mocha/Central.html#method-i-unstub_all">#unstub_all &mdash; Mocha::Central</a></li>
+    
+      <li><a href="Mocha/Cardinality.html#method-i-used-3F">#used? &mdash; Mocha::Cardinality</a></li>
+    
+      <li><a href="Mocha/Expectation.html#method-i-used-3F">#used? &mdash; Mocha::Expectation</a></li>
+    
+      <li><a href="Mocha/ExpectationList.html#method-i-verified-3F">#verified? &mdash; Mocha::ExpectationList</a></li>
+    
+      <li><a href="Mocha/Expectation.html#method-i-verified-3F">#verified? &mdash; Mocha::Expectation</a></li>
+    
+      <li><a href="Mocha/Cardinality.html#method-i-verified-3F">#verified? &mdash; Mocha::Cardinality</a></li>
+    
+      <li><a href="Mocha/Mockery.html#method-i-verify">#verify &mdash; Mocha::Mockery</a></li>
+    
+      <li><a href="Mocha/Logger.html#method-i-warn">#warn &mdash; Mocha::Logger</a></li>
+    
+      <li><a href="Mocha/Expectation.html#method-i-when">#when &mdash; Mocha::Expectation</a></li>
+    
+      <li><a href="Mocha/Expectation.html#method-i-with">#with &mdash; Mocha::Expectation</a></li>
+    
+      <li><a href="Mocha/ParameterMatchers.html#method-i-yaml_equivalent">#yaml_equivalent &mdash; Mocha::ParameterMatchers</a></li>
+    
+      <li><a href="Mocha/Expectation.html#method-i-yields">#yields &mdash; Mocha::Expectation</a></li>
+    
+      <li><a href="Mocha/ParameterMatchers/Base.html#method-i-7C">#| &mdash; Mocha::ParameterMatchers::Base</a></li>
+    
+  </ul>
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+</body>
+</html>

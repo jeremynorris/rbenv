@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"full_module_name:EFI"2Puppet::ModuleTool::Metadata#full_module_name;FI"R;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"NThe full name of the module, which is a dash-separated combination of the;TI""+username+ and module +name+.;T:
+@file0FI"'lib/puppet/module_tool/metadata.rb;T

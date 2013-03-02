@@ -1,0 +1,510 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Class: Log4r::SyslogOutputter</title>
+
+  <link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../lib/log4r/outputter/syslogoutputter_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/log4r/outputter/syslogoutputter.rb">lib/log4r/outputter/syslogoutputter.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link"><a href="Outputter.html">Log4r::Outputter</a></p>
+        
+      </div>
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-new">::new</a></li>
+          
+          <li><a href="#method-i-close">#close</a></li>
+          
+          <li><a href="#method-i-closed-3F">#closed?</a></li>
+          
+          <li><a href="#method-i-get_levels_map">#get_levels_map</a></li>
+          
+          <li><a href="#method-i-map_levels_by_name_to_syslog">#map_levels_by_name_to_syslog</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+      <!-- Included Modules -->
+      <div id="includes-section" class="section">
+        <h3 class="section-header">Included Modules</h3>
+        <ul class="link-list">
+        
+        
+          <li><span class="include">Syslog::Constants</span></li>
+        
+        
+        </ul>
+      </div>
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="../lib/log4r/rdoc/GDC.html">GDC</a></li>
+        
+          <li class="file"><a href="../lib/log4r/rdoc/MDC.html">MDC</a></li>
+        
+          <li class="file"><a href="../lib/log4r/rdoc/NDC.html">NDC</a></li>
+        
+          <li class="file"><a href="../lib/log4r/rdoc/configurator.html">configurator</a></li>
+        
+          <li class="file"><a href="../lib/log4r/rdoc/emailoutputter.html">emailoutputter</a></li>
+        
+          <li class="file"><a href="../lib/log4r/rdoc/formatter.html">formatter</a></li>
+        
+          <li class="file"><a href="../lib/log4r/rdoc/log4jxmlformatter.html">log4jxmlformatter</a></li>
+        
+          <li class="file"><a href="../lib/log4r/rdoc/log4r.html">log4r</a></li>
+        
+          <li class="file"><a href="../lib/log4r/rdoc/logger.html">logger</a></li>
+        
+          <li class="file"><a href="../lib/log4r/rdoc/logserver.html">logserver</a></li>
+        
+          <li class="file"><a href="../lib/log4r/rdoc/outputter.html">outputter</a></li>
+        
+          <li class="file"><a href="../lib/log4r/rdoc/patternformatter.html">patternformatter</a></li>
+        
+          <li class="file"><a href="../lib/log4r/rdoc/scribeoutputter.html">scribeoutputter</a></li>
+        
+          <li class="file"><a href="../lib/log4r/rdoc/syslogoutputter.html">syslogoutputter</a></li>
+        
+          <li class="file"><a href="../lib/log4r/rdoc/win32eventoutputter.html">win32eventoutputter</a></li>
+        
+          <li class="file"><a href="../lib/log4r/rdoc/yamlconfigurator.html">yamlconfigurator</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../Log4r.html">Log4r</a></li>
+        
+          <li><a href="../Log4r/BasicFormatter.html">Log4r::BasicFormatter</a></li>
+        
+          <li><a href="../Log4r/ConfigError.html">Log4r::ConfigError</a></li>
+        
+          <li><a href="../Log4r/Configurator.html">Log4r::Configurator</a></li>
+        
+          <li><a href="../Log4r/DateFileOutputter.html">Log4r::DateFileOutputter</a></li>
+        
+          <li><a href="../Log4r/DefaultFormatter.html">Log4r::DefaultFormatter</a></li>
+        
+          <li><a href="../Log4r/EmailOutputter.html">Log4r::EmailOutputter</a></li>
+        
+          <li><a href="../Log4r/FileOutputter.html">Log4r::FileOutputter</a></li>
+        
+          <li><a href="../Log4r/Formatter.html">Log4r::Formatter</a></li>
+        
+          <li><a href="../Log4r/GDC.html">Log4r::GDC</a></li>
+        
+          <li><a href="../Log4r/IOOutputter.html">Log4r::IOOutputter</a></li>
+        
+          <li><a href="../Log4r/Log4jXmlFormatter.html">Log4r::Log4jXmlFormatter</a></li>
+        
+          <li><a href="../Log4r/Log4rTools.html">Log4r::Log4rTools</a></li>
+        
+          <li><a href="../Log4r/LogEvent.html">Log4r::LogEvent</a></li>
+        
+          <li><a href="../Log4r/LogServer.html">Log4r::LogServer</a></li>
+        
+          <li><a href="../Log4r/Logger.html">Log4r::Logger</a></li>
+        
+          <li><a href="../Log4r/MDC.html">Log4r::MDC</a></li>
+        
+          <li><a href="../Log4r/NDC.html">Log4r::NDC</a></li>
+        
+          <li><a href="../Log4r/ObjectFormatter.html">Log4r::ObjectFormatter</a></li>
+        
+          <li><a href="../Log4r/Outputter.html">Log4r::Outputter</a></li>
+        
+          <li><a href="../Log4r/PatternFormatter.html">Log4r::PatternFormatter</a></li>
+        
+          <li><a href="../Log4r/RemoteOutputter.html">Log4r::RemoteOutputter</a></li>
+        
+          <li><a href="../Log4r/RollingFileOutputter.html">Log4r::RollingFileOutputter</a></li>
+        
+          <li><a href="../Log4r/RootLogger.html">Log4r::RootLogger</a></li>
+        
+          <li><a href="../Log4r/ScribeOutputter.html">Log4r::ScribeOutputter</a></li>
+        
+          <li><a href="../Log4r/SimpleFormatter.html">Log4r::SimpleFormatter</a></li>
+        
+          <li><a href="../Log4r/StderrOutputter.html">Log4r::StderrOutputter</a></li>
+        
+          <li><a href="../Log4r/StdoutOutputter.html">Log4r::StdoutOutputter</a></li>
+        
+          <li><a href="../Log4r/SyslogOutputter.html">Log4r::SyslogOutputter</a></li>
+        
+          <li><a href="../Log4r/UDPOutputter.html">Log4r::UDPOutputter</a></li>
+        
+          <li><a href="../Log4r/YamlConfigurator.html">Log4r::YamlConfigurator</a></li>
+        
+          <li><a href="../REXML.html">REXML</a></li>
+        
+          <li><a href="../Object.html">Object</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">Log4r::SyslogOutputter</h1>
+
+    <div id="description" class="description">
+      
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+      <!-- Constants -->
+      <div id="constants-list" class="section">
+        <h3 class="section-header">Constants</h3>
+        <dl>
+        
+          <dt><a name="SYSLOG_LEVELS_MAP">SYSLOG_LEVELS_MAP</a></dt>
+          
+          <dd class="description"><p>maps default log4r levels to syslog priorities (logevents never see ALL and
+OFF) SYSLOG Levels are:</p>
+
+<pre>&quot;DEBUG&quot;  =&gt; Syslog::LOG_DEBUG
+&quot;INFO&quot;   =&gt; Syslog::LOG_INFO
+&quot;NOTICE&quot; =&gt; Syslog::LOG_NOTICE
+&quot;WARN&quot;   =&gt; Syslog::LOG_WARN
+&quot;ERROR&quot;  =&gt; Syslog::LOG_ERROR
+&quot;FATAL&quot;  =&gt; Syslog::LOG_FATAL
+&quot;ALERT&quot;  =&gt; Syslog::LOG_ALERT
+&quot;EMERG&quot;  =&gt; Syslog::LOG_EMERG</pre></dd>
+          
+        
+          <dt><a name="SYSLOG_LOG4R_MAP">SYSLOG_LOG4R_MAP</a></dt>
+          
+          <dd class="description"><p>mapping from <a href="../Log4r.html">Log4r</a> default levels to syslog, by
+string name “DEBUG” =&gt; “DEBUG”</p>
+
+<pre>&quot;INFO&quot;   =&gt; &quot;INFO&quot; 
+&quot;WARN&quot;   =&gt; &quot;WARN&quot;
+&quot;ERROR&quot;  =&gt; &quot;ERROR&quot; 
+&quot;FATAL&quot;  =&gt; &quot;FATAL&quot;</pre></dd>
+          
+        
+        </dl>
+      </div>
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="new-method" class="method-detail ">
+          <a name="method-c-new"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">new</span><span
+              class="method-args">(_name, hash={})</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>There are 3 hash arguments</p>
+<dl class="rdoc-list"><dt><tt>:ident</tt></dt>
+<dd>
+<p>syslog ident, defaults to _name</p>
+</dd><dt><tt>:logopt</tt></dt>
+<dd>
+<p>syslog logopt, defaults to LOG_PID | LOG_CONS</p>
+</dd><dt><tt>:facility</tt></dt>
+<dd>
+<p>syslog facility, defaults to LOG_USER</p>
+</dd></dl>
+            
+
+            
+            <div class="method-source-code" id="new-source">
+<pre>
+<span class="ruby-comment"># File lib/log4r/outputter/syslogoutputter.rb, line 64</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">_name</span>, <span class="ruby-identifier">hash</span>={})
+  <span class="ruby-keyword">super</span>(<span class="ruby-identifier">_name</span>, <span class="ruby-identifier">hash</span>)
+  <span class="ruby-identifier">ident</span> = (<span class="ruby-identifier">hash</span>[<span class="ruby-value">:ident</span>] <span class="ruby-keyword">or</span> <span class="ruby-identifier">hash</span>[<span class="ruby-string">'ident'</span>] <span class="ruby-keyword">or</span> <span class="ruby-identifier">_name</span>)
+  <span class="ruby-identifier">logopt</span> = (<span class="ruby-identifier">hash</span>[<span class="ruby-value">:logopt</span>] <span class="ruby-keyword">or</span> <span class="ruby-identifier">hash</span>[<span class="ruby-string">'logopt'</span>] <span class="ruby-keyword">or</span> <span class="ruby-constant">LOG_PID</span> <span class="ruby-operator">|</span> <span class="ruby-constant">LOG_CONS</span>).<span class="ruby-identifier">to_i</span>
+  <span class="ruby-identifier">facility</span> = (<span class="ruby-identifier">hash</span>[<span class="ruby-value">:facility</span>] <span class="ruby-keyword">or</span> <span class="ruby-identifier">hash</span>[<span class="ruby-string">'facility'</span>] <span class="ruby-keyword">or</span> <span class="ruby-constant">LOG_USER</span>).<span class="ruby-identifier">to_i</span>
+  <span class="ruby-identifier">map_levels_by_name_to_syslog</span>()
+  <span class="ruby-keyword">if</span> ( <span class="ruby-constant">Syslog</span>.<span class="ruby-identifier">opened?</span> ) <span class="ruby-keyword">then</span>
+    <span class="ruby-constant">Logger</span>.<span class="ruby-identifier">log_internal</span> { <span class="ruby-string">&quot;Syslog already initialized, to alter, &quot;</span> <span class="ruby-operator">+</span>
+      <span class="ruby-string">&quot;you must close first&quot;</span>}
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-ivar">@syslog</span> = ( <span class="ruby-constant">Syslog</span>.<span class="ruby-identifier">opened?</span> ) <span class="ruby-operator">?</span> <span class="ruby-constant">Syslog</span> <span class="ruby-operator">:</span> <span class="ruby-constant">Syslog</span>.<span class="ruby-identifier">open</span>(<span class="ruby-identifier">ident</span>, <span class="ruby-identifier">logopt</span>, <span class="ruby-identifier">facility</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- new-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- new-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="close-method" class="method-detail ">
+          <a name="method-i-close"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">close</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="close-source">
+<pre>
+<span class="ruby-comment"># File lib/log4r/outputter/syslogoutputter.rb, line 81</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">close</span>
+  <span class="ruby-ivar">@syslog</span>.<span class="ruby-identifier">close</span> <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@syslog</span>.<span class="ruby-identifier">nil?</span>
+  <span class="ruby-ivar">@level</span> = <span class="ruby-constant">OFF</span>
+  <span class="ruby-constant">OutputterFactory</span>.<span class="ruby-identifier">create_methods</span>(<span class="ruby-keyword">self</span>)
+  <span class="ruby-constant">Logger</span>.<span class="ruby-identifier">log_internal</span> {<span class="ruby-node">&quot;Outputter '#{@name}' closed Syslog and set to OFF&quot;</span>}
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- close-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- close-method -->
+
+      
+        <div id="closed-3F-method" class="method-detail ">
+          <a name="method-i-closed-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">closed?</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="closed-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/log4r/outputter/syslogoutputter.rb, line 77</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">closed?</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-operator">!</span><span class="ruby-ivar">@syslog</span>.<span class="ruby-identifier">opened?</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- closed-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- closed-3F-method -->
+
+      
+        <div id="get_levels_map-method" class="method-detail ">
+          <a name="method-i-get_levels_map"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">get_levels_map</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="get_levels_map-source">
+<pre>
+<span class="ruby-comment"># File lib/log4r/outputter/syslogoutputter.rb, line 110</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_levels_map</span>()
+  <span class="ruby-keyword">return</span> <span class="ruby-ivar">@levels_map</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- get_levels_map-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- get_levels_map-method -->
+
+      
+        <div id="map_levels_by_name_to_syslog-method" class="method-detail ">
+          <a name="method-i-map_levels_by_name_to_syslog"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">map_levels_by_name_to_syslog</span><span
+              class="method-args">( lmap = SYSLOG_LOG4R_MAP )</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>A single hash argument that maps custom names to syslog names</p>
+<dl class="rdoc-list"><dt><tt>levels_map</tt></dt>
+<dd>
+<p>A map that will create a linkage between levels in a hash and underlying
+syslog levels. By default, these are direct mapping of the log4r levels
+(e.g. “DEBUG” =&gt; “DEBUG”) If you have defined your own custom levels,
+you should provide this underlying mapping, otherwise all messages will be
+mapped to the underlying syslog level of INFO by default. e.g. You have
+created custom levels called: <tt>Configurator.custom_levels
+&quot;HIGH&quot;, &quot;MEDIUM&quot;, &quot;LOW&quot;</tt> To map these to
+‘equivilent’ syslog levels, after instantiatin a syslogoutputter:
+<tt>SyslogOutputter.map_levels_by_name_to_syslog( { &quot;HIGH&quot; =&gt;
+&quot;ALERT&quot;, &quot;MEDIUM&quot; =&gt; &quot;WARN&quot;,
+&quot;LOW&quot; =&gt; &quot;INFO&quot; } )</tt></p>
+</dd></dl>
+            
+
+            
+            <div class="method-source-code" id="map_levels_by_name_to_syslog-source">
+<pre>
+<span class="ruby-comment"># File lib/log4r/outputter/syslogoutputter.rb, line 106</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">map_levels_by_name_to_syslog</span>( <span class="ruby-identifier">lmap</span> = <span class="ruby-constant">SYSLOG_LOG4R_MAP</span> )
+  <span class="ruby-ivar">@levels_map</span> = <span class="ruby-identifier">lmap</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- map_levels_by_name_to_syslog-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- map_levels_by_name_to_syslog-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

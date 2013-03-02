@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>File: NDC.rb [log4r-1.1.10 Documentation]</title>
+
+  <link type="text/css" media="screen" href="../../rdoc.css" rel="stylesheet" />
+
+  <script src="../../js/jquery.js" type="text/javascript"
+    charset="utf-8"></script>
+  <script src="../../js/thickbox-compressed.js" type="text/javascript"
+    charset="utf-8"></script>
+  <script src="../../js/quicksearch.js" type="text/javascript"
+    charset="utf-8"></script>
+  <script src="../../js/darkfish.js" type="text/javascript"
+    charset="utf-8"></script>
+</head>
+
+<body class="file file-popup">
+  <div id="metadata">
+    <dl>
+      <dt class="modified-date">Last Modified</dt>
+      <dd class="modified-date">2013-03-01 22:17:16 +0100</dd>
+
+      
+      <dt class="requires">Requires</dt>
+      <dd class="requires">
+        <ul>
+        
+        </ul>
+      </dd>
+      
+
+      
+    </dl>
+  </div>
+
+  <div id="documentation">
+    
+    <div class="description">
+      <h2>Description</h2>
+      
+<h1>NDC</h1>
+
+<p>The NDC class implements a copy of the Nested Diagnostic Context, which is
+part of the Apache Log4j library.  Nested Diagnostic Contexts were derived
+from Neil Harrison’s article on “Patterns for Logging Diagnostic Messages”,
+part of the book “Pattern Languages of Program Design 3” edited by Martin
+et al.</p>
+
+<p>NDCs in <a href="../../Log4r.html">Log4r</a> are thread safe.</p>
+
+<p>NDCs in log4r are close enough to NDCs in Log4j that I include its
+documentation directly:</p>
+
+<p>… A Nested Diagnostic Context, or NDC in short, is an instrument to
+distinguish interleaved log output from different sources. Log output is
+typically interleaved when a server handles multiple clients
+near-simultaneously.</p>
+
+<p>Interleaved log output can still be meaningful if each log entry from
+different contexts had a distinctive stamp. This is where NDCs come into
+play.</p>
+
+<p>Note that NDCs are managed on a per thread basis. NDC operations such as
+push, pop(), clear(), getDepth() and setMaxDepth(int) affect the NDC of the
+current thread only. NDCs of other threads remain unaffected. …</p>
+
+<p>An important difference between NDCs in <a
+href="../../Log4r.html">Log4r</a> vs Log4j is that you do not have to
+called NDC.remove() when exiting a thread.</p>
+
+<p>This class will automatically create Thread specific storage for the 
+current thread on the first call to any of its methods, i.e.</p>
+
+<pre>NDC.push( &quot;client accept&quot; );</pre>
+
+<p>New threads may inherit the NDC of the parent thread by making use of the
+clone_stack() and inherit() methods.  By default, the NDC is not inherited
+automatically.  This is unlike MDCs, which will inherit from the main
+thread.</p>
+
+<h2>Other Info</h2>
+<table class="rdoc-list"><tr><td class="rdoc-term"><p>Version</p></td>
+<td>
+<p>$Id$</p>
+</td></tr><tr><td class="rdoc-term"><p>Author</p></td>
+<td>
+<p>Colby Gutierrez-Kraybill &lt;colby(at)astro.berkeley.edu&gt;</p>
+</td></tr></table>
+
+    </div>
+    
+  </div>
+</body>
+</html>
+

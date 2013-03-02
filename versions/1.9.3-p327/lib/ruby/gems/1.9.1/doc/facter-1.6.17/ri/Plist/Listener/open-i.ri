@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"	open:EFI"Plist::Listener#open;FI"RW;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I""include REXML::StreamListener;T:
+@file0FI"$lib/facter/util/plist/parser.rb;T

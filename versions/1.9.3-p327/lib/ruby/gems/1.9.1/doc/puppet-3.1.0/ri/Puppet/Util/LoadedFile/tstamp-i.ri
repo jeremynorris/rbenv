@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"tstamp:EFI"$Puppet::Util::LoadedFile#tstamp;FI"W;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"IProvide a hook for setting the timestamp during testing, so we don't;TI"9have to depend on the granularity of the filesystem.;T:
+@file0FI""lib/puppet/util/loadedfile.rb;T

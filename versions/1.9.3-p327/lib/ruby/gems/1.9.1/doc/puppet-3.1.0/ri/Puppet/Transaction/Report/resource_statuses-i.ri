@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"resource_statuses:EFI"2Puppet::Transaction::Report#resource_statuses;FI"R;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I".A hash with a map from resource to status;TI"G@return [Hash<{String => String}>] Resource name to status string.;TI"<@todo Uncertain if the types in the hash are correct...;T:
+@file0FI"%lib/puppet/transaction/report.rb;T

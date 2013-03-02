@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Module: Facter::Memory</title>
+
+  <link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="module">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../lib/facter/util/memory_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/facter/util/memory.rb">lib/facter/util/memory.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-meminfo_number">::meminfo_number</a></li>
+          
+          <li><a href="#method-c-scale_number">::scale_number</a></li>
+          
+          <li><a href="#method-c-vmstat_darwin_find_free_memory">::vmstat_darwin_find_free_memory</a></li>
+          
+          <li><a href="#method-c-vmstat_find_free_memory">::vmstat_find_free_memory</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../Facter.html">Facter</a></li>
+        
+          <li><a href="../Facter/Application.html">Facter::Application</a></li>
+        
+          <li><a href="../Facter/Manufacturer.html">Facter::Manufacturer</a></li>
+        
+          <li><a href="../Facter/Memory.html">Facter::Memory</a></li>
+        
+          <li><a href="../Facter/NetMask.html">Facter::NetMask</a></li>
+        
+          <li><a href="../Facter/Util.html">Facter::Util</a></li>
+        
+          <li><a href="../Facter/Util/Collection.html">Facter::Util::Collection</a></li>
+        
+          <li><a href="../Facter/Util/Config.html">Facter::Util::Config</a></li>
+        
+          <li><a href="../Facter/Util/Confine.html">Facter::Util::Confine</a></li>
+        
+          <li><a href="../Facter/Util/EC2.html">Facter::Util::EC2</a></li>
+        
+          <li><a href="../Facter/Util/Fact.html">Facter::Util::Fact</a></li>
+        
+          <li><a href="../Facter/Util/IP.html">Facter::Util::IP</a></li>
+        
+          <li><a href="../Facter/Util/Loader.html">Facter::Util::Loader</a></li>
+        
+          <li><a href="../Facter/Util/Macaddress.html">Facter::Util::Macaddress</a></li>
+        
+          <li><a href="../Facter/Util/Macaddress/Darwin.html">Facter::Util::Macaddress::Darwin</a></li>
+        
+          <li><a href="../Facter/Util/Macaddress/Windows.html">Facter::Util::Macaddress::Windows</a></li>
+        
+          <li><a href="../Facter/Util/Macosx.html">Facter::Util::Macosx</a></li>
+        
+          <li><a href="../Facter/Util/MonkeyPatches.html">Facter::Util::MonkeyPatches</a></li>
+        
+          <li><a href="../Facter/Util/MonkeyPatches/Lines.html">Facter::Util::MonkeyPatches::Lines</a></li>
+        
+          <li><a href="../Facter/Util/Processor.html">Facter::Util::Processor</a></li>
+        
+          <li><a href="../Facter/Util/Registry.html">Facter::Util::Registry</a></li>
+        
+          <li><a href="../Facter/Util/Resolution.html">Facter::Util::Resolution</a></li>
+        
+          <li><a href="../Facter/Util/Uptime.html">Facter::Util::Uptime</a></li>
+        
+          <li><a href="../Facter/Util/Values.html">Facter::Util::Values</a></li>
+        
+          <li><a href="../Facter/Util/Virtual.html">Facter::Util::Virtual</a></li>
+        
+          <li><a href="../Facter/Util/Vlans.html">Facter::Util::Vlans</a></li>
+        
+          <li><a href="../Facter/Util/WMI.html">Facter::Util::WMI</a></li>
+        
+          <li><a href="../Facter/Util/Xendomains.html">Facter::Util::Xendomains</a></li>
+        
+          <li><a href="../Plist.html">Plist</a></li>
+        
+          <li><a href="../Plist/Emit.html">Plist::Emit</a></li>
+        
+          <li><a href="../Plist/Listener.html">Plist::Listener</a></li>
+        
+          <li><a href="../Plist/PArray.html">Plist::PArray</a></li>
+        
+          <li><a href="../Plist/PData.html">Plist::PData</a></li>
+        
+          <li><a href="../Plist/PDate.html">Plist::PDate</a></li>
+        
+          <li><a href="../Plist/PDict.html">Plist::PDict</a></li>
+        
+          <li><a href="../Plist/PFalse.html">Plist::PFalse</a></li>
+        
+          <li><a href="../Plist/PInteger.html">Plist::PInteger</a></li>
+        
+          <li><a href="../Plist/PKey.html">Plist::PKey</a></li>
+        
+          <li><a href="../Plist/PList.html">Plist::PList</a></li>
+        
+          <li><a href="../Plist/PReal.html">Plist::PReal</a></li>
+        
+          <li><a href="../Plist/PString.html">Plist::PString</a></li>
+        
+          <li><a href="../Plist/PTag.html">Plist::PTag</a></li>
+        
+          <li><a href="../Plist/PTrue.html">Plist::PTrue</a></li>
+        
+          <li><a href="../Plist/StreamParser.html">Plist::StreamParser</a></li>
+        
+          <li><a href="../IO.html">IO</a></li>
+        
+          <li><a href="../Object.html">Object</a></li>
+        
+          <li><a href="../String.html">String</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="module">Facter::Memory</h1>
+
+    <div id="description" class="description">
+      
+<p>memory.rb Support module for memory related facts</p>
+
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="meminfo_number-method" class="method-detail ">
+          <a name="method-c-meminfo_number"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">meminfo_number</span><span
+              class="method-args">(tag)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="meminfo_number-source">
+<pre>
+<span class="ruby-comment"># File lib/facter/util/memory.rb, line 8</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">meminfo_number</span>(<span class="ruby-identifier">tag</span>)
+  <span class="ruby-identifier">memsize</span> = <span class="ruby-string">&quot;&quot;</span>
+  <span class="ruby-constant">Thread</span><span class="ruby-operator">::</span><span class="ruby-identifier">exclusive</span> <span class="ruby-keyword">do</span>
+    <span class="ruby-identifier">size</span>, <span class="ruby-identifier">scale</span> = [<span class="ruby-value">0</span>, <span class="ruby-string">&quot;&quot;</span>]
+    <span class="ruby-constant">File</span>.<span class="ruby-identifier">readlines</span>(<span class="ruby-string">&quot;/proc/meminfo&quot;</span>).<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">l</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">size</span>, <span class="ruby-identifier">scale</span> = [<span class="ruby-node">$1</span>.<span class="ruby-identifier">to_f</span>, <span class="ruby-node">$2</span>] <span class="ruby-keyword">if</span> <span class="ruby-identifier">l</span> <span class="ruby-operator">=~</span> <span class="ruby-node">/^#{tag}:\s+(\d+)\s+(\S+)/</span>
+      <span class="ruby-comment"># MemoryFree == memfree + cached + buffers</span>
+      <span class="ruby-comment">#  (assume scales are all the same as memfree)</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">tag</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;MemFree&quot;</span> <span class="ruby-operator">&amp;&amp;</span>
+        <span class="ruby-identifier">l</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/^(?:Buffers|Cached):\s+(\d+)\s+(?:\S+)/</span>
+        <span class="ruby-identifier">size</span> <span class="ruby-operator">+=</span> <span class="ruby-node">$1</span>.<span class="ruby-identifier">to_f</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">memsize</span> = <span class="ruby-identifier">scale_number</span>(<span class="ruby-identifier">size</span>, <span class="ruby-identifier">scale</span>)
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">memsize</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- meminfo_number-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- meminfo_number-method -->
+
+      
+        <div id="scale_number-method" class="method-detail ">
+          <a name="method-c-scale_number"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">scale_number</span><span
+              class="method-args">(size, multiplier)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="scale_number-source">
+<pre>
+<span class="ruby-comment"># File lib/facter/util/memory.rb, line 27</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">scale_number</span>(<span class="ruby-identifier">size</span>, <span class="ruby-identifier">multiplier</span>)
+  <span class="ruby-identifier">suffixes</span> = [<span class="ruby-string">''</span>, <span class="ruby-string">'kB'</span>, <span class="ruby-string">'MB'</span>, <span class="ruby-string">'GB'</span>, <span class="ruby-string">'TB'</span>]
+
+  <span class="ruby-identifier">s</span> = <span class="ruby-identifier">suffixes</span>.<span class="ruby-identifier">shift</span>
+  <span class="ruby-keyword">while</span> <span class="ruby-identifier">s</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">multiplier</span>
+    <span class="ruby-identifier">s</span> = <span class="ruby-identifier">suffixes</span>.<span class="ruby-identifier">shift</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">while</span> <span class="ruby-identifier">size</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">1024.0</span>
+    <span class="ruby-identifier">size</span> <span class="ruby-operator">/=</span> <span class="ruby-value">1024.0</span>
+    <span class="ruby-identifier">s</span> = <span class="ruby-identifier">suffixes</span>.<span class="ruby-identifier">shift</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">return</span> <span class="ruby-string">&quot;%.2f %s&quot;</span> <span class="ruby-operator">%</span> [<span class="ruby-identifier">size</span>, <span class="ruby-identifier">s</span>]
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- scale_number-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- scale_number-method -->
+
+      
+        <div id="vmstat_darwin_find_free_memory-method" class="method-detail ">
+          <a name="method-c-vmstat_darwin_find_free_memory"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">vmstat_darwin_find_free_memory</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Darwin had to be different. It’s generally opaque with how much RAM it is
+using, and this figure could be improved upon too I fear. Parses the output
+of “vm_stat”, takes the pages free &amp; pages speculative and multiples
+that by the page size (also given in output). Ties in with what activity
+monitor outputs for free memory.</p>
+            
+
+            
+            <div class="method-source-code" id="vmstat_darwin_find_free_memory-source">
+<pre>
+<span class="ruby-comment"># File lib/facter/util/memory.rb, line 60</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">vmstat_darwin_find_free_memory</span>()
+
+  <span class="ruby-identifier">memfree</span> = <span class="ruby-value">0</span>
+  <span class="ruby-identifier">pagesize</span> = <span class="ruby-value">0</span>
+  <span class="ruby-identifier">memspecfree</span> = <span class="ruby-value">0</span>
+
+  <span class="ruby-identifier">vmstats</span> = <span class="ruby-constant">Facter</span><span class="ruby-operator">::</span><span class="ruby-constant">Util</span><span class="ruby-operator">::</span><span class="ruby-constant">Resolution</span>.<span class="ruby-identifier">exec</span>(<span class="ruby-string">'vm_stat'</span>)
+  <span class="ruby-identifier">vmstats</span>.<span class="ruby-identifier">each_line</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">vmline</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">case</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-identifier">vmline</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/page\ssize\sof\s(\d+)\sbytes/</span>
+      <span class="ruby-identifier">pagesize</span> = <span class="ruby-node">$1</span>.<span class="ruby-identifier">to_i</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-identifier">vmline</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/^Pages\sfree:\s+(\d+)\./</span>
+      <span class="ruby-identifier">memfree</span> = <span class="ruby-node">$1</span>.<span class="ruby-identifier">to_i</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-identifier">vmline</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/^Pages\sspeculative:\s+(\d+)\./</span>
+      <span class="ruby-identifier">memspecfree</span> = <span class="ruby-node">$1</span>.<span class="ruby-identifier">to_i</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">freemem</span> = ( <span class="ruby-identifier">memfree</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">memspecfree</span> ) * <span class="ruby-identifier">pagesize</span>
+  <span class="ruby-constant">Facter</span>.<span class="ruby-identifier">add</span>(<span class="ruby-string">&quot;MemoryFree&quot;</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-identifier">setcode</span> <span class="ruby-keyword">do</span>
+      <span class="ruby-constant">Facter</span><span class="ruby-operator">::</span><span class="ruby-constant">Memory</span>.<span class="ruby-identifier">scale_number</span>(<span class="ruby-identifier">freemem</span>.<span class="ruby-identifier">to_f</span>, <span class="ruby-string">&quot;&quot;</span>)
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- vmstat_darwin_find_free_memory-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- vmstat_darwin_find_free_memory-method -->
+
+      
+        <div id="vmstat_find_free_memory-method" class="method-detail ">
+          <a name="method-c-vmstat_find_free_memory"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">vmstat_find_free_memory</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="vmstat_find_free_memory-source">
+<pre>
+<span class="ruby-comment"># File lib/facter/util/memory.rb, line 43</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">vmstat_find_free_memory</span>()
+  <span class="ruby-identifier">row</span> = <span class="ruby-constant">Facter</span><span class="ruby-operator">::</span><span class="ruby-constant">Util</span><span class="ruby-operator">::</span><span class="ruby-constant">Resolution</span>.<span class="ruby-identifier">exec</span>(<span class="ruby-string">'vmstat'</span>).<span class="ruby-identifier">split</span>(<span class="ruby-string">&quot;\n&quot;</span>)[<span class="ruby-value">-1</span>]
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">row</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/^\s*\d+\s*\d+\s*\d+\s*\d+\s*(\d+)/</span>
+    <span class="ruby-constant">Facter</span>.<span class="ruby-identifier">add</span>(<span class="ruby-string">&quot;MemoryFree&quot;</span>) <span class="ruby-keyword">do</span>
+      <span class="ruby-identifier">memfree</span> = <span class="ruby-node">$1</span>
+      <span class="ruby-identifier">setcode</span> <span class="ruby-keyword">do</span>
+        <span class="ruby-constant">Facter</span><span class="ruby-operator">::</span><span class="ruby-constant">Memory</span>.<span class="ruby-identifier">scale_number</span>(<span class="ruby-identifier">memfree</span>.<span class="ruby-identifier">to_f</span>, <span class="ruby-string">&quot;kB&quot;</span>)
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- vmstat_find_free_memory-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- vmstat_find_free_memory-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

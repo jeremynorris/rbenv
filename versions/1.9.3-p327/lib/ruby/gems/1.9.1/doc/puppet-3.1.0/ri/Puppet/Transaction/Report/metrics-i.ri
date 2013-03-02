@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"metrics:EFI"(Puppet::Transaction::Report#metrics;FI"R;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"+A hash of metric name to metric value.;TI"F@return [Hash<{String => Object}>] A map of metric name to value.;TI"F@todo Uncertain if all values are numbers - now marked as Object.;T:
+@file0FI"%lib/puppet/transaction/report.rb;T

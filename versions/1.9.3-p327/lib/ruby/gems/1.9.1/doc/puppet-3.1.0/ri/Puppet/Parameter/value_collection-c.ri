@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"value_collection:EFI"(Puppet::Parameter::value_collection;FI"R;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"s@return [Puppet::Parameter::ValueCollection] The set of valid values (or an empty set that accepts any value).;TI"@api private;T:
+@file0TI"lib/puppet/parameter.rb;T

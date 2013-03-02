@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Class: Hiera::Backend::Yaml_backend</title>
+
+  <link rel="stylesheet" href="../../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../../index.html">Home</a>
+          <a href="../../index.html#classes">Classes</a>
+          <a href="../../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../../lib/hiera/backend/yaml_backend_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/hiera/backend/yaml_backend.rb">lib/hiera/backend/yaml_backend.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link">Object</p>
+        
+      </div>
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-new">::new</a></li>
+          
+          <li><a href="#method-i-lookup">#lookup</a></li>
+          
+          <li><a href="#method-i-stale-3F">#stale?</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../../Hiera.html">Hiera</a></li>
+        
+          <li><a href="../../Hiera/Backend.html">Hiera::Backend</a></li>
+        
+          <li><a href="../../Hiera/Backend/Json_backend.html">Hiera::Backend::Json_backend</a></li>
+        
+          <li><a href="../../Hiera/Backend/Yaml_backend.html">Hiera::Backend::Yaml_backend</a></li>
+        
+          <li><a href="../../Hiera/Config.html">Hiera::Config</a></li>
+        
+          <li><a href="../../Hiera/Console_logger.html">Hiera::Console_logger</a></li>
+        
+          <li><a href="../../Hiera/Noop_logger.html">Hiera::Noop_logger</a></li>
+        
+          <li><a href="../../Hiera/Puppet_logger.html">Hiera::Puppet_logger</a></li>
+        
+          <li><a href="../../Hiera/Util.html">Hiera::Util</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">Hiera::Backend::Yaml_backend</h1>
+
+    <div id="description" class="description">
+      
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="new-method" class="method-detail ">
+          <a name="method-c-new"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">new</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="new-source">
+<pre>
+<span class="ruby-comment"># File lib/hiera/backend/yaml_backend.rb, line 4</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>
+  <span class="ruby-identifier">require</span> <span class="ruby-string">'yaml'</span>
+  <span class="ruby-constant">Hiera</span>.<span class="ruby-identifier">debug</span>(<span class="ruby-string">&quot;Hiera YAML backend starting&quot;</span>)
+  <span class="ruby-ivar">@data</span>  = <span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-ivar">@cache</span> = <span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- new-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- new-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="lookup-method" class="method-detail ">
+          <a name="method-i-lookup"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">lookup</span><span
+              class="method-args">(key, scope, order_override, resolution_type)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="lookup-source">
+<pre>
+<span class="ruby-comment"># File lib/hiera/backend/yaml_backend.rb, line 11</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">lookup</span>(<span class="ruby-identifier">key</span>, <span class="ruby-identifier">scope</span>, <span class="ruby-identifier">order_override</span>, <span class="ruby-identifier">resolution_type</span>)
+  <span class="ruby-identifier">answer</span> = <span class="ruby-keyword">nil</span>
+
+  <span class="ruby-constant">Hiera</span>.<span class="ruby-identifier">debug</span>(<span class="ruby-node">&quot;Looking up #{key} in YAML backend&quot;</span>)
+
+  <span class="ruby-constant">Backend</span>.<span class="ruby-identifier">datasources</span>(<span class="ruby-identifier">scope</span>, <span class="ruby-identifier">order_override</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">source</span><span class="ruby-operator">|</span>
+    <span class="ruby-constant">Hiera</span>.<span class="ruby-identifier">debug</span>(<span class="ruby-node">&quot;Looking for data source #{source}&quot;</span>)
+    <span class="ruby-identifier">yamlfile</span> = <span class="ruby-constant">Backend</span>.<span class="ruby-identifier">datafile</span>(<span class="ruby-value">:yaml</span>, <span class="ruby-identifier">scope</span>, <span class="ruby-identifier">source</span>, <span class="ruby-string">&quot;yaml&quot;</span>) <span class="ruby-operator">||</span> <span class="ruby-keyword">next</span>
+
+    <span class="ruby-comment"># If you call stale? BEFORE you do encounter the YAML.load_file line</span>
+    <span class="ruby-comment"># it will populate the @cache variable and return true. The second</span>
+    <span class="ruby-comment"># time you call it, it will return false because @cache has been</span>
+    <span class="ruby-comment"># populated. Because of this there are two conditions to check:</span>
+    <span class="ruby-comment"># is @data[yamlfile] populated AND is the cache stale.</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@data</span>[<span class="ruby-identifier">yamlfile</span>]
+      <span class="ruby-ivar">@data</span>[<span class="ruby-identifier">yamlfile</span>] = <span class="ruby-constant">YAML</span>.<span class="ruby-identifier">load_file</span>(<span class="ruby-identifier">yamlfile</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">stale?</span>(<span class="ruby-identifier">yamlfile</span>)
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-ivar">@data</span>[<span class="ruby-identifier">yamlfile</span>] = <span class="ruby-constant">YAML</span>.<span class="ruby-identifier">load_file</span>(<span class="ruby-identifier">yamlfile</span>)
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-keyword">next</span> <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span> <span class="ruby-ivar">@data</span>[<span class="ruby-identifier">yamlfile</span>]
+    <span class="ruby-keyword">next</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@data</span>[<span class="ruby-identifier">yamlfile</span>].<span class="ruby-identifier">empty?</span>
+    <span class="ruby-keyword">next</span> <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@data</span>[<span class="ruby-identifier">yamlfile</span>].<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">key</span>)
+
+    <span class="ruby-comment"># Extra logging that we found the key. This can be outputted</span>
+    <span class="ruby-comment"># multiple times if the resolution type is array or hash but that</span>
+    <span class="ruby-comment"># should be expected as the logging will then tell the user ALL the</span>
+    <span class="ruby-comment"># places where the key is found.</span>
+    <span class="ruby-constant">Hiera</span>.<span class="ruby-identifier">debug</span>(<span class="ruby-node">&quot;Found #{key} in #{source}&quot;</span>)
+
+    <span class="ruby-comment"># for array resolution we just append to the array whatever</span>
+    <span class="ruby-comment"># we find, we then goes onto the next file and keep adding to</span>
+    <span class="ruby-comment"># the array</span>
+    <span class="ruby-comment">#</span>
+    <span class="ruby-comment"># for priority searches we break after the first found data item</span>
+    <span class="ruby-identifier">new_answer</span> = <span class="ruby-constant">Backend</span>.<span class="ruby-identifier">parse_answer</span>(<span class="ruby-ivar">@data</span>[<span class="ruby-identifier">yamlfile</span>][<span class="ruby-identifier">key</span>], <span class="ruby-identifier">scope</span>)
+    <span class="ruby-keyword">case</span> <span class="ruby-identifier">resolution_type</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-value">:array</span>
+      <span class="ruby-identifier">raise</span> <span class="ruby-constant">Exception</span>, <span class="ruby-node">&quot;Hiera type mismatch: expected Array and got #{new_answer.class}&quot;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">new_answer</span>.<span class="ruby-identifier">kind_of?</span> <span class="ruby-constant">Array</span> <span class="ruby-keyword">or</span> <span class="ruby-identifier">new_answer</span>.<span class="ruby-identifier">kind_of?</span> <span class="ruby-constant">String</span>
+      <span class="ruby-identifier">answer</span> <span class="ruby-operator">||=</span> []
+      <span class="ruby-identifier">answer</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">new_answer</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-value">:hash</span>
+      <span class="ruby-identifier">raise</span> <span class="ruby-constant">Exception</span>, <span class="ruby-node">&quot;Hiera type mismatch: expected Hash and got #{new_answer.class}&quot;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">new_answer</span>.<span class="ruby-identifier">kind_of?</span> <span class="ruby-constant">Hash</span>
+      <span class="ruby-identifier">answer</span> <span class="ruby-operator">||=</span> {}
+      <span class="ruby-identifier">answer</span> = <span class="ruby-identifier">new_answer</span>.<span class="ruby-identifier">merge</span> <span class="ruby-identifier">answer</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">answer</span> = <span class="ruby-identifier">new_answer</span>
+      <span class="ruby-keyword">break</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">answer</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- lookup-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- lookup-method -->
+
+      
+        <div id="stale-3F-method" class="method-detail ">
+          <a name="method-i-stale-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">stale?</span><span
+              class="method-args">(yamlfile)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="stale-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/hiera/backend/yaml_backend.rb, line 65</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">stale?</span>(<span class="ruby-identifier">yamlfile</span>)
+  <span class="ruby-comment"># NOTE: The mtime change in a file MUST be &gt; 1 second before being</span>
+  <span class="ruby-comment">#       recognized as stale. File mtime changes within 1 second will</span>
+  <span class="ruby-comment">#       not be recognized.</span>
+  <span class="ruby-identifier">stat</span>    = <span class="ruby-constant">File</span>.<span class="ruby-identifier">stat</span>(<span class="ruby-identifier">yamlfile</span>)
+  <span class="ruby-identifier">current</span> = { <span class="ruby-string">'inode'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">stat</span>.<span class="ruby-identifier">ino</span>, <span class="ruby-string">'mtime'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">stat</span>.<span class="ruby-identifier">mtime</span>, <span class="ruby-string">'size'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">stat</span>.<span class="ruby-identifier">size</span> }
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@cache</span>[<span class="ruby-identifier">yamlfile</span>] <span class="ruby-operator">==</span> <span class="ruby-identifier">current</span>
+
+  <span class="ruby-ivar">@cache</span>[<span class="ruby-identifier">yamlfile</span>] = <span class="ruby-identifier">current</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- stale-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- stale-3F-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

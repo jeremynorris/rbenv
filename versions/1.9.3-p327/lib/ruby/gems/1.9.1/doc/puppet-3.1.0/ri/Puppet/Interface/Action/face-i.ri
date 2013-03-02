@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"	face:EFI"#Puppet::Interface::Action#face;FI"R;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"(The face this action is attached to;TI" @return [Puppet::Interface];T:
+@file0FI"#lib/puppet/interface/action.rb;T

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>File: memory.rb [facter-1.6.17 Documentation]</title>
+
+  <link type="text/css" media="screen" href="../../rdoc.css" rel="stylesheet" />
+
+  <script src="../../js/jquery.js" type="text/javascript"
+    charset="utf-8"></script>
+  <script src="../../js/thickbox-compressed.js" type="text/javascript"
+    charset="utf-8"></script>
+  <script src="../../js/quicksearch.js" type="text/javascript"
+    charset="utf-8"></script>
+  <script src="../../js/darkfish.js" type="text/javascript"
+    charset="utf-8"></script>
+</head>
+
+<body class="file file-popup">
+  <div id="metadata">
+    <dl>
+      <dt class="modified-date">Last Modified</dt>
+      <dd class="modified-date">2013-03-01 22:14:08 +0100</dd>
+
+      
+      <dt class="requires">Requires</dt>
+      <dd class="requires">
+        <ul>
+        
+          <li>facter/util/memory</li>
+        
+          <li>facter/util/wmi</li>
+        
+        </ul>
+      </dd>
+      
+
+      
+    </dl>
+  </div>
+
+  <div id="documentation">
+    
+    <div class="description">
+      <h2>Description</h2>
+      
+<p>Fact: memory</p>
+
+<p>Purpose: Return information about memory and swap usage.</p>
+
+<p>Resolution:</p>
+
+<pre>On Linuxes, uses Facter::Memory.meminfo_number from
+'facter/util/memory.rb'
+On AIX, parses &quot;swap -l&quot; for swap values only.
+On OpenBSD, it parses &quot;swapctl -l&quot; for swap values, vmstat via a module for
+free memory, and &quot;sysctl hw.physmem&quot; for maximum memory.
+On Solaris, use &quot;swap -l&quot; for swap values, and parsing prtconf for maximum
+memory, and again, the vmstat module for free memory.</pre>
+
+<p>Caveats:</p>
+
+<pre>Some BSD platforms aren't covered at all. AIX is missing memory values.</pre>
+
+    </div>
+    
+  </div>
+</body>
+</html>
+

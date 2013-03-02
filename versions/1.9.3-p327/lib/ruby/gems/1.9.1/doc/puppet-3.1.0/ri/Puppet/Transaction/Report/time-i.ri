@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"	time:EFI"%Puppet::Transaction::Report#time;FI"R;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"1The time when the report data was generated.;TI"O@return [Time] A time object indicating when the report data was generated;T:
+@file0FI"%lib/puppet/transaction/report.rb;T

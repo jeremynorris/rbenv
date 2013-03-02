@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"instance:EFI"!Puppet::Configurer::instance;FI"RW;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"FPuppet agent should only have one instance running, and we need a;TI"way to retrieve it.;T:
+@file0TI"lib/puppet/configurer.rb;T

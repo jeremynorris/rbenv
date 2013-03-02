@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"	name:EFI"$Puppet::FileBucket::Dipper#name;FI"RW;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"9This is a transitional implementation that uses REST;TI"'to access remote filebucket files.;T:
+@file0FI"%lib/puppet/file_bucket/dipper.rb;T

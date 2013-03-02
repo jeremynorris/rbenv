@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>File: GDC.rb [log4r-1.1.10 Documentation]</title>
+
+  <link type="text/css" media="screen" href="../../rdoc.css" rel="stylesheet" />
+
+  <script src="../../js/jquery.js" type="text/javascript"
+    charset="utf-8"></script>
+  <script src="../../js/thickbox-compressed.js" type="text/javascript"
+    charset="utf-8"></script>
+  <script src="../../js/quicksearch.js" type="text/javascript"
+    charset="utf-8"></script>
+  <script src="../../js/darkfish.js" type="text/javascript"
+    charset="utf-8"></script>
+</head>
+
+<body class="file file-popup">
+  <div id="metadata">
+    <dl>
+      <dt class="modified-date">Last Modified</dt>
+      <dd class="modified-date">2013-03-01 22:17:16 +0100</dd>
+
+      
+      <dt class="requires">Requires</dt>
+      <dd class="requires">
+        <ul>
+        
+          <li>monitor</li>
+        
+        </ul>
+      </dd>
+      
+
+      
+    </dl>
+  </div>
+
+  <div id="documentation">
+    
+    <div class="description">
+      <h2>Description</h2>
+      
+<h1>GDC</h1>
+
+<p>The GDC class implements a copy of the Global Diagnostic Context, which is
+not part of the Apache Log4j library, as of this writing (10 Jan 2009).</p>
+
+<p>The GDC is like the NDC and MDC classes, only it is global to the
+application (see NDC and MDC for details on those classes).</p>
+
+<p>The GDC is local to the main thread, and any new threads will return the
+value of the current GDC set in the main thread.</p>
+
+<p>Only the main thread can set the GDC, any other threads that attempt to
+will raise an exception.</p>
+
+<h2>Other Info</h2>
+<table class="rdoc-list"><tr><td class="rdoc-term"><p>Version</p></td>
+<td>
+<p>$Id$</p>
+</td></tr><tr><td class="rdoc-term"><p>Author</p></td>
+<td>
+<p>Colby Gutierrez-Kraybill &lt;colby(at)astro.berkeley.edu&gt;</p>
+</td></tr></table>
+
+    </div>
+    
+  </div>
+</body>
+</html>
+

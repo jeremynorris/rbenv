@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"!create_default_short_options:EFI"LPuppet::Util::CommandLine::Trollop::Parser#create_default_short_options;FI"RW;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"oA flag that determines whether or not to attempt to automatically generate "short" options if they are not;To:RDoc::Markup::Verbatim;	[I"explicitly specified.;F:
+@file0FI",lib/puppet/util/command_line/trollop.rb;T

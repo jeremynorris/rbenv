@@ -1,0 +1,555 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Module: Hiera::Backend</title>
+
+  <link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="module">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../lib/hiera/backend/json_backend_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/hiera/backend/json_backend.rb">lib/hiera/backend/json_backend.rb</a></li>
+          
+            <li><a href="../lib/hiera/backend/yaml_backend_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/hiera/backend/yaml_backend.rb">lib/hiera/backend/yaml_backend.rb</a></li>
+          
+            <li><a href="../lib/hiera/backend_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/hiera/backend.rb">lib/hiera/backend.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+
+      
+
+      
+      <!-- Namespace Contents -->
+      <div id="namespace-list-section" class="section">
+        <h3 class="section-header">Namespace</h3>
+        <ul class="link-list">
+          
+          <li><span class="type">CLASS</span> <a href="Backend/Json_backend.html">Hiera::Backend::Json_backend</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="Backend/Yaml_backend.html">Hiera::Backend::Yaml_backend</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-datadir">::datadir</a></li>
+          
+          <li><a href="#method-c-datafile">::datafile</a></li>
+          
+          <li><a href="#method-c-datasources">::datasources</a></li>
+          
+          <li><a href="#method-c-lookup">::lookup</a></li>
+          
+          <li><a href="#method-c-parse_answer">::parse_answer</a></li>
+          
+          <li><a href="#method-c-parse_string">::parse_string</a></li>
+          
+          <li><a href="#method-c-resolve_answer">::resolve_answer</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../Hiera.html">Hiera</a></li>
+        
+          <li><a href="../Hiera/Backend.html">Hiera::Backend</a></li>
+        
+          <li><a href="../Hiera/Backend/Json_backend.html">Hiera::Backend::Json_backend</a></li>
+        
+          <li><a href="../Hiera/Backend/Yaml_backend.html">Hiera::Backend::Yaml_backend</a></li>
+        
+          <li><a href="../Hiera/Config.html">Hiera::Config</a></li>
+        
+          <li><a href="../Hiera/Console_logger.html">Hiera::Console_logger</a></li>
+        
+          <li><a href="../Hiera/Noop_logger.html">Hiera::Noop_logger</a></li>
+        
+          <li><a href="../Hiera/Puppet_logger.html">Hiera::Puppet_logger</a></li>
+        
+          <li><a href="../Hiera/Util.html">Hiera::Util</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="module">Hiera::Backend</h1>
+
+    <div id="description" class="description">
+      
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="datadir-method" class="method-detail ">
+          <a name="method-c-datadir"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">datadir</span><span
+              class="method-args">(backend, scope)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Data lives in /var/lib/hiera by default.  If a backend supplies a datadir
+in the config it will be used and subject to variable expansion based on
+scope</p>
+            
+
+            
+            <div class="method-source-code" id="datadir-source">
+<pre>
+<span class="ruby-comment"># File lib/hiera/backend.rb, line 9</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">datadir</span>(<span class="ruby-identifier">backend</span>, <span class="ruby-identifier">scope</span>)
+  <span class="ruby-identifier">backend</span> = <span class="ruby-identifier">backend</span>.<span class="ruby-identifier">to_sym</span>
+  <span class="ruby-identifier">default</span> = <span class="ruby-constant">Hiera</span><span class="ruby-operator">::</span><span class="ruby-constant">Util</span>.<span class="ruby-identifier">var_dir</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">Config</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">backend</span>)
+    <span class="ruby-identifier">parse_string</span>(<span class="ruby-constant">Config</span>[<span class="ruby-identifier">backend</span>][<span class="ruby-value">:datadir</span>] <span class="ruby-operator">||</span> <span class="ruby-identifier">default</span>, <span class="ruby-identifier">scope</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">parse_string</span>(<span class="ruby-identifier">default</span>, <span class="ruby-identifier">scope</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- datadir-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- datadir-method -->
+
+      
+        <div id="datafile-method" class="method-detail ">
+          <a name="method-c-datafile"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">datafile</span><span
+              class="method-args">(backend, scope, source, extension)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Finds the path to a datafile based on the Backend#datadir and extension</p>
+
+<p>If the file is not found nil is returned</p>
+            
+
+            
+            <div class="method-source-code" id="datafile-source">
+<pre>
+<span class="ruby-comment"># File lib/hiera/backend.rb, line 24</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">datafile</span>(<span class="ruby-identifier">backend</span>, <span class="ruby-identifier">scope</span>, <span class="ruby-identifier">source</span>, <span class="ruby-identifier">extension</span>)
+  <span class="ruby-identifier">file</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>([<span class="ruby-identifier">datadir</span>(<span class="ruby-identifier">backend</span>, <span class="ruby-identifier">scope</span>), <span class="ruby-node">&quot;#{source}.#{extension}&quot;</span>])
+
+  <span class="ruby-keyword">unless</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">exist?</span>(<span class="ruby-identifier">file</span>)
+    <span class="ruby-constant">Hiera</span>.<span class="ruby-identifier">debug</span>(<span class="ruby-node">&quot;Cannot find datafile #{file}, skipping&quot;</span>)
+
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">file</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- datafile-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- datafile-method -->
+
+      
+        <div id="datasources-method" class="method-detail ">
+          <a name="method-c-datasources"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">datasources</span><span
+              class="method-args">(scope, override=nil, hierarchy=nil)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Constructs a list of data sources to search</p>
+
+<p>If you give it a specific hierarchy it will just use that else it will use
+the global configured one, failing that it will just look in the ‘common’
+data source.</p>
+
+<p>An override can be supplied that will be pre-pended to the hierarchy.</p>
+
+<p>The source names will be subject to variable expansion based on scope</p>
+            
+
+            
+            <div class="method-source-code" id="datasources-source">
+<pre>
+<span class="ruby-comment"># File lib/hiera/backend.rb, line 47</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">datasources</span>(<span class="ruby-identifier">scope</span>, <span class="ruby-identifier">override</span>=<span class="ruby-keyword">nil</span>, <span class="ruby-identifier">hierarchy</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">hierarchy</span>
+    <span class="ruby-identifier">hierarchy</span> = [<span class="ruby-identifier">hierarchy</span>]
+  <span class="ruby-keyword">elsif</span> <span class="ruby-constant">Config</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-value">:hierarchy</span>)
+    <span class="ruby-identifier">hierarchy</span> = [<span class="ruby-constant">Config</span>[<span class="ruby-value">:hierarchy</span>]].<span class="ruby-identifier">flatten</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">hierarchy</span> = [<span class="ruby-string">&quot;common&quot;</span>]
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">hierarchy</span>.<span class="ruby-identifier">insert</span>(<span class="ruby-value">0</span>, <span class="ruby-identifier">override</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">override</span>
+
+  <span class="ruby-identifier">hierarchy</span>.<span class="ruby-identifier">flatten</span>.<span class="ruby-identifier">map</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">source</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">source</span> = <span class="ruby-identifier">parse_string</span>(<span class="ruby-identifier">source</span>, <span class="ruby-identifier">scope</span>)
+    <span class="ruby-keyword">yield</span>(<span class="ruby-identifier">source</span>) <span class="ruby-keyword">unless</span> <span class="ruby-identifier">source</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;&quot;</span> <span class="ruby-keyword">or</span> <span class="ruby-identifier">source</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/(^\/|\/\/|\/$)/</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- datasources-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- datasources-method -->
+
+      
+        <div id="lookup-method" class="method-detail ">
+          <a name="method-c-lookup"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">lookup</span><span
+              class="method-args">(key, default, scope, order_override, resolution_type)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Calls out to all configured backends in the order they were specified.  The
+first one to answer will win.</p>
+
+<p>This lets you declare multiple backends, a possible use case might be in
+Puppet where a Puppet module declares default data using in-module data
+while users can override using JSON/YAML etc.  By layering the backends and
+putting the Puppet one last you can override module author data easily.</p>
+
+<p><a href="Backend.html">Backend</a> instances are cached so if you need to
+connect to any databases then do so in your constructor, future calls to
+your backend will not create new instances</p>
+            
+
+            
+            <div class="method-source-code" id="lookup-source">
+<pre>
+<span class="ruby-comment"># File lib/hiera/backend.rb, line 152</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">lookup</span>(<span class="ruby-identifier">key</span>, <span class="ruby-identifier">default</span>, <span class="ruby-identifier">scope</span>, <span class="ruby-identifier">order_override</span>, <span class="ruby-identifier">resolution_type</span>)
+  <span class="ruby-ivar">@backends</span> <span class="ruby-operator">||=</span> {}
+  <span class="ruby-identifier">answer</span> = <span class="ruby-keyword">nil</span>
+
+  <span class="ruby-constant">Config</span>[<span class="ruby-value">:backends</span>].<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">backend</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">constants</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-node">&quot;#{backend.capitalize}_backend&quot;</span>) <span class="ruby-operator">||</span> <span class="ruby-identifier">constants</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-node">&quot;#{backend.capitalize}_backend&quot;</span>.<span class="ruby-identifier">to_sym</span>)
+      <span class="ruby-ivar">@backends</span>[<span class="ruby-identifier">backend</span>] <span class="ruby-operator">||=</span> <span class="ruby-constant">Backend</span>.<span class="ruby-identifier">const_get</span>(<span class="ruby-node">&quot;#{backend.capitalize}_backend&quot;</span>).<span class="ruby-identifier">new</span>
+      <span class="ruby-identifier">new_answer</span> = <span class="ruby-ivar">@backends</span>[<span class="ruby-identifier">backend</span>].<span class="ruby-identifier">lookup</span>(<span class="ruby-identifier">key</span>, <span class="ruby-identifier">scope</span>, <span class="ruby-identifier">order_override</span>, <span class="ruby-identifier">resolution_type</span>)
+
+      <span class="ruby-keyword">if</span> <span class="ruby-keyword">not</span> <span class="ruby-identifier">new_answer</span>.<span class="ruby-identifier">nil?</span>
+        <span class="ruby-keyword">case</span> <span class="ruby-identifier">resolution_type</span>
+        <span class="ruby-keyword">when</span> <span class="ruby-value">:array</span>
+          <span class="ruby-identifier">raise</span> <span class="ruby-constant">Exception</span>, <span class="ruby-node">&quot;Hiera type mismatch: expected Array and got #{new_answer.class}&quot;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">new_answer</span>.<span class="ruby-identifier">kind_of?</span> <span class="ruby-constant">Array</span> <span class="ruby-keyword">or</span> <span class="ruby-identifier">new_answer</span>.<span class="ruby-identifier">kind_of?</span> <span class="ruby-constant">String</span>
+          <span class="ruby-identifier">answer</span> <span class="ruby-operator">||=</span> []
+          <span class="ruby-identifier">answer</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">new_answer</span>
+        <span class="ruby-keyword">when</span> <span class="ruby-value">:hash</span>
+          <span class="ruby-identifier">raise</span> <span class="ruby-constant">Exception</span>, <span class="ruby-node">&quot;Hiera type mismatch: expected Hash and got #{new_answer.class}&quot;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">new_answer</span>.<span class="ruby-identifier">kind_of?</span> <span class="ruby-constant">Hash</span>
+          <span class="ruby-identifier">answer</span> <span class="ruby-operator">||=</span> {}
+          <span class="ruby-identifier">answer</span> = <span class="ruby-identifier">new_answer</span>.<span class="ruby-identifier">merge</span> <span class="ruby-identifier">answer</span>
+        <span class="ruby-keyword">else</span>
+          <span class="ruby-identifier">answer</span> = <span class="ruby-identifier">new_answer</span>
+          <span class="ruby-keyword">break</span>
+        <span class="ruby-keyword">end</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">answer</span> = <span class="ruby-identifier">resolve_answer</span>(<span class="ruby-identifier">answer</span>, <span class="ruby-identifier">resolution_type</span>) <span class="ruby-keyword">unless</span> <span class="ruby-identifier">answer</span>.<span class="ruby-identifier">nil?</span>
+  <span class="ruby-identifier">answer</span> = <span class="ruby-identifier">parse_string</span>(<span class="ruby-identifier">default</span>, <span class="ruby-identifier">scope</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">answer</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-keyword">and</span> <span class="ruby-identifier">default</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">String</span>)
+
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">default</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">answer</span>.<span class="ruby-identifier">nil?</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">answer</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- lookup-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- lookup-method -->
+
+      
+        <div id="parse_answer-method" class="method-detail ">
+          <a name="method-c-parse_answer"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">parse_answer</span><span
+              class="method-args">(data, scope, extra_data={})</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Parses a answer received from data files</p>
+
+<p>Ultimately it just pass the data through <a
+href="Backend.html#method-c-parse_string">parse_string</a> but it makes
+some effort to handle arrays of strings as well</p>
+            
+
+            
+            <div class="method-source-code" id="parse_answer-source">
+<pre>
+<span class="ruby-comment"># File lib/hiera/backend.rb, line 106</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">parse_answer</span>(<span class="ruby-identifier">data</span>, <span class="ruby-identifier">scope</span>, <span class="ruby-identifier">extra_data</span>={})
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">data</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Numeric</span>) <span class="ruby-keyword">or</span> <span class="ruby-identifier">data</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">TrueClass</span>) <span class="ruby-keyword">or</span> <span class="ruby-identifier">data</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">FalseClass</span>)
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">data</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">data</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">String</span>)
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">parse_string</span>(<span class="ruby-identifier">data</span>, <span class="ruby-identifier">scope</span>, <span class="ruby-identifier">extra_data</span>)
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">data</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Hash</span>)
+    <span class="ruby-identifier">answer</span> = {}
+    <span class="ruby-identifier">data</span>.<span class="ruby-identifier">each_pair</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">key</span>, <span class="ruby-identifier">val</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">answer</span>[<span class="ruby-identifier">key</span>] = <span class="ruby-identifier">parse_answer</span>(<span class="ruby-identifier">val</span>, <span class="ruby-identifier">scope</span>, <span class="ruby-identifier">extra_data</span>)
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">answer</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">data</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Array</span>)
+    <span class="ruby-identifier">answer</span> = []
+    <span class="ruby-identifier">data</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">item</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">answer</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">parse_answer</span>(<span class="ruby-identifier">item</span>, <span class="ruby-identifier">scope</span>, <span class="ruby-identifier">extra_data</span>)
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">answer</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- parse_answer-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- parse_answer-method -->
+
+      
+        <div id="parse_string-method" class="method-detail ">
+          <a name="method-c-parse_string"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">parse_string</span><span
+              class="method-args">(data, scope, extra_data={})</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Parse a string like ‘%{foo}’ against a supplied scope and additional scope.
+If either scope or extra_scope includes the varaible ‘foo’ it will be
+replaced else an empty string will be placed.</p>
+
+<p>If both scope and extra_data has “foo” scope will win.  See hiera-puppet
+for an example of this to make hiera aware of additional non scope
+variables</p>
+            
+
+            
+            <div class="method-source-code" id="parse_string-source">
+<pre>
+<span class="ruby-comment"># File lib/hiera/backend.rb, line 73</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">parse_string</span>(<span class="ruby-identifier">data</span>, <span class="ruby-identifier">scope</span>, <span class="ruby-identifier">extra_data</span>={})
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">data</span>
+
+  <span class="ruby-identifier">tdata</span> = <span class="ruby-identifier">data</span>.<span class="ruby-identifier">clone</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">tdata</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">String</span>)
+    <span class="ruby-keyword">while</span> <span class="ruby-identifier">tdata</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/%\{(.+?)\}/</span>
+      <span class="ruby-keyword">begin</span>
+        <span class="ruby-identifier">var</span> = <span class="ruby-node">$1</span>
+
+        <span class="ruby-identifier">val</span> = <span class="ruby-string">&quot;&quot;</span>
+
+        <span class="ruby-comment"># Puppet can return :undefined for unknown scope vars,</span>
+        <span class="ruby-comment"># If it does then we still need to evaluate extra_data</span>
+        <span class="ruby-comment"># before returning an empty string.</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">scope</span>[<span class="ruby-identifier">var</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">scope</span>[<span class="ruby-identifier">var</span>] <span class="ruby-operator">!=</span> <span class="ruby-value">:undefined</span>
+            <span class="ruby-identifier">val</span> = <span class="ruby-identifier">scope</span>[<span class="ruby-identifier">var</span>]
+        <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">extra_data</span>[<span class="ruby-identifier">var</span>]
+            <span class="ruby-identifier">val</span> = <span class="ruby-identifier">extra_data</span>[<span class="ruby-identifier">var</span>]
+        <span class="ruby-keyword">end</span>
+      <span class="ruby-keyword">end</span> <span class="ruby-keyword">until</span> <span class="ruby-identifier">val</span> <span class="ruby-operator">!=</span> <span class="ruby-string">&quot;&quot;</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">var</span> <span class="ruby-operator">!~</span> <span class="ruby-regexp">/::(.+)/</span>
+
+      <span class="ruby-identifier">tdata</span>.<span class="ruby-identifier">gsub!</span>(<span class="ruby-node">/%\{(::)?#{var}\}/</span>, <span class="ruby-identifier">val</span>)
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">tdata</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- parse_string-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- parse_string-method -->
+
+      
+        <div id="resolve_answer-method" class="method-detail ">
+          <a name="method-c-resolve_answer"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">resolve_answer</span><span
+              class="method-args">(answer, resolution_type)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="resolve_answer-source">
+<pre>
+<span class="ruby-comment"># File lib/hiera/backend.rb, line 128</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">resolve_answer</span>(<span class="ruby-identifier">answer</span>, <span class="ruby-identifier">resolution_type</span>)
+  <span class="ruby-keyword">case</span> <span class="ruby-identifier">resolution_type</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:array</span>
+    [<span class="ruby-identifier">answer</span>].<span class="ruby-identifier">flatten</span>.<span class="ruby-identifier">uniq</span>.<span class="ruby-identifier">compact</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:hash</span>
+    <span class="ruby-identifier">answer</span> <span class="ruby-comment"># Hash structure should be preserved</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">answer</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- resolve_answer-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- resolve_answer-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"result:EFI"Mongo::MongoDBError#result;FI"R;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"G@return The entire failed command's response object, if available.;T:
+@file0FI"lib/mongo/exceptions.rb;T

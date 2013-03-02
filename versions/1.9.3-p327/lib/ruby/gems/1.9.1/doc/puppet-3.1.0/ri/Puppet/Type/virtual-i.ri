@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"virtual:EFI"Puppet::Type#virtual;FI"RW;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"Q@return [Boolean] Flag indicating if the type is virtual (it should not be).;T:
+@file0FI"lib/puppet/type.rb;T

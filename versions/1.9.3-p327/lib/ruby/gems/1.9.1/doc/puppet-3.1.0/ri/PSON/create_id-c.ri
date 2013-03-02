@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"create_id:EFI"PSON::create_id;FI"RW;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"LThis is create identifier, that is used to decide, if the _pson_create_;TI"Fhook of a class should be called. It defaults to 'document_type'.;T:
+@file0TI"'lib/puppet/external/pson/common.rb;T

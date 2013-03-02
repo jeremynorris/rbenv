@@ -1,0 +1,4 @@
+U:RDoc::Attr[iI"copyright_owner:EFI"0Puppet::Interface::FullDocs#copyright_owner;FI"RW;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"Sets the copyright owner;TI"@@param value [String, Array<String>] The copyright owner or;To:RDoc::Markup::Verbatim;	[I"owners.
+;Fo;
+;	[I">@return [String] Comma-separated list of copyright owners;TI"@api private;T:
+@file0FI"*lib/puppet/interface/documentation.rb;T

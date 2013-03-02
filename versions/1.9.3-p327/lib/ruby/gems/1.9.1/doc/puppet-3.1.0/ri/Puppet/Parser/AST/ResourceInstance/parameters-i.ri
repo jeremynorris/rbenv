@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"parameters:EFI"5Puppet::Parser::AST::ResourceInstance#parameters;FI"RW;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"EA simple container for a parameter for an object.  Consists of a;TI"#title and a set of parameters.;T:
+@file0FI"/lib/puppet/parser/ast/resource_instance.rb;T

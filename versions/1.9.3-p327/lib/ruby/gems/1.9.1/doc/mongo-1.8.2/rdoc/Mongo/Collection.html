@@ -1,0 +1,2416 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Class: Mongo::Collection</title>
+
+  <link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../lib/mongo/collection_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/mongo/collection.rb">lib/mongo/collection.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link">Object</p>
+        
+      </div>
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-new">::new</a></li>
+          
+          <li><a href="#method-i-3C-3C">#<<</a></li>
+          
+          <li><a href="#method-i-5B-5D">#[]</a></li>
+          
+          <li><a href="#method-i-aggregate">#aggregate</a></li>
+          
+          <li><a href="#method-i-capped-3F">#capped?</a></li>
+          
+          <li><a href="#method-i-command_options">#command_options</a></li>
+          
+          <li><a href="#method-i-count">#count</a></li>
+          
+          <li><a href="#method-i-create_index">#create_index</a></li>
+          
+          <li><a href="#method-i-distinct">#distinct</a></li>
+          
+          <li><a href="#method-i-drop">#drop</a></li>
+          
+          <li><a href="#method-i-drop_index">#drop_index</a></li>
+          
+          <li><a href="#method-i-drop_indexes">#drop_indexes</a></li>
+          
+          <li><a href="#method-i-ensure_index">#ensure_index</a></li>
+          
+          <li><a href="#method-i-find">#find</a></li>
+          
+          <li><a href="#method-i-find_and_modify">#find_and_modify</a></li>
+          
+          <li><a href="#method-i-find_one">#find_one</a></li>
+          
+          <li><a href="#method-i-group">#group</a></li>
+          
+          <li><a href="#method-i-hint-3D">#hint=</a></li>
+          
+          <li><a href="#method-i-index_information">#index_information</a></li>
+          
+          <li><a href="#method-i-insert">#insert</a></li>
+          
+          <li><a href="#method-i-map_reduce">#map_reduce</a></li>
+          
+          <li><a href="#method-i-mapreduce">#mapreduce</a></li>
+          
+          <li><a href="#method-i-normalize_hint_fields">#normalize_hint_fields</a></li>
+          
+          <li><a href="#method-i-options">#options</a></li>
+          
+          <li><a href="#method-i-remove">#remove</a></li>
+          
+          <li><a href="#method-i-rename">#rename</a></li>
+          
+          <li><a href="#method-i-save">#save</a></li>
+          
+          <li><a href="#method-i-size">#size</a></li>
+          
+          <li><a href="#method-i-stats">#stats</a></li>
+          
+          <li><a href="#method-i-update">#update</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+      <!-- Included Modules -->
+      <div id="includes-section" class="section">
+        <h3 class="section-header">Included Modules</h3>
+        <ul class="link-list">
+        
+        
+          <li><a class="include" href="Logging.html">Mongo::Logging</a></li>
+        
+        
+        
+          <li><a class="include" href="WriteConcern.html">Mongo::WriteConcern</a></li>
+        
+        
+        </ul>
+      </div>
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../Mongo.html">Mongo</a></li>
+        
+          <li><a href="../Mongo/AuthenticationError.html">Mongo::AuthenticationError</a></li>
+        
+          <li><a href="../Mongo/Collection.html">Mongo::Collection</a></li>
+        
+          <li><a href="../Mongo/Connection.html">Mongo::Connection</a></li>
+        
+          <li><a href="../Mongo/ConnectionError.html">Mongo::ConnectionError</a></li>
+        
+          <li><a href="../Mongo/ConnectionFailure.html">Mongo::ConnectionFailure</a></li>
+        
+          <li><a href="../Mongo/ConnectionTimeoutError.html">Mongo::ConnectionTimeoutError</a></li>
+        
+          <li><a href="../Mongo/Constants.html">Mongo::Constants</a></li>
+        
+          <li><a href="../Mongo/Conversions.html">Mongo::Conversions</a></li>
+        
+          <li><a href="../Mongo/Cursor.html">Mongo::Cursor</a></li>
+        
+          <li><a href="../Mongo/DB.html">Mongo::DB</a></li>
+        
+          <li><a href="../Mongo/Grid.html">Mongo::Grid</a></li>
+        
+          <li><a href="../Mongo/GridError.html">Mongo::GridError</a></li>
+        
+          <li><a href="../Mongo/GridExt.html">Mongo::GridExt</a></li>
+        
+          <li><a href="../Mongo/GridExt/InstanceMethods.html">Mongo::GridExt::InstanceMethods</a></li>
+        
+          <li><a href="../Mongo/GridFileNotFound.html">Mongo::GridFileNotFound</a></li>
+        
+          <li><a href="../Mongo/GridFileSystem.html">Mongo::GridFileSystem</a></li>
+        
+          <li><a href="../Mongo/GridIO.html">Mongo::GridIO</a></li>
+        
+          <li><a href="../Mongo/GridMD5Failure.html">Mongo::GridMD5Failure</a></li>
+        
+          <li><a href="../Mongo/InvalidNSName.html">Mongo::InvalidNSName</a></li>
+        
+          <li><a href="../Mongo/InvalidOperation.html">Mongo::InvalidOperation</a></li>
+        
+          <li><a href="../Mongo/InvalidSortValueError.html">Mongo::InvalidSortValueError</a></li>
+        
+          <li><a href="../Mongo/LegacyWriteConcern.html">Mongo::LegacyWriteConcern</a></li>
+        
+          <li><a href="../Mongo/Logging.html">Mongo::Logging</a></li>
+        
+          <li><a href="../Mongo/Logging/Instrumenter.html">Mongo::Logging::Instrumenter</a></li>
+        
+          <li><a href="../Mongo/MongoArgumentError.html">Mongo::MongoArgumentError</a></li>
+        
+          <li><a href="../Mongo/MongoClient.html">Mongo::MongoClient</a></li>
+        
+          <li><a href="../Mongo/MongoDBError.html">Mongo::MongoDBError</a></li>
+        
+          <li><a href="../Mongo/MongoReplicaSetClient.html">Mongo::MongoReplicaSetClient</a></li>
+        
+          <li><a href="../Mongo/MongoRubyError.html">Mongo::MongoRubyError</a></li>
+        
+          <li><a href="../Mongo/MongoShardedClient.html">Mongo::MongoShardedClient</a></li>
+        
+          <li><a href="../Mongo/Networking.html">Mongo::Networking</a></li>
+        
+          <li><a href="../Mongo/Node.html">Mongo::Node</a></li>
+        
+          <li><a href="../Mongo/NodeWithTagsNotFound.html">Mongo::NodeWithTagsNotFound</a></li>
+        
+          <li><a href="../Mongo/OperationFailure.html">Mongo::OperationFailure</a></li>
+        
+          <li><a href="../Mongo/OperationTimeout.html">Mongo::OperationTimeout</a></li>
+        
+          <li><a href="../Mongo/Pool.html">Mongo::Pool</a></li>
+        
+          <li><a href="../Mongo/PoolManager.html">Mongo::PoolManager</a></li>
+        
+          <li><a href="../Mongo/ReadPreference.html">Mongo::ReadPreference</a></li>
+        
+          <li><a href="../Mongo/ReplSetConnection.html">Mongo::ReplSetConnection</a></li>
+        
+          <li><a href="../Mongo/ReplicaSetConnectionError.html">Mongo::ReplicaSetConnectionError</a></li>
+        
+          <li><a href="../Mongo/SSLSocket.html">Mongo::SSLSocket</a></li>
+        
+          <li><a href="../Mongo/ServerVersion.html">Mongo::ServerVersion</a></li>
+        
+          <li><a href="../Mongo/ShardedConnection.html">Mongo::ShardedConnection</a></li>
+        
+          <li><a href="../Mongo/ShardingPoolManager.html">Mongo::ShardingPoolManager</a></li>
+        
+          <li><a href="../Mongo/Support.html">Mongo::Support</a></li>
+        
+          <li><a href="../Mongo/TCPSocket.html">Mongo::TCPSocket</a></li>
+        
+          <li><a href="../Mongo/ThreadLocalVariableManager.html">Mongo::ThreadLocalVariableManager</a></li>
+        
+          <li><a href="../Mongo/UNIXSocket.html">Mongo::UNIXSocket</a></li>
+        
+          <li><a href="../Mongo/URIParser.html">Mongo::URIParser</a></li>
+        
+          <li><a href="../Mongo/WriteConcern.html">Mongo::WriteConcern</a></li>
+        
+          <li><a href="../Class.html">Class</a></li>
+        
+          <li><a href="../Mutex.html">Mutex</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">Mongo::Collection</h1>
+
+    <div id="description" class="description">
+      
+<p>A named collection of documents in a database.</p>
+
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+      <!-- Attributes -->
+      <div id="attribute-method-details" class="method-section section">
+        <h3 class="section-header">Attributes</h3>
+
+        
+        <div id="acceptable_latency-attribute-method" class="method-detail">
+          <a name="acceptable_latency"></a>
+          
+          <a name="acceptable_latency="></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">acceptable_latency</span><span
+              class="attribute-access-type">[RW]</span>
+          </div>
+
+          <div class="method-description">
+          
+          <p>Read Preference</p>
+          
+          </div>
+        </div>
+        
+        <div id="db-attribute-method" class="method-detail">
+          <a name="db"></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">db</span><span
+              class="attribute-access-type">[R]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+        <div id="hint-attribute-method" class="method-detail">
+          <a name="hint"></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">hint</span><span
+              class="attribute-access-type">[R]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+        <div id="name-attribute-method" class="method-detail">
+          <a name="name"></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">name</span><span
+              class="attribute-access-type">[R]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+        <div id="pk_factory-attribute-method" class="method-detail">
+          <a name="pk_factory"></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">pk_factory</span><span
+              class="attribute-access-type">[R]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+        <div id="read-attribute-method" class="method-detail">
+          <a name="read"></a>
+          
+          <a name="read="></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">read</span><span
+              class="attribute-access-type">[RW]</span>
+          </div>
+
+          <div class="method-description">
+          
+          <p>Read Preference</p>
+          
+          </div>
+        </div>
+        
+        <div id="tag_sets-attribute-method" class="method-detail">
+          <a name="tag_sets"></a>
+          
+          <a name="tag_sets="></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">tag_sets</span><span
+              class="attribute-access-type">[RW]</span>
+          </div>
+
+          <div class="method-description">
+          
+          <p>Read Preference</p>
+          
+          </div>
+        </div>
+        
+        <div id="write_concern-attribute-method" class="method-detail">
+          <a name="write_concern"></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">write_concern</span><span
+              class="attribute-access-type">[R]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+      </div><!-- attribute-method-details -->
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="new-method" class="method-detail ">
+          <a name="method-c-new"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">new</span><span
+              class="method-args">(name, db, opts={})</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Initialize a collection object.</p>
+
+<p>@param [String, Symbol] name the name of the collection. @param [DB] db a
+MongoDB database instance.</p>
+
+<p>@option opts [String, Integer, Symbol] :w (1) Set default number of nodes
+to which a write</p>
+
+<pre>should be acknowledged</pre>
+
+<p>@option opts [Boolean] :j (false) Set journal acknowledgement @option opts
+[Integer] :wtimeout (nil) Set replica set acknowledgement timeout @option
+opts [Boolean] :fsync (false) Set fsync acknowledgement.</p>
+
+<pre>Notes about write concern:
+  These write concern options will be used for insert, update, and remove methods called on this  
+  Collection instance. If no value is provided, the default values set on this instance's DB will be used. 
+  These option values can be overridden for any invocation of insert, update, or remove.</pre>
+
+<p>@option opts [:create_pk] :pk (BSON::ObjectId) A primary key factory to use</p>
+
+<pre>other than the default BSON::ObjectId.</pre>
+
+<p>@option opts [:primary, :secondary] :read The default read preference for
+queries</p>
+
+<pre>initiates from this connection object. If +:secondary+ is chosen, reads will be sent
+to one of the closest available secondary nodes. If a secondary node cannot be located, the
+read will be sent to the primary. If this option is left unspecified, the value of the read
+preference for this collection's associated Mongo::DB object will be used.</pre>
+
+<p>@raise [InvalidNSName]</p>
+
+<pre>if collection name is empty, contains '$', or starts or ends with '.'</pre>
+
+<p>@raise [TypeError]</p>
+
+<pre>if collection name is not a string or symbol</pre>
+
+<p>@return [Collection]</p>
+
+<p>@core collections constructor_details</p>
+            
+
+            
+            <div class="method-source-code" id="new-source">
+<pre>
+<span class="ruby-comment"># File lib/mongo/collection.rb, line 68</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">db</span>, <span class="ruby-identifier">opts</span>={})
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">db</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">String</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">name</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Mongo</span><span class="ruby-operator">::</span><span class="ruby-constant">DB</span>)
+    <span class="ruby-identifier">warn</span> <span class="ruby-string">&quot;Warning: the order of parameters to initialize a collection have changed. &quot;</span> <span class="ruby-operator">+</span>
+         <span class="ruby-string">&quot;Please specify the collection name first, followed by the db. This will be made permanent&quot;</span> <span class="ruby-operator">+</span>
+         <span class="ruby-string">&quot;in v2.0.&quot;</span>
+    <span class="ruby-identifier">db</span>, <span class="ruby-identifier">name</span> = <span class="ruby-identifier">name</span>, <span class="ruby-identifier">db</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">case</span> <span class="ruby-identifier">name</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-constant">Symbol</span>, <span class="ruby-constant">String</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">TypeError</span>, <span class="ruby-string">&quot;new_name must be a string or symbol&quot;</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">name</span> = <span class="ruby-identifier">name</span>.<span class="ruby-identifier">to_s</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">name</span>.<span class="ruby-identifier">empty?</span> <span class="ruby-keyword">or</span> <span class="ruby-identifier">name</span>.<span class="ruby-identifier">include?</span> <span class="ruby-string">&quot;..&quot;</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">Mongo</span><span class="ruby-operator">::</span><span class="ruby-constant">InvalidNSName</span>, <span class="ruby-string">&quot;collection names cannot be empty&quot;</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">name</span>.<span class="ruby-identifier">include?</span> <span class="ruby-string">&quot;$&quot;</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">Mongo</span><span class="ruby-operator">::</span><span class="ruby-constant">InvalidNSName</span>, <span class="ruby-string">&quot;collection names must not contain '$'&quot;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">name</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/((^\$cmd)|(oplog\.\$main))/</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">name</span>.<span class="ruby-identifier">match</span>(<span class="ruby-regexp">/^\./</span>) <span class="ruby-keyword">or</span> <span class="ruby-identifier">name</span>.<span class="ruby-identifier">match</span>(<span class="ruby-regexp">/\.$/</span>)
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">Mongo</span><span class="ruby-operator">::</span><span class="ruby-constant">InvalidNSName</span>, <span class="ruby-string">&quot;collection names must not start or end with '.'&quot;</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:create_pk</span>) <span class="ruby-operator">||</span> <span class="ruby-operator">!</span><span class="ruby-identifier">opts</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Hash</span>)
+    <span class="ruby-identifier">warn</span> <span class="ruby-string">&quot;The method for specifying a primary key factory on a Collection has changed.\n&quot;</span> <span class="ruby-operator">+</span>
+      <span class="ruby-string">&quot;Please specify it as an option (e.g., :pk =&gt; PkFactory).&quot;</span>
+    <span class="ruby-identifier">pk_factory</span> = <span class="ruby-identifier">opts</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">pk_factory</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-ivar">@db</span>, <span class="ruby-ivar">@name</span>  = <span class="ruby-identifier">db</span>, <span class="ruby-identifier">name</span>
+  <span class="ruby-ivar">@connection</span> = <span class="ruby-ivar">@db</span>.<span class="ruby-identifier">connection</span>
+  <span class="ruby-ivar">@logger</span>     = <span class="ruby-ivar">@connection</span>.<span class="ruby-identifier">logger</span>
+  <span class="ruby-ivar">@cache_time</span> = <span class="ruby-ivar">@db</span>.<span class="ruby-identifier">cache_time</span>
+  <span class="ruby-ivar">@cache</span>      = <span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">0</span>)
+  <span class="ruby-keyword">unless</span> <span class="ruby-identifier">pk_factory</span>
+    <span class="ruby-ivar">@write_concern</span> = <span class="ruby-identifier">get_write_concern</span>(<span class="ruby-identifier">opts</span>, <span class="ruby-identifier">db</span>)
+    <span class="ruby-ivar">@read</span> =  <span class="ruby-identifier">opts</span>[<span class="ruby-value">:read</span>] <span class="ruby-operator">||</span> <span class="ruby-ivar">@db</span>.<span class="ruby-identifier">read</span>
+    <span class="ruby-constant">Mongo</span><span class="ruby-operator">::</span><span class="ruby-constant">ReadPreference</span><span class="ruby-operator">::</span><span class="ruby-identifier">validate</span>(<span class="ruby-ivar">@read</span>)
+    <span class="ruby-ivar">@tag_sets</span>           = <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">fetch</span>(<span class="ruby-value">:tag_sets</span>, <span class="ruby-ivar">@db</span>.<span class="ruby-identifier">tag_sets</span>)
+    <span class="ruby-ivar">@acceptable_latency</span> = <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">fetch</span>(<span class="ruby-value">:acceptable_latency</span>, <span class="ruby-ivar">@db</span>.<span class="ruby-identifier">acceptable_latency</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-ivar">@pk_factory</span> = <span class="ruby-identifier">pk_factory</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">opts</span>[<span class="ruby-value">:pk</span>] <span class="ruby-operator">||</span> <span class="ruby-constant">BSON</span><span class="ruby-operator">::</span><span class="ruby-constant">ObjectId</span>
+  <span class="ruby-ivar">@hint</span> = <span class="ruby-keyword">nil</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- new-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- new-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="3C-3C-method" class="method-detail method-alias">
+          <a name="method-i-3C-3C"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">&lt;&lt;</span><span
+              class="method-args">(doc_or_docs, opts={})</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="Collection.html#method-i-insert">insert</a>
+          </div>
+          
+        </div><!-- 3C-3C-method -->
+
+      
+        <div id="5B-5D-method" class="method-detail ">
+          <a name="method-i-5B-5D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">[]</span><span
+              class="method-args">(name)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Return a sub-collection of this collection by name. If ‘users’ is a
+collection, then ‘users.comments’ is a sub-collection of users.</p>
+
+<p>@param [String, Symbol] name</p>
+
+<pre>the collection to return</pre>
+
+<p>@raise [Mongo::InvalidNSName]</p>
+
+<pre>if passed an invalid collection name</pre>
+
+<p>@return [Collection]</p>
+
+<pre>the specified sub-collection</pre>
+            
+
+            
+            <div class="method-source-code" id="5B-5D-source">
+<pre>
+<span class="ruby-comment"># File lib/mongo/collection.rb, line 139</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">[]</span>(<span class="ruby-identifier">name</span>)
+  <span class="ruby-identifier">name</span> = <span class="ruby-node">&quot;#{self.name}.#{name}&quot;</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-constant">Collection</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">db</span>) <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">db</span>.<span class="ruby-identifier">strict?</span> <span class="ruby-operator">||</span>
+    <span class="ruby-identifier">db</span>.<span class="ruby-identifier">collection_names</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">name</span>.<span class="ruby-identifier">to_s</span>)
+  <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;Collection #{name} doesn't exist. Currently in strict mode.&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- 5B-5D-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- 5B-5D-method -->
+
+      
+        <div id="aggregate-method" class="method-detail ">
+          <a name="method-i-aggregate"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">aggregate</span><span
+              class="method-args">(pipeline=nil, opts={})</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Perform an aggregation using the aggregation framework on the current
+collection. @note Aggregate requires server version &gt;= 2.1.1 @note Field
+References: Within an expression, field names must be quoted and prefixed
+by a dollar sign ($).</p>
+
+<p>@example Define the pipeline as an array of operator hashes:</p>
+
+<pre>coll.aggregate([ {&quot;$project&quot; =&gt; {&quot;last_name&quot; =&gt; 1, &quot;first_name&quot; =&gt; 1 }}, {&quot;$match&quot; =&gt; {&quot;last_name&quot; =&gt; &quot;Jones&quot;}} ])</pre>
+
+<p>@param [Array] pipeline Should be a single array of pipeline operator
+hashes.</p>
+
+<pre>'$project' Reshapes a document stream by including fields, excluding fields, inserting computed fields, 
+renaming fields,or creating/populating fields that hold sub-documents.
+
+'$match' Query-like interface for filtering documents out of the aggregation pipeline.
+
+'$limit' Restricts the number of documents that pass through the pipeline.
+
+'$skip' Skips over the specified number of documents and passes the rest along the pipeline.
+
+'$unwind' Peels off elements of an array individually, returning one document for each member.
+
+'$group' Groups documents for calculating aggregate values.
+
+'$sort' Sorts all input documents and returns them to the pipeline in sorted order.</pre>
+
+<p>@option opts [:primary, :secondary] :read Read preference indicating which
+server to perform this query</p>
+
+<pre>on. See Collection#find for more details.</pre>
+
+<p>@option opts [String]  :comment (nil) a comment to include in profiling
+logs</p>
+
+<p>@return [Array] An Array with the aggregate command’s results.</p>
+
+<p>@raise <a href="MongoArgumentError.html">MongoArgumentError</a> if
+operators either aren’t supplied or aren’t in the correct format. @raise
+MongoOperationFailure if the aggregate command fails.</p>
+            
+
+            
+            <div class="method-source-code" id="aggregate-source">
+<pre>
+<span class="ruby-comment"># File lib/mongo/collection.rb, line 659</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">aggregate</span>(<span class="ruby-identifier">pipeline</span>=<span class="ruby-keyword">nil</span>, <span class="ruby-identifier">opts</span>={})
+  <span class="ruby-identifier">raise</span> <span class="ruby-constant">MongoArgumentError</span>, <span class="ruby-string">&quot;pipeline must be an array of operators&quot;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">pipeline</span>.<span class="ruby-identifier">class</span> <span class="ruby-operator">==</span> <span class="ruby-constant">Array</span>
+  <span class="ruby-identifier">raise</span> <span class="ruby-constant">MongoArgumentError</span>, <span class="ruby-string">&quot;pipeline operators must be hashes&quot;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">pipeline</span>.<span class="ruby-identifier">all?</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">op</span><span class="ruby-operator">|</span> <span class="ruby-identifier">op</span>.<span class="ruby-identifier">class</span> <span class="ruby-operator">==</span> <span class="ruby-constant">Hash</span> }
+
+  <span class="ruby-identifier">hash</span> = <span class="ruby-constant">BSON</span><span class="ruby-operator">::</span><span class="ruby-constant">OrderedHash</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-identifier">hash</span>[<span class="ruby-string">'aggregate'</span>] = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">name</span>
+  <span class="ruby-identifier">hash</span>[<span class="ruby-string">'pipeline'</span>] = <span class="ruby-identifier">pipeline</span>
+
+  <span class="ruby-identifier">result</span> = <span class="ruby-ivar">@db</span>.<span class="ruby-identifier">command</span>(<span class="ruby-identifier">hash</span>, <span class="ruby-identifier">command_options</span>(<span class="ruby-identifier">opts</span>))
+  <span class="ruby-keyword">unless</span> <span class="ruby-constant">Mongo</span><span class="ruby-operator">::</span><span class="ruby-constant">Support</span>.<span class="ruby-identifier">ok?</span>(<span class="ruby-identifier">result</span>)
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">Mongo</span><span class="ruby-operator">::</span><span class="ruby-constant">OperationFailure</span>, <span class="ruby-node">&quot;aggregate failed: #{result['errmsg']}&quot;</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">result</span>[<span class="ruby-string">&quot;result&quot;</span>]
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- aggregate-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- aggregate-method -->
+
+      
+        <div id="capped-3F-method" class="method-detail ">
+          <a name="method-i-capped-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">capped?</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Indicate whether this is a capped collection.</p>
+
+<p>@raise [Mongo::OperationFailure]</p>
+
+<pre>if the collection doesn't exist.</pre>
+
+<p>@return [Boolean]</p>
+            
+
+            
+            <div class="method-source-code" id="capped-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/mongo/collection.rb, line 124</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">capped?</span>
+  [<span class="ruby-value">1</span>, <span class="ruby-keyword">true</span>].<span class="ruby-identifier">include?</span> <span class="ruby-ivar">@db</span>.<span class="ruby-identifier">command</span>({<span class="ruby-value">:collstats</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@name</span>})[<span class="ruby-string">'capped'</span>]
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- capped-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- capped-3F-method -->
+
+      
+        <div id="count-method" class="method-detail ">
+          <a name="method-i-count"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">count</span><span
+              class="method-args">(opts={})</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Get the number of documents in this collection.</p>
+
+<p>@option opts [Hash] :query ({}) A query selector for filtering the
+documents counted. @option opts [Integer] :skip (nil) The number of
+documents to skip. @option opts [Integer] :limit (nil) The number of
+documents to limit. @option opts [:primary, :secondary] :read Read
+preference for this command. See <a
+href="Collection.html#method-i-find">Collection#find</a> for</p>
+
+<pre>more details.</pre>
+
+<p>@option opts [String]  :comment (nil) a comment to include in profiling
+logs</p>
+
+<p>@return [Integer]</p>
+            
+
+            
+            <div class="method-source-code" id="count-source">
+<pre>
+<span class="ruby-comment"># File lib/mongo/collection.rb, line 962</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">count</span>(<span class="ruby-identifier">opts</span>={})
+  <span class="ruby-identifier">find</span>(<span class="ruby-identifier">opts</span>[<span class="ruby-value">:query</span>],
+       <span class="ruby-value">:skip</span>  =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">opts</span>[<span class="ruby-value">:skip</span>],
+       <span class="ruby-value">:limit</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">opts</span>[<span class="ruby-value">:limit</span>],
+       <span class="ruby-value">:read</span>  =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">opts</span>[<span class="ruby-value">:read</span>],
+       <span class="ruby-value">:comment</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">opts</span>[<span class="ruby-value">:comment</span>]).<span class="ruby-identifier">count</span>(<span class="ruby-keyword">true</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- count-source -->
+            
+          </div>
+
+          
+          <div class="aliases">
+            Also aliased as: <a href="Collection.html#method-i-size">size</a>
+          </div>
+          
+
+          
+        </div><!-- count-method -->
+
+      
+        <div id="create_index-method" class="method-detail ">
+          <a name="method-i-create_index"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">create_index</span><span
+              class="method-args">(spec, opts={})</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Create a new index.</p>
+
+<p>@param [String, Array] spec</p>
+
+<pre>should be either a single field name or an array of
+[field name, direction] pairs. Directions should be specified
+as Mongo::ASCENDING, Mongo::DESCENDING, or Mongo::GEO2D.
+
+Note that geospatial indexing only works with versions of MongoDB &gt;= 1.3.3+. Keep in mind, too,
+that in order to geo-index a given field, that field must reference either an array or a sub-object
+where the first two values represent x- and y-coordinates. Examples can be seen below.
+
+Also note that it is permissible to create compound indexes that include a geospatial index as
+long as the geospatial index comes first.
+
+If your code calls create_index frequently, you can use Collection#ensure_index to cache these calls
+and thereby prevent excessive round trips to the database.</pre>
+
+<p>@option opts [Boolean] :unique (false) if true, this index will enforce a
+uniqueness constraint. @option opts [Boolean] :background (false) indicate
+that the index should be built in the background. This</p>
+
+<pre>feature is only available in MongoDB &gt;= 1.3.2.</pre>
+
+<p>@option opts [Boolean] :drop_dups (nil) If creating a unique index on a
+collection with pre-existing records,</p>
+
+<pre>this option will keep the first document the database indexes and drop all subsequent with duplicate values.</pre>
+
+<p>@option opts [Integer] :min (nil) specify the minimum longitude and
+latitude for a geo index. @option opts [Integer] :max (nil) specify the
+maximum longitude and latitude for a geo index.</p>
+
+<p>@example Creating a compound index using a hash: (Ruby 1.9 and above)</p>
+
+<pre>@posts.create_index({'subject' =&gt; Mongo::ASCENDING, 'created_at' =&gt; Mongo::DESCENDING})</pre>
+
+<p>@example Creating a compound index:</p>
+
+<pre>@posts.create_index([['subject', Mongo::ASCENDING], ['created_at', Mongo::DESCENDING]])</pre>
+
+<p>@example Creating a geospatial index:</p>
+
+<pre>@restaurants.create_index([['location', Mongo::GEO2D]])
+
+# Note that this will work only if 'location' represents x,y coordinates:
+{'location': [0, 50]}
+{'location': {'x' =&gt; 0, 'y' =&gt; 50}}
+{'location': {'latitude' =&gt; 0, 'longitude' =&gt; 50}}</pre>
+
+<p>@example A geospatial index with alternate longitude and latitude:</p>
+
+<pre>@restaurants.create_index([['location', Mongo::GEO2D]], :min =&gt; 500, :max =&gt; 500)</pre>
+
+<p>@return [String] the name of the index created.</p>
+
+<p>@core indexes create_index-instance_method</p>
+            
+
+            
+            <div class="method-source-code" id="create_index-source">
+<pre>
+<span class="ruby-comment"># File lib/mongo/collection.rb, line 533</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">create_index</span>(<span class="ruby-identifier">spec</span>, <span class="ruby-identifier">opts</span>={})
+  <span class="ruby-identifier">opts</span>[<span class="ruby-value">:dropDups</span>] = <span class="ruby-identifier">opts</span>[<span class="ruby-value">:drop_dups</span>] <span class="ruby-keyword">if</span> <span class="ruby-identifier">opts</span>[<span class="ruby-value">:drop_dups</span>]
+  <span class="ruby-identifier">field_spec</span>      = <span class="ruby-identifier">parse_index_spec</span>(<span class="ruby-identifier">spec</span>)
+  <span class="ruby-identifier">opts</span>            = <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">dup</span>
+  <span class="ruby-identifier">name</span>            = <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-value">:name</span>) <span class="ruby-operator">||</span> <span class="ruby-identifier">generate_index_name</span>(<span class="ruby-identifier">field_spec</span>)
+  <span class="ruby-identifier">name</span>            = <span class="ruby-identifier">name</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">name</span>
+  <span class="ruby-identifier">generate_indexes</span>(<span class="ruby-identifier">field_spec</span>, <span class="ruby-identifier">name</span>, <span class="ruby-identifier">opts</span>)
+  <span class="ruby-identifier">name</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- create_index-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- create_index-method -->
+
+      
+        <div id="distinct-method" class="method-detail ">
+          <a name="method-i-distinct"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">distinct</span><span
+              class="method-args">(key, query=nil, opts={})</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Return a list of distinct values for <tt>key</tt> across all documents in
+the collection. The key may use dot notation to reach into an embedded
+object.</p>
+
+<p>@param [String, Symbol, OrderedHash] key or hash to group by. @param [Hash]
+query a selector for limiting the result set over which to group. @param
+[Hash] opts the options for this distinct operation.</p>
+
+<p>@option opts [:primary, :secondary] :read Read preference indicating which
+server to perform this query</p>
+
+<pre>on. See Collection#find for more details.</pre>
+
+<p>@option opts [String]  :comment (nil) a comment to include in profiling
+logs</p>
+
+<p>@example Saving zip codes and ages and returning distinct results.</p>
+
+<pre>@collection.save({:zip =&gt; 10010, :name =&gt; {:age =&gt; 27}})
+@collection.save({:zip =&gt; 94108, :name =&gt; {:age =&gt; 24}})
+@collection.save({:zip =&gt; 10010, :name =&gt; {:age =&gt; 27}})
+@collection.save({:zip =&gt; 99701, :name =&gt; {:age =&gt; 24}})
+@collection.save({:zip =&gt; 94108, :name =&gt; {:age =&gt; 27}})
+
+@collection.distinct(:zip)
+  [10010, 94108, 99701]
+@collection.distinct(&quot;name.age&quot;)
+  [27, 24]
+
+# You may also pass a document selector as the second parameter
+# to limit the documents over which distinct is run:
+@collection.distinct(&quot;name.age&quot;, {&quot;name.age&quot; =&gt; {&quot;$gt&quot; =&gt; 24}})
+  [27]</pre>
+
+<p>@return [Array] an array of distinct values.</p>
+            
+
+            
+            <div class="method-source-code" id="distinct-source">
+<pre>
+<span class="ruby-comment"># File lib/mongo/collection.rb, line 885</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">distinct</span>(<span class="ruby-identifier">key</span>, <span class="ruby-identifier">query</span>=<span class="ruby-keyword">nil</span>, <span class="ruby-identifier">opts</span>={})
+  <span class="ruby-identifier">raise</span> <span class="ruby-constant">MongoArgumentError</span> <span class="ruby-keyword">unless</span> [<span class="ruby-constant">String</span>, <span class="ruby-constant">Symbol</span>].<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">key</span>.<span class="ruby-identifier">class</span>)
+  <span class="ruby-identifier">command</span>            = <span class="ruby-constant">BSON</span><span class="ruby-operator">::</span><span class="ruby-constant">OrderedHash</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-identifier">command</span>[<span class="ruby-value">:distinct</span>] = <span class="ruby-ivar">@name</span>
+  <span class="ruby-identifier">command</span>[<span class="ruby-value">:key</span>]      = <span class="ruby-identifier">key</span>.<span class="ruby-identifier">to_s</span>
+  <span class="ruby-identifier">command</span>[<span class="ruby-value">:query</span>]    = <span class="ruby-identifier">query</span>
+
+  <span class="ruby-ivar">@db</span>.<span class="ruby-identifier">command</span>(<span class="ruby-identifier">command</span>, <span class="ruby-identifier">command_options</span>(<span class="ruby-identifier">opts</span>))[<span class="ruby-string">&quot;values&quot;</span>]
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- distinct-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- distinct-method -->
+
+      
+        <div id="drop-method" class="method-detail ">
+          <a name="method-i-drop"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">drop</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Drop the entire collection. USE WITH CAUTION.</p>
+            
+
+            
+            <div class="method-source-code" id="drop-source">
+<pre>
+<span class="ruby-comment"># File lib/mongo/collection.rb, line 599</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">drop</span>
+  <span class="ruby-ivar">@db</span>.<span class="ruby-identifier">drop_collection</span>(<span class="ruby-ivar">@name</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- drop-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- drop-method -->
+
+      
+        <div id="drop_index-method" class="method-detail ">
+          <a name="method-i-drop_index"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">drop_index</span><span
+              class="method-args">(name)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Drop a specified index.</p>
+
+<p>@param [String] name</p>
+
+<p>@core indexes</p>
+            
+
+            
+            <div class="method-source-code" id="drop_index-source">
+<pre>
+<span class="ruby-comment"># File lib/mongo/collection.rb, line 580</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">drop_index</span>(<span class="ruby-identifier">name</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">name</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Array</span>)
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">drop_index</span>(<span class="ruby-identifier">index_name</span>(<span class="ruby-identifier">name</span>))
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-ivar">@cache</span>[<span class="ruby-identifier">name</span>.<span class="ruby-identifier">to_s</span>] = <span class="ruby-keyword">nil</span>
+  <span class="ruby-ivar">@db</span>.<span class="ruby-identifier">drop_index</span>(<span class="ruby-ivar">@name</span>, <span class="ruby-identifier">name</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- drop_index-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- drop_index-method -->
+
+      
+        <div id="drop_indexes-method" class="method-detail ">
+          <a name="method-i-drop_indexes"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">drop_indexes</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Drop all indexes.</p>
+
+<p>@core indexes</p>
+            
+
+            
+            <div class="method-source-code" id="drop_indexes-source">
+<pre>
+<span class="ruby-comment"># File lib/mongo/collection.rb, line 591</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">drop_indexes</span>
+  <span class="ruby-ivar">@cache</span> = {}
+
+  <span class="ruby-comment"># Note: calling drop_indexes with no args will drop them all.</span>
+  <span class="ruby-ivar">@db</span>.<span class="ruby-identifier">drop_index</span>(<span class="ruby-ivar">@name</span>, <span class="ruby-string">'*'</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- drop_indexes-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- drop_indexes-method -->
+
+      
+        <div id="ensure_index-method" class="method-detail ">
+          <a name="method-i-ensure_index"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">ensure_index</span><span
+              class="method-args">(spec, opts={})</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Calls <a href="Collection.html#method-i-create_index">create_index</a> and
+sets a flag to not do so again for another X minutes. this time can be
+specified as an option when initializing a <a href="DB.html">Mongo::DB</a>
+object as <a href="http://:cache_time">options</a> Any changes to an index
+will be propagated through regardless of cache time (e.g., a change of
+index direction)</p>
+
+<p>The parameters and options for this methods are the same as those for <a
+href="Collection.html#method-i-create_index">Collection#create_index</a>.</p>
+
+<p>@example Call sequence:</p>
+
+<pre>Time t: @posts.ensure_index([['subject', Mongo::ASCENDING])  -- calls create_index and
+  sets the 5 minute cache
+Time t+2min : @posts.ensure_index([['subject', Mongo::ASCENDING])  -- doesn't do anything
+Time t+3min : @posts.ensure_index([['something_else', Mongo::ASCENDING])  -- calls create_index
+  and sets 5 minute cache
+Time t+10min : @posts.ensure_index([['subject', Mongo::ASCENDING])  -- calls create_index and
+  resets the 5 minute counter</pre>
+
+<p>@return [String] the name of the index.</p>
+            
+
+            
+            <div class="method-source-code" id="ensure_index-source">
+<pre>
+<span class="ruby-comment"># File lib/mongo/collection.rb, line 559</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">ensure_index</span>(<span class="ruby-identifier">spec</span>, <span class="ruby-identifier">opts</span>={})
+  <span class="ruby-identifier">now</span>             = <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>.<span class="ruby-identifier">utc</span>.<span class="ruby-identifier">to_i</span>
+  <span class="ruby-identifier">opts</span>[<span class="ruby-value">:dropDups</span>] = <span class="ruby-identifier">opts</span>[<span class="ruby-value">:drop_dups</span>] <span class="ruby-keyword">if</span> <span class="ruby-identifier">opts</span>[<span class="ruby-value">:drop_dups</span>]
+  <span class="ruby-identifier">field_spec</span>      = <span class="ruby-identifier">parse_index_spec</span>(<span class="ruby-identifier">spec</span>)
+  <span class="ruby-identifier">name</span>            = <span class="ruby-identifier">opts</span>[<span class="ruby-value">:name</span>] <span class="ruby-operator">||</span> <span class="ruby-identifier">generate_index_name</span>(<span class="ruby-identifier">field_spec</span>)
+  <span class="ruby-identifier">name</span>            = <span class="ruby-identifier">name</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">name</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-ivar">@cache</span>[<span class="ruby-identifier">name</span>] <span class="ruby-operator">||</span> <span class="ruby-ivar">@cache</span>[<span class="ruby-identifier">name</span>] <span class="ruby-operator">&lt;=</span> <span class="ruby-identifier">now</span>
+    <span class="ruby-identifier">generate_indexes</span>(<span class="ruby-identifier">field_spec</span>, <span class="ruby-identifier">name</span>, <span class="ruby-identifier">opts</span>)
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment"># Reset the cache here in case there are any errors inserting. Best to be safe.</span>
+  <span class="ruby-ivar">@cache</span>[<span class="ruby-identifier">name</span>] = <span class="ruby-identifier">now</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@cache_time</span>
+  <span class="ruby-identifier">name</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- ensure_index-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- ensure_index-method -->
+
+      
+        <div id="find-method" class="method-detail ">
+          <a name="method-i-find"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">find</span><span
+              class="method-args">(selector={}, opts={})</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Query the database.</p>
+
+<p>The <tt>selector</tt> argument is a prototype document that all results
+must match. For example:</p>
+
+<pre>collection.find({&quot;hello&quot; =&gt; &quot;world&quot;})</pre>
+
+<p>only matches documents that have a key “hello” with value “world”. Matches
+can have other keys *in addition* to “hello”.</p>
+
+<p>If given an optional block <tt>find</tt> will yield a <a
+href="Cursor.html">Cursor</a> to that block, close the cursor, and then
+return nil. This guarantees that partially evaluated cursors will be
+closed. If given no block <tt>find</tt> returns a cursor.</p>
+
+<p>@param [Hash] selector</p>
+
+<pre>a document specifying elements which must be present for a
+document to be included in the result set. Note that in rare cases,
+(e.g., with $near queries), the order of keys will matter. To preserve
+key order on a selector, use an instance of BSON::OrderedHash (only applies
+to Ruby 1.8).</pre>
+
+<p>@option opts [Array, Hash] :fields field names that should be returned in
+the result</p>
+
+<pre>set (&quot;_id&quot; will be included unless explicitly excluded). By limiting results to a certain subset of fields,
+you can cut down on network traffic and decoding time. If using a Hash, keys should be field
+names and values should be either 1 or 0, depending on whether you want to include or exclude
+the given field.</pre>
+
+<p>@option opts [:primary, :secondary] :read The default read preference for
+queries</p>
+
+<pre>initiates from this connection object. If +:secondary+ is chosen, reads will be sent
+to one of the closest available secondary nodes. If a secondary node cannot be located, the
+read will be sent to the primary. If this option is left unspecified, the value of the read
+preference for this Collection object will be used.</pre>
+
+<p>@option opts [Integer] :skip number of documents to skip from the beginning
+of the result set @option opts [Integer] :limit maximum number of documents
+to return @option opts [Array]   :sort an array of [key, direction] pairs
+to sort by. Direction should</p>
+
+<pre>be specified as Mongo::ASCENDING (or :ascending / :asc) or Mongo::DESCENDING (or :descending / :desc)</pre>
+
+<p>@option opts [String, Array, OrderedHash] :hint hint for query optimizer,
+usually not necessary if</p>
+
+<pre>using MongoDB &gt; 1.1</pre>
+
+<p>@option opts [Boolean] :snapshot (false) if true, snapshot mode will be
+used for this query.</p>
+
+<pre>Snapshot mode assures no duplicates are returned, or objects missed, which were preset at both the start and
+end of the query's execution.
+For details see http://www.mongodb.org/display/DOCS/How+to+do+Snapshotting+in+the+Mongo+Database</pre>
+
+<p>@option opts [Boolean] :batch_size (100) the number of documents to
+returned by the database per</p>
+
+<pre>GETMORE operation. A value of 0 will let the database server decide how many results to return.
+This option can be ignored for most use cases.</pre>
+
+<p>@option opts [Boolean] :timeout (true) when <tt>true</tt>, the returned
+cursor will be subject to</p>
+
+<pre>the normal cursor timeout behavior of the mongod process. When +false+, the returned cursor will
+never timeout. Note that disabling timeout will only work when #find is invoked with a block.
+This is to prevent any inadvertent failure to close the cursor, as the cursor is explicitly
+closed when block code finishes.</pre>
+
+<p>@option opts [Integer] :max_scan (nil) Limit the number of items to scan on
+both collection scans and indexed queries.. @option opts [Boolean]
+:show_disk_loc (false) Return the disk location of each query result (for
+debugging). @option opts [Boolean] :return_key (false) Return the index key
+used to obtain the result (for debugging). @option opts [Block]
+:transformer (nil) a block for transforming returned documents.</p>
+
+<pre>This is normally used by object mappers to convert each returned document to an instance of a class.</pre>
+
+<p>@option opts [String] :comment (nil) a comment to include in profiling logs</p>
+
+<p>@raise [ArgumentError]</p>
+
+<pre>if timeout is set to false and find is not invoked in a block</pre>
+
+<p>@raise [RuntimeError]</p>
+
+<pre>if given unknown options</pre>
+
+<p>@core find find-instance_method</p>
+            
+
+            
+            <div class="method-source-code" id="find-source">
+<pre>
+<span class="ruby-comment"># File lib/mongo/collection.rb, line 221</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">find</span>(<span class="ruby-identifier">selector</span>={}, <span class="ruby-identifier">opts</span>={})
+  <span class="ruby-identifier">opts</span>               = <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">dup</span>
+  <span class="ruby-identifier">fields</span>             = <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-value">:fields</span>)
+  <span class="ruby-identifier">fields</span>             = [<span class="ruby-string">&quot;_id&quot;</span>] <span class="ruby-keyword">if</span> <span class="ruby-identifier">fields</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">fields</span>.<span class="ruby-identifier">empty?</span>
+  <span class="ruby-identifier">skip</span>               = <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-value">:skip</span>) <span class="ruby-operator">||</span> <span class="ruby-identifier">skip</span> <span class="ruby-operator">||</span> <span class="ruby-value">0</span>
+  <span class="ruby-identifier">limit</span>              = <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-value">:limit</span>) <span class="ruby-operator">||</span> <span class="ruby-value">0</span>
+  <span class="ruby-identifier">sort</span>               = <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-value">:sort</span>)
+  <span class="ruby-identifier">hint</span>               = <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-value">:hint</span>)
+  <span class="ruby-identifier">snapshot</span>           = <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-value">:snapshot</span>)
+  <span class="ruby-identifier">batch_size</span>         = <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-value">:batch_size</span>)
+  <span class="ruby-identifier">timeout</span>            = (<span class="ruby-identifier">opts</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-value">:timeout</span>) <span class="ruby-operator">==</span> <span class="ruby-keyword">false</span>) <span class="ruby-operator">?</span> <span class="ruby-keyword">false</span> <span class="ruby-operator">:</span> <span class="ruby-keyword">true</span>
+  <span class="ruby-identifier">max_scan</span>           = <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-value">:max_scan</span>)
+  <span class="ruby-identifier">return_key</span>         = <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-value">:return_key</span>)
+  <span class="ruby-identifier">transformer</span>        = <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-value">:transformer</span>)
+  <span class="ruby-identifier">show_disk_loc</span>      = <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-value">:show_disk_loc</span>)
+  <span class="ruby-identifier">comment</span>            = <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-value">:comment</span>)
+  <span class="ruby-identifier">read</span>               = <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-value">:read</span>) <span class="ruby-operator">||</span> <span class="ruby-ivar">@read</span>
+  <span class="ruby-identifier">tag_sets</span>           = <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-value">:tag_sets</span>) <span class="ruby-operator">||</span> <span class="ruby-ivar">@tag_sets</span>
+  <span class="ruby-identifier">acceptable_latency</span> = <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-value">:acceptable_latency</span>) <span class="ruby-operator">||</span> <span class="ruby-ivar">@acceptable_latency</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">timeout</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">false</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">block_given?</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-node">&quot;Collection#find must be invoked with a block when timeout is disabled.&quot;</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">hint</span>
+    <span class="ruby-identifier">hint</span> = <span class="ruby-identifier">normalize_hint_fields</span>(<span class="ruby-identifier">hint</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">hint</span> = <span class="ruby-ivar">@hint</span>        <span class="ruby-comment"># assumed to be normalized already</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">raise</span> <span class="ruby-constant">RuntimeError</span>, <span class="ruby-node">&quot;Unknown options [#{opts.inspect}]&quot;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">empty?</span>
+
+  <span class="ruby-identifier">cursor</span> = <span class="ruby-constant">Cursor</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword">self</span>, {
+    <span class="ruby-value">:selector</span>           =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">selector</span>,
+    <span class="ruby-value">:fields</span>             =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">fields</span>,
+    <span class="ruby-value">:skip</span>               =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">skip</span>,
+    <span class="ruby-value">:limit</span>              =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">limit</span>,
+    <span class="ruby-value">:order</span>              =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">sort</span>,
+    <span class="ruby-value">:hint</span>               =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">hint</span>,
+    <span class="ruby-value">:snapshot</span>           =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">snapshot</span>,
+    <span class="ruby-value">:timeout</span>            =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">timeout</span>,
+    <span class="ruby-value">:batch_size</span>         =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">batch_size</span>,
+    <span class="ruby-value">:transformer</span>        =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">transformer</span>,
+    <span class="ruby-value">:max_scan</span>           =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">max_scan</span>,
+    <span class="ruby-value">:show_disk_loc</span>      =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">show_disk_loc</span>,
+    <span class="ruby-value">:return_key</span>         =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">return_key</span>,
+    <span class="ruby-value">:read</span>               =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">read</span>,
+    <span class="ruby-value">:tag_sets</span>           =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">tag_sets</span>,
+    <span class="ruby-value">:comment</span>            =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">comment</span>,
+    <span class="ruby-value">:acceptable_latency</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">acceptable_latency</span>
+  })
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">block_given?</span>
+    <span class="ruby-keyword">begin</span>
+      <span class="ruby-keyword">yield</span> <span class="ruby-identifier">cursor</span>
+    <span class="ruby-keyword">ensure</span>
+      <span class="ruby-identifier">cursor</span>.<span class="ruby-identifier">close</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">cursor</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- find-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- find-method -->
+
+      
+        <div id="find_and_modify-method" class="method-detail ">
+          <a name="method-i-find_and_modify"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">find_and_modify</span><span
+              class="method-args">(opts={})</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Atomically update and return a document using MongoDB’s findAndModify
+command. (MongoDB &gt; 1.3.0)</p>
+
+<p>@option opts [Hash] :query ({}) a query selector document for matching the
+desired document. @option opts [Hash] :update (nil) the update operation to
+perform on the matched document. @option opts [Array, String, OrderedHash]
+:sort ({}) specify a sort option for the query using any</p>
+
+<pre>of the sort options available for Cursor#sort. Sort order is important if the query will be matching
+multiple documents since only the first matching document will be updated and returned.</pre>
+
+<p>@option opts [Boolean] :remove (false) If true, removes the the returned
+document from the collection. @option opts [Boolean] :new (false) If true,
+returns the updated document; otherwise, returns the document</p>
+
+<pre>prior to update.</pre>
+
+<p>@return [Hash] the matched document.</p>
+
+<p>@core findandmodify find_and_modify-instance_method</p>
+            
+
+            
+            <div class="method-source-code" id="find_and_modify-source">
+<pre>
+<span class="ruby-comment"># File lib/mongo/collection.rb, line 617</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">find_and_modify</span>(<span class="ruby-identifier">opts</span>={})
+  <span class="ruby-identifier">cmd</span> = <span class="ruby-constant">BSON</span><span class="ruby-operator">::</span><span class="ruby-constant">OrderedHash</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-identifier">cmd</span>[<span class="ruby-value">:findandmodify</span>] = <span class="ruby-ivar">@name</span>
+  <span class="ruby-identifier">cmd</span>.<span class="ruby-identifier">merge!</span>(<span class="ruby-identifier">opts</span>)
+  <span class="ruby-identifier">cmd</span>[<span class="ruby-value">:sort</span>] = <span class="ruby-constant">Mongo</span><span class="ruby-operator">::</span><span class="ruby-constant">Support</span>.<span class="ruby-identifier">format_order_clause</span>(<span class="ruby-identifier">opts</span>[<span class="ruby-value">:sort</span>]) <span class="ruby-keyword">if</span> <span class="ruby-identifier">opts</span>[<span class="ruby-value">:sort</span>]
+
+  <span class="ruby-ivar">@db</span>.<span class="ruby-identifier">command</span>(<span class="ruby-identifier">cmd</span>)[<span class="ruby-string">'value'</span>]
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- find_and_modify-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- find_and_modify-method -->
+
+      
+        <div id="find_one-method" class="method-detail ">
+          <a name="method-i-find_one"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">find_one</span><span
+              class="method-args">(spec_or_object_id=nil, opts={})</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Return a single object from the database.</p>
+
+<p>@return [OrderedHash, Nil]</p>
+
+<pre>a single document or nil if no result is found.</pre>
+
+<p>@param [Hash, ObjectId, Nil] spec_or_object_id a hash specifying elements</p>
+
+<pre>which must be present for a document to be included in the result set or an
+instance of ObjectId to be used as the value for an _id query.
+If nil, an empty selector, {}, will be used.</pre>
+
+<p>@option opts [Hash]</p>
+
+<pre>any valid options that can be send to Collection#find</pre>
+
+<p>@raise [TypeError]</p>
+
+<pre>if the argument is of an improper type.</pre>
+            
+
+            
+            <div class="method-source-code" id="find_one-source">
+<pre>
+<span class="ruby-comment"># File lib/mongo/collection.rb, line 300</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">find_one</span>(<span class="ruby-identifier">spec_or_object_id</span>=<span class="ruby-keyword">nil</span>, <span class="ruby-identifier">opts</span>={})
+  <span class="ruby-identifier">spec</span> = <span class="ruby-keyword">case</span> <span class="ruby-identifier">spec_or_object_id</span>
+         <span class="ruby-keyword">when</span> <span class="ruby-keyword">nil</span>
+           {}
+         <span class="ruby-keyword">when</span> <span class="ruby-constant">BSON</span><span class="ruby-operator">::</span><span class="ruby-constant">ObjectId</span>
+           {<span class="ruby-value">:_id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">spec_or_object_id</span>}
+         <span class="ruby-keyword">when</span> <span class="ruby-constant">Hash</span>
+           <span class="ruby-identifier">spec_or_object_id</span>
+         <span class="ruby-keyword">else</span>
+           <span class="ruby-identifier">raise</span> <span class="ruby-constant">TypeError</span>, <span class="ruby-string">&quot;spec_or_object_id must be an instance of ObjectId or Hash, or nil&quot;</span>
+         <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">find</span>(<span class="ruby-identifier">spec</span>, <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">merge</span>(<span class="ruby-value">:limit</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">-1</span>)).<span class="ruby-identifier">next_document</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- find_one-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- find_one-method -->
+
+      
+        <div id="group-method" class="method-detail ">
+          <a name="method-i-group"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">group</span><span
+              class="method-args">(opts, condition={}, initial={}, reduce=nil, finalize=nil)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Perform a group aggregation.</p>
+
+<p>@param [Hash] opts the options for this group operation. The minimum
+required are :initial</p>
+
+<pre>and :reduce.</pre>
+
+<p>@option opts [Array, String, Symbol] :key (nil) Either the name of a field
+or a list of fields to group by (optional). @option opts [String,
+BSON::Code] :keyf (nil) A JavaScript function to be used to generate the
+grouping keys (optional). @option opts [String, BSON::Code] :cond ({}) A
+document specifying a query for filtering the documents over</p>
+
+<pre>which the aggregation is run (optional).</pre>
+
+<p>@option opts [Hash] :initial the initial value of the aggregation counter
+object (required). @option opts [String, BSON::Code] :reduce (nil) a
+JavaScript aggregation function (required). @option opts [String,
+BSON::Code] :finalize (nil) a JavaScript function that receives and
+modifies</p>
+
+<pre>each of the resultant grouped objects. Available only when group is run with command
+set to true.</pre>
+
+<p>@option opts [:primary, :secondary] :read Read preference indicating which
+server to perform this group</p>
+
+<pre>on. See Collection#find for more details.</pre>
+
+<p>@option opts [String]  :comment (nil) a comment to include in profiling
+logs</p>
+
+<p>@return [Array] the command response consisting of grouped items.</p>
+            
+
+            
+            <div class="method-source-code" id="group-source">
+<pre>
+<span class="ruby-comment"># File lib/mongo/collection.rb, line 762</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">group</span>(<span class="ruby-identifier">opts</span>, <span class="ruby-identifier">condition</span>={}, <span class="ruby-identifier">initial</span>={}, <span class="ruby-identifier">reduce</span>=<span class="ruby-keyword">nil</span>, <span class="ruby-identifier">finalize</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Hash</span>)
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">new_group</span>(<span class="ruby-identifier">opts</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">warn</span> <span class="ruby-node">&quot;Collection#group no longer take a list of parameters. This usage is deprecated and will be remove in v2.0.&quot;</span> <span class="ruby-operator">+</span>
+         <span class="ruby-node">&quot;Check out the new API at http://api.mongodb.org/ruby/current/Mongo/Collection.html#group-instance_method&quot;</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">reduce</span> = <span class="ruby-constant">BSON</span><span class="ruby-operator">::</span><span class="ruby-constant">Code</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">reduce</span>) <span class="ruby-keyword">unless</span> <span class="ruby-identifier">reduce</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">BSON</span><span class="ruby-operator">::</span><span class="ruby-constant">Code</span>)
+
+  <span class="ruby-identifier">group_command</span> = {
+    <span class="ruby-string">&quot;group&quot;</span> =<span class="ruby-operator">&gt;</span> {
+      <span class="ruby-string">&quot;ns&quot;</span>      =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@name</span>,
+      <span class="ruby-string">&quot;$reduce&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">reduce</span>,
+      <span class="ruby-string">&quot;cond&quot;</span>    =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">condition</span>,
+      <span class="ruby-string">&quot;initial&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">initial</span>
+    }
+  }
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Symbol</span>)
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">MongoArgumentError</span>, <span class="ruby-string">&quot;Group takes either an array of fields to group by or a JavaScript function&quot;</span> <span class="ruby-operator">+</span>
+      <span class="ruby-string">&quot;in the form of a String or BSON::Code.&quot;</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">unless</span> <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">nil?</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">Array</span>
+      <span class="ruby-identifier">key_type</span> = <span class="ruby-string">&quot;key&quot;</span>
+      <span class="ruby-identifier">key_value</span> = {}
+      <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">k</span><span class="ruby-operator">|</span> <span class="ruby-identifier">key_value</span>[<span class="ruby-identifier">k</span>] = <span class="ruby-value">1</span> }
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">key_type</span>  = <span class="ruby-string">&quot;$keyf&quot;</span>
+      <span class="ruby-identifier">key_value</span> = <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">BSON</span><span class="ruby-operator">::</span><span class="ruby-constant">Code</span>) <span class="ruby-operator">?</span> <span class="ruby-identifier">opts</span> <span class="ruby-operator">:</span> <span class="ruby-constant">BSON</span><span class="ruby-operator">::</span><span class="ruby-constant">Code</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">opts</span>)
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-identifier">group_command</span>[<span class="ruby-string">&quot;group&quot;</span>][<span class="ruby-identifier">key_type</span>] = <span class="ruby-identifier">key_value</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">finalize</span> = <span class="ruby-constant">BSON</span><span class="ruby-operator">::</span><span class="ruby-constant">Code</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">finalize</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">finalize</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">String</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">finalize</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">BSON</span><span class="ruby-operator">::</span><span class="ruby-constant">Code</span>)
+    <span class="ruby-identifier">group_command</span>[<span class="ruby-string">'group'</span>][<span class="ruby-string">'finalize'</span>] = <span class="ruby-identifier">finalize</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">result</span> = <span class="ruby-ivar">@db</span>.<span class="ruby-identifier">command</span>(<span class="ruby-identifier">group_command</span>)
+
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">Mongo</span><span class="ruby-operator">::</span><span class="ruby-constant">Support</span>.<span class="ruby-identifier">ok?</span>(<span class="ruby-identifier">result</span>)
+    <span class="ruby-identifier">result</span>[<span class="ruby-string">&quot;retval&quot;</span>]
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">OperationFailure</span>, <span class="ruby-node">&quot;group command failed: #{result['errmsg']}&quot;</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- group-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- group-method -->
+
+      
+        <div id="hint-3D-method" class="method-detail ">
+          <a name="method-i-hint-3D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">hint=</span><span
+              class="method-args">(hint=nil)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Set a hint field for query optimizer. Hint may be a single field name,
+array of field names, or a hash (preferably an [OrderedHash]). If using
+MongoDB &gt; 1.1, you probably don’t ever need to set a hint.</p>
+
+<p>@param [String, Array, OrderedHash] hint a single field, an array of</p>
+
+<pre>fields, or a hash specifying fields</pre>
+            
+
+            
+            <div class="method-source-code" id="hint-3D-source">
+<pre>
+<span class="ruby-comment"># File lib/mongo/collection.rb, line 152</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">hint=</span>(<span class="ruby-identifier">hint</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-ivar">@hint</span> = <span class="ruby-identifier">normalize_hint_fields</span>(<span class="ruby-identifier">hint</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- hint-3D-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- hint-3D-method -->
+
+      
+        <div id="index_information-method" class="method-detail ">
+          <a name="method-i-index_information"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">index_information</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Get information on the indexes for this collection.</p>
+
+<p>@return [Hash] a hash where the keys are index names.</p>
+
+<p>@core indexes</p>
+            
+
+            
+            <div class="method-source-code" id="index_information-source">
+<pre>
+<span class="ruby-comment"># File lib/mongo/collection.rb, line 933</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">index_information</span>
+  <span class="ruby-ivar">@db</span>.<span class="ruby-identifier">index_information</span>(<span class="ruby-ivar">@name</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- index_information-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- index_information-method -->
+
+      
+        <div id="insert-method" class="method-detail ">
+          <a name="method-i-insert"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">insert</span><span
+              class="method-args">(doc_or_docs, opts={})</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Insert one or more documents into the collection.</p>
+
+<p>@param [Hash, Array] doc_or_docs</p>
+
+<pre>a document (as a hash) or array of documents to be inserted.</pre>
+
+<p>@return [ObjectId, Array]</p>
+
+<pre>The _id of the inserted document or a list of _ids of all inserted documents.</pre>
+
+<p>@return [[ObjectId, Array], [Hash, Array]]</p>
+
+<pre>1st, the _id of the inserted document or a list of _ids of all inserted documents.
+2nd, a list of invalid documents.
+Return this result format only when :collect_on_error is true.</pre>
+
+<p>@option opts [String, Integer, Symbol] :w (1) Set default number of nodes
+to which a write</p>
+
+<pre>should be acknowledged</pre>
+
+<p>@option opts [Boolean] :j (false) Set journal acknowledgement @option opts
+[Integer] :wtimeout (nil) Set replica set acknowledgement timeout @option
+opts [Boolean] :fsync (false) Set fsync acknowledgement.</p>
+
+<pre>Notes on write concern:
+  Options provided here will override any write concern options set on this collection,
+  its database object, or the current connection. See the options for +DB#get_last_error+.</pre>
+
+<p>@option opts [Boolean] :continue_on_error (<tt>false</tt>) If true, then</p>
+
+<pre>continue a bulk insert even if one of the documents inserted
+triggers a database assertion (as in a duplicate insert, for instance).
+If not acknowledging writes, the list of ids returned will
+include the object ids of all documents attempted on insert, even
+if some are rejected on error. When acknowledging writes, any error will raise an 
+OperationFailure exception.
+MongoDB v2.0+.</pre>
+
+<p>@option opts [Boolean] :collect_on_error (<tt>false</tt>) if true, then</p>
+
+<pre>collects invalid documents as an array. Note that this option changes the result format.</pre>
+
+<p>@raise [Mongo::OperationFailure] will be raised iff :w &gt; 0 and the
+operation fails.</p>
+
+<p>@core insert insert-instance_method</p>
+            
+
+            
+            <div class="method-source-code" id="insert-source">
+<pre>
+<span class="ruby-comment"># File lib/mongo/collection.rb, line 379</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">insert</span>(<span class="ruby-identifier">doc_or_docs</span>, <span class="ruby-identifier">opts</span>={})
+  <span class="ruby-identifier">doc_or_docs</span> = [<span class="ruby-identifier">doc_or_docs</span>] <span class="ruby-keyword">unless</span> <span class="ruby-identifier">doc_or_docs</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Array</span>)
+  <span class="ruby-identifier">doc_or_docs</span>.<span class="ruby-identifier">collect!</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">doc</span><span class="ruby-operator">|</span> <span class="ruby-ivar">@pk_factory</span>.<span class="ruby-identifier">create_pk</span>(<span class="ruby-identifier">doc</span>) }
+  <span class="ruby-identifier">write_concern</span> = <span class="ruby-identifier">get_write_concern</span>(<span class="ruby-identifier">opts</span>, <span class="ruby-keyword">self</span>)
+  <span class="ruby-identifier">result</span> = <span class="ruby-identifier">insert_documents</span>(<span class="ruby-identifier">doc_or_docs</span>, <span class="ruby-ivar">@name</span>, <span class="ruby-keyword">true</span>, <span class="ruby-identifier">write_concern</span>, <span class="ruby-identifier">opts</span>)
+  <span class="ruby-identifier">result</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">result</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">result</span>.<span class="ruby-identifier">first</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- insert-source -->
+            
+          </div>
+
+          
+          <div class="aliases">
+            Also aliased as: <a href="Collection.html#method-i-3C-3C">&lt;&lt;</a>
+          </div>
+          
+
+          
+        </div><!-- insert-method -->
+
+      
+        <div id="map_reduce-method" class="method-detail ">
+          <a name="method-i-map_reduce"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">map_reduce</span><span
+              class="method-args">(map, reduce, opts={})</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Perform a map-reduce operation on the current collection.</p>
+
+<p>@param [String, BSON::Code] map a map function, written in JavaScript.
+@param [String, BSON::Code] reduce a reduce function, written in
+JavaScript.</p>
+
+<p>@option opts [Hash] :query ({}) a query selector document, like what’s
+passed to <a href="Collection.html#method-i-find">find</a>, to limit</p>
+
+<pre>the operation to a subset of the collection.</pre>
+
+<p>@option opts [Array] :sort ([]) an array of [key, direction] pairs to sort
+by. Direction should</p>
+
+<pre>be specified as Mongo::ASCENDING (or :ascending / :asc) or Mongo::DESCENDING (or :descending / :desc)</pre>
+
+<p>@option opts [Integer] :limit (nil) if passing a query, number of objects
+to return from the collection. @option opts [String, BSON::Code] :finalize
+(nil) a javascript function to apply to the result set after the</p>
+
+<pre>map/reduce operation has finished.</pre>
+
+<p>@option opts [String] :out (nil) a valid output type. In versions of
+MongoDB prior to v1.7.6,</p>
+
+<pre>this option takes the name of a collection for the output results. In versions 1.7.6 and later,
+this option specifies the output type. See the core docs for available output types.</pre>
+
+<p>@option opts [Boolean] :keeptemp (false) if true, the generated collection
+will be persisted. The default</p>
+
+<pre>is false. Note that this option has no effect is versions of MongoDB &gt; v1.7.6.</pre>
+
+<p>@option opts [Boolean ] :verbose (false) if true, provides statistics on
+job execution time. @option opts [Boolean] :raw (false) if true, return the
+raw result object from the <a
+href="Collection.html#method-i-map_reduce">map_reduce</a> command, and not</p>
+
+<pre>the instantiated collection that's returned by default. Note if a collection name isn't returned in the
+map-reduce output (as, for example, when using :out =&gt; { :inline =&gt; 1 }), then you must specify this option
+or an ArgumentError will be raised.</pre>
+
+<p>@option opts [:primary, :secondary] :read Read preference indicating which
+server to run this map-reduce</p>
+
+<pre>on. See Collection#find for more details.</pre>
+
+<p>@option opts [String]  :comment (nil) a comment to include in profiling
+logs</p>
+
+<p>@return [<a href="Collection.html">Collection</a>, Hash] a <a
+href="Collection.html">Mongo::Collection</a> object or a Hash with the
+map-reduce command’s results.</p>
+
+<p>@raise ArgumentError if you specify { :out =&gt; { :inline =&gt; true }}
+but don’t specify :raw =&gt; true.</p>
+
+<p>@see <a
+href="http://www.mongodb.org/display/DOCS/MapReduce">www.mongodb.org/display/DOCS/MapReduce</a>
+Offical MongoDB map/reduce documentation.</p>
+
+<p>@core mapreduce map_reduce-instance_method</p>
+            
+
+            
+            <div class="method-source-code" id="map_reduce-source">
+<pre>
+<span class="ruby-comment"># File lib/mongo/collection.rb, line 708</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">map_reduce</span>(<span class="ruby-identifier">map</span>, <span class="ruby-identifier">reduce</span>, <span class="ruby-identifier">opts</span>={})
+  <span class="ruby-identifier">map</span>    = <span class="ruby-constant">BSON</span><span class="ruby-operator">::</span><span class="ruby-constant">Code</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">map</span>) <span class="ruby-keyword">unless</span> <span class="ruby-identifier">map</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">BSON</span><span class="ruby-operator">::</span><span class="ruby-constant">Code</span>)
+  <span class="ruby-identifier">reduce</span> = <span class="ruby-constant">BSON</span><span class="ruby-operator">::</span><span class="ruby-constant">Code</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">reduce</span>) <span class="ruby-keyword">unless</span> <span class="ruby-identifier">reduce</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">BSON</span><span class="ruby-operator">::</span><span class="ruby-constant">Code</span>)
+  <span class="ruby-identifier">raw</span>    = <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-value">:raw</span>)
+
+  <span class="ruby-identifier">hash</span> = <span class="ruby-constant">BSON</span><span class="ruby-operator">::</span><span class="ruby-constant">OrderedHash</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-identifier">hash</span>[<span class="ruby-string">'mapreduce'</span>] = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">name</span>
+  <span class="ruby-identifier">hash</span>[<span class="ruby-string">'map'</span>] = <span class="ruby-identifier">map</span>
+  <span class="ruby-identifier">hash</span>[<span class="ruby-string">'reduce'</span>] = <span class="ruby-identifier">reduce</span>
+  <span class="ruby-identifier">hash</span>.<span class="ruby-identifier">merge!</span> <span class="ruby-identifier">opts</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">hash</span>[<span class="ruby-value">:sort</span>]
+    <span class="ruby-identifier">hash</span>[<span class="ruby-value">:sort</span>] = <span class="ruby-constant">Mongo</span><span class="ruby-operator">::</span><span class="ruby-constant">Support</span>.<span class="ruby-identifier">format_order_clause</span>(<span class="ruby-identifier">hash</span>[<span class="ruby-value">:sort</span>])
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">result</span> = <span class="ruby-ivar">@db</span>.<span class="ruby-identifier">command</span>(<span class="ruby-identifier">hash</span>, <span class="ruby-identifier">command_options</span>(<span class="ruby-identifier">opts</span>))
+  <span class="ruby-keyword">unless</span> <span class="ruby-constant">Mongo</span><span class="ruby-operator">::</span><span class="ruby-constant">Support</span>.<span class="ruby-identifier">ok?</span>(<span class="ruby-identifier">result</span>)
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">Mongo</span><span class="ruby-operator">::</span><span class="ruby-constant">OperationFailure</span>, <span class="ruby-node">&quot;map-reduce failed: #{result['errmsg']}&quot;</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">raw</span>
+    <span class="ruby-identifier">result</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">result</span>[<span class="ruby-string">&quot;result&quot;</span>]
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">result</span>[<span class="ruby-string">'result'</span>].<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">BSON</span><span class="ruby-operator">::</span><span class="ruby-constant">OrderedHash</span> <span class="ruby-keyword">and</span> <span class="ruby-identifier">result</span>[<span class="ruby-string">'result'</span>].<span class="ruby-identifier">has_key?</span> <span class="ruby-string">'db'</span> <span class="ruby-keyword">and</span> <span class="ruby-identifier">result</span>[<span class="ruby-string">'result'</span>].<span class="ruby-identifier">has_key?</span> <span class="ruby-string">'collection'</span>
+      <span class="ruby-identifier">otherdb</span> = <span class="ruby-ivar">@db</span>.<span class="ruby-identifier">connection</span>[<span class="ruby-identifier">result</span>[<span class="ruby-string">'result'</span>][<span class="ruby-string">'db'</span>]]
+      <span class="ruby-identifier">otherdb</span>[<span class="ruby-identifier">result</span>[<span class="ruby-string">'result'</span>][<span class="ruby-string">'collection'</span>]]
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-ivar">@db</span>[<span class="ruby-identifier">result</span>[<span class="ruby-string">&quot;result&quot;</span>]]
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-string">&quot;Could not instantiate collection from result. If you specified &quot;</span> <span class="ruby-operator">+</span>
+      <span class="ruby-string">&quot;{:out =&gt; {:inline =&gt; true}}, then you must also specify :raw =&gt; true to get the results.&quot;</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- map_reduce-source -->
+            
+          </div>
+
+          
+          <div class="aliases">
+            Also aliased as: <a href="Collection.html#method-i-mapreduce">mapreduce</a>
+          </div>
+          
+
+          
+        </div><!-- map_reduce-method -->
+
+      
+        <div id="mapreduce-method" class="method-detail method-alias">
+          <a name="method-i-mapreduce"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">mapreduce</span><span
+              class="method-args">(map, reduce, opts={})</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="Collection.html#method-i-map_reduce">map_reduce</a>
+          </div>
+          
+        </div><!-- mapreduce-method -->
+
+      
+        <div id="options-method" class="method-detail ">
+          <a name="method-i-options"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">options</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Return a hash containing options that apply to this collection. For all
+possible keys and values, see <a
+href="DB.html#method-i-create_collection">DB#create_collection</a>.</p>
+
+<p>@return [Hash] options that apply to this collection.</p>
+            
+
+            
+            <div class="method-source-code" id="options-source">
+<pre>
+<span class="ruby-comment"># File lib/mongo/collection.rb, line 941</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">options</span>
+  <span class="ruby-ivar">@db</span>.<span class="ruby-identifier">collections_info</span>(<span class="ruby-ivar">@name</span>).<span class="ruby-identifier">next_document</span>[<span class="ruby-string">'options'</span>]
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- options-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- options-method -->
+
+      
+        <div id="remove-method" class="method-detail ">
+          <a name="method-i-remove"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">remove</span><span
+              class="method-args">(selector={}, opts={})</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Remove all documents from this collection.</p>
+
+<p>@param [Hash] selector</p>
+
+<pre>If specified, only matching documents will be removed.</pre>
+
+<p>@option opts [String, Integer, Symbol] :w (1) Set default number of nodes
+to which a write</p>
+
+<pre>should be acknowledged</pre>
+
+<p>@option opts [Boolean] :j (false) Set journal acknowledgement @option opts
+[Integer] :wtimeout (nil) Set replica set acknowledgement timeout @option
+opts [Boolean] :fsync (false) Set fsync acknowledgement.</p>
+
+<pre>Notes on write concern:
+  Options provided here will override any write concern options set on this collection,
+  its database object, or the current connection. See the options for +DB#get_last_error+.</pre>
+
+<p>@example remove all documents from the ‘users’ collection:</p>
+
+<pre>users.remove
+users.remove({})</pre>
+
+<p>@example remove only documents that have expired:</p>
+
+<pre>users.remove({:expire =&gt; {&quot;$lte&quot; =&gt; Time.now}})</pre>
+
+<p>@return [Hash, true] Returns a Hash containing the last error object if
+acknowledging writes</p>
+
+<pre>Otherwise, returns true.</pre>
+
+<p>@raise [Mongo::OperationFailure] will be raised iff :w &gt; 0 and the
+operation fails.</p>
+
+<p>@core remove remove-instance_method</p>
+            
+
+            
+            <div class="method-source-code" id="remove-source">
+<pre>
+<span class="ruby-comment"># File lib/mongo/collection.rb, line 416</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">remove</span>(<span class="ruby-identifier">selector</span>={}, <span class="ruby-identifier">opts</span>={})
+  <span class="ruby-identifier">write_concern</span> = <span class="ruby-identifier">get_write_concern</span>(<span class="ruby-identifier">opts</span>, <span class="ruby-keyword">self</span>)
+  <span class="ruby-identifier">message</span> = <span class="ruby-constant">BSON</span><span class="ruby-operator">::</span><span class="ruby-constant">ByteBuffer</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;\00\\00\\00\\00&quot;&quot;</span>)
+  <span class="ruby-constant">BSON</span><span class="ruby-operator">::</span><span class="ruby-constant">BSON_RUBY</span>.<span class="ruby-identifier">serialize_cstr</span>(<span class="ruby-identifier">message</span>, <span class="ruby-node">&quot;#{@db.name}.#{@name}&quot;</span>)
+  <span class="ruby-identifier">message</span>.<span class="ruby-identifier">put_int</span>(<span class="ruby-value">0</span>)
+  <span class="ruby-identifier">message</span>.<span class="ruby-identifier">put_binary</span>(<span class="ruby-constant">BSON</span><span class="ruby-operator">::</span><span class="ruby-constant">BSON_CODER</span>.<span class="ruby-identifier">serialize</span>(<span class="ruby-identifier">selector</span>, <span class="ruby-keyword">false</span>, <span class="ruby-keyword">true</span>, <span class="ruby-ivar">@connection</span>.<span class="ruby-identifier">max_bson_size</span>).<span class="ruby-identifier">to_s</span>)
+
+  <span class="ruby-identifier">instrument</span>(<span class="ruby-value">:remove</span>, <span class="ruby-value">:database</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@db</span>.<span class="ruby-identifier">name</span>, <span class="ruby-value">:collection</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@name</span>, <span class="ruby-value">:selector</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">selector</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-constant">Mongo</span><span class="ruby-operator">::</span><span class="ruby-constant">WriteConcern</span>.<span class="ruby-identifier">gle?</span>(<span class="ruby-identifier">write_concern</span>)
+      <span class="ruby-ivar">@connection</span>.<span class="ruby-identifier">send_message_with_gle</span>(<span class="ruby-constant">Mongo</span><span class="ruby-operator">::</span><span class="ruby-constant">Constants</span><span class="ruby-operator">::</span><span class="ruby-constant">OP_DELETE</span>, <span class="ruby-identifier">message</span>, <span class="ruby-ivar">@db</span>.<span class="ruby-identifier">name</span>, <span class="ruby-keyword">nil</span>, <span class="ruby-identifier">write_concern</span>)
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-ivar">@connection</span>.<span class="ruby-identifier">send_message</span>(<span class="ruby-constant">Mongo</span><span class="ruby-operator">::</span><span class="ruby-constant">Constants</span><span class="ruby-operator">::</span><span class="ruby-constant">OP_DELETE</span>, <span class="ruby-identifier">message</span>)
+      <span class="ruby-keyword">true</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- remove-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- remove-method -->
+
+      
+        <div id="rename-method" class="method-detail ">
+          <a name="method-i-rename"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">rename</span><span
+              class="method-args">(new_name)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Rename this collection.</p>
+
+<p>Note: If operating in auth mode, the client must be authorized as an admin
+to perform this operation.</p>
+
+<p>@param [String] new_name the new name for this collection</p>
+
+<p>@return [String] the name of the new collection.</p>
+
+<p>@raise [Mongo::InvalidNSName] if <tt>new_name</tt> is an invalid collection
+name.</p>
+            
+
+            
+            <div class="method-source-code" id="rename-source">
+<pre>
+<span class="ruby-comment"># File lib/mongo/collection.rb, line 905</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">rename</span>(<span class="ruby-identifier">new_name</span>)
+  <span class="ruby-keyword">case</span> <span class="ruby-identifier">new_name</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-constant">Symbol</span>, <span class="ruby-constant">String</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">TypeError</span>, <span class="ruby-string">&quot;new_name must be a string or symbol&quot;</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">new_name</span> = <span class="ruby-identifier">new_name</span>.<span class="ruby-identifier">to_s</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">new_name</span>.<span class="ruby-identifier">empty?</span> <span class="ruby-keyword">or</span> <span class="ruby-identifier">new_name</span>.<span class="ruby-identifier">include?</span> <span class="ruby-string">&quot;..&quot;</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">Mongo</span><span class="ruby-operator">::</span><span class="ruby-constant">InvalidNSName</span>, <span class="ruby-string">&quot;collection names cannot be empty&quot;</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">new_name</span>.<span class="ruby-identifier">include?</span> <span class="ruby-string">&quot;$&quot;</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">Mongo</span><span class="ruby-operator">::</span><span class="ruby-constant">InvalidNSName</span>, <span class="ruby-string">&quot;collection names must not contain '$'&quot;</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">new_name</span>.<span class="ruby-identifier">match</span>(<span class="ruby-regexp">/^\./</span>) <span class="ruby-keyword">or</span> <span class="ruby-identifier">new_name</span>.<span class="ruby-identifier">match</span>(<span class="ruby-regexp">/\.$/</span>)
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">Mongo</span><span class="ruby-operator">::</span><span class="ruby-constant">InvalidNSName</span>, <span class="ruby-string">&quot;collection names must not start or end with '.'&quot;</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-ivar">@db</span>.<span class="ruby-identifier">rename_collection</span>(<span class="ruby-ivar">@name</span>, <span class="ruby-identifier">new_name</span>)
+  <span class="ruby-ivar">@name</span> = <span class="ruby-identifier">new_name</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- rename-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- rename-method -->
+
+      
+        <div id="save-method" class="method-detail ">
+          <a name="method-i-save"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">save</span><span
+              class="method-args">(doc, opts={})</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Save a document to this collection.</p>
+
+<p>@param [Hash] doc</p>
+
+<pre>the document to be saved. If the document already has an '_id' key,
+then an update (upsert) operation will be performed, and any existing
+document with that _id is overwritten. Otherwise an insert operation is performed.</pre>
+
+<p>@return [ObjectId] the _id of the saved document.</p>
+
+<p>@option opts [Hash] :w, :j, :wtimeout, :fsync Set the write concern for
+this operation.</p>
+
+<pre>:w &gt; 0 will run a +getlasterror+ command on the database to report any assertion. 
+:j will confirm a write has been committed to the journal,
+:wtimeout specifies how long to wait for write confirmation,
+:fsync will confirm that a write has been fsynced. 
+Options provided here will override any write concern options set on this collection,
+its database object, or the current connection. See the options
+for DB#get_last_error.</pre>
+
+<p>@raise [Mongo::OperationFailure] will be raised iff :w &gt; 0 and the
+operation fails.</p>
+            
+
+            
+            <div class="method-source-code" id="save-source">
+<pre>
+<span class="ruby-comment"># File lib/mongo/collection.rb, line 333</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">save</span>(<span class="ruby-identifier">doc</span>, <span class="ruby-identifier">opts</span>={})
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">doc</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-value">:_id</span>) <span class="ruby-operator">||</span> <span class="ruby-identifier">doc</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-string">'_id'</span>)
+    <span class="ruby-identifier">id</span> = <span class="ruby-identifier">doc</span>[<span class="ruby-value">:_id</span>] <span class="ruby-operator">||</span> <span class="ruby-identifier">doc</span>[<span class="ruby-string">'_id'</span>]
+    <span class="ruby-identifier">update</span>({<span class="ruby-value">:_id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">id</span>}, <span class="ruby-identifier">doc</span>, <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">merge!</span>({<span class="ruby-value">:upsert</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">true</span>}))
+    <span class="ruby-identifier">id</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">insert</span>(<span class="ruby-identifier">doc</span>, <span class="ruby-identifier">opts</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- save-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- save-method -->
+
+      
+        <div id="size-method" class="method-detail method-alias">
+          <a name="method-i-size"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">size</span><span
+              class="method-args">(opts={})</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+          </div>
+
+          
+
+          
+          <div class="aliases">
+            Alias for: <a href="Collection.html#method-i-count">count</a>
+          </div>
+          
+        </div><!-- size-method -->
+
+      
+        <div id="stats-method" class="method-detail ">
+          <a name="method-i-stats"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">stats</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Return stats on the collection. Uses MongoDB’s collstats command.</p>
+
+<p>@return [Hash]</p>
+            
+
+            
+            <div class="method-source-code" id="stats-source">
+<pre>
+<span class="ruby-comment"># File lib/mongo/collection.rb, line 948</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">stats</span>
+  <span class="ruby-ivar">@db</span>.<span class="ruby-identifier">command</span>({<span class="ruby-value">:collstats</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@name</span>})
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- stats-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- stats-method -->
+
+      
+        <div id="update-method" class="method-detail ">
+          <a name="method-i-update"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">update</span><span
+              class="method-args">(selector, document, opts={})</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Update one or more documents in this collection.</p>
+
+<p>@param [Hash] selector</p>
+
+<pre>a hash specifying elements which must be present for a document to be updated. Note:
+the update command currently updates only the first document matching the
+given selector. If you want all matching documents to be updated, be sure
+to specify :multi =&gt; true.</pre>
+
+<p>@param [Hash] document</p>
+
+<pre>a hash specifying the fields to be changed in the selected document,
+or (in the case of an upsert) the document to be inserted</pre>
+
+<p>@option opts [Boolean] :upsert (<tt>false</tt>) if true, performs an upsert
+(update or insert) @option opts [Boolean] :multi (<tt>false</tt>) update
+all documents matching the selector, as opposed to</p>
+
+<pre>just the first matching document. Note: only works in MongoDB 1.1.3 or later.</pre>
+
+<p>@option opts [String, Integer, Symbol] :w (1) Set default number of nodes
+to which a write</p>
+
+<pre>should be acknowledged</pre>
+
+<p>@option opts [Boolean] :j (false) Set journal acknowledgement @option opts
+[Integer] :wtimeout (nil) Set replica set acknowledgement timeout @option
+opts [Boolean] :fsync (false) Set fsync acknowledgement.</p>
+
+<pre>Notes on write concern:
+  Options provided here will override any write concern options set on this collection,
+  its database object, or the current connection. See the options for DB#get_last_error.</pre>
+
+<p>@return [Hash, true] Returns a Hash containing the last error object if
+acknowledging writes.</p>
+
+<pre>Otherwise, returns true.</pre>
+
+<p>@raise [Mongo::OperationFailure] will be raised iff :w &gt; 0 and the
+operation fails.</p>
+
+<p>@core update update-instance_method</p>
+            
+
+            
+            <div class="method-source-code" id="update-source">
+<pre>
+<span class="ruby-comment"># File lib/mongo/collection.rb, line 463</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">update</span>(<span class="ruby-identifier">selector</span>, <span class="ruby-identifier">document</span>, <span class="ruby-identifier">opts</span>={})
+  <span class="ruby-comment"># Initial byte is 0.</span>
+  <span class="ruby-identifier">write_concern</span> = <span class="ruby-identifier">get_write_concern</span>(<span class="ruby-identifier">opts</span>, <span class="ruby-keyword">self</span>)
+  <span class="ruby-identifier">message</span> = <span class="ruby-constant">BSON</span><span class="ruby-operator">::</span><span class="ruby-constant">ByteBuffer</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;\00\\00\\00\\00&quot;&quot;</span>)
+  <span class="ruby-constant">BSON</span><span class="ruby-operator">::</span><span class="ruby-constant">BSON_RUBY</span>.<span class="ruby-identifier">serialize_cstr</span>(<span class="ruby-identifier">message</span>, <span class="ruby-node">&quot;#{@db.name}.#{@name}&quot;</span>)
+  <span class="ruby-identifier">update_options</span>  = <span class="ruby-value">0</span>
+  <span class="ruby-identifier">update_options</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">opts</span>[<span class="ruby-value">:upsert</span>]
+  <span class="ruby-identifier">update_options</span> <span class="ruby-operator">+=</span> <span class="ruby-value">2</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">opts</span>[<span class="ruby-value">:multi</span>]
+
+  <span class="ruby-comment"># Determine if update document has modifiers and check keys if so</span>
+  <span class="ruby-identifier">check_keys</span> = <span class="ruby-identifier">document</span>.<span class="ruby-identifier">keys</span>.<span class="ruby-identifier">first</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">start_with?</span>(<span class="ruby-string">&quot;$&quot;</span>) <span class="ruby-operator">?</span> <span class="ruby-keyword">false</span> <span class="ruby-operator">:</span> <span class="ruby-keyword">true</span>
+
+  <span class="ruby-identifier">message</span>.<span class="ruby-identifier">put_int</span>(<span class="ruby-identifier">update_options</span>)
+  <span class="ruby-identifier">message</span>.<span class="ruby-identifier">put_binary</span>(<span class="ruby-constant">BSON</span><span class="ruby-operator">::</span><span class="ruby-constant">BSON_CODER</span>.<span class="ruby-identifier">serialize</span>(<span class="ruby-identifier">selector</span>, <span class="ruby-keyword">false</span>, <span class="ruby-keyword">true</span>).<span class="ruby-identifier">to_s</span>)
+  <span class="ruby-identifier">message</span>.<span class="ruby-identifier">put_binary</span>(<span class="ruby-constant">BSON</span><span class="ruby-operator">::</span><span class="ruby-constant">BSON_CODER</span>.<span class="ruby-identifier">serialize</span>(<span class="ruby-identifier">document</span>, <span class="ruby-identifier">check_keys</span>, <span class="ruby-keyword">true</span>, <span class="ruby-ivar">@connection</span>.<span class="ruby-identifier">max_bson_size</span>).<span class="ruby-identifier">to_s</span>)
+
+  <span class="ruby-identifier">instrument</span>(<span class="ruby-value">:update</span>, <span class="ruby-value">:database</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@db</span>.<span class="ruby-identifier">name</span>, <span class="ruby-value">:collection</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@name</span>, <span class="ruby-value">:selector</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">selector</span>, <span class="ruby-value">:document</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">document</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-constant">Mongo</span><span class="ruby-operator">::</span><span class="ruby-constant">WriteConcern</span>.<span class="ruby-identifier">gle?</span>(<span class="ruby-identifier">write_concern</span>)
+      <span class="ruby-ivar">@connection</span>.<span class="ruby-identifier">send_message_with_gle</span>(<span class="ruby-constant">Mongo</span><span class="ruby-operator">::</span><span class="ruby-constant">Constants</span><span class="ruby-operator">::</span><span class="ruby-constant">OP_UPDATE</span>, <span class="ruby-identifier">message</span>, <span class="ruby-ivar">@db</span>.<span class="ruby-identifier">name</span>, <span class="ruby-keyword">nil</span>, <span class="ruby-identifier">write_concern</span>)
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-ivar">@connection</span>.<span class="ruby-identifier">send_message</span>(<span class="ruby-constant">Mongo</span><span class="ruby-operator">::</span><span class="ruby-constant">Constants</span><span class="ruby-operator">::</span><span class="ruby-constant">OP_UPDATE</span>, <span class="ruby-identifier">message</span>)
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- update-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- update-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+      <div id="protected-instance-method-details" class="method-section section">
+        <h3 class="section-header">Protected Instance Methods</h3>
+
+      
+        <div id="command_options-method" class="method-detail ">
+          <a name="method-i-command_options"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">command_options</span><span
+              class="method-args">(opts)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Parse common options for read-only commands from an input @opts hash and
+return a hash suitable for passing to <a
+href="DB.html#method-i-command">DB#command</a>.</p>
+            
+
+            
+            <div class="method-source-code" id="command_options-source">
+<pre>
+<span class="ruby-comment"># File lib/mongo/collection.rb, line 976</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">command_options</span>(<span class="ruby-identifier">opts</span>)
+  <span class="ruby-identifier">out</span> = {}
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">read</span> = <span class="ruby-identifier">opts</span>[<span class="ruby-value">:read</span>]
+    <span class="ruby-constant">Mongo</span><span class="ruby-operator">::</span><span class="ruby-constant">ReadPreference</span><span class="ruby-operator">::</span><span class="ruby-identifier">validate</span>(<span class="ruby-identifier">read</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">read</span> = <span class="ruby-ivar">@read</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">out</span>[<span class="ruby-value">:read</span>] = <span class="ruby-identifier">read</span>
+  <span class="ruby-identifier">out</span>[<span class="ruby-value">:comment</span>] = <span class="ruby-identifier">opts</span>[<span class="ruby-value">:comment</span>] <span class="ruby-keyword">if</span> <span class="ruby-identifier">opts</span>[<span class="ruby-value">:comment</span>]
+  <span class="ruby-identifier">out</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- command_options-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- command_options-method -->
+
+      
+        <div id="normalize_hint_fields-method" class="method-detail ">
+          <a name="method-i-normalize_hint_fields"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">normalize_hint_fields</span><span
+              class="method-args">(hint)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="normalize_hint_fields-source">
+<pre>
+<span class="ruby-comment"># File lib/mongo/collection.rb, line 989</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">normalize_hint_fields</span>(<span class="ruby-identifier">hint</span>)
+  <span class="ruby-keyword">case</span> <span class="ruby-identifier">hint</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-constant">String</span>
+    {<span class="ruby-identifier">hint</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>}
+  <span class="ruby-keyword">when</span> <span class="ruby-constant">Hash</span>
+    <span class="ruby-identifier">hint</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-keyword">nil</span>
+    <span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">h</span> = <span class="ruby-constant">BSON</span><span class="ruby-operator">::</span><span class="ruby-constant">OrderedHash</span>.<span class="ruby-identifier">new</span>
+    <span class="ruby-identifier">hint</span>.<span class="ruby-identifier">to_a</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">k</span><span class="ruby-operator">|</span> <span class="ruby-identifier">h</span>[<span class="ruby-identifier">k</span>] = <span class="ruby-value">1</span> }
+    <span class="ruby-identifier">h</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- normalize_hint_fields-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- normalize_hint_fields-method -->
+
+      
+      </div><!-- protected-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

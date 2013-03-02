@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"version:EFI"Puppet::Interface#version;FI"R;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"The version of the face;TI"@return [SemVer];T:
+@file0FI"lib/puppet/interface.rb;T

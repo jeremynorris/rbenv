@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"environment:EFI"/Puppet::Network::Rights::Right#environment;FI"RW;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"KOverriding Object#methods sucks for debugging. If we're in here in the;TI"5future, it would be nice to rename Right#methods;T:
+@file0FI"!lib/puppet/network/rights.rb;T

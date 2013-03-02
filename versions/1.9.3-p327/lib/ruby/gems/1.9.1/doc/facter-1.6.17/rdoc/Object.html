@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Class: Object</title>
+
+  <link rel="stylesheet" href="./rdoc.css" type="text/css" media="screen" />
+
+  <script src="./js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="./index.html">Home</a>
+          <a href="./index.html#classes">Classes</a>
+          <a href="./index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="./lib/facter/ec2_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/facter/ec2.rb">lib/facter/ec2.rb</a></li>
+          
+            <li><a href="./lib/facter/ipaddress6_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/facter/ipaddress6.rb">lib/facter/ipaddress6.rb</a></li>
+          
+            <li><a href="./lib/facter/selinux_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/facter/selinux.rb">lib/facter/selinux.rb</a></li>
+          
+            <li><a href="./lib/facter/util/monkey_patches_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/facter/util/monkey_patches.rb">lib/facter/util/monkey_patches.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link">BasicObject</p>
+        
+      </div>
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-i-get_address_after_token">#get_address_after_token</a></li>
+          
+          <li><a href="#method-i-metadata">#metadata</a></li>
+          
+          <li><a href="#method-i-selinux_mount_point">#selinux_mount_point</a></li>
+          
+          <li><a href="#method-i-userdata">#userdata</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="./images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="./Facter.html">Facter</a></li>
+        
+          <li><a href="./Facter/Application.html">Facter::Application</a></li>
+        
+          <li><a href="./Facter/Manufacturer.html">Facter::Manufacturer</a></li>
+        
+          <li><a href="./Facter/Memory.html">Facter::Memory</a></li>
+        
+          <li><a href="./Facter/NetMask.html">Facter::NetMask</a></li>
+        
+          <li><a href="./Facter/Util.html">Facter::Util</a></li>
+        
+          <li><a href="./Facter/Util/Collection.html">Facter::Util::Collection</a></li>
+        
+          <li><a href="./Facter/Util/Config.html">Facter::Util::Config</a></li>
+        
+          <li><a href="./Facter/Util/Confine.html">Facter::Util::Confine</a></li>
+        
+          <li><a href="./Facter/Util/EC2.html">Facter::Util::EC2</a></li>
+        
+          <li><a href="./Facter/Util/Fact.html">Facter::Util::Fact</a></li>
+        
+          <li><a href="./Facter/Util/IP.html">Facter::Util::IP</a></li>
+        
+          <li><a href="./Facter/Util/Loader.html">Facter::Util::Loader</a></li>
+        
+          <li><a href="./Facter/Util/Macaddress.html">Facter::Util::Macaddress</a></li>
+        
+          <li><a href="./Facter/Util/Macaddress/Darwin.html">Facter::Util::Macaddress::Darwin</a></li>
+        
+          <li><a href="./Facter/Util/Macaddress/Windows.html">Facter::Util::Macaddress::Windows</a></li>
+        
+          <li><a href="./Facter/Util/Macosx.html">Facter::Util::Macosx</a></li>
+        
+          <li><a href="./Facter/Util/MonkeyPatches.html">Facter::Util::MonkeyPatches</a></li>
+        
+          <li><a href="./Facter/Util/MonkeyPatches/Lines.html">Facter::Util::MonkeyPatches::Lines</a></li>
+        
+          <li><a href="./Facter/Util/Processor.html">Facter::Util::Processor</a></li>
+        
+          <li><a href="./Facter/Util/Registry.html">Facter::Util::Registry</a></li>
+        
+          <li><a href="./Facter/Util/Resolution.html">Facter::Util::Resolution</a></li>
+        
+          <li><a href="./Facter/Util/Uptime.html">Facter::Util::Uptime</a></li>
+        
+          <li><a href="./Facter/Util/Values.html">Facter::Util::Values</a></li>
+        
+          <li><a href="./Facter/Util/Virtual.html">Facter::Util::Virtual</a></li>
+        
+          <li><a href="./Facter/Util/Vlans.html">Facter::Util::Vlans</a></li>
+        
+          <li><a href="./Facter/Util/WMI.html">Facter::Util::WMI</a></li>
+        
+          <li><a href="./Facter/Util/Xendomains.html">Facter::Util::Xendomains</a></li>
+        
+          <li><a href="./Plist.html">Plist</a></li>
+        
+          <li><a href="./Plist/Emit.html">Plist::Emit</a></li>
+        
+          <li><a href="./Plist/Listener.html">Plist::Listener</a></li>
+        
+          <li><a href="./Plist/PArray.html">Plist::PArray</a></li>
+        
+          <li><a href="./Plist/PData.html">Plist::PData</a></li>
+        
+          <li><a href="./Plist/PDate.html">Plist::PDate</a></li>
+        
+          <li><a href="./Plist/PDict.html">Plist::PDict</a></li>
+        
+          <li><a href="./Plist/PFalse.html">Plist::PFalse</a></li>
+        
+          <li><a href="./Plist/PInteger.html">Plist::PInteger</a></li>
+        
+          <li><a href="./Plist/PKey.html">Plist::PKey</a></li>
+        
+          <li><a href="./Plist/PList.html">Plist::PList</a></li>
+        
+          <li><a href="./Plist/PReal.html">Plist::PReal</a></li>
+        
+          <li><a href="./Plist/PString.html">Plist::PString</a></li>
+        
+          <li><a href="./Plist/PTag.html">Plist::PTag</a></li>
+        
+          <li><a href="./Plist/PTrue.html">Plist::PTrue</a></li>
+        
+          <li><a href="./Plist/StreamParser.html">Plist::StreamParser</a></li>
+        
+          <li><a href="./IO.html">IO</a></li>
+        
+          <li><a href="./Object.html">Object</a></li>
+        
+          <li><a href="./String.html">String</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">Object</h1>
+
+    <div id="description" class="description">
+      
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+      <!-- Constants -->
+      <div id="constants-list" class="section">
+        <h3 class="section-header">Constants</h3>
+        <dl>
+        
+          <dt><a name="RbConfig">RbConfig</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+        </dl>
+      </div>
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="get_address_after_token-method" class="method-detail ">
+          <a name="method-i-get_address_after_token"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">get_address_after_token</span><span
+              class="method-args">(output, token, return_first=false)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Cody Herriges &lt;c.a.herriges@gmail.com&gt;</p>
+
+<p>Used the ipaddress fact that is already part of <a
+href="Facter.html">Facter</a> as a template.</p>
+            
+
+            
+            <div class="method-source-code" id="get_address_after_token-source">
+<pre>
+<span class="ruby-comment"># File lib/facter/ipaddress6.rb, line 24</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_address_after_token</span>(<span class="ruby-identifier">output</span>, <span class="ruby-identifier">token</span>, <span class="ruby-identifier">return_first</span>=<span class="ruby-keyword">false</span>)
+  <span class="ruby-identifier">ip</span> = <span class="ruby-keyword">nil</span>
+
+  <span class="ruby-identifier">output</span>.<span class="ruby-identifier">scan</span>(<span class="ruby-node">/#{token} ((?&gt;[0-9,a-f,A-F]*\:{1,2})+[0-9,a-f,A-F]{0,4})/</span>).<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">match</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">match</span> = <span class="ruby-identifier">match</span>.<span class="ruby-identifier">first</span>
+    <span class="ruby-keyword">unless</span> <span class="ruby-identifier">match</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/fe80.*/</span> <span class="ruby-keyword">or</span> <span class="ruby-identifier">match</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;::1&quot;</span>
+      <span class="ruby-identifier">ip</span> = <span class="ruby-identifier">match</span>
+      <span class="ruby-keyword">break</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">return_first</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">ip</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- get_address_after_token-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- get_address_after_token-method -->
+
+      
+        <div id="metadata-method" class="method-detail ">
+          <a name="method-i-metadata"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">metadata</span><span
+              class="method-args">(id = "")</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="metadata-source">
+<pre>
+<span class="ruby-comment"># File lib/facter/ec2.rb, line 4</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">metadata</span>(<span class="ruby-identifier">id</span> = <span class="ruby-string">&quot;&quot;</span>)
+  <span class="ruby-identifier">open</span>(<span class="ruby-node">&quot;http://169.254.169.254/2008-02-01/meta-data/#{id||=''}&quot;</span>).<span class="ruby-identifier">read</span>.
+    <span class="ruby-identifier">split</span>(<span class="ruby-string">&quot;\n&quot;</span>).<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">o</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">key</span> = <span class="ruby-node">&quot;#{id}#{o.gsub(/\=.*$/, '/')}&quot;</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">key</span>[<span class="ruby-value">-1</span><span class="ruby-operator">..</span><span class="ruby-value">-1</span>] <span class="ruby-operator">!=</span> <span class="ruby-string">'/'</span>
+      <span class="ruby-identifier">value</span> = <span class="ruby-identifier">open</span>(<span class="ruby-node">&quot;http://169.254.169.254/2008-02-01/meta-data/#{key}&quot;</span>).<span class="ruby-identifier">read</span>.
+        <span class="ruby-identifier">split</span>(<span class="ruby-string">&quot;\n&quot;</span>)
+      <span class="ruby-identifier">symbol</span> = <span class="ruby-node">&quot;ec2_#{key.gsub(/\-|\//, '_')}&quot;</span>.<span class="ruby-identifier">to_sym</span>
+      <span class="ruby-constant">Facter</span>.<span class="ruby-identifier">add</span>(<span class="ruby-identifier">symbol</span>) { <span class="ruby-identifier">setcode</span> { <span class="ruby-identifier">value</span>.<span class="ruby-identifier">join</span>(<span class="ruby-string">','</span>) } }
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">metadata</span>(<span class="ruby-identifier">key</span>)
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">rescue</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">details</span>
+  <span class="ruby-constant">Facter</span>.<span class="ruby-identifier">warn</span> <span class="ruby-node">&quot;Could not retrieve ec2 metadata: #{details.message}&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- metadata-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- metadata-method -->
+
+      
+        <div id="selinux_mount_point-method" class="method-detail ">
+          <a name="method-i-selinux_mount_point"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">selinux_mount_point</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>This supports the fact that the selinux mount point is not always in the
+same location – the selinux mount point is operating system specific.</p>
+            
+
+            
+            <div class="method-source-code" id="selinux_mount_point-source">
+<pre>
+<span class="ruby-comment"># File lib/facter/selinux.rb, line 17</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">selinux_mount_point</span>
+  <span class="ruby-identifier">path</span> = <span class="ruby-string">&quot;/selinux&quot;</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">FileTest</span>.<span class="ruby-identifier">exists?</span>(<span class="ruby-string">'/proc/self/mounts'</span>)
+    <span class="ruby-comment"># Centos 5 shows an error in which having ruby use File.read to read</span>
+    <span class="ruby-comment"># /proc/self/mounts combined with the puppet agent run with --listen causes</span>
+    <span class="ruby-comment"># a hang. Reading from other parts of /proc does not seem to cause this problem.</span>
+    <span class="ruby-comment"># The work around is to read the file in another process.</span>
+    <span class="ruby-comment"># -- andy Fri Aug 31 2012</span>
+    <span class="ruby-identifier">selinux_line</span> = <span class="ruby-constant">Facter</span><span class="ruby-operator">::</span><span class="ruby-constant">Util</span><span class="ruby-operator">::</span><span class="ruby-constant">Resolution</span>.<span class="ruby-identifier">exec</span>(<span class="ruby-string">'cat /proc/self/mounts'</span>).<span class="ruby-identifier">lines</span>.<span class="ruby-identifier">find</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">line</span><span class="ruby-operator">|</span> <span class="ruby-identifier">line</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/selinuxfs/</span> }
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">selinux_line</span>
+      <span class="ruby-identifier">path</span> = <span class="ruby-identifier">selinux_line</span>.<span class="ruby-identifier">split</span>[<span class="ruby-value">1</span>]
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">path</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- selinux_mount_point-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- selinux_mount_point-method -->
+
+      
+        <div id="userdata-method" class="method-detail ">
+          <a name="method-i-userdata"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">userdata</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="userdata-source">
+<pre>
+<span class="ruby-comment"># File lib/facter/ec2.rb, line 21</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">userdata</span>()
+  <span class="ruby-constant">Facter</span>.<span class="ruby-identifier">add</span>(<span class="ruby-value">:ec2_userdata</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-identifier">setcode</span> <span class="ruby-keyword">do</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">userdata</span> = <span class="ruby-constant">Facter</span><span class="ruby-operator">::</span><span class="ruby-constant">Util</span><span class="ruby-operator">::</span><span class="ruby-constant">EC2</span>.<span class="ruby-identifier">userdata</span>
+        <span class="ruby-identifier">userdata</span>.<span class="ruby-identifier">split</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- userdata-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- userdata-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"	name:EFI"Puppet::Type::name;FI"R;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"A@return [String] the name of the resource type; e.g., "File";T:
+@file0TI"lib/puppet/type.rb;T

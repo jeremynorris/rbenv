@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>File: domain.rb [facter-1.6.17 Documentation]</title>
+
+  <link type="text/css" media="screen" href="../../rdoc.css" rel="stylesheet" />
+
+  <script src="../../js/jquery.js" type="text/javascript"
+    charset="utf-8"></script>
+  <script src="../../js/thickbox-compressed.js" type="text/javascript"
+    charset="utf-8"></script>
+  <script src="../../js/quicksearch.js" type="text/javascript"
+    charset="utf-8"></script>
+  <script src="../../js/darkfish.js" type="text/javascript"
+    charset="utf-8"></script>
+</head>
+
+<body class="file file-popup">
+  <div id="metadata">
+    <dl>
+      <dt class="modified-date">Last Modified</dt>
+      <dd class="modified-date">2013-03-01 22:14:08 +0100</dd>
+
+      
+      <dt class="requires">Requires</dt>
+      <dd class="requires">
+        <ul>
+        
+          <li>facter/util/registry</li>
+        
+          <li>facter/util/wmi</li>
+        
+        </ul>
+      </dd>
+      
+
+      
+    </dl>
+  </div>
+
+  <div id="documentation">
+    
+    <div class="description">
+      <h2>Description</h2>
+      
+<p>Fact: domain</p>
+
+<p>Purpose:</p>
+
+<pre>Return the host's primary DNS domain name.</pre>
+
+<p>Resolution:</p>
+
+<pre>On UNIX (excluding Darwin), first try and use the hostname fact,
+which uses the hostname system command, and then parse the output
+of that.
+Failing that it tries the dnsdomainname system command.
+Failing that it uses /etc/resolv.conf and takes the domain from that, or as
+a final resort, the search from that.
+Otherwise returns nil.
+
+On Windows uses the win32ole gem and winmgmts to get the DNSDomain value
+from the Win32 networking stack.</pre>
+
+<p>Caveats:</p>
+
+    </div>
+    
+  </div>
+</body>
+</html>
+

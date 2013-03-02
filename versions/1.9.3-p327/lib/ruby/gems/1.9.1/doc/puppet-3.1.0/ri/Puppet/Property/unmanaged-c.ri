@@ -1,0 +1,4 @@
+U:RDoc::Attr[iI"unmanaged:EFI" Puppet::Property::unmanaged;FI"RW;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"`@todo Figure out what this is used for. Can not find any logic in the puppet code base that;To:RDoc::Markup::Verbatim;	[I"%reads or writes this attribute.
+;Fo;
+;	[I"??? Probably Unused;T:
+@file0TI"lib/puppet/property.rb;T

@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"	name:EFI"Mongo::DB#name;FI"R;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"BThe name of the database and the local write concern options.;T:
+@file0FI"lib/mongo/db.rb;T

@@ -1,0 +1,5 @@
+U:RDoc::Attr[iI"
+model:EFI"Puppet::Provider#model;FI"R;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"k@todo original = _"LAK 2007-05-09: Keep the model stuff around for backward compatibility"_, why is it;To:RDoc::Markup::Verbatim;	[I"Iboth here (instance) and at class level? Is this a different model?
+;Fo;
+;	[I"!@return [???] model is WHAT?;T:
+@file0FI"lib/puppet/provider.rb;T

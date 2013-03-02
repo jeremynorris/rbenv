@@ -1,0 +1,3 @@
+U:RDoc::Attr[iI"
+links:EFI"$Puppet::FileServing::Base#links;FI"R;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"&Determine how we deal with links.;T:
+@file0FI"$lib/puppet/file_serving/base.rb;T

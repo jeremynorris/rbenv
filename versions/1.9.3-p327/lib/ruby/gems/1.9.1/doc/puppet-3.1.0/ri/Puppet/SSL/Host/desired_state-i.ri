@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"desired_state:EFI"$Puppet::SSL::Host#desired_state;FI"RW;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"UThis accessor is used in instances for indirector requests to hold desired state;T:
+@file0FI"lib/puppet/ssl/host.rb;T

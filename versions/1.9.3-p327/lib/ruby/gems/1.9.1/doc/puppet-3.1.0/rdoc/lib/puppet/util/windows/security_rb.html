@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>File: security.rb [puppet-3.1.0 Documentation]</title>
+
+  <link type="text/css" media="screen" href="../../../../rdoc.css" rel="stylesheet" />
+
+  <script src="../../../../js/jquery.js" type="text/javascript"
+    charset="utf-8"></script>
+  <script src="../../../../js/thickbox-compressed.js" type="text/javascript"
+    charset="utf-8"></script>
+  <script src="../../../../js/quicksearch.js" type="text/javascript"
+    charset="utf-8"></script>
+  <script src="../../../../js/darkfish.js" type="text/javascript"
+    charset="utf-8"></script>
+</head>
+
+<body class="file file-popup">
+  <div id="metadata">
+    <dl>
+      <dt class="modified-date">Last Modified</dt>
+      <dd class="modified-date">2013-03-01 22:14:16 +0100</dd>
+
+      
+      <dt class="requires">Requires</dt>
+      <dd class="requires">
+        <ul>
+        
+          <li>puppet/util/windows</li>
+        
+          <li>pathname</li>
+        
+          <li>win32/security</li>
+        
+          <li>windows/file</li>
+        
+          <li>windows/handle</li>
+        
+          <li>windows/security</li>
+        
+          <li>windows/process</li>
+        
+          <li>windows/memory</li>
+        
+          <li>windows/volume</li>
+        
+        </ul>
+      </dd>
+      
+
+      
+    </dl>
+  </div>
+
+  <div id="documentation">
+    
+    <div class="description">
+      <h2>Description</h2>
+      
+<p>This class maps POSIX owner, group, and modes to the Windows security
+model, and back.</p>
+
+<p>The primary goal of this mapping is to ensure that owner, group, and modes
+can be round-tripped in a consistent and deterministic way. Otherwise, <a
+href="../../../../Puppet.html">Puppet</a> might think file resources are
+out-of-sync every time it runs. A secondary goal is to provide equivalent
+permissions for common use-cases. For example, setting the owner to
+“Administrators”, group to “Users”, and mode to 750 (which also denies
+access to everyone else.</p>
+
+<p>There are some well-known problems mapping windows and POSIX permissions
+due to differences between the two security models. Search for “POSIX
+permission mapping leak”. In POSIX, access to a file is determined solely
+based on the most specific class (user, group, other). So a mode of 460
+would deny write access to the owner even if they are a member of the
+group. But in Windows, the entire access control list is walked until the
+user is explicitly denied or allowed (denied take precedence, and if
+neither occurs they are denied). As a result, a user could be allowed
+access based on their group membership. To solve this problem, other people
+have used deny access control entries to more closely model POSIX, but this
+introduces a lot of complexity.</p>
+
+<p>In general, this implementation only supports “typical” permissions, where
+group permissions are a subset of user, and other permissions are a subset
+of group, e.g. 754, but not 467.  However, there are some Windows quirks to
+be aware of.</p>
+<ul><li>
+<p>The owner can be either a user or group SID, and most system files are
+owned by the Administrators group.</p>
+</li><li>
+<p>The group can be either a user or group SID.</p>
+</li><li>
+<p>Unexpected results can occur if the owner and group are the same, but the
+user and group classes are different, e.g. 750. In this case, it is not
+possible to allow write access to the owner, but not the group. As a
+result, the actual permissions set on the file would be 770.</p>
+</li><li>
+<p>In general, only privileged users can set the owner, group, or change the
+mode for files they do not own. In 2003, the user must be a member of the
+Administrators group. In Vista/2008, the user must be running with elevated
+privileges.</p>
+</li><li>
+<p>A file/dir can be deleted by anyone with the DELETE access right OR by
+anyone that has the FILE_DELETE_CHILD access right for the parent. See <a
+href="http://support.microsoft.com/kb/238018.">support.microsoft.com/kb/238018.</a>
+But on Unix, the user must have write access to the file/dir AND execute
+access to all of the parent path components.</p>
+</li><li>
+<p>Many access control entries are inherited from parent directories, and it
+is common for file/dirs to have more than 3 entries, e.g. Users, Power
+Users, Administrators, SYSTEM, etc, which cannot be mapped into the 3 class
+POSIX model. The get_mode method will set the S_IEXTRA bit flag indicating
+that an access control entry was found whose SID is neither the owner,
+group, or other. This enables <a href="../../../../Puppet.html">Puppet</a>
+to detect when file/dirs are out-of-sync, especially those that <a
+href="../../../../Puppet.html">Puppet</a> did not create, but is attempting
+to manage.</p>
+</li><li>
+<p>On Unix, the owner and group can be modified without changing the mode. But
+on Windows, an access control entry specifies which SID it applies to. As a
+result, the set_owner and set_group methods automatically rebuild the
+access control list based on the new (and different) owner or group.</p>
+</li></ul>
+
+    </div>
+    
+  </div>
+</body>
+</html>
+

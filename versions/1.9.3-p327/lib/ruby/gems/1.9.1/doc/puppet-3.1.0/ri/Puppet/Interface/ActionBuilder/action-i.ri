@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"action:EFI",Puppet::Interface::ActionBuilder#action;FI"R;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I""The action under construction;TI"(@return [Puppet::Interface::Action];TI"@api private;T:
+@file0FI"+lib/puppet/interface/action_builder.rb;T

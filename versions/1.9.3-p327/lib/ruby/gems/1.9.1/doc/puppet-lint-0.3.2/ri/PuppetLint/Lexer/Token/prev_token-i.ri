@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"prev_token:EFI"(PuppetLint::Lexer::Token#prev_token;FI"RW;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"<Internal: Gets/sets the previous token in the manifest.;T:
+@file0FI"#lib/puppet-lint/lexer/token.rb;T

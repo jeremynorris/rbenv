@@ -1,0 +1,524 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Module: Log4r</title>
+
+  <link rel="stylesheet" href="./rdoc.css" type="text/css" media="screen" />
+
+  <script src="./js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="module">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="./index.html">Home</a>
+          <a href="./index.html#classes">Classes</a>
+          <a href="./index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="./lib/log4r/base_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/log4r/base.rb">lib/log4r/base.rb</a></li>
+          
+            <li><a href="./lib/log4r/config_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/log4r/config.rb">lib/log4r/config.rb</a></li>
+          
+            <li><a href="./lib/log4r/configurator_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/log4r/configurator.rb">lib/log4r/configurator.rb</a></li>
+          
+            <li><a href="./lib/log4r/formatter/formatter_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/log4r/formatter/formatter.rb">lib/log4r/formatter/formatter.rb</a></li>
+          
+            <li><a href="./lib/log4r/formatter/log4jxmlformatter_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/log4r/formatter/log4jxmlformatter.rb">lib/log4r/formatter/log4jxmlformatter.rb</a></li>
+          
+            <li><a href="./lib/log4r/formatter/patternformatter_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/log4r/formatter/patternformatter.rb">lib/log4r/formatter/patternformatter.rb</a></li>
+          
+            <li><a href="./lib/log4r/GDC_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/log4r/GDC.rb">lib/log4r/GDC.rb</a></li>
+          
+            <li><a href="./lib/log4r/lib/drbloader_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/log4r/lib/drbloader.rb">lib/log4r/lib/drbloader.rb</a></li>
+          
+            <li><a href="./lib/log4r/lib/xmlloader_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/log4r/lib/xmlloader.rb">lib/log4r/lib/xmlloader.rb</a></li>
+          
+            <li><a href="./lib/log4r/logevent_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/log4r/logevent.rb">lib/log4r/logevent.rb</a></li>
+          
+            <li><a href="./lib/log4r/logger_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/log4r/logger.rb">lib/log4r/logger.rb</a></li>
+          
+            <li><a href="./lib/log4r/loggerfactory_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/log4r/loggerfactory.rb">lib/log4r/loggerfactory.rb</a></li>
+          
+            <li><a href="./lib/log4r/logserver_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/log4r/logserver.rb">lib/log4r/logserver.rb</a></li>
+          
+            <li><a href="./lib/log4r/MDC_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/log4r/MDC.rb">lib/log4r/MDC.rb</a></li>
+          
+            <li><a href="./lib/log4r/NDC_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/log4r/NDC.rb">lib/log4r/NDC.rb</a></li>
+          
+            <li><a href="./lib/log4r/outputter/consoleoutputters_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/log4r/outputter/consoleoutputters.rb">lib/log4r/outputter/consoleoutputters.rb</a></li>
+          
+            <li><a href="./lib/log4r/outputter/datefileoutputter_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/log4r/outputter/datefileoutputter.rb">lib/log4r/outputter/datefileoutputter.rb</a></li>
+          
+            <li><a href="./lib/log4r/outputter/emailoutputter_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/log4r/outputter/emailoutputter.rb">lib/log4r/outputter/emailoutputter.rb</a></li>
+          
+            <li><a href="./lib/log4r/outputter/fileoutputter_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/log4r/outputter/fileoutputter.rb">lib/log4r/outputter/fileoutputter.rb</a></li>
+          
+            <li><a href="./lib/log4r/outputter/iooutputter_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/log4r/outputter/iooutputter.rb">lib/log4r/outputter/iooutputter.rb</a></li>
+          
+            <li><a href="./lib/log4r/outputter/outputter_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/log4r/outputter/outputter.rb">lib/log4r/outputter/outputter.rb</a></li>
+          
+            <li><a href="./lib/log4r/outputter/outputterfactory_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/log4r/outputter/outputterfactory.rb">lib/log4r/outputter/outputterfactory.rb</a></li>
+          
+            <li><a href="./lib/log4r/outputter/remoteoutputter_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/log4r/outputter/remoteoutputter.rb">lib/log4r/outputter/remoteoutputter.rb</a></li>
+          
+            <li><a href="./lib/log4r/outputter/rollingfileoutputter_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/log4r/outputter/rollingfileoutputter.rb">lib/log4r/outputter/rollingfileoutputter.rb</a></li>
+          
+            <li><a href="./lib/log4r/outputter/scribeoutputter_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/log4r/outputter/scribeoutputter.rb">lib/log4r/outputter/scribeoutputter.rb</a></li>
+          
+            <li><a href="./lib/log4r/outputter/staticoutputter_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/log4r/outputter/staticoutputter.rb">lib/log4r/outputter/staticoutputter.rb</a></li>
+          
+            <li><a href="./lib/log4r/outputter/syslogoutputter_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/log4r/outputter/syslogoutputter.rb">lib/log4r/outputter/syslogoutputter.rb</a></li>
+          
+            <li><a href="./lib/log4r/outputter/udpoutputter_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/log4r/outputter/udpoutputter.rb">lib/log4r/outputter/udpoutputter.rb</a></li>
+          
+            <li><a href="./lib/log4r/repository_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/log4r/repository.rb">lib/log4r/repository.rb</a></li>
+          
+            <li><a href="./lib/log4r/staticlogger_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/log4r/staticlogger.rb">lib/log4r/staticlogger.rb</a></li>
+          
+            <li><a href="./lib/log4r/version_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/log4r/version.rb">lib/log4r/version.rb</a></li>
+          
+            <li><a href="./lib/log4r/yamlconfigurator_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/log4r/yamlconfigurator.rb">lib/log4r/yamlconfigurator.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+
+      
+
+      
+      <!-- Namespace Contents -->
+      <div id="namespace-list-section" class="section">
+        <h3 class="section-header">Namespace</h3>
+        <ul class="link-list">
+          
+          <li><span class="type">CLASS</span> <a href="Log4r/BasicFormatter.html">Log4r::BasicFormatter</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="Log4r/ConfigError.html">Log4r::ConfigError</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="Log4r/Configurator.html">Log4r::Configurator</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="Log4r/DateFileOutputter.html">Log4r::DateFileOutputter</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="Log4r/DefaultFormatter.html">Log4r::DefaultFormatter</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="Log4r/EmailOutputter.html">Log4r::EmailOutputter</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="Log4r/FileOutputter.html">Log4r::FileOutputter</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="Log4r/Formatter.html">Log4r::Formatter</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="Log4r/GDC.html">Log4r::GDC</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="Log4r/IOOutputter.html">Log4r::IOOutputter</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="Log4r/Log4jXmlFormatter.html">Log4r::Log4jXmlFormatter</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="Log4r/Log4rTools.html">Log4r::Log4rTools</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="Log4r/LogEvent.html">Log4r::LogEvent</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="Log4r/LogServer.html">Log4r::LogServer</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="Log4r/Logger.html">Log4r::Logger</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="Log4r/MDC.html">Log4r::MDC</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="Log4r/NDC.html">Log4r::NDC</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="Log4r/ObjectFormatter.html">Log4r::ObjectFormatter</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="Log4r/Outputter.html">Log4r::Outputter</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="Log4r/PatternFormatter.html">Log4r::PatternFormatter</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="Log4r/RemoteOutputter.html">Log4r::RemoteOutputter</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="Log4r/RollingFileOutputter.html">Log4r::RollingFileOutputter</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="Log4r/RootLogger.html">Log4r::RootLogger</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="Log4r/ScribeOutputter.html">Log4r::ScribeOutputter</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="Log4r/SimpleFormatter.html">Log4r::SimpleFormatter</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="Log4r/StderrOutputter.html">Log4r::StderrOutputter</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="Log4r/StdoutOutputter.html">Log4r::StdoutOutputter</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="Log4r/SyslogOutputter.html">Log4r::SyslogOutputter</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="Log4r/UDPOutputter.html">Log4r::UDPOutputter</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="Log4r/YamlConfigurator.html">Log4r::YamlConfigurator</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="./lib/log4r/rdoc/GDC.html">GDC</a></li>
+        
+          <li class="file"><a href="./lib/log4r/rdoc/MDC.html">MDC</a></li>
+        
+          <li class="file"><a href="./lib/log4r/rdoc/NDC.html">NDC</a></li>
+        
+          <li class="file"><a href="./lib/log4r/rdoc/configurator.html">configurator</a></li>
+        
+          <li class="file"><a href="./lib/log4r/rdoc/emailoutputter.html">emailoutputter</a></li>
+        
+          <li class="file"><a href="./lib/log4r/rdoc/formatter.html">formatter</a></li>
+        
+          <li class="file"><a href="./lib/log4r/rdoc/log4jxmlformatter.html">log4jxmlformatter</a></li>
+        
+          <li class="file"><a href="./lib/log4r/rdoc/log4r.html">log4r</a></li>
+        
+          <li class="file"><a href="./lib/log4r/rdoc/logger.html">logger</a></li>
+        
+          <li class="file"><a href="./lib/log4r/rdoc/logserver.html">logserver</a></li>
+        
+          <li class="file"><a href="./lib/log4r/rdoc/outputter.html">outputter</a></li>
+        
+          <li class="file"><a href="./lib/log4r/rdoc/patternformatter.html">patternformatter</a></li>
+        
+          <li class="file"><a href="./lib/log4r/rdoc/scribeoutputter.html">scribeoutputter</a></li>
+        
+          <li class="file"><a href="./lib/log4r/rdoc/syslogoutputter.html">syslogoutputter</a></li>
+        
+          <li class="file"><a href="./lib/log4r/rdoc/win32eventoutputter.html">win32eventoutputter</a></li>
+        
+          <li class="file"><a href="./lib/log4r/rdoc/yamlconfigurator.html">yamlconfigurator</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="./images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="./Log4r.html">Log4r</a></li>
+        
+          <li><a href="./Log4r/BasicFormatter.html">Log4r::BasicFormatter</a></li>
+        
+          <li><a href="./Log4r/ConfigError.html">Log4r::ConfigError</a></li>
+        
+          <li><a href="./Log4r/Configurator.html">Log4r::Configurator</a></li>
+        
+          <li><a href="./Log4r/DateFileOutputter.html">Log4r::DateFileOutputter</a></li>
+        
+          <li><a href="./Log4r/DefaultFormatter.html">Log4r::DefaultFormatter</a></li>
+        
+          <li><a href="./Log4r/EmailOutputter.html">Log4r::EmailOutputter</a></li>
+        
+          <li><a href="./Log4r/FileOutputter.html">Log4r::FileOutputter</a></li>
+        
+          <li><a href="./Log4r/Formatter.html">Log4r::Formatter</a></li>
+        
+          <li><a href="./Log4r/GDC.html">Log4r::GDC</a></li>
+        
+          <li><a href="./Log4r/IOOutputter.html">Log4r::IOOutputter</a></li>
+        
+          <li><a href="./Log4r/Log4jXmlFormatter.html">Log4r::Log4jXmlFormatter</a></li>
+        
+          <li><a href="./Log4r/Log4rTools.html">Log4r::Log4rTools</a></li>
+        
+          <li><a href="./Log4r/LogEvent.html">Log4r::LogEvent</a></li>
+        
+          <li><a href="./Log4r/LogServer.html">Log4r::LogServer</a></li>
+        
+          <li><a href="./Log4r/Logger.html">Log4r::Logger</a></li>
+        
+          <li><a href="./Log4r/MDC.html">Log4r::MDC</a></li>
+        
+          <li><a href="./Log4r/NDC.html">Log4r::NDC</a></li>
+        
+          <li><a href="./Log4r/ObjectFormatter.html">Log4r::ObjectFormatter</a></li>
+        
+          <li><a href="./Log4r/Outputter.html">Log4r::Outputter</a></li>
+        
+          <li><a href="./Log4r/PatternFormatter.html">Log4r::PatternFormatter</a></li>
+        
+          <li><a href="./Log4r/RemoteOutputter.html">Log4r::RemoteOutputter</a></li>
+        
+          <li><a href="./Log4r/RollingFileOutputter.html">Log4r::RollingFileOutputter</a></li>
+        
+          <li><a href="./Log4r/RootLogger.html">Log4r::RootLogger</a></li>
+        
+          <li><a href="./Log4r/ScribeOutputter.html">Log4r::ScribeOutputter</a></li>
+        
+          <li><a href="./Log4r/SimpleFormatter.html">Log4r::SimpleFormatter</a></li>
+        
+          <li><a href="./Log4r/StderrOutputter.html">Log4r::StderrOutputter</a></li>
+        
+          <li><a href="./Log4r/StdoutOutputter.html">Log4r::StdoutOutputter</a></li>
+        
+          <li><a href="./Log4r/SyslogOutputter.html">Log4r::SyslogOutputter</a></li>
+        
+          <li><a href="./Log4r/UDPOutputter.html">Log4r::UDPOutputter</a></li>
+        
+          <li><a href="./Log4r/YamlConfigurator.html">Log4r::YamlConfigurator</a></li>
+        
+          <li><a href="./REXML.html">REXML</a></li>
+        
+          <li><a href="./Object.html">Object</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="module">Log4r</h1>
+
+    <div id="description" class="description">
+      <table class="rdoc-list"><tr><td class="rdoc-term"><p>Version</p></td>
+<td>
+<p>$Id$</p>
+</td></tr></table>
+<hr style="height: 1px">
+
+<p>TODO: catch unparsed parameters #{FOO} and die</p>
+<hr style="height: 1px">
+<hr style="height: 1px">
+<hr style="height: 1px">
+<hr style="height: 1px">
+
+<h1><a href="Log4r/NDC.html">NDC</a></h1>
+
+<p>The <a href="Log4r/NDC.html">NDC</a> class implements a copy of the Nested
+Diagnostic Context, which is part of the Apache Log4j library.  Nested
+Diagnostic Contexts were derived from Neil Harrison’s article on “Patterns
+for Logging Diagnostic Messages”, part of the book “Pattern Languages of
+Program Design 3” edited by Martin et al.</p>
+
+<p>NDCs in <a href="Log4r.html">Log4r</a> are thread safe.</p>
+
+<p>NDCs in log4r are close enough to NDCs in Log4j that I include its
+documentation directly:</p>
+
+<p>… A Nested Diagnostic Context, or <a href="Log4r/NDC.html">NDC</a> in
+short, is an instrument to distinguish interleaved log output from
+different sources. Log output is typically interleaved when a server
+handles multiple clients near-simultaneously.</p>
+
+<p>Interleaved log output can still be meaningful if each log entry from
+different contexts had a distinctive stamp. This is where NDCs come into
+play.</p>
+
+<p>Note that NDCs are managed on a per thread basis. <a
+href="Log4r/NDC.html">NDC</a> operations such as push, pop(), clear(),
+getDepth() and setMaxDepth(int) affect the <a href="Log4r/NDC.html">NDC</a>
+of the current thread only. NDCs of other threads remain unaffected. …</p>
+
+<p>An important difference between NDCs in <a href="Log4r.html">Log4r</a> vs
+Log4j is that you do not have to called <a
+href="Log4r/NDC.html#method-c-remove">NDC.remove()</a> when exiting a
+thread.</p>
+
+<p>This class will automatically create Thread specific storage for the 
+current thread on the first call to any of its methods, i.e.</p>
+
+<pre>NDC.push( &quot;client accept&quot; );</pre>
+
+<p>New threads may inherit the <a href="Log4r/NDC.html">NDC</a> of the parent
+thread by making use of the clone_stack() and inherit() methods.  By
+default, the <a href="Log4r/NDC.html">NDC</a> is not inherited
+automatically.  This is unlike MDCs, which will inherit from the main
+thread.</p>
+
+<h2>Other Info</h2>
+<table class="rdoc-list"><tr><td class="rdoc-term"><p>Version</p></td>
+<td>
+<p>$Id$</p>
+</td></tr><tr><td class="rdoc-term"><p>Author</p></td>
+<td>
+<p>Colby Gutierrez-Kraybill &lt;colby(at)astro.berkeley.edu&gt;</p>
+</td></tr></table>
+<hr style="height: 1px">
+<hr style="height: 1px">
+
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+      <!-- Constants -->
+      <div id="constants-list" class="section">
+        <h3 class="section-header">Constants</h3>
+        <dl>
+        
+          <dt><a name="ALL">ALL</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="GDCNAME">GDCNAME</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="HAVE_REXML">HAVE_REXML</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="HAVE_ROMP">HAVE_ROMP</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="LNAMES">LNAMES</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="Log4rVersion">Log4rVersion</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="MDCNAME">MDCNAME</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="MDCNAMEMAXDEPTH">MDCNAMEMAXDEPTH</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="NDCDEFAULTMAXDEPTH">NDCDEFAULTMAXDEPTH</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="NDCNAME">NDCNAME</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="NDCNAMEMAXDEPTH">NDCNAMEMAXDEPTH</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SYSLOGNAMES">SYSLOGNAMES</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="VERSION">VERSION</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+        </dl>
+      </div>
+      
+
+      
+
+      <!-- Methods -->
+      
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+
